@@ -2,22 +2,35 @@
 
 Read-only browser panel for the bundled Freelancer multiplayer account archive.
 It reads character `.fl` files from `Accts/MultiPlayer` and translates numeric
-ship/equipment/cargo codes through the local `IONCROSS/GAMEDATA_*.txt` files.
+ship/equipment/cargo/navigation codes through the local `IONCROSS/GAMEDATA_*.txt`
+files.
 
-## Features
+## Client login
 
-- player login by account-folder ID (`23-...`) with optional character-name check;
-- character summary: rank, credits, kills, mission counters, ship, current system,
-  current base and last base;
-- readable equipment and cargo names resolved from IONCROSS data files;
-- full faction reputation table using `GAMEDATA_factions.txt`;
-- admin search page for local operators at `/admin`;
-- JSON export at `/api/accounts` for integrations;
-- no external Python dependencies.
+The client-facing page does **not** ask for an account-folder ID. A player enters:
 
-> Security note: this repository does not contain real account passwords. Do not
-> publish `/admin` or `/account/...` directly to the internet without adding a
-> proper authentication layer, VPN, or reverse-proxy access control.
+1. character name from a `.fl` save;
+2. the account-wide password stored in the account folder's `name` file.
+
+After a successful match the panel opens only that character's personal cabinet.
+All `.fl` files in one account folder share the same `name` password.
+
+## Character cabinet tabs
+
+- **Инвентарь** — cargo/inventory from the character save;
+- **Снаряжение** — ship, mounted equipment and base equipment state;
+- **Статистика** — time played, created/updated dates, kills, deaths and mission counters;
+- **Финансы** — character money, future personal-bank balance and disabled placeholders for
+  internal transfers/bank deposit/withdrawal flows;
+- **Репутация** — relations with factions resolved through `GAMEDATA_factions.txt`;
+- **Навигация** — current system/base plus visited systems, bases, holes and map marks in a
+  readable table where the local data allows code resolution.
+
+## Admin area
+
+Administrative views are separated under `/admin`. They keep the operator search/listing and
+JSON export away from the player login flow. Protect `/admin` with VPN/reverse-proxy auth before
+publishing the service.
 
 ## Run locally
 
@@ -25,8 +38,8 @@ ship/equipment/cargo codes through the local `IONCROSS/GAMEDATA_*.txt` files.
 python3 account_panel.py --host 127.0.0.1 --port 8080
 ```
 
-Open <http://127.0.0.1:8080>, then log in with an account directory such as
-`23-f73f713c`. If you enter a character name, it must belong to that account.
+Open <http://127.0.0.1:8080>, then log in with a character name such as `Athlon0104`
+and the decoded password from that account's `name` file.
 
 ## Custom paths
 
@@ -38,5 +51,11 @@ python3 account_panel.py \
   --port 8080
 ```
 
-Environment variables `FL_PANEL_HOST` and `FL_PANEL_PORT` can also set the
-listen address and port.
+Environment variables `FL_PANEL_HOST` and `FL_PANEL_PORT` can also set the listen address
+and port.
+
+## Security note
+
+The panel is intentionally read-only for save files. The future bank/transfer controls are UI
+placeholders and currently do not write to `.fl` files. Do not expose the app publicly without
+adding real transport security and access control.
