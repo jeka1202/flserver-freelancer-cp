@@ -1,0 +1,197 @@
+
+[Player]
+description = 00300034002f00310039002f00310035002000300039003a00330035003a00320035
+
+tstamp = 30440068,707383872
+name = 0046007200650072
+rank = 5
+house = -0.59, li_n_grp
+house = -0.59, li_lsf_grp
+house = -0.59, li_p_grp
+house = -0.59, br_n_grp
+house = -0.59, br_p_grp
+house = -0.59, ku_n_grp
+house = -0.59, ku_p_grp
+house = -0.59, rh_n_grp
+house = -0.59, rh_p_grp
+house = -0.59, co_alg_grp
+house = -0.59, co_be_grp
+house = -0.59, br_m_grp
+house = -0.59, co_nws_grp
+house = -0.3, co_hsp_grp
+house = -0.3, co_ic_grp
+house = -0.59, co_khc_grp
+house = -0.59, co_kt_grp
+house = -0.59, rh_m_grp
+house = -0.3, co_me_grp
+house = -0.3, co_ni_grp
+house = -0.3, co_os_grp
+house = -0.59, co_rs_grp
+house = -0.59, co_shi_grp
+house = -0.3, co_ss_grp
+house = -0.3, co_ti_grp
+house = -0.3, co_vr_grp
+house = -0.59, fc_bd_grp
+house = -0.59, fc_b_grp
+house = -0.59, fc_c_grp
+house = -0.59, fc_fa_grp
+house = -0.59, fc_g_grp
+house = -0.59, fc_gc_grp
+house = -0.59, fc_h_grp
+house = -0.59, fc_j_grp
+house = -0.59, fc_lh_grp
+house = -0.59, fc_lr_grp
+house = -0.59, fc_lwb_grp
+house = -0.59, fc_m_grp
+house = -0.59, fc_ou_grp
+house = -0.59, fc_rh_grp
+house = 0, fc_or_grp
+house = -0.59, fc_u_grp
+house = 0.91, fc_x_grp
+house = -0.59, gd_gm_grp
+house = 0, fc_uk_grp
+house = -0.91, fc_n_grp
+house = -0.59, fc_ln_grp
+house = -0.59, fc_kn_grp
+house = -0.59, fc_rn_grp
+house = 0, fc_ouk_grp
+house = 0, fc_q_grp
+house = 0, fc_f_grp
+house = 0, gd_im_grp
+house = 0, gd_z_grp
+house = -0.59, gd_bh_grp
+rep_group = fc_x_grp
+money = 100000
+num_kills = 0
+num_misn_successes = 0
+num_misn_failures = 0
+
+voice = trent_voice
+com_body = 3144214861
+com_head = 2223155968
+com_lefthand = 2479975689
+com_righthand = 2264565644
+body = 3144214861
+head = 2223155968
+lefthand = 2479975689
+righthand = 2264565644
+
+system = Li03
+base = Li03_04_Base
+
+ship_archetype = 2151746432
+
+equip = 2493263750, , 1
+equip = 2779996489, , 1
+equip = 2797446218, HpWeapon03, 1
+equip = 2797446218, HpWeapon01, 1
+equip = 2797446218, HpWeapon02, 1
+equip = 2736134149, HpCM01, 1
+cargo = 2210881030, 70, , , 0
+equip = 2300075273, HpMine01, 1
+cargo = 2502579789, 70, , , 0
+equip = 3090672911, HpShield01, 1
+equip = 2314753344, HpEngine01, 1
+equip = 2314753344, DpEngine, 1
+equip = 2799531210, , 1
+equip = 2723858309, , 1
+
+last_base = Li03_04_Base
+
+base_hull_status = 1
+base_collision_group = port_wing_lod1, 1
+base_collision_group = star_wing_lod1, 1
+
+base_equip = 2493263750, , 1
+base_equip = 2779996489, , 1
+base_equip = 2797446218, HpWeapon03, 1
+base_equip = 2797446218, HpWeapon01, 1
+base_equip = 2797446218, HpWeapon02, 1
+base_equip = 2736134149, HpCM01, 1
+base_cargo = 2210881030, 70, , , 0
+base_equip = 2300075273, HpMine01, 1
+base_cargo = 2502579789, 70, , , 0
+base_equip = 3090672911, HpShield01, 1
+base_equip = 2314753344, HpEngine01, 1
+base_equip = 2314753344, DpEngine, 1
+base_equip = 2799531210, , 1
+base_equip = 2723858309, , 1
+
+wg = 0, HpWeapon03
+wg = 0, HpWeapon01
+wg = 0, HpWeapon02
+
+
+visit = 21524, 65
+visit = 33711, 65
+visit = 36813, 65
+visit = 47419, 65
+visit = 2171276554, 1
+visit = 2187869067, 41
+visit = 2208818767, 1
+visit = 2303806795, 41
+visit = 2316869826, 41
+visit = 2401552897, 45
+visit = 2420513546, 41
+visit = 2505145163, 41
+visit = 2571686465, 1
+visit = 2587306432, 1
+visit = 2658963343, 1
+visit = 2708173066, 1
+visit = 2785735040, 41
+visit = 2840670539, 41
+visit = 2853745858, 41
+visit = 2945648463, 41
+visit = 2957403914, 41
+visit = 2961693579, 41
+visit = 2989953600, 1
+visit = 3005765254, 41
+visit = 3005845126, 41
+visit = 3034444867, 41
+visit = 3041986379, 41
+visit = 3044986959, 41
+visit = 3084895240, 41
+visit = 3124188608, 1
+visit = 3185791372, 1
+visit = 3196634688, 31
+
+
+interface = 3
+
+[mPlayer]
+can_dock = 1
+can_tl = 1
+total_cash_earned = 0.000000
+total_time_played = 184.000000
+sys_visited = 2208818767
+base_visited = 2808642565
+[StoryInfo]
+ship_bought = false
+debug = 0
+[StoryInfo]
+ship_bought = false
+debug = 0
+[StoryInfo]
+ship_bought = false
+debug = 0
+[StoryInfo]
+ship_bought = false
+debug = 0
+[StoryInfo]
+ship_bought = false
+debug = 0
+[StoryInfo]
+ship_bought = false
+debug = 0
+[StoryInfo]
+ship_bought = false
+debug = 0
+[StoryInfo]
+ship_bought = false
+debug = 0
+[StoryInfo]
+ship_bought = false
+debug = 0
+[flhook]
+base.last_player_base = 0
+base.player_base = 0

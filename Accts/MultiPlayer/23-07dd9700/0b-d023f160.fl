@@ -1,0 +1,36 @@
+[player]
+description = 00300032002f00320034002f00310033002000310037003a00340030003a00330036
+tstamp = 30282422, 226469088
+name = 0050006f00740072006f00730068006900740065006c
+rank = 52
+money = 10000000
+num_kills = 0
+num_misn_successes = 0
+num_misn_failures = 0
+voice = trent_voice
+com_body = 3144214861
+com_head = 2223155968
+com_lefthand = 2479975689
+com_righthand = 2264565644
+body = 3144214861
+head = 2223155968
+lefthand = 2479975689
+righthand = 2264565644
+system = li01
+base = li01_proxy_base
+ship_archetype = 2151746432
+equip = 2445172356, hprunninglight01, 1
+equip = 2445172356, hprunninglight02, 1
+equip = 2494027655, hpdocklight01, 1
+equip = 2494027655, hpdocklight02, 1
+equip = 2500775748, hpcontrail01, 1
+equip = 2500775748, hpcontrail02, 1
+equip = 2186984325, , 1
+last_base = li01_proxy_base
+base_hull_status = 1
+base_equip = 2445172356, hprunninglight01, 1
+base_equip = 2445172356, hprunninglight02, 1
+base_equip = 2494027655, hpdocklight01, 1
+base_equip = 2494027655, hpdocklight02, 1
+base_equip = 2500775748, hpcontrail01, 1
+

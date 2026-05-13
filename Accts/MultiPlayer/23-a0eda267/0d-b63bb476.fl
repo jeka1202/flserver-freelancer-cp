@@ -1,0 +1,1661 @@
+[player]
+description = 00310030002f00310032002f00310033002000310033003a00340033003a00300032
+tstamp = 30328656, 4171835824
+name = 005b004700430045005d007b00440041007d0057006f006c0066
+rank = 83
+money = 14654564
+num_kills = 0
+num_misn_successes = 0
+num_misn_failures = 0
+voice = trent_voice
+com_body = 3144214861
+com_head = 2223155968
+com_lefthand = 2479975689
+com_righthand = 2264565644
+body = 3144214861
+head = 2223155968
+lefthand = 2479975689
+righthand = 2264565644
+system = hi02
+base = hi02_01_base
+ship_archetype = 2151746432
+equip = 2883923718, hprunninglight01, 1
+equip = 2883923718, hprunninglight02, 1
+equip = 2500775748, hpcontrail01, 1
+equip = 2500775748, hpcontrail02, 1
+equip = 2356232010, , 1
+cargo = 2911012559, 1700, , , 0
+cargo = 2596081674, 1700, , , 0
+cargo = 2211307011, 3, , , 0
+cargo = 2502579789, 2, , , 0
+cargo = 3130078795, 2, , , 0
+last_base = hi02_01_base
+base_hull_status = 1
+base_collision_group = dsy_dummy_group, 1
+base_equip = 2883923718, hprunninglight01, 1
+base_equip = 2883923718, hprunninglight02, 1
+base_equip = 2500775748, hpcontrail01, 1
+base_equip = 2500775748, hpcontrail02, 1
+base_equip = 2356232010, , 1
+base_cargo = 2911012559, 1700, , , 0
+base_cargo = 2596081674, 1700, , , 0
+base_cargo = 2211307011, 3, , , 0
+base_cargo = 2502579789, 2, , , 0
+base_cargo = 3130078795, 2, , , 0
+wg = 0, hpturret05
+wg = 0, hpturret06
+wg = 0, hpturret03
+wg = 0, hpturret04
+wg = 0, hpturret17
+wg = 0, hpturret18
+wg = 0, hpturret09
+wg = 0, hpturret10
+wg = 0, hpturret11
+wg = 0, hpturret12
+wg = 0, hpturret13
+wg = 0, hpturret14
+wg = 0, hpturret15
+wg = 0, hpturret16
+wg = 1, hpturret05
+wg = 1, hpturret06
+wg = 1, hpturret03
+wg = 1, hpturret04
+wg = 1, hpturret17
+wg = 1, hpturret18
+wg = 1, hpturret09
+wg = 1, hpturret10
+wg = 1, hpturret11
+wg = 1, hpturret12
+wg = 1, hpturret13
+wg = 1, hpturret14
+wg = 1, hpturret15
+wg = 1, hpturret16
+wg = 4, hpturret06
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+interface = 11
+base_equip = 2493263750, , 1
+base_equip = 2779996489, , 1
+cargo = 3092952192, 1, , , 0
+cargo = 2789628939, 1, , , 0
+cargo = 2789628939, 1, , , 0
+base_equip = 2802020621, hprunninglight05, 1
+cargo = 2184748238, 1, , , 0
+cargo = 2184748238, 1, , , 0
+cargo = 2184748238, 1, , , 0
+cargo = 2184748238, 1, , , 0
+cargo = 2184748238, 1, , , 0
+cargo = 2265531853, 1, , , 0
+cargo = 2883923718, 1, , , 0
+cargo = 2883923718, 1, , , 0
+cargo = 2883923718, 1, , , 0
+cargo = 2883923718, 1, , , 0
+cargo = 2500775748, 1, , , 0
+cargo = 2500775748, 1, , , 0
+equip = 2493263750, , 1
+equip = 2779996489, , 1
+equip = 2802020621, hprunninglight05, 1
+
+[mplayer]
+vnpc = 2809015302, 3195696772, 1, 0
+vnpc = 2809015302, 2994366596, 1, 0
+can_dock = 1
+can_tl = 1
+total_cash_earned = 0.000000
+total_time_played = 82302.000000
+sys_visited = 2206699082
+sys_visited = 2611985924
+sys_visited = 3147250178
+sys_visited = 3148857860
+sys_visited = 2610361858
+sys_visited = 2611955204
+sys_visited = 2610376194
+sys_visited = 2476692041
+sys_visited = 3147256322
+sys_visited = 3086998659
+sys_visited = 2611949060
+sys_visited = 2743595594
+sys_visited = 3148851716
+sys_visited = 2610413058
+sys_visited = 2610382338
+sys_visited = 3147278850
+sys_visited = 3147284994
+sys_visited = 2945943554
+sys_visited = 2945966082
+sys_visited = 3086951555
+base_visited = 2805083916
+base_visited = 3102247810
+base_visited = 3098839176
+base_visited = 3112381507
+base_visited = 3094291273
+base_visited = 3089998156
+base_visited = 3090189698
+base_visited = 3149903104
+base_visited = 3094908802
+base_visited = 3094826885
+base_visited = 2809015302
+base_visited = 2808212481
+base_visited = 3102952079
+base_visited = 3103558280
+base_visited = 3102418499
+base_visited = 3090997316
+holes_visited = 3127308936
+holes_visited = 2367640450
+holes_visited = 2349539719
+holes_visited = 2505963660
+holes_visited = 3127456399
+holes_visited = 2984209282
+holes_visited = 2963003786
+holes_visited = 2593317002
+holes_visited = 3045986693
+holes_visited = 2164412547
+holes_visited = 2508521356
+holes_visited = 2176948110
+holes_visited = 2508930955
+holes_visited = 3171004302
+holes_visited = 3171217292
+holes_visited = 2177570699
+holes_visited = 2283549956
+holes_visited = 3157929601
+holes_visited = 2283189505
+holes_visited = 2495233665
+holes_visited = 2618356613
+holes_visited = 2259929730
+holes_visited = 2260290183
+holes_visited = 3029394309
+holes_visited = 3042072199
+holes_visited = 2559102602
+holes_visited = 2572204933
+holes_visited = 2258864778
+holes_visited = 2556119439
+holes_visited = 2417553550
+holes_visited = 2429433737
+holes_visited = 2840708998
+holes_visited = 2845343886
+holes_visited = 2554644864
+holes_visited = 2840889220
+holes_visited = 2223906697
+holes_visited = 2224136070
+holes_visited = 2429876100
+holes_visited = 2430498689
+holes_visited = 2886832006
+holes_visited = 2350144385
+holes_visited = 2919942795
+
+[flhook]
+base.last_player_base = 0
+base.player_base = 0
+conn.retbase = 2809015302
+dock.carrier_pos.x = 0
+dock.carrier_pos.y = 0
+dock.carrier_pos.z = 0
+dock.carrier_rot.x = 0
+dock.carrier_rot.y = 0
+dock.carrier_rot.z = 0
+dock.carrier_system = 0
+dock.docked_ship.1 = 005200610069006e00650072
+dock.docked_ships_count = 0
+dock.docked_with_charname = 
+dock.last_base = 0
+

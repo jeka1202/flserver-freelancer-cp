@@ -1,0 +1,99 @@
+[player]
+description = 00300039002f00320032002f00310033002000310035003a00320033003a00300034
+tstamp = 30324647, 2712935488
+name = 0043006900760069006c00690061006e
+rank = 21
+money = 8500
+num_kills = 0
+num_misn_successes = 0
+num_misn_failures = 0
+voice = trent_voice
+com_body = 3144214861
+com_head = 2223155968
+com_lefthand = 2479975689
+com_righthand = 2264565644
+body = 3144214861
+head = 2223155968
+lefthand = 2479975689
+righthand = 2264565644
+system = li01
+base = li01_proxy_base
+ship_archetype = 2151746432
+equip = 2493263750, , 1
+equip = 2723858309, , 1
+equip = 3088575754, hpshield01, 1
+equip = 2500775748, hpcontrail01, 1
+equip = 2500775748, hpcontrail02, 1
+equip = 2802020621, hprunninglight01, 1
+equip = 2802020621, hprunninglight02, 1
+equip = 2494027655, hpdocklight01, 1
+equip = 2494027655, hpdocklight02, 1
+equip = 2260551754, hpweapon01, 1
+equip = 2260551754, hpweapon02, 1
+equip = 2260551754, hpweapon03, 1
+cargo = 2596081674, 10, , , 0
+cargo = 2911012559, 8, , , 0
+last_base = li01_proxy_base
+base_hull_status = 1
+base_equip = 2493263750, , 1
+base_equip = 2723858309, , 1
+base_equip = 3088575754, hpshield01, 1
+base_equip = 2500775748, hpcontrail01, 1
+base_equip = 2500775748, hpcontrail02, 1
+base_equip = 2802020621, hprunninglight01, 1
+base_equip = 2802020621, hprunninglight02, 1
+base_equip = 2494027655, hpdocklight01, 1
+base_equip = 2494027655, hpdocklight02, 1
+base_equip = 2260551754, hpweapon01, 1
+base_equip = 2260551754, hpweapon02, 1
+base_equip = 2260551754, hpweapon03, 1
+base_cargo = 2596081674, 10, , , 0
+base_cargo = 2911012559, 8, , , 0
+wg = 0, hpweapon01
+wg = 0, hpweapon02
+wg = 0, hpweapon03
+wg = 0, hpweapon04
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+interface = 3
+base_equip = 2779996489, , 1
+cargo = 2265531853, 1, , , 0
+cargo = 2314753344, 1, , , 0
+cargo = 2260551754, 1, , , 0
+equip = 2779996489, , 1
+
+[mplayer]
+can_dock = 1
+can_tl = 1
+total_cash_earned = 0.000000
+total_time_played = 134.000000
+
+[flhook]
+base.last_player_base = 0
+base.player_base = 0
+

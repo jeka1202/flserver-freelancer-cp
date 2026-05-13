@@ -1,0 +1,741 @@
+[player]
+description = 00300036002f00310033002f00310033002000310039003a00350032003a00310032
+tstamp = 30304367, 2138158368
+name = 0041006d0061007400650072006100730075003c0033003e
+rank = 80
+house = 0.855, li_n_grp
+house = 0.882, li_lsf_grp
+house = 0.88425, li_p_grp
+house = 0.167118, br_n_grp
+house = 0.15728, br_p_grp
+house = 0.420925, ku_n_grp
+house = 0.000895769, ku_p_grp
+house = 0.0734957, rh_n_grp
+house = 0.131246, rh_p_grp
+house = 0.558725, co_alg_grp
+house = 0.698015, co_be_grp
+house = 0.0361391, br_m_grp
+house = 0.862368, co_nws_grp
+house = 0.777834, co_hsp_grp
+house = 0.88875, co_ic_grp
+house = -0.242261, co_khc_grp
+house = 0.864524, co_kt_grp
+house = 0.0487385, rh_m_grp
+house = 0.887625, co_me_grp
+house = 0.8865, co_ni_grp
+house = 0.6654, co_os_grp
+house = 0.787535, co_rs_grp
+house = 0.836224, co_shi_grp
+house = 0.819, co_ss_grp
+house = 0.0514828, co_ti_grp
+house = 0.88875, co_vr_grp
+house = 0.165238, fc_bd_grp
+house = -0.175208, fc_b_grp
+house = -0.9, fc_c_grp
+house = 0.187445, fc_fa_grp
+house = -0.178137, fc_g_grp
+house = -0.76543, fc_gc_grp
+house = -0.022595, fc_h_grp
+house = -0.89775, fc_j_grp
+house = -0.88425, fc_lh_grp
+house = -0.88875, fc_lr_grp
+house = -0.34726, fc_lwb_grp
+house = -0.9, fc_m_grp
+house = -0.882, fc_ou_grp
+house = -0.472732, fc_rh_grp
+house = 0, fc_or_grp
+house = -0.898875, fc_u_grp
+house = -0.2756, fc_x_grp
+house = 0.002765, gd_gm_grp
+house = 0, fc_uk_grp
+house = -0.65, fc_n_grp
+house = -0.65, fc_ln_grp
+house = -0.65, fc_kn_grp
+house = -0.65, fc_rn_grp
+house = 0, fc_ouk_grp
+house = 0, fc_q_grp
+house = 0, fc_f_grp
+house = 0.0697127, gd_im_grp
+house = -0.0543915, gd_z_grp
+house = 0.86296, gd_bh_grp
+rep_group = li_n_grp
+money = 500393884
+num_kills = 0
+num_misn_successes = 0
+num_misn_failures = 0
+voice = trent_voice
+com_body = 3144214861
+com_head = 2223155968
+com_lefthand = 2479975689
+com_righthand = 2264565644
+body = 3144214861
+head = 2223155968
+lefthand = 2479975689
+righthand = 2264565644
+system = li01
+base = li01_03_base
+ship_archetype = 2913217602
+equip = 2189918923, , 1
+equip = 3166825668, , 1
+equip = 2922321028, hprunninglight02, 1
+equip = 2942079111, hpshield01, 1
+equip = 3071246276, hprunninglight01, 1
+equip = 2314753344, hpengine01, 1
+equip = 2314753344, hpengine04, 1
+equip = 2424062339, hptorpedo02, 1
+equip = 2462983881, hpweapon01, 1
+equip = 2462983881, hpweapon02, 1
+equip = 2960932227, hptorpedo01, 1
+equip = 2999857865, hpweapon03, 1
+equip = 2999857865, hpweapon04, 1
+equip = 2999857865, hpweapon05, 1
+equip = 2999857865, hpweapon06, 1
+equip = 2999857865, hpturret01, 1
+equip = 2999857865, hpweapon07, 1
+equip = 2736156677, hpmine01, 1
+equip = 2723858309, , 1
+equip = 2265531853, hpheadlight, 1
+equip = 2494027655, hpdocklight01, 1
+equip = 2494027655, hpdocklight02, 1
+equip = 2525110029, hprunninglight04, 1
+equip = 2525110029, hprunninglight05, 1
+equip = 2525110029, hprunninglight06, 1
+equip = 2799531210, , 1
+equip = 2500775748, hpcontrail02, 1
+equip = 2500775748, hpcontrail03, 1
+equip = 2687356491, hpcm01, 1
+equip = 2771314693, , 1
+cargo = 2596081674, 70, , , 0
+cargo = 2911012559, 70, , , 0
+last_base = li01_03_base
+base_hull_status = 1
+base_collision_group = or_star_wing_lod1, 1
+base_collision_group = or_port_wing_lod1, 1
+base_equip = 2189918923, , 1
+base_equip = 3166825668, , 1
+base_equip = 2922321028, hprunninglight02, 1
+base_equip = 2942079111, hpshield01, 1
+base_equip = 3071246276, hprunninglight01, 1
+base_equip = 2314753344, hpengine01, 1
+base_equip = 2314753344, hpengine04, 1
+base_equip = 2424062339, hptorpedo02, 1
+base_equip = 2462983881, hpweapon01, 1
+base_equip = 2462983881, hpweapon02, 1
+base_equip = 2960932227, hptorpedo01, 1
+base_equip = 2999857865, hpweapon03, 1
+base_equip = 2999857865, hpweapon04, 1
+base_equip = 2999857865, hpweapon05, 1
+base_equip = 2999857865, hpweapon06, 1
+base_equip = 2999857865, hpturret01, 1
+base_equip = 2999857865, hpweapon07, 1
+base_equip = 2736156677, hpmine01, 1
+base_equip = 2723858309, , 1
+base_equip = 2265531853, hpheadlight, 1
+base_equip = 2494027655, hpdocklight01, 1
+base_equip = 2494027655, hpdocklight02, 1
+base_equip = 2525110029, hprunninglight04, 1
+base_equip = 2525110029, hprunninglight05, 1
+base_equip = 2525110029, hprunninglight06, 1
+base_equip = 2799531210, , 1
+base_equip = 2500775748, hpcontrail02, 1
+base_equip = 2500775748, hpcontrail03, 1
+base_equip = 2687356491, hpcm01, 1
+base_equip = 2771314693, , 1
+base_cargo = 2596081674, 70, , , 0
+base_cargo = 2911012559, 70, , , 0
+wg = 0, hpweapon01
+wg = 0, hpweapon02
+wg = 0, hpweapon03
+wg = 0, hpweapon04
+wg = 0, hpweapon05
+wg = 0, hpweapon06
+wg = 0, hpturret01
+wg = 0, hpweapon07
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+interface = 3
+
+[mplayer]
+vnpc = 2804956685, 2625803845, 9, 0
+vnpc = 2804956685, 2531902145, 79, 0
+vnpc = 2804956685, 2818398735, 7, 0
+vnpc = 2804956685, 2416075521, 18, 2
+vnpc = 2804956685, 2661328717, 5, 0
+vnpc = 2804956685, 2348554255, 4, 0
+vnpc = 2804956685, 2494363083, 6, 0
+vnpc = 2804956685, 2382397839, 2, 0
+vnpc = 2805988874, 2692843589, 1, 0
+vnpc = 2805988874, 2397687053, 3, 0
+vnpc = 2805988874, 2955157325, 3, 3
+vnpc = 2724232325, 3196622467, 2, 0
+vnpc = 2804956685, 2751287311, 5, 0
+vnpc = 2805644808, 2263468105, 16, 0
+vnpc = 2805644808, 2494422347, 5, 3
+vnpc = 2805644808, 3028320837, 4, 0
+vnpc = 2805644808, 2416315209, 6, 1
+vnpc = 2805644808, 2200444687, 6, 0
+vnpc = 2805644808, 2938723599, 6, 0
+vnpc = 2805644808, 2804500751, 1, 0
+vnpc = 2805644808, 2986169483, 1, 0
+vnpc = 2805644808, 2650543755, 1, 0
+vnpc = 2804956685, 2248185231, 4, 0
+vnpc = 2804956685, 2996954445, 2, 0
+vnpc = 2804956685, 3064065869, 1, 0
+vnpc = 2724232325, 2654321805, 1, 0
+rumor = 131225, 1
+rumor = 131241, 1
+rumor = 131229, 1
+rumor = 393424, 1
+can_dock = 1
+can_tl = 1
+ship_type_killed = 2151746432, 7
+ship_type_killed = 2246075530, 2
+ship_type_killed = 2248965056, 1
+ship_type_killed = 2529638985, 5
+ship_type_killed = 2650442112, 1
+ship_type_killed = 2701984835, 20
+ship_type_killed = 2702011459, 30
+ship_type_killed = 2702048323, 30
+ship_type_killed = 2820316814, 25
+ship_type_killed = 2917601664, 111
+ship_type_killed = 2986822601, 2
+ship_type_killed = 3021923272, 1
+ship_type_killed = 3072655695, 90
+rm_completed = 0, 7
+rm_completed = 1, 11
+rm_completed = 2, 1
+rm_aborted = 1, 5
+rm_aborted = 4, 1
+rm_failed = 0, 3
+rm_failed = 1, 21
+total_cash_earned = 0.000000
+total_time_played = 44235.000000
+sys_visited = 2208796239
+sys_visited = 2475664971
+sys_visited = 2745633359
+base_visited = 2804956685
+base_visited = 2805988874
+base_visited = 2804612608
+base_visited = 2725264525
+base_visited = 2724232325
+base_visited = 2740108105
+base_visited = 2740468556
+base_visited = 2805644808
+holes_visited = 2950413706
+
+[storyinfo]
+ship_bought = false
+debug = 0
+
+[storyinfo]
+ship_bought = false
+debug = 0
+
+[storyinfo]
+ship_bought = false
+debug = 0
+
+[storyinfo]
+ship_bought = false
+debug = 0
+
+[storyinfo]
+ship_bought = false
+debug = 0
+
+[storyinfo]
+ship_bought = false
+debug = 0
+
+[storyinfo]
+ship_bought = false
+debug = 0
+
+[storyinfo]
+ship_bought = false
+debug = 0
+
+[storyinfo]
+ship_bought = false
+debug = 0
+
+[storyinfo]
+ship_bought = false
+debug = 0
+
+[storyinfo]
+ship_bought = false
+debug = 0
+
+[flhook]
+base.last_player_base = 0
+base.player_base = 0
+

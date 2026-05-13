@@ -1,0 +1,786 @@
+[player]
+description = 00300037002f00300032002f00310033002000320030003a00310035003a00350036
+tstamp = 30308192, 4121911168
+name = 004b0036
+rank = 44
+money = 498775
+num_kills = 0
+num_misn_successes = 0
+num_misn_failures = 0
+voice = trent_voice
+com_body = 3144214861
+com_head = 2223155968
+com_lefthand = 2479975689
+com_righthand = 2264565644
+body = 3144214861
+head = 2223155968
+lefthand = 2479975689
+righthand = 2264565644
+system = li01
+base = li01_proxy_base
+ship_archetype = 2151746432
+equip = 2779996489, , 1
+equip = 2493263750, , 1
+cargo = 2851656000, 1, , , 0
+cargo = 2314832841, 1, , , 0
+cargo = 2314832841, 1, , , 0
+cargo = 2314855369, 1, , , 0
+cargo = 2315037635, 1, , , 0
+cargo = 2315037635, 1, , , 0
+cargo = 2315037635, 1, , , 0
+cargo = 2315066307, 1, , , 0
+cargo = 2315066307, 1, , , 0
+cargo = 2315066307, 1, , , 0
+cargo = 2315117507, 1, , , 0
+cargo = 2315117507, 1, , , 0
+cargo = 2315117507, 1, , , 0
+cargo = 2315117507, 1, , , 0
+cargo = 2487706958, 1, , , 0
+cargo = 2639905100, 1, , , 0
+cargo = 2851672009, 1, , , 0
+cargo = 2851708873, 1, , , 0
+cargo = 2851708873, 1, , , 0
+cargo = 2851708873, 1, , , 0
+cargo = 2851731401, 1, , , 0
+cargo = 2851731401, 1, , , 0
+cargo = 2851913667, 1, , , 0
+cargo = 2851913667, 1, , , 0
+cargo = 2851934147, 1, , , 0
+cargo = 2851934147, 1, , , 0
+cargo = 2851934147, 1, , , 0
+cargo = 2851934147, 1, , , 0
+cargo = 2851934147, 1, , , 0
+cargo = 2851956675, 1, , , 0
+equip = 3112104454, hptorpedo01, 1
+cargo = 3176774988, 1, , , 0
+cargo = 3176774988, 1, , , 0
+cargo = 3176774988, 1, , , 0
+cargo = 3176774988, 1, , , 0
+equip = 2300075273, hpmine01, 1
+equip = 2736134149, hpcm01, 1
+equip = 2723858309, , 1
+equip = 2265531853, hpheadlight, 1
+equip = 2494027655, hpdocklight01, 1
+equip = 2494027655, hpdocklight02, 1
+equip = 2802020621, hprunninglight01, 1
+equip = 2802020621, hprunninglight02, 1
+equip = 2802020621, hprunninglight05, 1
+equip = 2500775748, hpcontrail01, 1
+equip = 2500775748, hpcontrail02, 1
+cargo = 2911012559, 129, , , 0
+cargo = 2596081674, 102, , , 0
+cargo = 2834217409, 25, , , 0
+cargo = 2502579789, 12, , , 0
+cargo = 2210881030, 52, , , 0
+last_base = li01_proxy_base
+base_hull_status = 1
+base_equip = 2779996489, , 1
+base_equip = 2493263750, , 1
+base_cargo = 2851656000, 1, , , 0
+base_cargo = 2314832841, 1, , , 0
+base_cargo = 2314832841, 1, , , 0
+base_cargo = 2314855369, 1, , , 0
+base_cargo = 2315037635, 1, , , 0
+base_cargo = 2315037635, 1, , , 0
+base_cargo = 2315037635, 1, , , 0
+base_cargo = 2315066307, 1, , , 0
+base_cargo = 2315066307, 1, , , 0
+base_cargo = 2315066307, 1, , , 0
+base_cargo = 2315117507, 1, , , 0
+base_cargo = 2315117507, 1, , , 0
+base_cargo = 2315117507, 1, , , 0
+base_cargo = 2315117507, 1, , , 0
+base_cargo = 2487706958, 1, , , 0
+base_cargo = 2639905100, 1, , , 0
+base_cargo = 2851672009, 1, , , 0
+base_cargo = 2851708873, 1, , , 0
+base_cargo = 2851708873, 1, , , 0
+base_cargo = 2851708873, 1, , , 0
+base_cargo = 2851731401, 1, , , 0
+base_cargo = 2851731401, 1, , , 0
+base_cargo = 2851913667, 1, , , 0
+base_cargo = 2851913667, 1, , , 0
+base_cargo = 2851934147, 1, , , 0
+base_cargo = 2851934147, 1, , , 0
+base_cargo = 2851934147, 1, , , 0
+base_cargo = 2851934147, 1, , , 0
+base_cargo = 2851934147, 1, , , 0
+base_cargo = 2851956675, 1, , , 0
+base_equip = 3112104454, hptorpedo01, 1
+base_cargo = 3176774988, 1, , , 0
+base_cargo = 3176774988, 1, , , 0
+base_cargo = 3176774988, 1, , , 0
+base_cargo = 3176774988, 1, , , 0
+base_equip = 2300075273, hpmine01, 1
+base_equip = 2736134149, hpcm01, 1
+base_equip = 2723858309, , 1
+base_equip = 2265531853, hpheadlight, 1
+base_equip = 2494027655, hpdocklight01, 1
+base_equip = 2494027655, hpdocklight02, 1
+base_equip = 2802020621, hprunninglight01, 1
+base_equip = 2802020621, hprunninglight02, 1
+base_equip = 2802020621, hprunninglight05, 1
+base_equip = 2500775748, hpcontrail01, 1
+base_equip = 2500775748, hpcontrail02, 1
+base_cargo = 2911012559, 129, , , 0
+base_cargo = 2596081674, 102, , , 0
+base_cargo = 2834217409, 25, , , 0
+base_cargo = 2502579789, 12, , , 0
+base_cargo = 2210881030, 52, , , 0
+wg = 0, hpturret01
+wg = 0, hpturret02
+wg = 0, hpturret03
+wg = 0, hpturret04
+wg = 0, hpturret05
+wg = 0, hpturret06
+wg = 0, hpweapon01
+wg = 0, hpweapon02
+wg = 0, hpweapon03
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+interface = 1
+cargo = 2851656000, 1, , , 0
+cargo = 2829950208, 1, , , 0
+cargo = 2851993539, 1, , , 0
+cargo = 2851993539, 1, , , 0
+cargo = 2802020621, 1, , , 0
+cargo = 2802020621, 1, , , 0
+cargo = 2802020621, 1, , , 0
+cargo = 2802020621, 1, , , 0
+cargo = 2802020621, 1, , , 0
+cargo = 2500775748, 1, , , 0
+cargo = 2500775748, 1, , , 0
+
+[mplayer]
+can_dock = 1
+can_tl = 1
+ship_type_killed = 2805431751, 21
+ship_type_killed = 2917601664, 10
+ship_type_killed = 3072655695, 39
+total_cash_earned = 0.000000
+total_time_played = 18518.000000
+sys_visited = 2208796239
+sys_visited = 2745692751
+sys_visited = 3146754635
+sys_visited = 2409077762
+base_visited = 2725952648
+base_visited = 2810150415
+base_visited = 2804612608
+base_visited = 2804956685
+base_visited = 2724232325
+base_visited = 2725264525
+base_visited = 2804923906
+base_visited = 2805644808
+base_visited = 2808528130
+base_visited = 3103439243
+base_visited = 3179390535
+
+[flhook]
+base.last_player_base = 0
+base.player_base = 0
+

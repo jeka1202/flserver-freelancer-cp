@@ -1,0 +1,92 @@
+[player]
+description = 00300032002f00300034002f00310031002000310037003a00340038003a00300030
+
+tstamp = 30131347,2856542288
+name = 005f003c0053004d0045005200530048003e005f003c0053004800410044004f0057003e005f
+rank = 76
+money = 233016217
+num_kills = 1
+num_misn_successes = 0
+num_misn_failures = 0
+
+voice = trent_voice
+com_body = 3144214861
+com_head = 2223155968
+com_lefthand = 2479975689
+com_righthand = 2264565644
+body = 3144214861
+head = 2223155968
+lefthand = 2479975689
+righthand = 2264565644
+
+system = li01
+pos = 46387.7,-185.817,6231.96
+rotate = -164.537,-40.315,-176.937
+
+ship_archetype = 2151746432
+
+equip = 3065516173, , 1
+cargo = 2911012559, 60, , , 0
+cargo = 2211307011, 60, , , 0
+cargo = 2492012162, 60, , , 0
+cargo = 2596081674, 49, , , 0
+cargo = 2834217409, 30, , , 0
+cargo = 2203211205, 1, , , 0
+cargo = 2203211205, 1, , , 0
+cargo = 2883923718, 1, , , 0
+cargo = 2883923718, 1, , , 0
+cargo = 2340893774, 1, , , 0
+cargo = 2340893774, 1, , , 0
+equip = 2493263750, , 1
+equip = 2779996489, , 1
+
+last_base = li01_14_base
+
+base_hull_status = 1
+base_collision_group = port_wing_lod1, 1
+base_collision_group = star_wing_lod1, 1
+
+base_equip = 3065516173, , 1
+base_cargo = 2911012559, 2, , , 0
+base_equip = 2493263750, , 1
+base_equip = 2779996489, , 1
+
+wg = 0, hpturret_r2_01
+wg = 0, hpturret_r2_02
+wg = 0, hpturret_r2_03
+wg = 0, hpturret_r2_04
+wg = 0, hpturret_r3_01
+wg = 0, hpturret_r3_02
+wg = 0, hpturret_r2_05
+wg = 0, hpturret_r2_06
+
+
+
+interface = 3
+
+[mplayer]
+rumor = 131232, 1
+can_dock = 1
+can_tl = 1
+ship_type_killed = 2485863490, 1
+ship_type_killed = 3038813056, 2
+rm_failed = 2, 1
+total_cash_earned = 0.000000
+total_time_played = 15633.000000
+sys_visited = 2208796239
+base_visited = 3197677122
+base_visited = 2804612608
+base_visited = 3099425676
+base_visited = 2793005704
+base_visited = 2797561223
+base_visited = 3094826885
+base_visited = 3094908802
+base_visited = 2813606663
+base_visited = 2724232325
+holes_visited = 2572204933
+holes_visited = 2258864778
+holes_visited = 2259929730
+holes_visited = 2618356613
+holes_visited = 2260290183
+holes_visited = 3127456399
+holes_visited = 2984209282

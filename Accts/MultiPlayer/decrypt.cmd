@@ -1,0 +1,1 @@
+for /r %%j in (*.fl) do @start /b flcodec -d "%%j" "%%j"

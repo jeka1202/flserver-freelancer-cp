@@ -1,0 +1,682 @@
+[player]
+description = 00300031002f00320031002f00310032002000310035003a00350034003a00350032
+tstamp = 30201941, 53028464
+name = 004d0065004700610056006f006c007400280072007500730029
+rank = 56
+money = 13343371
+num_kills = 0
+num_misn_successes = 0
+num_misn_failures = 0
+voice = trent_voice
+com_body = 3144214861
+com_head = 2223155968
+com_lefthand = 2479975689
+com_righthand = 2264565644
+body = 3144214861
+head = 2223155968
+lefthand = 2479975689
+righthand = 2264565644
+system = li01
+base = li01_proxy_base
+ship_archetype = 2151746432
+equip = 2736134149, hpcm01, 1
+equip = 2186984325, , 1
+equip = 2959689030, , 1
+last_base = li01_proxy_base
+base_hull_status = 1
+base_collision_group = trans_frnt_lod1, 1
+base_collision_group = trans_rear_lod1, 1
+base_collision_group = trans_cntrl_twr_lod1, 1
+base_collision_group = trans_eng_lod1, 1
+base_collision_group = trans_port_eng_lod1, 1
+base_collision_group = trans_star_eng_lod1, 1
+base_collision_group = trans_tail_fin_lod1, 1
+base_equip = 2736134149, hpcm01, 1
+base_equip = 2186984325, , 1
+base_equip = 2959689030, , 1
+wg = 0, hpturret_u1_01
+wg = 0, hpturret_u1_02
+wg = 0, hpturret_u1_03
+wg = 0, hpturret_u1_04
+wg = 0, hpturret_u3_01
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+interface = 9
+base_equip = 2493263750, , 1
+base_equip = 2779996489, , 1
+base_equip = 2494027655, hpdocklight01, 1
+base_equip = 2494027655, hpdocklight02, 1
+cargo = 2346914757, 1, , , 0
+cargo = 2399322506, 1, , , 0
+cargo = 2399322506, 1, , , 0
+cargo = 2399322506, 1, , , 0
+cargo = 2399322506, 1, , , 0
+equip = 2493263750, , 1
+equip = 2779996489, , 1
+equip = 2494027655, hpdocklight01, 1
+equip = 2494027655, hpdocklight02, 1
+
+[mplayer]
+can_dock = 1
+can_tl = 1
+total_cash_earned = 0.000000
+total_time_played = 22276.000000
+sys_visited = 2208796239
+sys_visited = 2208818767
+sys_visited = 2745633359
+sys_visited = 2745692751
+sys_visited = 2609858123
+base_visited = 2809806349
+base_visited = 2804956685
+base_visited = 2724232325
+base_visited = 2809674765
+base_visited = 2725264525
+base_visited = 2813606663
+base_visited = 2812361485
+base_visited = 2804923906
+base_visited = 2814294786
+base_visited = 2805988874
+base_visited = 2810150415
+base_visited = 2804612608
+base_visited = 2808888583
+base_visited = 3090595457
+

@@ -1,0 +1,167 @@
+
+[Player]
+description = 00300036002f00300031002f00310035002000310038003a00350031003a00330031
+
+tstamp = 30448795,4186431680
+name = 005f0053004d0045005200530048005f003c004d004f004c004e004900590041003e005f
+rank = 28
+money = 6543665
+num_kills = 8
+num_misn_successes = 0
+num_misn_failures = 0
+
+voice = trent_voice
+com_body = 3144214861
+com_head = 2223155968
+com_lefthand = 2479975689
+com_righthand = 2264565644
+body = 3144214861
+head = 2223155968
+lefthand = 2479975689
+righthand = 2264565644
+
+system = Hi01
+pos = -17944.4,24165.3,5729.78
+rotate = 0,44.6124,0
+
+ship_archetype = 2151746432
+
+equip = 2356232010, , 1
+cargo = 3037957647, 1, , , 0
+cargo = 3037957647, 1, , , 0
+cargo = 3037957647, 1, , , 0
+cargo = 3037957647, 1, , , 0
+equip = 2493263750, , 1
+equip = 2779996489, , 1
+
+last_base = Hi01_01_Base
+
+base_hull_status = 1
+base_collision_group = port_wing_lod1, 1
+base_collision_group = star_wing_lod1, 1
+
+base_equip = 2356232010, , 1
+base_equip = 2493263750, , 1
+base_equip = 2779996489, , 1
+
+wg = 0, hpturret_r1_01
+wg = 0, hpturret_r2_03
+wg = 0, hpturret_r2_04
+wg = 0, hpturret_r3_05
+wg = 0, hpturret_r4_03
+wg = 0, hpturret_r4_04
+wg = 0, hpturret_r1_02
+wg = 0, hpturret_r1_03
+wg = 0, hpturret_r3_01
+wg = 0, hpturret_r3_03
+wg = 0, hpturret_r3_06
+wg = 0, hpturret_r4_01
+wg = 0, hpturret_r4_02
+wg = 0, hpturret_r4_05
+wg = 0, hpturret_r4_07
+wg = 0, hpturret_r2_01
+wg = 0, hpturret_r2_02
+
+visit = 2206699082, 1
+visit = 2391839872, 41
+visit = 2625431434, 41
+
+
+interface = 1
+
+[mPlayer]
+rumor = 133220, 1
+rumor = 133219, 1
+rumor = 133218, 1
+rumor = 132817, 1
+can_dock = 1
+can_tl = 1
+ship_type_killed = 2165116995, 4
+ship_type_killed = 2257007305, 6
+ship_type_killed = 2257092298, 8
+ship_type_killed = 2270462412, 50
+ship_type_killed = 2294760008, 8
+ship_type_killed = 2485863490, 18
+ship_type_killed = 2529638985, 5
+ship_type_killed = 2573757580, 1
+ship_type_killed = 2688203850, 2
+ship_type_killed = 2701984835, 28
+ship_type_killed = 2702011459, 2
+ship_type_killed = 2702048323, 3
+ship_type_killed = 2745310027, 6
+ship_type_killed = 2806013121, 21
+ship_type_killed = 2986822601, 3
+ship_type_killed = 2992982989, 1
+ship_type_killed = 3038813056, 65
+ship_type_killed = 3072655695, 5
+ship_type_killed = 3084736265, 4
+ship_type_killed = 3119119432, 1
+ship_type_killed = 3151149197, 8
+ship_type_killed = 3199383692, 1
+rm_completed = 0, 2
+total_cash_earned = 0.000000
+total_time_played = 179902.000000
+sys_visited = 2206699082
+base_visited = 2804956685
+base_visited = 2803924485
+base_visited = 2809806349
+base_visited = 2808347904
+base_visited = 3103439243
+base_visited = 3103095180
+base_visited = 3179390535
+base_visited = 3185108303
+base_visited = 3176341570
+base_visited = 3112807494
+base_visited = 3098839176
+base_visited = 2805083916
+base_visited = 3094908802
+base_visited = 3094826885
+base_visited = 2809015302
+base_visited = 2808212481
+base_visited = 3112381507
+base_visited = 3123468036
+base_visited = 3102247810
+base_visited = 3093357390
+base_visited = 3089572169
+base_visited = 3089998156
+base_visited = 2792579725
+base_visited = 2788221320
+base_visited = 2796659840
+base_visited = 2796872834
+base_visited = 3089686862
+base_visited = 3090189698
+base_visited = 3102952079
+base_visited = 3090358339
+base_visited = 2791449477
+base_visited = 2792940424
+base_visited = 3099281551
+base_visited = 2789155215
+base_visited = 2787156352
+base_visited = 3128923145
+holes_visited = 2593317002
+holes_visited = 2963003786
+holes_visited = 2984209282
+holes_visited = 3127456399
+holes_visited = 2260290183
+holes_visited = 2259929730
+holes_visited = 2618356613
+holes_visited = 3127308936
+holes_visited = 2367640450
+holes_visited = 2349539719
+holes_visited = 2505963660
+holes_visited = 2508930955
+holes_visited = 3171004302
+holes_visited = 2674754498
+holes_visited = 3061882251
+holes_visited = 3171217292
+holes_visited = 2177570699
+holes_visited = 2164412547
+holes_visited = 2559102602
+holes_visited = 2554644864
+holes_visited = 2845343886
+holes_visited = 2417553550
+holes_visited = 2556119439
+[StoryInfo]
+ship_bought = false
+debug = 0
+[flhook]

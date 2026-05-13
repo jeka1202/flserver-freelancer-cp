@@ -1,0 +1,178 @@
+
+[Player]
+description = 00300036002f00300035002f00310035002000310036003a00310030003a00330039
+
+tstamp = 30449578,711898912
+name = 00410072006d00650064005f0061006e0064005f00440061006e006700650072006f00750073
+rank = 34
+money = 14359472
+num_kills = 0
+num_misn_successes = 0
+num_misn_failures = 0
+
+voice = trent_voice
+com_body = 3144214861
+com_head = 2223155968
+com_lefthand = 2479975689
+com_righthand = 2264565644
+body = 3144214861
+head = 2223155968
+lefthand = 2479975689
+righthand = 2264565644
+
+system = Li02
+pos = 27163.2,14974.9,-18704.1
+rotate = 1.69409,26.321,11.8537
+
+ship_archetype = 2151746432
+
+equip = 2356232010, , 1
+cargo = 2596081674, 10, , , 0
+cargo = 2222938626, 1, , , 0
+cargo = 2487706958, 1, , , 0
+cargo = 3037957647, 1, , , 0
+cargo = 3203756301, 1, , , 0
+cargo = 3203756301, 1, , , 0
+cargo = 3203756301, 1, , , 0
+cargo = 3203756301, 1, , , 0
+cargo = 3203756301, 1, , , 0
+cargo = 3203756301, 1, , , 0
+cargo = 3203756301, 1, , , 0
+equip = 2493263750, , 1
+equip = 2779996489, , 1
+
+wg = 0, hpturret03
+wg = 0, hpturret04
+wg = 0, hpturret05
+wg = 0, hpturret06
+wg = 0, hpturret07
+wg = 0, hpturret08
+wg = 0, hpturret11
+wg = 0, hpturret12
+wg = 0, hpturret15
+wg = 0, hpturret16
+wg = 0, hpturret19
+wg = 0, hpturret20
+
+visit = 2436197261, 41
+visit = 2745692751, 1
+visit = 3194865550, 1
+
+
+interface = 1
+
+[mPlayer]
+rumor = 133259, 1
+rumor = 133174, 1
+rumor = 133173, 1
+rumor = 253901, 1
+rumor = 131550, 1
+rumor = 131513, 1
+rumor = 131525, 1
+rumor = 131524, 1
+rumor = 131521, 2
+rumor = 131514, 1
+rumor = 134322, 1
+rumor = 131520, 1
+rumor = 131526, 2
+rumor = 131528, 1
+rumor = 131523, 1
+rumor = 131522, 1
+rumor = 131510, 1
+rumor = 253755, 1
+rumor = 131929, 1
+rumor = 253757, 1
+rumor = 131941, 1
+can_dock = 1
+can_tl = 1
+ship_type_killed = 2165116995, 3
+ship_type_killed = 2248965056, 11
+ship_type_killed = 2270462412, 827
+ship_type_killed = 2294760008, 4
+ship_type_killed = 2485863490, 47
+ship_type_killed = 2529638985, 133
+ship_type_killed = 2701984835, 2
+ship_type_killed = 2702011459, 15
+ship_type_killed = 2702048323, 3
+ship_type_killed = 2705036494, 21
+ship_type_killed = 2805431751, 314
+ship_type_killed = 2806013121, 12
+ship_type_killed = 2820316814, 1
+ship_type_killed = 2986822601, 13
+ship_type_killed = 3038813056, 392
+ship_type_killed = 3072655695, 256
+ship_type_killed = 3084736265, 13
+ship_type_killed = 3199383692, 7
+rm_completed = 0, 87
+rm_completed = 1, 1
+rm_completed = 2, 27
+rm_completed = 3, 5
+rm_completed = 4, 13
+rm_completed = 5, 2
+rm_aborted = 0, 2
+rm_failed = 0, 4
+rm_failed = 2, 3
+rm_failed = 3, 1
+total_cash_earned = 0.000000
+total_time_played = 285274.000000
+sys_visited = 2745692751
+base_visited = 2804956685
+base_visited = 2804923906
+base_visited = 3090189698
+base_visited = 3094908802
+base_visited = 2805083916
+base_visited = 3149903104
+base_visited = 3094826885
+base_visited = 2812295693
+base_visited = 3137327105
+base_visited = 3094445190
+base_visited = 3135574028
+base_visited = 3135262734
+base_visited = 2809674765
+base_visited = 3090595457
+base_visited = 3102952079
+base_visited = 2808212481
+base_visited = 3102418499
+base_visited = 3172049479
+base_visited = 3103095180
+base_visited = 3103439243
+base_visited = 2808347904
+base_visited = 2809593098
+base_visited = 2805988874
+base_visited = 3103558280
+holes_visited = 2164412547
+holes_visited = 2260290183
+holes_visited = 2259929730
+holes_visited = 2618356613
+holes_visited = 2698972034
+holes_visited = 3128701573
+holes_visited = 2795458180
+holes_visited = 3079286414
+holes_visited = 2417553550
+holes_visited = 2556119439
+holes_visited = 2559102602
+holes_visited = 2572204933
+holes_visited = 2258864778
+holes_visited = 3127456399
+holes_visited = 2984209282
+holes_visited = 2554644864
+holes_visited = 2845343886
+[StoryInfo]
+ship_bought = false
+debug = 0
+[StoryInfo]
+ship_bought = false
+debug = 0
+[StoryInfo]
+ship_bought = false
+debug = 0
+[StoryInfo]
+ship_bought = false
+debug = 0
+[StoryInfo]
+ship_bought = false
+debug = 0
+[StoryInfo]
+ship_bought = false
+debug = 0
+[flhook]

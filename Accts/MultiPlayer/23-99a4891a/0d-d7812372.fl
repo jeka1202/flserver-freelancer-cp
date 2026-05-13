@@ -1,0 +1,154 @@
+[player]
+description = 00300038002f00310036002f00310034002000300032003a00350033003a00310036
+
+tstamp = 30390525,984409600
+name = 004a0061006b006f0062005f00530065006d006f00740061006e
+rank = 88
+house = 0.002, li_n_grp
+house = 0.002, li_lsf_grp
+house = 0.002, li_p_grp
+house = 0.002, br_n_grp
+house = 0.002, br_p_grp
+house = 0.002, ku_n_grp
+house = 0.002, ku_p_grp
+house = 0.002, rh_n_grp
+house = 0.002, rh_p_grp
+house = 0, co_alg_grp
+house = 0, co_be_grp
+house = 0, br_m_grp
+house = 0, co_nws_grp
+house = 0, co_hsp_grp
+house = 0, co_ic_grp
+house = 0, co_khc_grp
+house = 0, co_kt_grp
+house = 0, rh_m_grp
+house = 0, co_me_grp
+house = 0, co_ni_grp
+house = 0, co_os_grp
+house = 0, co_rs_grp
+house = 0, co_shi_grp
+house = 0, co_ss_grp
+house = 0, co_ti_grp
+house = 0, co_vr_grp
+house = 0, fc_bd_grp
+house = 0, fc_b_grp
+house = -0.002, fc_c_grp
+house = 0.004, fc_fa_grp
+house = -0.002, fc_g_grp
+house = 0, fc_gc_grp
+house = 0.008, fc_h_grp
+house = -0.04, fc_j_grp
+house = -0.002, fc_lh_grp
+house = -0.004, fc_lr_grp
+house = -0.552, fc_lwb_grp
+house = -0.002, fc_m_grp
+house = -0.004, fc_ou_grp
+house = -0.004, fc_rh_grp
+house = 0, fc_or_grp
+house = -0.002, fc_u_grp
+house = 0.008, fc_x_grp
+house = 0, gd_gm_grp
+house = 0, fc_uk_grp
+house = -0.9, fc_n_grp
+house = 0, fc_ln_grp
+house = 0, fc_kn_grp
+house = 0, fc_rn_grp
+house = 0, fc_ouk_grp
+house = 0, fc_q_grp
+house = 0, fc_f_grp
+house = 0, gd_im_grp
+house = 0, gd_z_grp
+house = 0.002, gd_bh_grp
+money = 715982670
+num_kills = 0
+num_misn_successes = 0
+num_misn_failures = 0
+
+voice = trent_voice
+com_body = 3144214861
+com_head = 2223155968
+com_lefthand = 2479975689
+com_righthand = 2264565644
+body = 3144214861
+head = 2223155968
+lefthand = 2479975689
+righthand = 2264565644
+
+system = li01
+base = li01_08_base
+
+ship_archetype = 2151746432
+
+equip = 2974645449, hpshield01, 1
+equip = 2289839304, hprunninglight12, 1
+equip = 2289839304, hprunninglight13, 1
+equip = 2289839304, hprunninglight01, 1
+equip = 2289839304, hprunninglight02, 1
+equip = 3150769097, , 1
+cargo = 3108339138, 1, , , 0
+cargo = 2517790468, 118, , , 0
+cargo = 2260241671, 51, , , 0
+cargo = 3062202251, 118, , , 0
+cargo = 2664163777, 101, , , 0
+cargo = 2911012559, 2, , , 0
+
+last_base = li01_08_base
+
+base_hull_status = 1
+base_collision_group = liner_frnt_lod1, 1
+base_collision_group = liner_mid_lod1, 1
+base_collision_group = liner_rear_lod1, 1
+base_collision_group = liner_reactor_lod1, 1
+
+base_equip = 2974645449, hpshield01, 1
+base_equip = 2289839304, hprunninglight12, 1
+base_equip = 2289839304, hprunninglight13, 1
+base_equip = 2289839304, hprunninglight01, 1
+base_equip = 2289839304, hprunninglight02, 1
+base_equip = 3150769097, , 1
+base_cargo = 3108339138, 1, , , 0
+base_cargo = 2517790468, 118, , , 0
+base_cargo = 2260241671, 51, , , 0
+base_cargo = 3062202251, 118, , , 0
+base_cargo = 2664163777, 101, , , 0
+base_cargo = 2911012559, 2, , , 0
+
+wg = 0, hpturret_liner_04
+wg = 0, hpturret_liner_05
+wg = 0, hpturret_liner_06
+wg = 0, hpturret_liner_10
+wg = 0, hpturret_liner_11
+wg = 0, hpturret_liner_07
+wg = 0, hpturret_liner_08
+wg = 0, hpturret_liner_09
+wg = 0, hpturret_liner_01
+wg = 0, hpturret_liner_02
+wg = 0, hpturret_liner_03
+
+
+
+
+interface = 3
+
+[mplayer]
+vnpc = 2724232325, 2587211405, 1, 0 ; li01_14_base, 0x9a35b68d
+vnpc = 2724232325, 2184546957, 1, 0 ; li01_14_base, 0x82358a8d
+can_dock = 1
+can_tl = 1
+rm_completed = 7, 1
+total_cash_earned = 0.000000
+total_time_played = 906.000000
+sys_visited = 2208796239
+base_visited = 2804956685
+base_visited = 2725264525
+base_visited = 2724232325
+base_visited = 2810150415
+[storyinfo]
+ship_bought = false
+mission = no_mission
+missionnum = 42
+delta_worth = -1.000000
+debug = 0
+[flhook]
+base.last_player_base = 0
+base.player_base = 0

@@ -1,0 +1,166 @@
+
+[Player]
+description = 00300036002f00310036002f00310035002000320032003a00330039003a00330038
+
+tstamp = 30451845,1408388880
+name = 00500041004c004100490044
+rank = 1
+house = 0.65405, li_n_grp
+house = 0.00405, li_lsf_grp
+house = 0.65405, li_p_grp
+house = 0.64775, br_n_grp
+house = 0.64955, br_p_grp
+house = 0.5483, ku_n_grp
+house = 0.60275, ku_p_grp
+house = 0.65, rh_n_grp
+house = 0.65, rh_p_grp
+house = -0.0045, co_alg_grp
+house = -0.0009, co_be_grp
+house = 0, br_m_grp
+house = -0.0009, co_nws_grp
+house = -0.0027, co_hsp_grp
+house = 0.0009, co_ic_grp
+house = 0, co_khc_grp
+house = -0.0135, co_kt_grp
+house = 0, rh_m_grp
+house = -0.0054, co_me_grp
+house = 0.0009, co_ni_grp
+house = -0.0027, co_os_grp
+house = 0, co_rs_grp
+house = -0.0675, co_shi_grp
+house = 0.0009, co_ss_grp
+house = 0, co_ti_grp
+house = 0.0063, co_vr_grp
+house = -0.54185, fc_bd_grp
+house = -0.5891, fc_b_grp
+house = -0.57875, fc_c_grp
+house = -0.30225, fc_fa_grp
+house = -0.59, fc_g_grp
+house = -0.5675, fc_gc_grp
+house = -0.30225, fc_h_grp
+house = -0.3009, fc_j_grp
+house = -0.58775, fc_lh_grp
+house = -0.57605, fc_lr_grp
+house = -0.59, fc_lwb_grp
+house = -0.59, fc_m_grp
+house = -0.58505, fc_ou_grp
+house = -0.58685, fc_rh_grp
+house = 0, fc_or_grp
+house = -0.5918, fc_u_grp
+house = -0.57695, fc_x_grp
+house = -0.027, gd_gm_grp
+house = 0, fc_uk_grp
+house = -0.9, fc_n_grp
+house = 0, fc_ln_grp
+house = 0, fc_kn_grp
+house = 0, fc_rn_grp
+house = 0, fc_ouk_grp
+house = 0, fc_q_grp
+house = -0.59, fc_f_grp
+house = -0.0009, gd_im_grp
+house = -0.0009, gd_z_grp
+house = 0.89775, gd_bh_grp
+rep_group = gd_bh_grp
+money = 24
+num_kills = 0
+num_misn_successes = 0
+num_misn_failures = 0
+
+voice = trent_voice
+com_body = 3144214861
+com_head = 2223155968
+com_lefthand = 2479975689
+com_righthand = 2264565644
+body = 3144214861
+head = 2223155968
+lefthand = 2479975689
+righthand = 2264565644
+
+system = Ku02
+base = Ku02_02_Base
+
+ship_archetype = 2248965056
+
+equip = 2946888966, , 1
+equip = 2151659853, HpRunningLight04, 1
+equip = 2151659853, HpRunningLight05, 1
+equip = 2151659853, HpRunningLight08, 1
+equip = 2265531853, HpHeadlight, 1
+equip = 2494027655, HpDockLight01, 1
+equip = 2494027655, HpDockLight02, 1
+equip = 2500775748, HpContrail01, 1
+equip = 2500775748, HpContrail02, 1
+equip = 2300075273, HpCM01, 1
+equip = 2232532170, , 1
+equip = 2736134149, HpMine01, 1
+equip = 2314753344, HpEngine01, 1
+equip = 2314753344, dpeng01, 1
+equip = 2723858309, , 1
+equip = 2799531210, , 1
+equip = 2222916097, HpTurret01, 1
+equip = 2260551754, HpWeapon02, 1
+equip = 2260551754, HpWeapon01, 1
+equip = 2260551754, HpWeapon04, 1
+equip = 2260551754, HpWeapon03, 1
+equip = 3141004547, HpShield01, 1
+cargo = 2210881030, 70, , , 0
+
+last_base = Ku02_02_Base
+
+base_hull_status = 1
+base_collision_group = bw_port_wing01_lod1, 1
+base_collision_group = bw_star_wing01_lod1, 1
+
+base_equip = 2946888966, , 1
+base_equip = 2151659853, HpRunningLight04, 1
+base_equip = 2151659853, HpRunningLight05, 1
+base_equip = 2151659853, HpRunningLight08, 1
+base_equip = 2265531853, HpHeadlight, 1
+base_equip = 2494027655, HpDockLight01, 1
+base_equip = 2494027655, HpDockLight02, 1
+base_equip = 2500775748, HpContrail01, 1
+base_equip = 2500775748, HpContrail02, 1
+base_equip = 2300075273, HpCM01, 1
+base_equip = 2232532170, , 1
+base_equip = 2736134149, HpMine01, 1
+base_equip = 2314753344, HpEngine01, 1
+base_equip = 2314753344, dpeng01, 1
+base_equip = 2723858309, , 1
+base_equip = 2799531210, , 1
+base_equip = 2222916097, HpTurret01, 1
+base_equip = 2260551754, HpWeapon02, 1
+base_equip = 2260551754, HpWeapon01, 1
+base_equip = 2260551754, HpWeapon04, 1
+base_equip = 2260551754, HpWeapon03, 1
+base_equip = 3141004547, HpShield01, 1
+base_cargo = 2210881030, 70, , , 0
+
+wg = 0, hpturret01
+wg = 0, hpweapon02
+wg = 0, hpweapon01
+wg = 0, hpweapon04
+wg = 0, hpweapon03
+
+visit = 41933, 65
+visit = 2476714569, 1
+visit = 2760586187, 30
+
+
+interface = 1
+
+[mPlayer]
+can_dock = 1
+can_tl = 1
+rm_failed = 2, 2
+rm_failed = 4, 1
+total_cash_earned = 0.000000
+total_time_played = 1035.000000
+sys_visited = 2476714569
+base_visited = 3137327105
+base_visited = 3135262734
+[StoryInfo]
+ship_bought = false
+debug = 0
+[flhook]
+base.last_player_base = 0
+base.player_base = 0

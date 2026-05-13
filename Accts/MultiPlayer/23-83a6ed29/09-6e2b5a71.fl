@@ -1,0 +1,975 @@
+[player]
+description = 00310030002f00300035002f00310033002000310035003a00320034003a00350033
+tstamp = 30327263, 170509152
+name = 00420053007c007c007e0047006f0072007e
+rank = 86
+money = 127794980
+num_kills = 0
+num_misn_successes = 0
+num_misn_failures = 0
+voice = trent_voice
+com_body = 3052246286
+com_head = 2223155968
+com_lefthand = 2479975689
+com_righthand = 2264565644
+body = 3052246286
+head = 2223155968
+lefthand = 2479975689
+righthand = 2264565644
+system = li01
+base = li01_proxy_base
+ship_archetype = 2151746432
+equip = 2199282693, hpcm01, 1
+equip = 2402349700, hprunninglight01, 1
+equip = 2402349700, hprunninglight02, 1
+equip = 3065516173, , 1
+cargo = 2911012559, 1600, , , 0
+cargo = 2596081674, 1600, , , 0
+cargo = 2210962945, 60, , , 0
+last_base = li01_proxy_base
+base_hull_status = 1
+base_collision_group = dsy_dummy_group, 1
+base_equip = 2199282693, hpcm01, 1
+base_equip = 2402349700, hprunninglight01, 1
+base_equip = 2402349700, hprunninglight02, 1
+base_equip = 3065516173, , 1
+base_cargo = 2911012559, 1600, , , 0
+base_cargo = 2596081674, 1600, , , 0
+base_cargo = 2210962945, 60, , , 0
+wg = 0, hpturret01
+wg = 0, hpturret02
+wg = 0, hpturret03
+wg = 0, hpturret04
+wg = 0, hpturret07
+wg = 0, hpturret08
+wg = 0, hpturret09
+wg = 0, hpturret10
+wg = 0, hpturret11
+wg = 0, hpturret12
+wg = 0, hpturret15
+wg = 0, hpturret16
+wg = 0, hpturret05
+wg = 0, hpturret06
+wg = 0, hpturret17
+wg = 0, hpturret18
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+interface = 3
+base_equip = 2493263750, , 1
+base_equip = 2779996489, , 1
+cargo = 2402349700, 1, , , 0
+cargo = 2402349700, 1, , , 0
+base_equip = 2802020621, hprunninglight05, 1
+cargo = 2402349700, 1, , , 0
+cargo = 2402349700, 1, , , 0
+cargo = 2402349700, 1, , , 0
+cargo = 2402349700, 1, , , 0
+cargo = 2402349700, 1, , , 0
+equip = 2493263750, , 1
+equip = 2779996489, , 1
+equip = 2802020621, hprunninglight05, 1
+
+[mplayer]
+can_dock = 1
+can_tl = 1
+total_cash_earned = 0.000000
+total_time_played = 10772.000000
+sys_visited = 2206699082
+sys_visited = 2611985924
+sys_visited = 3147250178
+sys_visited = 3147256322
+sys_visited = 2610376194
+sys_visited = 2611955204
+sys_visited = 2743595594
+sys_visited = 2611949060
+sys_visited = 3086951555
+sys_visited = 3148851716
+sys_visited = 2610382338
+sys_visited = 2610413058
+sys_visited = 3147278850
+sys_visited = 3147022856
+sys_visited = 3147284994
+base_visited = 2805083916
+base_visited = 3102247810
+base_visited = 3093357390
+base_visited = 3094291273
+base_visited = 3089572169
+base_visited = 3089998156
+base_visited = 3094667844
+base_visited = 3095077443
+base_visited = 3090189698
+base_visited = 2809015302
+base_visited = 2808212481
+base_visited = 3094826885
+base_visited = 3144135424
+base_visited = 3103558280
+base_visited = 3102952079
+base_visited = 3090997316
+base_visited = 3090358339
+base_visited = 3102008900
+base_visited = 3102418499
+base_visited = 3102795598
+base_visited = 3103106892
+base_visited = 3099125070
+base_visited = 3099010377
+base_visited = 3099436364
+base_visited = 3097978177
+base_visited = 3097634115
+holes_visited = 3127308936
+holes_visited = 2367640450
+holes_visited = 2349539719
+holes_visited = 2505963660
+holes_visited = 3029394309
+holes_visited = 2260290183
+holes_visited = 2554644864
+holes_visited = 2845343886
+holes_visited = 2556119439
+holes_visited = 2417553550
+
+[flhook]
+base.last_player_base = 0
+base.player_base = 0
+conn.retbase = 0
+

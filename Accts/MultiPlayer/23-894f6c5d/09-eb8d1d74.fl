@@ -1,0 +1,421 @@
+[player]
+description = 00300035002f00310032002f00310033002000320030003a00350033003a00340039
+tstamp = 30297938, 3444384352
+name = 004b006900730073004d0079004100730073
+rank = 65
+house = 0.88425, li_n_grp
+house = 0.882, li_lsf_grp
+house = 0.855, li_p_grp
+house = 0, br_n_grp
+house = 0, br_p_grp
+house = 0.0054, ku_n_grp
+house = 0, ku_p_grp
+house = 0, rh_n_grp
+house = 0, rh_p_grp
+house = 0.00315, co_alg_grp
+house = 0.00585, co_be_grp
+house = 0, br_m_grp
+house = 0.00585, co_nws_grp
+house = -0.00315, co_hsp_grp
+house = 0.65225, co_ic_grp
+house = -0.3, co_khc_grp
+house = -0.28875, co_kt_grp
+house = 0, rh_m_grp
+house = 0.64955, co_me_grp
+house = 0.64415, co_ni_grp
+house = -0.00585, co_os_grp
+house = -0.29145, co_rs_grp
+house = -0.28875, co_shi_grp
+house = 0.65225, co_ss_grp
+house = -0.00225, co_ti_grp
+house = 0.64415, co_vr_grp
+house = -0.2946, fc_bd_grp
+house = -0.2973, fc_b_grp
+house = -0.65, fc_c_grp
+house = -0.2946, fc_fa_grp
+house = -0.2973, fc_g_grp
+house = -0.3054, fc_gc_grp
+house = -0.3, fc_h_grp
+house = -0.3036, fc_j_grp
+house = -0.65315, fc_lh_grp
+house = -0.69275, fc_lr_grp
+house = -0.3, fc_lwb_grp
+house = -0.6527, fc_m_grp
+house = -0.6509, fc_ou_grp
+house = -0.6446, fc_rh_grp
+house = 0, fc_or_grp
+house = -0.6581, fc_u_grp
+house = -0.61625, fc_x_grp
+house = 0, gd_gm_grp
+house = 0, fc_uk_grp
+house = -0.65, fc_n_grp
+house = -0.65, fc_ln_grp
+house = -0.65, fc_kn_grp
+house = -0.65, fc_rn_grp
+house = 0, fc_ouk_grp
+house = 0, fc_q_grp
+house = 0, fc_f_grp
+house = 0, gd_im_grp
+house = 0, gd_z_grp
+house = -0.29415, gd_bh_grp
+rep_group = li_n_grp
+money = 60665206
+num_kills = 0
+num_misn_successes = 0
+num_misn_failures = 0
+voice = trent_voice
+com_body = 3144214861
+com_head = 2223155968
+com_lefthand = 2479975689
+com_righthand = 2264565644
+body = 3144214861
+head = 2223155968
+lefthand = 2479975689
+righthand = 2264565644
+system = li01
+base = li01_01_base
+ship_archetype = 2170806662
+equip = 3131068425, , 1
+equip = 2314753344, hpengine01, 1
+equip = 2314753344, hpengine02, 1
+equip = 2490116425, hptorpedo01, 1
+equip = 2991259779, hpturret02, 1
+equip = 2991259779, hpturret03, 1
+equip = 2991259779, hpturret_l5_01, 1
+equip = 2991259779, hpturret04, 1
+equip = 2991259779, hpturret06, 1
+equip = 2991259779, hpturret05, 1
+equip = 2991259779, hpturret_l5_03, 1
+equip = 2991259779, hpturret_l5_04, 1
+equip = 2991259779, hpturret_l5_02, 1
+equip = 2991259779, hpturret_l5_05, 1
+equip = 3026992457, hpturret_l5_07, 1
+equip = 3026992457, hpturret01, 1
+equip = 3026992457, hpweapon01, 1
+equip = 2736156677, hpcm01, 1
+equip = 2186984325, , 1
+equip = 2203211205, hprunninglight06, 1
+equip = 2203211205, hprunninglight08, 1
+equip = 2203211205, hprunninglight09, 1
+equip = 2265531853, hpheadlight01, 1
+equip = 2265531853, hpheadlight02, 1
+equip = 2799531210, , 1
+equip = 3065516173, , 1
+equip = 3008199873, hpshield01, 1
+last_base = li01_01_base
+base_hull_status = 1
+base_collision_group = li_cruiser_cntrltwr_lod1, 1
+base_collision_group = li_cruiser_nose_lod1, 1
+base_collision_group = li_cruiser_engine01_lod1, 1
+base_collision_group = li_cruiser_engine02_lod1, 1
+base_collision_group = li_cruiser_engine03_lod1, 1
+base_collision_group = li_cruiser_engine04_lod1, 1
+base_equip = 3131068425, , 1
+base_equip = 2314753344, hpengine01, 1
+base_equip = 2314753344, hpengine02, 1
+base_equip = 2490116425, hptorpedo01, 1
+base_equip = 2991259779, hpturret02, 1
+base_equip = 2991259779, hpturret03, 1
+base_equip = 2991259779, hpturret_l5_01, 1
+base_equip = 2991259779, hpturret04, 1
+base_equip = 2991259779, hpturret06, 1
+base_equip = 2991259779, hpturret05, 1
+base_equip = 2991259779, hpturret_l5_03, 1
+base_equip = 2991259779, hpturret_l5_04, 1
+base_equip = 2991259779, hpturret_l5_02, 1
+base_equip = 2991259779, hpturret_l5_05, 1
+base_equip = 3026992457, hpturret_l5_07, 1
+base_equip = 3026992457, hpturret01, 1
+base_equip = 3026992457, hpweapon01, 1
+base_equip = 2736156677, hpcm01, 1
+base_equip = 2186984325, , 1
+base_equip = 2203211205, hprunninglight06, 1
+base_equip = 2203211205, hprunninglight08, 1
+base_equip = 2203211205, hprunninglight09, 1
+base_equip = 2265531853, hpheadlight01, 1
+base_equip = 2265531853, hpheadlight02, 1
+base_equip = 2799531210, , 1
+base_equip = 3065516173, , 1
+base_equip = 3008199873, hpshield01, 1
+wg = 0, hpweapon01
+wg = 0, hpturret01
+wg = 0, hpturret02
+wg = 0, hpturret03
+wg = 0, hpturret04
+wg = 0, hpturret05
+wg = 0, hpturret06
+wg = 0, hpturret_l5_01
+wg = 0, hpturret_l5_02
+wg = 0, hpturret_l5_03
+wg = 0, hpturret_l5_04
+wg = 0, hpturret_l5_05
+wg = 0, hpturret_l5_07
+wg = 0, hptorpedo01
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+interface = 3
+cargo = 2553359424, 1, , , 0
+base_equip = 2553359424, , 1
+equip = 2553359424, , 1
+
+[mplayer]
+vnpc = 2804956685, 2625803845, 5, 0
+vnpc = 2804956685, 2531902145, 13, 0
+vnpc = 2805644808, 2263468105, 7, 0
+vnpc = 2804956685, 2494363083, 2, 0
+vnpc = 2805644808, 3028320837, 1, 0
+vnpc = 2804923906, 2794052941, 4, 0
+vnpc = 2804956685, 2416075521, 1, 0
+rumor = 131233, 1
+can_dock = 1
+can_tl = 1
+ship_type_killed = 2917601664, 2
+ship_type_killed = 3072655695, 1
+rm_failed = 4, 1
+total_cash_earned = 0.000000
+total_time_played = 7682.000000
+sys_visited = 2208796239
+sys_visited = 2475664971
+base_visited = 2804956685
+base_visited = 2810150415
+base_visited = 2740108105
+base_visited = 2805644808
+base_visited = 2804923906
+holes_visited = 2950413706
+
+[storyinfo]
+ship_bought = false
+debug = 0
+
+[storyinfo]
+ship_bought = false
+debug = 0
+
+[storyinfo]
+ship_bought = false
+debug = 0
+
+[storyinfo]
+ship_bought = false
+debug = 0
+
+[flhook]
+base.last_player_base = 0
+base.player_base = 0
+

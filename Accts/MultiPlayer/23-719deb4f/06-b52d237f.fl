@@ -1,0 +1,173 @@
+[player]
+description = 00300038002f00300039002f00310034002000300030003a00330036003a00350039
+
+tstamp = 30389098,125820992
+name = 005a004f005a0045004c0041
+rank = 90
+house = 0.8, li_n_grp
+house = 0.8, li_lsf_grp
+house = 0.8, li_p_grp
+house = 0.8, br_n_grp
+house = 0.8, br_p_grp
+house = 0.8, ku_n_grp
+house = 0.8, ku_p_grp
+house = 0.8, rh_n_grp
+house = 0.8, rh_p_grp
+house = 0, co_alg_grp
+house = 0, co_be_grp
+house = 0, br_m_grp
+house = 0, co_nws_grp
+house = 0, co_hsp_grp
+house = 0, co_ic_grp
+house = 0, co_khc_grp
+house = 0, co_kt_grp
+house = 0, rh_m_grp
+house = 0, co_me_grp
+house = 0, co_ni_grp
+house = 0, co_os_grp
+house = 0, co_rs_grp
+house = 0, co_shi_grp
+house = 0, co_ss_grp
+house = 0, co_ti_grp
+house = 0, co_vr_grp
+house = -0.9, fc_bd_grp
+house = -0.9, fc_b_grp
+house = -0.9, fc_c_grp
+house = -0.9, fc_fa_grp
+house = -0.9, fc_g_grp
+house = -0.9, fc_gc_grp
+house = -0.9, fc_h_grp
+house = -0.9, fc_j_grp
+house = -0.9, fc_lh_grp
+house = -0.9, fc_lr_grp
+house = -0.9, fc_lwb_grp
+house = -0.9, fc_m_grp
+house = -0.9, fc_ou_grp
+house = -0.9, fc_rh_grp
+house = -0.9, fc_or_grp
+house = -0.9, fc_u_grp
+house = -0.9, fc_x_grp
+house = 0, gd_gm_grp
+house = -0.9, fc_uk_grp
+house = -0.9, fc_n_grp
+house = -0.7, fc_ln_grp
+house = -0.9, fc_kn_grp
+house = 0, fc_rn_grp
+house = -0.7, fc_ouk_grp
+house = -0.3, fc_q_grp
+house = -0.9, fc_f_grp
+house = 0, gd_im_grp
+house = 0, gd_z_grp
+house = 0.9, gd_bh_grp
+money = 925000000
+num_kills = 0
+num_misn_successes = 0
+num_misn_failures = 0
+
+voice = trent_voice
+com_body = 2664777412
+com_head = 2223155968
+com_lefthand = 2479975689
+com_righthand = 2264565644
+body = 2664777412
+head = 2223155968
+lefthand = 2479975689
+righthand = 2264565644
+
+system = li01
+pos = -4941.23,-101017,1439.2
+rotate = -7.91711,61.3913,2.71198
+
+ship_archetype = 2151746432
+
+cargo = 2911012559, 1500, , , 0
+cargo = 2596081674, 1500, , , 0
+equip = 2184748238, hprunninglight01, 1
+equip = 2184748238, hprunninglight02, 1
+equip = 3203756301, hprunninglight03, 1
+equip = 2203211205, hprunninglight04, 1
+equip = 2203211205, hprunninglight05, 1
+equip = 3203756301, hprunninglight06, 1
+equip = 3203756301, hprunninglight07, 1
+equip = 3203756301, hprunninglight08, 1
+equip = 3203756301, hprunninglight09, 1
+equip = 3203756301, hprunninglight10, 1
+equip = 2356232010, , 1
+equip = 3092952192, hpdockingbay01, 1
+
+last_base = li01_proxy_base
+
+base_hull_status = 1
+base_collision_group = dsy_dummy_group, 1
+
+base_cargo = 2911012559, 1500, , , 0
+base_cargo = 2596081674, 1500, , , 0
+base_equip = 2184748238, hprunninglight01, 1
+base_equip = 2184748238, hprunninglight02, 1
+base_equip = 3203756301, hprunninglight03, 1
+base_equip = 2203211205, hprunninglight04, 1
+base_equip = 2203211205, hprunninglight05, 1
+base_equip = 3203756301, hprunninglight06, 1
+base_equip = 3203756301, hprunninglight07, 1
+base_equip = 3203756301, hprunninglight08, 1
+base_equip = 3203756301, hprunninglight09, 1
+base_equip = 3203756301, hprunninglight10, 1
+base_equip = 2356232010, , 1
+base_equip = 3092952192, hpdockingbay01, 1
+
+wg = 0, hpturret01
+wg = 0, hpturret02
+wg = 0, hpturret05
+wg = 0, hpturret06
+wg = 0, hpturret03
+wg = 0, hpturret04
+wg = 0, hpturret15
+wg = 0, hpturret16
+wg = 0, hpturret17
+wg = 0, hpturret18
+
+
+
+
+interface = 3
+
+[mplayer]
+can_dock = 1
+can_tl = 1
+ship_type_killed = 2294760008, 1
+ship_type_killed = 2435672448, 1
+total_cash_earned = 0.000000
+total_time_played = 7062.000000
+sys_visited = 2208796239
+sys_visited = 3086998659
+sys_visited = 2743595594
+sys_visited = 3147022856
+base_visited = 2805988874
+base_visited = 2804956685
+base_visited = 3149903104
+base_visited = 2726296714
+base_visited = 2468635589
+[storyinfo]
+ship_bought = false
+debug = 1
+[storyinfo]
+ship_bought = false
+mission = mission_13
+missionnum = 0
+delta_worth = -1.000000
+debug = 1
+[storyinfo]
+ship_bought = false
+mission = mission_13
+missionnum = 0
+delta_worth = -1.000000
+debug = 1
+[storyinfo]
+ship_bought = false
+mission = mission_13
+missionnum = 0
+delta_worth = -1.000000
+debug = 1
+[flhook]
+base.last_player_base = 0
+base.player_base = 0

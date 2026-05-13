@@ -1,0 +1,91 @@
+[player]
+description = 00310031002f00330030002f00310030002000310032003a00300037003a00300030
+
+tstamp = 30118023,399324192
+name = 0042006f006d006200610072006400690072
+rank = 69
+money = 93322048
+num_kills = 0
+num_misn_successes = 0
+num_misn_failures = 0
+
+voice = trent_voice
+com_body = 3144214861
+com_head = 2223155968
+com_lefthand = 2479975689
+com_righthand = 2264565644
+body = 3144214861
+head = 2223155968
+lefthand = 2479975689
+righthand = 2264565644
+
+system = li01
+pos = 47501.4,-54.7757,5458.3
+rotate = 3.61361e-006,40,2.33809e-006
+
+ship_archetype = 2151746432
+
+equip = 2493263750, , 1
+equip = 2186984325, , 1
+equip = 2500775748, hpcontrail01, 1
+equip = 2500775748, hpcontrail02, 1
+cargo = 2911012559, 15, , , 0
+cargo = 2596081674, 15, , , 0
+cargo = 2801007561, 1, , , 0
+cargo = 2801007561, 1, , , 0
+cargo = 2500775748, 1, , , 0
+cargo = 2500775748, 1, , , 0
+cargo = 3148037441, 1, , , 0
+cargo = 3148037441, 1, , , 0
+cargo = 3148037441, 1, , , 0
+cargo = 3148037441, 1, , , 0
+cargo = 2759806466, 1, , , 0
+equip = 2779996489, , 1
+
+last_base = li01_07_base
+
+base_hull_status = 1
+base_collision_group = port_wing_lod1, 1
+base_collision_group = star_wing_lod1, 1
+
+base_equip = 2493263750, , 1
+base_equip = 2186984325, , 1
+base_equip = 2500775748, hpcontrail01, 1
+base_equip = 2500775748, hpcontrail02, 1
+base_cargo = 2911012559, 15, , , 0
+base_cargo = 2596081674, 15, , , 0
+base_cargo = 2801007561, 1, , , 0
+base_cargo = 2801007561, 1, , , 0
+base_cargo = 2500775748, 1, , , 0
+base_cargo = 2500775748, 1, , , 0
+base_cargo = 3148037441, 1, , , 0
+base_cargo = 3148037441, 1, , , 0
+base_cargo = 3148037441, 1, , , 0
+base_cargo = 3148037441, 1, , , 0
+base_cargo = 2759806466, 1, , , 0
+base_equip = 2779996489, , 1
+
+wg = 0, hpweapon01
+wg = 0, hpweapon02
+wg = 0, hpweapon03
+wg = 0, hpweapon04
+wg = 0, hpturret01
+
+
+
+interface = 1
+
+[mplayer]
+rumor = 253711, 1
+can_dock = 1
+can_tl = 1
+total_cash_earned = 0.000000
+total_time_played = 5206.000000
+sys_visited = 2208796239
+base_visited = 2804956685
+base_visited = 3175555400
+base_visited = 3176276290
+base_visited = 2725952648
+base_visited = 2805644808
+base_visited = 2726296714
+base_visited = 2804923906

@@ -1,0 +1,124 @@
+[player]
+description = 00300032002f00300039002f00310032002000310033003a00310032003a00350030
+tstamp = 30205740, 2257700960
+name = 00560069007600610074
+rank = 18
+money = 114244
+num_kills = 0
+num_misn_successes = 0
+num_misn_failures = 0
+voice = trent_voice
+com_body = 3144214861
+com_head = 2223155968
+com_lefthand = 2479975689
+com_righthand = 2264565644
+body = 3144214861
+head = 2223155968
+lefthand = 2479975689
+righthand = 2264565644
+system = li01
+base = li01_proxy_base
+ship_archetype = 2151746432
+equip = 2779996489, , 1
+equip = 2493263750, , 1
+equip = 2420932431, hpweapon02, 1
+equip = 2420932431, hpweapon01, 1
+equip = 2521107725, hpweapon03, 1
+equip = 3112104454, hptorpedo01, 1
+equip = 2736134149, hpcm01, 1
+equip = 2723858309, , 1
+equip = 2265531853, hpheadlight, 1
+equip = 2470059588, hprunninglight01, 1
+equip = 2470059588, hprunninglight02, 1
+equip = 2494027655, hpdocklight01, 1
+equip = 2494027655, hpdocklight02, 1
+equip = 2500775748, hpcontrail01, 1
+equip = 2500775748, hpcontrail02, 1
+last_base = li01_proxy_base
+base_hull_status = 1
+base_collision_group = li_star_wing_lod1, 1
+base_collision_group = li_port_wing_lod1, 1
+base_collision_group = li_spoiler_lod1, 1
+base_equip = 2779996489, , 1
+base_equip = 2493263750, , 1
+base_equip = 2420932431, hpweapon02, 1
+base_equip = 2420932431, hpweapon01, 1
+base_equip = 2521107725, hpweapon03, 1
+base_equip = 3112104454, hptorpedo01, 1
+base_equip = 2736134149, hpcm01, 1
+base_equip = 2723858309, , 1
+base_equip = 2265531853, hpheadlight, 1
+base_equip = 2470059588, hprunninglight01, 1
+base_equip = 2470059588, hprunninglight02, 1
+base_equip = 2494027655, hpdocklight01, 1
+base_equip = 2494027655, hpdocklight02, 1
+base_equip = 2500775748, hpcontrail01, 1
+base_equip = 2500775748, hpcontrail02, 1
+wg = 0, hpweapon03
+wg = 0, hpweapon04
+wg = 0, hpweapon05
+wg = 0, hpweapon01
+wg = 0, hpturret01
+wg = 0, hpweapon02
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+interface = 3
+cargo = 2851612992, 1, , , 0
+cargo = 2260588618, 1, , , 0
+cargo = 2472051085, 1, , , 0
+cargo = 2521107725, 1, , , 0
+cargo = 2470059588, 1, , , 0
+cargo = 2470059588, 1, , , 0
+
+[mplayer]
+can_dock = 1
+can_tl = 1
+ship_type_killed = 2151746432, 6
+ship_type_killed = 2248965056, 6
+ship_type_killed = 2917601664, 15
+total_cash_earned = 0.000000
+total_time_played = 18467.000000
+

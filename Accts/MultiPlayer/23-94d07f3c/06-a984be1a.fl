@@ -1,0 +1,366 @@
+[player]
+description = 00300036002f00310031002f00310032002000320033003a00350038003a00330035
+tstamp = 30230574, 487972096
+name = 005300650072006700650079
+rank = 11
+money = 37554
+num_kills = 0
+num_misn_successes = 0
+num_misn_failures = 0
+voice = trent_voice
+com_body = 3144214861
+com_head = 2223155968
+com_lefthand = 2479975689
+com_righthand = 2264565644
+body = 3144214861
+head = 2223155968
+lefthand = 2479975689
+righthand = 2264565644
+system = li01
+base = li01_proxy_base
+ship_archetype = 2151746432
+equip = 2779996489, , 1
+equip = 2493263750, , 1
+equip = 3139431687, hpshield01, 1
+equip = 2521107725, hpweapon03, 1
+cargo = 2682414537, 1, , , 0
+equip = 3219270090, hpweapon01, 1
+equip = 2736134149, hpcm01, 1
+equip = 2723858309, , 1
+equip = 2265531853, hpheadlight, 1
+equip = 2494027655, hpdocklight01, 1
+equip = 2494027655, hpdocklight02, 1
+equip = 2802020621, hprunninglight01, 1
+equip = 2802020621, hprunninglight02, 1
+equip = 2802020621, hprunninglight05, 1
+equip = 2500775748, hpcontrail01, 1
+equip = 2500775748, hpcontrail02, 1
+cargo = 2911012559, 10, , , 0
+cargo = 2596081674, 10, , , 0
+cargo = 2472077709, 1, , , 0
+cargo = 3139925646, 21, , , 0
+cargo = 2593638279, 11, , , 0
+cargo = 2587568141, 3, , , 0
+equip = 2487743822, hpweapon02, 1
+last_base = li01_proxy_base
+base_hull_status = 1
+base_collision_group = port_wing_lod1, 1
+base_collision_group = star_wing_lod1, 1
+base_equip = 2779996489, , 1
+base_equip = 2493263750, , 1
+base_equip = 3139431687, hpshield01, 1
+base_equip = 2521107725, hpweapon03, 1
+base_cargo = 2682414537, 1, , , 0
+base_equip = 3219270090, hpweapon01, 1
+base_equip = 2736134149, hpcm01, 1
+base_equip = 2723858309, , 1
+base_equip = 2265531853, hpheadlight, 1
+base_equip = 2494027655, hpdocklight01, 1
+base_equip = 2494027655, hpdocklight02, 1
+base_equip = 2802020621, hprunninglight01, 1
+base_equip = 2802020621, hprunninglight02, 1
+base_equip = 2802020621, hprunninglight05, 1
+base_equip = 2500775748, hpcontrail01, 1
+base_equip = 2500775748, hpcontrail02, 1
+base_cargo = 2911012559, 10, , , 0
+base_cargo = 2596081674, 10, , , 0
+base_cargo = 2472077709, 1, , , 0
+base_cargo = 3139925646, 21, , , 0
+base_cargo = 2593638279, 11, , , 0
+base_cargo = 2587568141, 3, , , 0
+base_equip = 2487743822, hpweapon02, 1
+wg = 0, hpweapon01
+wg = 0, hpweapon03
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+interface = 3
+cargo = 2314753344, 1, , , 0
+
+[mplayer]
+can_dock = 1
+can_tl = 1
+ship_type_killed = 2151746432, 1
+ship_type_killed = 2917601664, 10
+rm_completed = 0, 3
+rm_completed = 2, 1
+rm_completed = 4, 1
+rm_failed = 0, 5
+rm_failed = 2, 1
+rm_failed = 5, 1
+total_cash_earned = 0.000000
+total_time_played = 12942.000000
+sys_visited = 2208796239
+base_visited = 2809806349
+base_visited = 2804956685
+

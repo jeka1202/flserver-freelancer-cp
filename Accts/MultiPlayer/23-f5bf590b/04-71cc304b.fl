@@ -1,0 +1,176 @@
+[player]
+description = 00310031002f00320034002f00310031002000320033003a00330035003a00340039
+
+tstamp = 30190337,3422271248
+name = 0046006500270065
+rank = 65
+house = 0.9, li_n_grp
+house = 0.9, li_lsf_grp
+house = 0.8, li_p_grp
+house = 0.03, br_n_grp
+house = 0.03, br_p_grp
+house = 0.03, ku_n_grp
+house = 0.03, ku_p_grp
+house = 0.03, rh_n_grp
+house = 0.03, rh_p_grp
+house = 0, co_alg_grp
+house = 0, co_be_grp
+house = 0, br_m_grp
+house = 0, co_nws_grp
+house = 0.6, co_hsp_grp
+house = 0.68, co_ic_grp
+house = -0.3, co_khc_grp
+house = -0.3, co_kt_grp
+house = 0, rh_m_grp
+house = 0.68, co_me_grp
+house = 0.68, co_ni_grp
+house = 0.03, co_os_grp
+house = -0.3, co_rs_grp
+house = -0.3, co_shi_grp
+house = 0.71, co_ss_grp
+house = 0, co_ti_grp
+house = 0.68, co_vr_grp
+house = -0.3, fc_bd_grp
+house = -0.3, fc_b_grp
+house = 0.53, fc_c_grp
+house = -0.3, fc_fa_grp
+house = -0.3, fc_g_grp
+house = -0.3, fc_gc_grp
+house = -0.3, fc_h_grp
+house = -0.3, fc_j_grp
+house = 0.53, fc_lh_grp
+house = 0.5, fc_lr_grp
+house = -0.33, fc_lwb_grp
+house = 0.59, fc_m_grp
+house = 0.38, fc_ou_grp
+house = 0.56, fc_rh_grp
+house = 0, fc_or_grp
+house = 0.56, fc_u_grp
+house = 0.53, fc_x_grp
+house = 0, gd_gm_grp
+house = 0, fc_uk_grp
+house = 0.59, fc_n_grp
+house = 0.59, fc_ln_grp
+house = 0.59, fc_kn_grp
+house = 0.59, fc_rn_grp
+house = 0, fc_ouk_grp
+house = 0, fc_q_grp
+house = 0, fc_f_grp
+house = 0, gd_im_grp
+house = 0, gd_z_grp
+house = -0.3, gd_bh_grp
+money = 220259
+num_kills = 1
+num_misn_successes = 0
+num_misn_failures = 0
+
+voice = trent_voice
+com_body = 3144214861
+com_head = 2223155968
+com_lefthand = 2479975689
+com_righthand = 2264565644
+body = 3144214861
+head = 2223155968
+lefthand = 2479975689
+righthand = 2264565644
+
+system = li01
+base = li01_10_base
+
+ship_archetype = 2316709831
+
+equip = 2553359424, , 1
+equip = 2227120193, , 1
+equip = 2974645449, hpshield01, 1
+equip = 2504894597, hpturret_prison_01, 1
+equip = 2575207942, hptorpedo01, 1
+equip = 3186340170, hpturret_prison_02, 1
+equip = 3186340170, hpturret_prison_03, 1
+equip = 3186340170, hpturret_prison_04, 1
+equip = 3186340170, hpturret_prison_06, 1
+equip = 3186340170, hpturret_prison_07, 1
+equip = 3186340170, hpturret_prison_08, 1
+equip = 3186340170, hpturret_prison_09, 1
+equip = 3186340170, hpturret_prison_10, 1
+equip = 3186340170, hpturret_prison_05, 1
+equip = 2736134149, hpmine01, 1
+equip = 2723858309, , 1
+equip = 2289839304, hprunninglight07, 1
+equip = 2289839304, hprunninglight15, 1
+equip = 2289839304, hprunninglight09, 1
+equip = 2799531210, , 1
+equip = 2771314693, , 1
+cargo = 2833349062, 60, , , 0
+cargo = 2210881030, 55, , , 0
+cargo = 2502579789, 70, , , 0
+
+last_base = li01_10_base
+
+base_hull_status = 1
+base_collision_group = prison_frnt_lod1, 1
+base_collision_group = prison_mid_lod1, 1
+base_collision_group = prison_rear_lod1, 1
+base_collision_group = prison_reactor_lod1, 1
+
+base_equip = 2553359424, , 1
+base_equip = 2227120193, , 1
+base_equip = 2974645449, hpshield01, 1
+base_equip = 2504894597, hpturret_prison_01, 1
+base_equip = 2575207942, hptorpedo01, 1
+base_equip = 3186340170, hpturret_prison_02, 1
+base_equip = 3186340170, hpturret_prison_03, 1
+base_equip = 3186340170, hpturret_prison_04, 1
+base_equip = 3186340170, hpturret_prison_06, 1
+base_equip = 3186340170, hpturret_prison_07, 1
+base_equip = 3186340170, hpturret_prison_08, 1
+base_equip = 3186340170, hpturret_prison_09, 1
+base_equip = 3186340170, hpturret_prison_10, 1
+base_equip = 3186340170, hpturret_prison_05, 1
+base_equip = 2736134149, hpmine01, 1
+base_equip = 2723858309, , 1
+base_equip = 2289839304, hprunninglight07, 1
+base_equip = 2289839304, hprunninglight15, 1
+base_equip = 2289839304, hprunninglight09, 1
+base_equip = 2799531210, , 1
+base_equip = 2771314693, , 1
+base_cargo = 2833349062, 60, , , 0
+base_cargo = 2210881030, 55, , , 0
+base_cargo = 2502579789, 70, , , 0
+
+wg = 0, hpturret_prison_01
+wg = 0, hpturret_prison_02
+wg = 0, hpturret_prison_03
+wg = 0, hpturret_prison_04
+wg = 0, hpturret_prison_05
+wg = 0, hpturret_prison_06
+wg = 0, hpturret_prison_07
+wg = 0, hpturret_prison_08
+wg = 0, hpturret_prison_09
+wg = 0, hpturret_prison_10
+
+
+
+interface = 1
+
+[mplayer]
+rumor = 253684, 1
+can_dock = 1
+can_tl = 1
+total_cash_earned = 0.000000
+total_time_played = 6787.000000
+sys_visited = 2208796239
+sys_visited = 2745633359
+base_visited = 2804956685
+base_visited = 2725608591
+base_visited = 2724232325
+base_visited = 2804923906
+base_visited = 2814294786
+[storyinfo]
+ship_bought = false
+debug = 0
+[storyinfo]
+ship_bought = false
+debug = 0
+[storyinfo]
+ship_bought = false
+debug = 0

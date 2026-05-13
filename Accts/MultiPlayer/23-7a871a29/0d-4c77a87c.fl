@@ -1,0 +1,423 @@
+[player]
+description = 00300031002f00330030002f00310033002000310034003a00340039003a00330036
+tstamp = 30277369, 103575776
+name = 0041006c0065007800560061006c0065006e00740069006e0065
+rank = 74
+money = 155222138
+num_kills = 0
+num_misn_successes = 0
+num_misn_failures = 0
+voice = trent_voice
+com_body = 3144214861
+com_head = 2223155968
+com_lefthand = 2479975689
+com_righthand = 2264565644
+body = 3144214861
+head = 2223155968
+lefthand = 2479975689
+righthand = 2264565644
+system = li01
+pos = -24342.4, 5.82697, 8172.88
+rotate = 180, 87.1774, 180
+ship_archetype = 2151746432
+hull_status = 0.915453
+equip = 2494027655, hpdocklight01, 1
+equip = 2494027655, hpdocklight02, 1
+equip = 2500775748, hpcontrail01, 1
+equip = 2500775748, hpcontrail02, 1
+equip = 2300075273, hpmine01, 0.997999
+cargo = 2502579789, 69, , , 0
+cargo = 2596081674, 99, , , 0
+cargo = 2911012559, 145, , , 0
+cargo = 2442885122, 1, , , 0
+cargo = 2900244931, 1, , , 0
+cargo = 2851708873, 1, , , 0
+cargo = 2487711055, 1, , , 0
+cargo = 3148052166, 10, , , 0
+last_base = li01_proxy_base
+base_hull_status = 0.920049
+base_equip = 2494027655, hpdocklight01, 1
+base_equip = 2494027655, hpdocklight02, 1
+base_equip = 2500775748, hpcontrail01, 1
+base_equip = 2500775748, hpcontrail02, 1
+base_equip = 2300075273, hpmine01, 1
+base_cargo = 2502579789, 69, , , 0
+base_cargo = 2596081674, 94, , , 0
+base_cargo = 2911012559, 140, , , 0
+wg = 0, hpturret01
+wg = 0, hpturret02
+wg = 0, hpweapon03
+wg = 0, hpweapon04
+wg = 0, hpweapon02
+wg = 0, hpweapon01
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+interface = 3
+base_equip = 2493263750, , 1
+base_equip = 2779996489, , 1
+equip = 2493263750, , 1
+equip = 2779996489, , 1
+
+[mplayer]
+vnpc = 2808212481, 3162435916, 1, 0
+vnpc = 3102952079, 2280889856, 2, 0
+vnpc = 3102952079, 2307198478, 8, 0
+vnpc = 3102952079, 2750597120, 4, 0
+vnpc = 3102952079, 2760164618, 2, 0
+vnpc = 3102952079, 2415102464, 2, 0
+rumor = 133191, 1
+rumor = 252711, 1
+can_dock = 1
+can_tl = 1
+ship_type_killed = 2270462412, 2
+rm_completed = 0, 1
+total_cash_earned = 0.000000
+total_time_played = 12701.000000
+sys_visited = 2208796239
+sys_visited = 2208767567
+sys_visited = 3086998659
+sys_visited = 3086951555
+sys_visited = 2611949060
+sys_visited = 2743595594
+sys_visited = 3148851716
+base_visited = 2809806349
+base_visited = 3094826885
+base_visited = 2808212481
+base_visited = 3102952079
+holes_visited = 2618356613
+holes_visited = 2259929730
+holes_visited = 2258864778
+holes_visited = 2572204933
+
+[flhook]
+base.last_player_base = 0
+base.player_base = 0
+

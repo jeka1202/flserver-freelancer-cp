@@ -1,0 +1,452 @@
+[player]
+description = 00300037002f00310036002f00310034002000300030003a00340031003a00340035
+tstamp = 30384270, 3095916080
+name = 00430061006d007000650072004d0061006e0032
+rank = 7
+house = 0.9, li_n_grp
+house = 0.9, li_lsf_grp
+house = 0.87163, li_p_grp
+house = 0.005975, br_n_grp
+house = 0.005975, br_p_grp
+house = 0.007775, ku_n_grp
+house = 0.005975, ku_p_grp
+house = 0.005975, rh_n_grp
+house = 0.005975, rh_p_grp
+house = 0.067125, co_alg_grp
+house = 0.032745, co_be_grp
+house = 0, br_m_grp
+house = 0.009225, co_nws_grp
+house = 0.066295, co_hsp_grp
+house = 0.735565, co_ic_grp
+house = -0.3, co_khc_grp
+house = -0.230175, co_kt_grp
+house = 0, rh_m_grp
+house = 0.723738, co_me_grp
+house = 0.676186, co_ni_grp
+house = 0.0559, co_os_grp
+house = -0.219315, co_rs_grp
+house = -0.230175, co_shi_grp
+house = 0.84221, co_ss_grp
+house = 0.0125, co_ti_grp
+house = 0.67115, co_vr_grp
+house = -0.28644, fc_bd_grp
+house = -0.32262, fc_b_grp
+house = -0.655975, fc_c_grp
+house = -0.29839, fc_fa_grp
+house = -0.28734, fc_g_grp
+house = -0.29004, fc_gc_grp
+house = -0.27648, fc_h_grp
+house = -0.290185, fc_j_grp
+house = -0.682805, fc_lh_grp
+house = -0.6627, fc_lr_grp
+house = -0.294215, fc_lwb_grp
+house = -0.645115, fc_m_grp
+house = -0.667625, fc_ou_grp
+house = -0.630655, fc_rh_grp
+house = 0, fc_or_grp
+house = -0.612657, fc_u_grp
+house = -0.9, fc_x_grp
+house = 0, gd_gm_grp
+house = 0, fc_uk_grp
+house = -0.65, fc_n_grp
+house = -0.65, fc_ln_grp
+house = -0.65, fc_kn_grp
+house = -0.65, fc_rn_grp
+house = 0, fc_ouk_grp
+house = 0, fc_q_grp
+house = 0, fc_f_grp
+house = 0, gd_im_grp
+house = -0.03528, gd_z_grp
+house = -0.220215, gd_bh_grp
+rep_group = li_lsf_grp
+money = 29018
+num_kills = 0
+num_misn_successes = 0
+num_misn_failures = 0
+voice = trent_voice
+com_body = 3144214861
+com_head = 2223155968
+com_lefthand = 2479975689
+com_righthand = 2264565644
+body = 3144214861
+head = 2223155968
+lefthand = 2479975689
+righthand = 2264565644
+system = li01
+base = li01_09_base
+location = 3099282181
+ship_archetype = 2917601664
+equip = 2864006792, , 1
+equip = 3217975054, , 1
+equip = 3138907398, hpshield01, 1
+equip = 2487743822, hpweapon01, 1
+equip = 2988811471, hpweapon02, 1
+equip = 2736134149, hpcm01, 1
+equip = 2723858309, , 1
+equip = 2265531853, hpheadlight, 1
+equip = 2494027655, hpdocklight01, 1
+equip = 2494027655, hpdocklight02, 1
+equip = 2801007561, hprunninglight01, 1
+equip = 2801007561, hprunninglight02, 1
+equip = 2801007561, hprunninglight04, 1
+equip = 2801007561, hprunninglight05, 1
+equip = 2801007561, hprunninglight06, 1
+equip = 2801007561, hprunninglight07, 1
+equip = 2799531210, , 1
+cargo = 3139925646, 8, , , 0
+last_base = li01_09_base
+base_hull_status = 1
+base_collision_group = fins_mid_lod1, 1
+base_collision_group = fins_top_lod1, 1
+base_equip = 2864006792, , 1
+base_equip = 3217975054, , 1
+base_equip = 3138907398, hpshield01, 1
+base_equip = 2487743822, hpweapon01, 1
+base_equip = 2988811471, hpweapon02, 1
+base_equip = 2736134149, hpcm01, 1
+base_equip = 2723858309, , 1
+base_equip = 2265531853, hpheadlight, 1
+base_equip = 2494027655, hpdocklight01, 1
+base_equip = 2494027655, hpdocklight02, 1
+base_equip = 2801007561, hprunninglight01, 1
+base_equip = 2801007561, hprunninglight02, 1
+base_equip = 2801007561, hprunninglight04, 1
+base_equip = 2801007561, hprunninglight05, 1
+base_equip = 2801007561, hprunninglight06, 1
+base_equip = 2801007561, hprunninglight07, 1
+base_equip = 2799531210, , 1
+base_cargo = 3139925646, 8, , , 0
+wg = 0, hpweapon02
+wg = 0, hpweapon03
+wg = 0, hpcm01
+wg = 1, hpweapon01
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+interface = 1
+cargo = 2851612992, 1, , , 0
+cargo = 2988811471, 1, , , 0
+cargo = 2801007561, 1, , , 0
+
+[mplayer]
+vnpc = 2725608591, 3007467273, 2, 3
+vnpc = 2809806349, 2854477583, 1, 0
+can_dock = 1
+can_tl = 1
+ship_type_killed = 2151746432, 19
+ship_type_killed = 2702048323, 2
+rm_completed = 0, 2
+rm_completed = 5, 1
+rm_failed = 0, 1
+rm_failed = 1, 1
+rm_failed = 2, 1
+total_cash_earned = 0.000000
+total_time_played = 6541.000000
+sys_visited = 2208796239
+base_visited = 2804956685
+base_visited = 2725608591
+base_visited = 2809806349
+base_visited = 2805644808
+base_visited = 2804923906
+base_visited = 2725952648
+base_visited = 2804612608
+
+[flhook]
+base.last_player_base = 0
+base.player_base = 0
+

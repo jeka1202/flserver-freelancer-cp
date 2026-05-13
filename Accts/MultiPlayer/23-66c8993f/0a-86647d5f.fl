@@ -1,0 +1,97 @@
+[player]
+description = 00310031002f00310039002f00310030002000320032003a00310037003a00350033
+
+tstamp = 30115895,2616320080
+name = 0050007200610076006f00730079006400690065
+rank = 83
+money = 532318624
+num_kills = 0
+num_misn_successes = 0
+num_misn_failures = 0
+
+voice = trent_voice
+com_body = 3144214861
+com_head = 2223155968
+com_lefthand = 2479975689
+com_righthand = 2264565644
+body = 3144214861
+head = 2223155968
+lefthand = 2479975689
+righthand = 2264565644
+
+system = li01
+base = li01_01_base
+
+ship_archetype = 2151746432
+
+equip = 2779996489, , 1
+equip = 2493263750, , 1
+equip = 2500775748, hpcontrail01, 1
+equip = 2500775748, hpcontrail02, 1
+cargo = 2911012559, 51, , , 0
+cargo = 2596081674, 38, , , 0
+cargo = 3116146697, 1, , , 0
+cargo = 2525110029, 1, , , 0
+cargo = 2525110029, 1, , , 0
+cargo = 2525110029, 1, , , 0
+cargo = 2687356491, 1, , , 0
+
+last_base = li01_01_base
+
+base_hull_status = 1
+base_collision_group = port_wing_lod1, 1
+base_collision_group = star_wing_lod1, 1
+
+base_equip = 2779996489, , 1
+base_equip = 2493263750, , 1
+base_equip = 2500775748, hpcontrail01, 1
+base_equip = 2500775748, hpcontrail02, 1
+base_cargo = 2911012559, 51, , , 0
+base_cargo = 2596081674, 38, , , 0
+base_cargo = 3116146697, 1, , , 0
+base_cargo = 2525110029, 1, , , 0
+base_cargo = 2525110029, 1, , , 0
+base_cargo = 2525110029, 1, , , 0
+base_cargo = 2687356491, 1, , , 0
+
+wg = 0, hpturret01
+wg = 0, hpweapon05
+wg = 0, hpweapon01
+wg = 0, hpweapon02
+wg = 0, hpweapon03
+wg = 0, hpweapon04
+
+
+
+interface = 3
+
+[mplayer]
+can_dock = 1
+can_tl = 1
+ship_type_killed = 2529638985, 5
+ship_type_killed = 2701984835, 3
+ship_type_killed = 2820316814, 12
+ship_type_killed = 3072655695, 6
+rm_completed = 0, 2
+rm_completed = 1, 1
+rm_aborted = 1, 1
+total_cash_earned = 0.000000
+total_time_played = 36918.000000
+sys_visited = 2208796239
+base_visited = 2804956685
+base_visited = 2789155215
+base_visited = 2804923906
+base_visited = 2792153730
+base_visited = 2788123015
+base_visited = 2805644808
+base_visited = 2792579725
+base_visited = 2809806349
+base_visited = 2804612608
+base_visited = 2724232325
+base_visited = 3176620352
+base_visited = 3103439243
+base_visited = 2803924485
+base_visited = 2813606663
+base_visited = 2814294786
+base_visited = 2812361485
+base_visited = 2787778949

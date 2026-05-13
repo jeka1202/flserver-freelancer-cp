@@ -1,0 +1,176 @@
+[player]
+description = 00300038002f00310033002f00310034002000300035003a00310034003a00330039
+
+tstamp = 30389941,2071480464
+name = 00610073006400660066
+rank = 87
+house = 0.9, li_n_grp
+house = 0.665, li_lsf_grp
+house = 0.03, li_p_grp
+house = 0.015, br_n_grp
+house = 0.015, br_p_grp
+house = 0.1, ku_n_grp
+house = 0.1, ku_p_grp
+house = 0.115, rh_n_grp
+house = 0.115, rh_p_grp
+house = 0, co_alg_grp
+house = 0, co_be_grp
+house = 0, br_m_grp
+house = 0, co_nws_grp
+house = 0, co_hsp_grp
+house = 0, co_ic_grp
+house = 0.3, co_khc_grp
+house = 0.3, co_kt_grp
+house = 0, rh_m_grp
+house = 0, co_me_grp
+house = 0, co_ni_grp
+house = 0, co_os_grp
+house = 0.3, co_rs_grp
+house = 0.3, co_shi_grp
+house = 0, co_ss_grp
+house = 0, co_ti_grp
+house = 0, co_vr_grp
+house = 0.27, fc_bd_grp
+house = 0.27, fc_b_grp
+house = 0.34, fc_c_grp
+house = 0.27, fc_fa_grp
+house = 0.27, fc_g_grp
+house = 0.62, fc_gc_grp
+house = 0.37, fc_h_grp
+house = 0.285, fc_j_grp
+house = 0.52, fc_lh_grp
+house = 0.62, fc_lr_grp
+house = -0.58, fc_lwb_grp
+house = 0.62, fc_m_grp
+house = 0.34, fc_ou_grp
+house = 0.62, fc_rh_grp
+house = 0.27, fc_or_grp
+house = 0.62, fc_u_grp
+house = 0.72, fc_x_grp
+house = 0.1, gd_gm_grp
+house = 0, fc_uk_grp
+house = -0.9, fc_n_grp
+house = 0.65, fc_ln_grp
+house = 0.65, fc_kn_grp
+house = 0.65, fc_rn_grp
+house = 0.3, fc_ouk_grp
+house = 0, fc_q_grp
+house = 0.3, fc_f_grp
+house = 0.15, gd_im_grp
+house = 0, gd_z_grp
+house = 0.6, gd_bh_grp
+rep_group = li_n_grp
+money = 773136950
+num_kills = 0
+num_misn_successes = 0
+num_misn_failures = 0
+
+voice = trent_voice
+com_body = 3144214861
+com_head = 2223155968
+com_lefthand = 2479975689
+com_righthand = 2264565644
+body = 3144214861
+head = 2223155968
+lefthand = 2479975689
+righthand = 2264565644
+
+system = bw03
+base = bw03_01_base
+
+ship_archetype = 2151746432
+
+equip = 2232532170, hpengine01, 1
+equip = 3090672911, hpshield01, 1
+equip = 2723858309, , 1
+equip = 2151659853, hprunninglight01, 1
+equip = 2151659853, hprunninglight02, 1
+equip = 2151659853, hprunninglight03, 1
+equip = 2151659853, hprunninglight04, 1
+equip = 2151659853, hprunninglight05, 1
+equip = 2151659853, hprunninglight08, 1
+equip = 2265531853, hpheadlight, 1
+equip = 2494027655, hpdocklight01, 1
+equip = 2494027655, hpdocklight02, 1
+equip = 2500775748, hpcontrail01, 1
+equip = 2500775748, hpcontrail02, 1
+equip = 2315117507, hpweapon01, 1
+equip = 2315117507, hpweapon02, 1
+equip = 2315117507, hpweapon03, 1
+equip = 2315117507, hpweapon04, 1
+equip = 2315117507, hpweapon05, 1
+cargo = 2911012559, 3, , , 0
+cargo = 2596081674, 1, , , 0
+
+last_base = bw03_01_base
+
+base_hull_status = 1
+
+base_equip = 2232532170, hpengine01, 1
+base_equip = 3090672911, hpshield01, 1
+base_equip = 2723858309, , 1
+base_equip = 2151659853, hprunninglight01, 1
+base_equip = 2151659853, hprunninglight02, 1
+base_equip = 2151659853, hprunninglight03, 1
+base_equip = 2151659853, hprunninglight04, 1
+base_equip = 2151659853, hprunninglight05, 1
+base_equip = 2151659853, hprunninglight08, 1
+base_equip = 2265531853, hpheadlight, 1
+base_equip = 2494027655, hpdocklight01, 1
+base_equip = 2494027655, hpdocklight02, 1
+base_equip = 2500775748, hpcontrail01, 1
+base_equip = 2500775748, hpcontrail02, 1
+base_equip = 2315117507, hpweapon01, 1
+base_equip = 2315117507, hpweapon02, 1
+base_equip = 2315117507, hpweapon03, 1
+base_equip = 2315117507, hpweapon04, 1
+base_equip = 2315117507, hpweapon05, 1
+base_cargo = 2911012559, 3, , , 0
+base_cargo = 2596081674, 1, , , 0
+
+wg = 0, hpweapon01
+wg = 0, hpweapon02
+wg = 0, hpweapon03
+wg = 0, hpweapon04
+wg = 0, hpweapon05
+
+
+
+
+interface = 1
+
+[mplayer]
+vnpc = 3103439243, 2848735816, 1, 0 ; iw03_01_base, 0xa9cc4248
+vnpc = 3103439243, 2567298625, 1, 0 ; iw03_01_base, 0x9905de41
+vnpc = 3103439243, 2444529095, 1, 0 ; iw03_01_base, 0x91b48dc7
+vnpc = 3181078090, 2778353796, 1, 0 ; br02_04_base, 0xa59a5084
+vnpc = 3181078090, 2338903690, 1, 0 ; br02_04_base, 0x8b68d68a
+can_dock = 1
+can_tl = 1
+total_cash_earned = 0.000000
+total_time_played = 2641.000000
+sys_visited = 2208796239
+sys_visited = 2745692751
+sys_visited = 3146754635
+sys_visited = 2409077762
+sys_visited = 2945966082
+sys_visited = 2945943554
+sys_visited = 3147284994
+sys_visited = 3147278850
+base_visited = 2804956685
+base_visited = 2810150415
+base_visited = 2808347904
+base_visited = 3103439243
+base_visited = 3181078090
+base_visited = 3179390535
+base_visited = 3099125070
+base_visited = 3103729481
+[storyinfo]
+ship_bought = false
+mission = mission_13
+missionnum = 41
+delta_worth = -1.000000
+debug = 0
+[flhook]
+base.last_player_base = 0
+base.player_base = 0

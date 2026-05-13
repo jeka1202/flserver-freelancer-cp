@@ -1,0 +1,188 @@
+
+[Player]
+description = 00300035002f00310034002f00310039002000310032003a00330031003a00330033
+
+tstamp = 30739024,4148860896
+name = 004e006900740072006f0078
+rank = 49
+house = -0.65, li_n_grp
+house = -0.65, li_lsf_grp
+house = -0.65, li_p_grp
+house = -0.65, br_n_grp
+house = -0.65, br_p_grp
+house = -0.65, ku_n_grp
+house = -0.65, ku_p_grp
+house = -0.65, rh_n_grp
+house = -0.65, rh_p_grp
+house = -0.3, co_alg_grp
+house = -0.3, co_be_grp
+house = -0.65, br_m_grp
+house = -0.3, co_nws_grp
+house = -0.65, co_hsp_grp
+house = -0.65, co_ic_grp
+house = -0.3, co_khc_grp
+house = -0.3, co_kt_grp
+house = -0.3, rh_m_grp
+house = -0.65, co_me_grp
+house = -0.3, co_ni_grp
+house = -0.3, co_os_grp
+house = -0.3, co_rs_grp
+house = -0.3, co_shi_grp
+house = -0.3, co_ss_grp
+house = -0.65, co_ti_grp
+house = -0.3, co_vr_grp
+house = -0.3, fc_bd_grp
+house = -0.3, fc_b_grp
+house = -0.65, fc_c_grp
+house = -0.65, fc_fa_grp
+house = -0.3, fc_g_grp
+house = 0.65, fc_gc_grp
+house = -0.65, fc_h_grp
+house = 0, fc_j_grp
+house = 0.91, fc_lh_grp
+house = 0.65, fc_lr_grp
+house = -0.3, fc_lwb_grp
+house = -0.3, fc_m_grp
+house = 0.91, fc_ou_grp
+house = -0.65, fc_rh_grp
+house = 0, fc_or_grp
+house = -0.65, fc_u_grp
+house = -0.65, fc_x_grp
+house = -0.65, gd_gm_grp
+house = 0, fc_uk_grp
+house = -0.65, fc_n_grp
+house = -0.65, fc_ln_grp
+house = -0.65, fc_kn_grp
+house = -0.65, fc_rn_grp
+house = 0, fc_ouk_grp
+house = 0, fc_q_grp
+house = 0, fc_f_grp
+house = -0.65, gd_im_grp
+house = 0, gd_z_grp
+house = -0.65, gd_bh_grp
+rep_group = fc_ou_grp
+money = 130624772
+num_kills = 1
+num_misn_successes = 0
+num_misn_failures = 0
+
+voice = trent_voice
+com_body = 3144214861
+com_head = 2223155968
+com_lefthand = 2479975689
+com_righthand = 2264565644
+body = 3144214861
+head = 2223155968
+lefthand = 2479975689
+righthand = 2264565644
+
+system = Hi01
+pos = -13904.9,3.9101,9990.13
+rotate = 0,10.8807,0
+
+ship_archetype = 2540205126
+
+equip = 2482777999, , 1
+equip = 3098537294, HpShield01, 1
+equip = 2723858309, , 1
+equip = 2265531853, HpHeadlight, 1
+equip = 2494027655, HpDockLight01, 1
+equip = 2494027655, HpDockLight02, 1
+equip = 2802020621, HpRunningLight04, 1
+equip = 2802020621, HpRunningLight05, 1
+equip = 2802020621, HpRunningLight06, 1
+equip = 2802020621, HpRunningLight07, 1
+equip = 2802020621, HpRunningLight08, 1
+equip = 2802020621, HpRunningLight09, 1
+equip = 2802020621, HpRunningLight10, 1
+equip = 2799531210, , 1
+equip = 2500775748, HpContrail01, 1
+equip = 2500775748, HpContrail02, 1
+equip = 2553359424, , 1
+equip = 2909563015, HpWeapon01, 1
+
+last_base = Hi01_01_Base
+
+base_hull_status = 1
+
+base_equip = 2482777999, , 1
+base_equip = 3098537294, HpShield01, 1
+base_equip = 2723858309, , 1
+base_equip = 2265531853, HpHeadlight, 1
+base_equip = 2494027655, HpDockLight01, 1
+base_equip = 2494027655, HpDockLight02, 1
+base_equip = 2802020621, HpRunningLight04, 1
+base_equip = 2802020621, HpRunningLight05, 1
+base_equip = 2802020621, HpRunningLight06, 1
+base_equip = 2802020621, HpRunningLight07, 1
+base_equip = 2802020621, HpRunningLight08, 1
+base_equip = 2802020621, HpRunningLight09, 1
+base_equip = 2802020621, HpRunningLight10, 1
+base_equip = 2799531210, , 1
+base_equip = 2500775748, HpContrail01, 1
+base_equip = 2500775748, HpContrail02, 1
+base_equip = 2553359424, , 1
+base_equip = 2909563015, HpWeapon01, 1
+
+wg = 0, HpWeapon01
+
+
+visit = 2745, 65
+visit = 42810, 65
+visit = 2206699082, 1
+visit = 2342012994, 31
+visit = 2391839872, 41
+visit = 2391866496, 41
+visit = 2420688838, 41
+visit = 2437940423, 41
+visit = 2487760326, 41
+visit = 2505051847, 41
+visit = 2505074375, 41
+visit = 2521416838, 41
+visit = 2574343755, 1
+visit = 2625431434, 41
+visit = 2639272647, 41
+visit = 2652499650, 41
+visit = 2687370377, 1
+visit = 2779840320, 1
+visit = 2929947136, 41
+visit = 2957519814, 41
+visit = 2957562822, 41
+visit = 3024626118, 41
+visit = 3041954503, 41
+visit = 3042023752, 41
+visit = 3158887878, 41
+visit = 3176163015, 41
+
+
+interface = 3
+
+[mPlayer]
+locked_gate = 2541540999
+locked_gate = 2963174661
+can_dock = 1
+can_tl = 1
+ship_type_killed = 2294760008, 15
+rm_completed = 7, 3
+total_cash_earned = 0.000000
+total_time_played = 10756.000000
+sys_visited = 2610413058
+sys_visited = 3147256322
+sys_visited = 2206699082
+base_visited = 3102008900
+base_visited = 3089998156
+base_visited = 2805083916
+[StoryInfo]
+ship_bought = false
+Mission = No_Mission
+MissionNum = 42
+delta_worth = -1.000000
+debug = 0
+[StoryInfo]
+ship_bought = false
+Mission = No_Mission
+MissionNum = 42
+delta_worth = -1.000000
+debug = 0
+[flhook]
+event.shipid = 2799531210

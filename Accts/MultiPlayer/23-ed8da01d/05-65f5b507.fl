@@ -1,0 +1,309 @@
+[player]
+description = 00310031002f00300032002f00310031002000310033003a00350034003a00350037
+tstamp = 30185831, 24267024
+name = 007a0069006200650072
+rank = 79
+money = 1017229928
+num_kills = 3
+num_misn_successes = 0
+num_misn_failures = 0
+voice = trent_voice
+com_body = 3144214861
+com_head = 2223155968
+com_lefthand = 2479975689
+com_righthand = 2264565644
+body = 3144214861
+head = 2223155968
+lefthand = 2479975689
+righthand = 2264565644
+system = li01
+pos = 47165.7, 399.389, 5845.86
+rotate = -0.583003, -49.4829, 1.26509
+ship_archetype = 2170806662
+equip = 2553359424, , 1
+equip = 3131068425, , 1
+equip = 2406439823, hpturret_l5_01, 1
+equip = 2406439823, hpturret_l5_02, 1
+equip = 2406439823, hpturret_l5_05, 1
+equip = 2406439823, hpturret_l5_07, 1
+equip = 2823534476, hpturret_l5_03, 1
+equip = 2823534476, hpturret_l5_04, 1
+equip = 2186984325, , 1
+equip = 2203211205, hprunninglight06, 1
+equip = 2203211205, hprunninglight08, 1
+equip = 2203211205, hprunninglight09, 1
+equip = 2265531853, hpheadlight01, 1
+equip = 2265531853, hpheadlight02, 1
+cargo = 2799531210, 1, , , 0
+equip = 3065516173, , 1
+equip = 2687356491, hpcm01, 1
+cargo = 2687356491, 1, , , 0
+cargo = 2851672009, 1, , , 0
+cargo = 2851672009, 1, , , 0
+cargo = 2422867012, 1, , , 0
+cargo = 2260541514, 1, , , 0
+cargo = 2911012559, 67, , , 0
+cargo = 2596081674, 67, , , 0
+equip = 2799531210, , 1
+last_base = li01_07_base
+base_hull_status = 1
+base_collision_group = li_cruiser_cntrltwr_lod1, 1
+base_collision_group = li_cruiser_nose_lod1, 1
+base_collision_group = li_cruiser_engine01_lod1, 1
+base_collision_group = li_cruiser_engine02_lod1, 1
+base_collision_group = li_cruiser_engine03_lod1, 1
+base_collision_group = li_cruiser_engine04_lod1, 1
+base_equip = 2553359424, , 1
+base_equip = 3131068425, , 1
+base_equip = 2406439823, hpturret_l5_01, 1
+base_equip = 2406439823, hpturret_l5_02, 1
+base_equip = 2406439823, hpturret_l5_05, 1
+base_equip = 2406439823, hpturret_l5_07, 1
+base_equip = 2823534476, hpturret_l5_03, 1
+base_equip = 2823534476, hpturret_l5_04, 1
+base_equip = 2186984325, , 1
+base_equip = 2203211205, hprunninglight06, 1
+base_equip = 2203211205, hprunninglight08, 1
+base_equip = 2203211205, hprunninglight09, 1
+base_equip = 2265531853, hpheadlight01, 1
+base_equip = 2265531853, hpheadlight02, 1
+base_cargo = 2799531210, 1, , , 0
+base_equip = 3065516173, , 1
+base_equip = 2687356491, hpcm01, 1
+base_cargo = 2687356491, 1, , , 0
+base_cargo = 2851672009, 1, , , 0
+base_cargo = 2851672009, 1, , , 0
+base_cargo = 2422867012, 1, , , 0
+base_cargo = 2260541514, 1, , , 0
+base_cargo = 2911012559, 67, , , 0
+base_cargo = 2596081674, 67, , , 0
+base_equip = 2799531210, , 1
+wg = 0, hpturret_l5_01
+wg = 0, hpturret_l5_02
+wg = 0, hpturret_l5_05
+wg = 0, hpturret_l5_07
+wg = 0, hpturret_l5_03
+wg = 0, hpturret_l5_04
+wg = 0, hpweapon01
+interface = 3
+cargo = 2406439823, 1, , , 0
+cargo = 2222540935, 1, , , 0
+cargo = 2203211205, 1, , , 0
+
+[mplayer]
+rumor = 253612, 1
+rumor = 253846, 1
+rumor = 132113, 1
+rumor = 132112, 1
+rumor = 253798, 1
+rumor = 253628, 1
+rumor = 133934, 2
+rumor = 253954, 1
+rumor = 253610, 1
+rumor = 253629, 1
+rumor = 132148, 1
+rumor = 132145, 1
+rumor = 133453, 1
+rumor = 133218, 2
+rumor = 133219, 1
+rumor = 133171, 1
+rumor = 133174, 1
+rumor = 133177, 1
+rumor = 133179, 1
+rumor = 253609, 1
+rumor = 132886, 1
+rumor = 132893, 1
+rumor = 131676, 1
+can_dock = 1
+can_tl = 1
+ship_type_killed = 2165116995, 23
+ship_type_killed = 2248965056, 134
+ship_type_killed = 2257092298, 1
+ship_type_killed = 2358174656, 1
+ship_type_killed = 2511993871, 4
+ship_type_killed = 2529638985, 99
+ship_type_killed = 2605017987, 29
+ship_type_killed = 2701984835, 44
+ship_type_killed = 2702048323, 8
+ship_type_killed = 2705036494, 2
+ship_type_killed = 2805431751, 3
+ship_type_killed = 2820316814, 69
+ship_type_killed = 2992982989, 19
+ship_type_killed = 3038813056, 3
+ship_type_killed = 3072655695, 60
+rm_completed = 0, 7
+rm_completed = 1, 4
+rm_completed = 3, 1
+total_cash_earned = 0.000000
+total_time_played = 249628.000000
+sys_visited = 2208767567
+sys_visited = 2208796239
+base_visited = 2804956685
+base_visited = 2814294786
+base_visited = 2788123015
+base_visited = 2795873674
+base_visited = 2796496271
+base_visited = 3099125070
+base_visited = 3184043335
+base_visited = 3176341570
+base_visited = 3099281551
+base_visited = 3098839176
+base_visited = 3184993608
+base_visited = 3180390223
+base_visited = 3176980549
+base_visited = 2809314312
+base_visited = 2792579725
+base_visited = 2789155215
+base_visited = 2787778949
+base_visited = 3102952079
+base_visited = 2808212481
+base_visited = 3090358339
+base_visited = 2791449477
+base_visited = 3183617346
+base_visited = 3114118476
+base_visited = 3124205065
+base_visited = 3094291273
+base_visited = 3089572169
+base_visited = 2810150415
+base_visited = 2813606663
+base_visited = 2792153730
+base_visited = 2791514757
+base_visited = 3099425676
+base_visited = 3175555400
+base_visited = 2809015302
+base_visited = 3181324104
+base_visited = 2724232325
+base_visited = 2804923906
+base_visited = 2724543623
+base_visited = 3137048835
+base_visited = 3132330755
+base_visited = 3135262734
+base_visited = 2809674765
+base_visited = 2809658378
+base_visited = 2808642565
+base_visited = 3103439243
+base_visited = 3179390535
+base_visited = 3090189698
+base_visited = 2797282437
+base_visited = 2791940736
+base_visited = 3149903104
+base_visited = 2805644808
+base_visited = 2792940424
+base_visited = 3180701517
+base_visited = 2813262602
+base_visited = 2812295693
+base_visited = 3113807182
+base_visited = 3132691206
+base_visited = 3132904196
+base_visited = 3124565516
+base_visited = 2805988874
+base_visited = 3094826885
+base_visited = 3094908802
+base_visited = 2725264525
+base_visited = 2808888583
+base_visited = 2792825743
+base_visited = 2793251722
+base_visited = 2725608591
+base_visited = 2809806349
+base_visited = 3135574028
+base_visited = 3089686862
+base_visited = 3185419597
+base_visited = 3137327105
+base_visited = 3136262153
+base_visited = 3122894595
+base_visited = 3136360710
+base_visited = 3131659022
+base_visited = 3124254222
+base_visited = 2804612608
+holes_visited = 2593317002
+holes_visited = 2963003786
+holes_visited = 2984209282
+holes_visited = 3127456399
+holes_visited = 2879482760
+holes_visited = 2200697741
+holes_visited = 2572204933
+holes_visited = 2258864778
+holes_visited = 2554644864
+holes_visited = 2845343886
+holes_visited = 2508930955
+holes_visited = 3171004302
+holes_visited = 2417553550
+holes_visited = 2556119439
+holes_visited = 2260290183
+holes_visited = 2158369218
+holes_visited = 2497933760
+holes_visited = 2909159874
+holes_visited = 2499391949
+holes_visited = 2881203077
+holes_visited = 2934678413
+holes_visited = 2553705349
+holes_visited = 2338032898
+holes_visited = 2387709826
+holes_visited = 2585061248
+holes_visited = 2606769805
+holes_visited = 2777033996
+holes_visited = 3156225933
+holes_visited = 2919472778
+holes_visited = 2618356613
+holes_visited = 2259929730
+holes_visited = 2730882441
+holes_visited = 2334714816
+holes_visited = 2335665103
+holes_visited = 2605024649
+holes_visited = 2641878019
+holes_visited = 2766679052
+holes_visited = 2211890816
+holes_visited = 2906296192
+
+[storyinfo]
+ship_bought = false
+debug = 0
+
+[storyinfo]
+ship_bought = false
+debug = 0
+
+[storyinfo]
+ship_bought = false
+debug = 0
+
+[storyinfo]
+ship_bought = false
+debug = 0
+
+[storyinfo]
+ship_bought = false
+debug = 0
+
+[storyinfo]
+ship_bought = false
+debug = 0
+
+[storyinfo]
+ship_bought = false
+debug = 0
+
+[storyinfo]
+ship_bought = false
+debug = 0
+
+[storyinfo]
+ship_bought = false
+debug = 0
+
+[storyinfo]
+ship_bought = false
+debug = 0
+
+[storyinfo]
+ship_bought = false
+debug = 0
+
+[storyinfo]
+ship_bought = false
+debug = 0
+
+[storyinfo]
+ship_bought = false
+debug = 0
+
