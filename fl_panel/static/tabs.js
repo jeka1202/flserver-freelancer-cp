@@ -38,20 +38,25 @@ document.addEventListener('submit', async (event) => {
     const response = await fetch(form.action, {
       method: 'POST',
       body: new FormData(form),
+      credentials: 'same-origin',
       headers: {
         Accept: 'application/json',
         'X-Requested-With': 'XMLHttpRequest',
       },
     });
+    const contentType = response.headers.get('content-type') || '';
+    if (!contentType.includes('application/json')) {
+      const text = await response.text();
+      throw new Error(text || `HTTP ${response.status}`);
+    }
     const payload = await response.json();
     setFinanceMessage(payload.message || 'Операция завершена.', payload.ok && response.ok);
-    if (response.ok) {
-      setBalance('#character-money', payload.character_money, payload.character_money_formatted);
-      setBalance('#bank-money', payload.bank, payload.bank_formatted);
-      if (payload.ok) form.reset();
-    }
+    setBalance('#character-money', payload.character_money, payload.character_money_formatted);
+    setBalance('#bank-money', payload.bank, payload.bank_formatted);
+    if (response.ok && payload.ok) form.reset();
   } catch (error) {
-    setFinanceMessage('Не удалось выполнить операцию без перезагрузки страницы. Попробуйте ещё раз.', false);
+    console.error('Finance AJAX failed:', error);
+    setFinanceMessage('Фоновая операция не выполнена: сервер вернул неожиданный ответ. Обновите страницу и попробуйте ещё раз.', false);
   } finally {
     if (button) {
       button.disabled = false;

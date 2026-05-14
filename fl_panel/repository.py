@@ -210,31 +210,25 @@ class Repository:
     def bank_operation(self, account_id: str, character_file: str, action: str, amount: int) -> tuple[bool, str]:
         if amount <= 0:
             return False, "Сумма должна быть положительным целым числом."
-        account = self.by_id.get(account_id.lower())
-        if not account:
-            return False, "Аккаунт не найден."
-        character = next((item for item in account["characters"] if item["file"] == character_file), None)
-        if not character:
-            return False, "Персонаж не найден."
         account_path = self.accounts_dir / account_id
         character_path = account_path / character_file
-        character_money = int(character.get("money", 0))
-        bank_money = int(account.get("bank", 0))
+        if not character_path.exists():
+            return False, "Персонаж не найден."
+        character_money = read_character_money(character_path)
+        bank_money = read_bank_balance(account_path)
         if action == "deposit":
             if character_money < amount:
                 return False, "На игровом счёте персонажа недостаточно средств для зачисления в банк."
             write_character_money(character_path, character_money - amount)
             write_bank_balance(account_path, bank_money + amount)
-            self.set_character_money(account, character, character_money - amount)
-            self.set_account_bank(account, bank_money + amount)
+            self.reload()
             return True, f"{money(amount)} кредитов переведено с персонажа в bank.ini."
         if action == "withdraw":
             if bank_money < amount:
                 return False, "В bank.ini недостаточно средств для вывода персонажу."
             write_bank_balance(account_path, bank_money - amount)
             write_character_money(character_path, character_money + amount)
-            self.set_account_bank(account, bank_money - amount)
-            self.set_character_money(account, character, character_money + amount)
+            self.reload()
             return True, f"{money(amount)} кредитов выведено из bank.ini персонажу."
         return False, "Неизвестная банковская операция."
 
@@ -249,30 +243,24 @@ class Repository:
         target_account, target_character = target
         if target_account["id"] == sender_account_id and target_character["file"] == sender_file:
             return False, "Нельзя выполнить перевод самому себе."
-        sender_account = self.by_id.get(sender_account_id.lower())
-        if not sender_account:
-            return False, "Аккаунт отправителя не найден."
-        sender_character = next((item for item in sender_account["characters"] if item["file"] == sender_file), None)
-        if not sender_character:
-            return False, "Персонаж отправителя не найден."
         sender_account_path = self.accounts_dir / sender_account_id
         sender_path = sender_account_path / sender_file
         target_path = self.accounts_dir / target_account["id"] / target_character["file"]
-        sender_money = int(sender_character.get("money", 0))
-        sender_bank = int(sender_account.get("bank", 0))
+        if not sender_path.exists() or not target_path.exists():
+            return False, "Файл отправителя или получателя не найден."
+
+        sender_money = read_character_money(sender_path)
+        sender_bank = read_bank_balance(sender_account_path)
         if sender_money + sender_bank < amount:
             return False, "Средств недостаточно: денег персонажа и bank.ini вместе не хватает для перевода."
         debit_from_character = min(sender_money, amount)
         debit_from_bank = amount - debit_from_character
-        target_money = int(target_character.get("money", 0))
+        target_money = read_character_money(target_path)
         write_character_money(sender_path, sender_money - debit_from_character)
         if debit_from_bank:
             write_bank_balance(sender_account_path, sender_bank - debit_from_bank)
         write_character_money(target_path, target_money + amount)
-        self.set_character_money(sender_account, sender_character, sender_money - debit_from_character)
-        if debit_from_bank:
-            self.set_account_bank(sender_account, sender_bank - debit_from_bank)
-        self.set_character_money(target_account, target_character, target_money + amount)
+        self.reload()
         details = f"списано {money(debit_from_character)} с персонажа"
         if debit_from_bank:
             details += f" и {money(debit_from_bank)} из bank.ini"
