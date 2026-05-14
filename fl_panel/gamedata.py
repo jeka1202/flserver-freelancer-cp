@@ -1,0 +1,65 @@
+from __future__ import annotations
+
+from dataclasses import dataclass
+from pathlib import Path
+
+from .config import CATEGORY_LABELS, DATA_FILES, VISIT_TYPES
+from .utils import nickname_hash, read_text, split_csv
+
+
+@dataclass(frozen=True)
+class GameItem:
+    code: str
+    nickname: str
+    name: str
+    category: str
+
+
+class GameData:
+    def __init__(self, directory: Path) -> None:
+        self.by_category: dict[str, dict[str, GameItem]] = {}
+        self.by_code: dict[str, GameItem] = {}
+        self.by_nickname: dict[str, GameItem] = {}
+        self.load(directory)
+
+    def load(self, directory: Path) -> None:
+        for category, filename in DATA_FILES.items():
+            items: dict[str, GameItem] = {}
+            path = directory / filename
+            if not path.exists():
+                self.by_category[category] = items
+                continue
+            for raw_line in read_text(path).splitlines():
+                line = raw_line.strip()
+                if not line or line.startswith(("#", ";")) or "=" not in line:
+                    continue
+                code, rest = [part.strip() for part in line.split("=", 1)]
+                if category == "mapinfo" and code == "visit":
+                    parts = split_csv(rest)
+                    code = parts[0] if parts else rest.strip()
+                    nickname = code
+                    visit_type = parts[1] if len(parts) > 1 else ""
+                    name = f"Отметка карты {code} ({VISIT_TYPES.get(visit_type, visit_type or 'тип неизвестен')})"
+                else:
+                    parts = [part.strip() for part in rest.split(",", 1)]
+                    nickname = parts[0]
+                    name = parts[1] if len(parts) > 1 and parts[1] else nickname
+                item = GameItem(code=code, nickname=nickname, name=name, category=category)
+                for lookup_code in {code, nickname_hash(code), nickname, nickname_hash(nickname)}:
+                    items[lookup_code] = item
+                    self.by_code[lookup_code] = item
+                self.by_nickname[nickname.lower()] = item
+            self.by_category[category] = items
+
+    def resolve(self, token: str | None) -> dict[str, str]:
+        token = (token or "").strip()
+        item = self.by_code.get(token) or self.by_nickname.get(token.lower())
+        if item:
+            return {
+                "code": item.code,
+                "nickname": item.nickname,
+                "name": item.name,
+                "category": item.category,
+                "category_label": CATEGORY_LABELS.get(item.category, item.category),
+            }
+        return {"code": token, "nickname": token, "name": token or "—", "category": "unknown", "category_label": CATEGORY_LABELS["unknown"]}

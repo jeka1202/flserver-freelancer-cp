@@ -1,19 +1,29 @@
 # Freelancer Account Control Panel
 
-Browser panel for the bundled Freelancer multiplayer account archive. It reads
-character `.fl` files from `Accts/MultiPlayer`, translates numeric
-ship/equipment/cargo/navigation codes through the local `IONCROSS/GAMEDATA_*.txt`
-files, and can update player finances.
+Browser panel for a Freelancer multiplayer account archive. The app is now split into a small
+entry point plus modules under `fl_panel/`, while browser styling and JavaScript live in
+`fl_panel/static/` for easier editing.
 
-## Client login
+## Project layout
 
-The client-facing page does **not** ask for an account-folder ID. A player enters:
+- `account_panel.py` — tiny CLI entry point;
+- `fl_panel/server.py` — HTTP routes, sessions and POST handlers;
+- `fl_panel/repository.py` — account loading, authentication and business logic;
+- `fl_panel/gamedata.py` — IONCROSS `GAMEDATA_*.txt` loader and code resolver;
+- `fl_panel/finance.py` — `.fl` money and account `bank.ini` read/write helpers;
+- `fl_panel/views.py` — HTML renderers;
+- `fl_panel/static/style.css` and `fl_panel/static/tabs.js` — browser UI assets.
 
-1. character name from a `.fl` save;
-2. the account-wide password stored in the account folder's `name` file.
+## Login compatibility
 
-After a successful match the panel opens only that character's personal cabinet.
-All `.fl` files in one account folder share the same `name` password.
+The login form accepts either:
+
+1. a character name plus the account password from the account folder `name` file;
+2. an account folder ID (`23-...`) with the optional character name field;
+3. the old compatibility mode: account folder ID without a password.
+
+This keeps the previous account-ID login flow available while still supporting the character
+password login flow.
 
 ## Character cabinet tabs
 
@@ -59,7 +69,8 @@ python3 account_panel.py --host 127.0.0.1 --port 8080
 ```
 
 Open <http://127.0.0.1:8080>, then log in with a character name such as `Athlon0104`
-and the decoded password from that account's `name` file.
+and the decoded password from that account's `name` file, or use an account ID in compatibility
+mode.
 
 ## Custom paths
 
