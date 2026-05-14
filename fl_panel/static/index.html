@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Вход · Freelancer Account Panel</title>
+<link rel="stylesheet" href="/static/style.css">
+<body>
+<main class="wrap">
+  <section class="hero">
+    <div class="card">
+      <span class="pill">FREELANCER · ACCOUNT CP</span>
+      <h1>Личный кабинет пилота</h1>
+      <p class="muted">Введите имя персонажа или ID аккаунта. Пароль можно указать из файла <code>name</code>; для совместимости старый вход по ID аккаунта работает без пароля.</p>
+      {{message}}
+      <form method="post" action="/login">
+        <label>Логин</label>
+        <input name="login" placeholder="Athlon0104 или 23-f73f713c" autocomplete="username" required autofocus>
+        <label>Пароль</label>
+        <input name="password" type="password" placeholder="пароль из файла name, если используется">
+        <label>Персонаж (если вошли по ID аккаунта)</label>
+        <input name="character" placeholder="необязательно">
+        <button>Войти в кабинет</button>
+      </form>
+      <p class="muted small">Администрирование вынесено отдельно: <a href="/admin">/admin</a>. Клиентская часть не показывает список чужих аккаунтов.</p>
+    </div>
+    <div class="card">
+      <h2>Что будет внутри</h2>
+      <div class="grid">
+        <div class="stat"><b>{{characters}}</b>персонажей в архиве</div>
+        <div class="stat"><b>{{gamedata_items}}</b>записей IONCROSS</div>
+      </div>
+      <p><span class="pill">Инвентарь</span><span class="pill">Снаряжение</span><span class="pill">Статистика</span><span class="pill">Финансы и банк</span><span class="pill">Репутация</span><span class="pill">Навигация</span></p>
+    </div>
+  </section>
+  <p class="footer">Freelancer Account Panel · клиентская часть показывает только персонажа после входа · админская логика отдельно в /admin</p>
+</main>
+<script src="/static/tabs.js"></script>
+</body>
+</html>
