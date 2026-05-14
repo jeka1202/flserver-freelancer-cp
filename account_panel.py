@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Read-only Freelancer account control panel.
+"""Freelancer account control panel.
 
 The panel intentionally uses only Python's standard library so it can be
 started beside an FLServer account folder without installing dependencies.
@@ -7,6 +7,7 @@ started beside an FLServer account folder without installing dependencies.
 from __future__ import annotations
 
 import argparse
+import configparser
 import datetime as dt
 import html
 import json
@@ -25,7 +26,8 @@ from typing import Any
 ROOT = Path(__file__).resolve().parent
 ACCOUNTS_DIR = ROOT / "Accts" / "MultiPlayer"
 IONCROSS_DIR = ROOT / "IONCROSS"
-BANK_DIR = ROOT / "PanelData" / "banks"
+BANK_SECTION = "Bank"
+BANK_KEY = "balance"
 
 DATA_FILES = {
     "ammo": "GAMEDATA_ammo.txt",
@@ -365,7 +367,7 @@ def build_character(account_id: str, account_path: Path, file_path: Path, gameda
         "updated": file_time(file_path),
         "rank": intish(first(data, "rank")),
         "money": intish(first(data, "money")),
-        "bank": read_bank_balance(account_id, file_path.name),
+        "bank": read_bank_balance(account_path),
         "kills": intish(first(data, "num_kills")),
         "deaths": deaths,
         "missions_success": intish(first(data, "num_misn_successes")),
@@ -386,15 +388,61 @@ def build_character(account_id: str, account_path: Path, file_path: Path, gameda
     }
 
 
-def read_bank_balance(account_id: str, character_file: str) -> int:
-    bank_path = BANK_DIR / account_id / f"{character_file}.json"
-    if not bank_path.exists():
+def parse_amount(value: str) -> int:
+    normalized = value.replace(" ", "").replace("_", "").strip()
+    amount = intish(normalized, -1)
+    return amount if amount > 0 else -1
+
+
+def bank_ini_path(account_path: Path) -> Path:
+    return account_path / "bank.ini"
+
+
+def read_bank_balance(account_path: Path) -> int:
+    path = bank_ini_path(account_path)
+    if not path.exists():
         return 0
-    try:
-        payload = json.loads(read_text(bank_path))
-    except json.JSONDecodeError:
+    parser = configparser.ConfigParser()
+    parser.read(path, encoding="utf-8")
+    if not parser.has_section(BANK_SECTION):
         return 0
-    return intish(str(payload.get("balance", 0)))
+    for key in (BANK_KEY, "money", "cash", "credits"):
+        if parser.has_option(BANK_SECTION, key):
+            return max(0, intish(parser.get(BANK_SECTION, key), 0))
+    return 0
+
+
+def write_bank_balance(account_path: Path, balance: int) -> None:
+    path = bank_ini_path(account_path)
+    parser = configparser.ConfigParser()
+    if path.exists():
+        parser.read(path, encoding="utf-8")
+    if not parser.has_section(BANK_SECTION):
+        parser.add_section(BANK_SECTION)
+    parser.set(BANK_SECTION, BANK_KEY, str(max(0, balance)))
+    with path.open("w", encoding="utf-8") as handle:
+        parser.write(handle)
+
+
+def read_character_money(file_path: Path) -> int:
+    return intish(first(parse_fl(file_path), "money"))
+
+
+def write_character_money(file_path: Path, new_money: int) -> None:
+    content = read_text(file_path)
+    lines = content.splitlines(keepends=True)
+    replaced = False
+    for index, line in enumerate(lines):
+        if re.match(r"^\s*money\s*=", line):
+            ending = "\n" if line.endswith("\n") else ""
+            if line.endswith("\r\n"):
+                ending = "\r\n"
+            lines[index] = f"money = {max(0, new_money)}{ending}"
+            replaced = True
+            break
+    if not replaced:
+        lines.append(f"money = {max(0, new_money)}\n")
+    file_path.write_text("".join(lines), encoding="utf-8")
 
 
 def load_accounts(accounts_dir: Path, gamedata: GameData) -> list[dict[str, Any]]:
@@ -410,6 +458,7 @@ def load_accounts(accounts_dir: Path, gamedata: GameData) -> list[dict[str, Any]
             "id": account_path.name,
             "password": account_password(account_path),
             "created": created_at,
+            "bank": read_bank_balance(account_path),
             "characters": characters,
             "character_count": len(characters),
             "total_money": sum(char["money"] for char in characters),
@@ -446,6 +495,84 @@ class Repository:
                 return account, character
         return None
 
+    def character_by_account_file(self, account_id: str, character_file: str) -> tuple[dict[str, Any], dict[str, Any]] | None:
+        account = self.by_id.get(account_id.lower())
+        if not account:
+            return None
+        for character in account["characters"]:
+            if character["file"] == character_file:
+                return account, character
+        return None
+
+    def find_unique_character(self, character_name_value: str) -> tuple[dict[str, Any], dict[str, Any]] | None | str:
+        matches = self.characters.get(character_name_value.casefold(), [])
+        if not matches:
+            return None
+        if len(matches) > 1:
+            return "ambiguous"
+        return matches[0]
+
+    def bank_operation(self, account_id: str, character_file: str, action: str, amount: int) -> tuple[bool, str]:
+        if amount <= 0:
+            return False, "Сумма должна быть положительным целым числом."
+        account_path = self.accounts_dir / account_id
+        character_path = account_path / character_file
+        if not character_path.exists():
+            return False, "Персонаж не найден."
+        character_money = read_character_money(character_path)
+        bank_money = read_bank_balance(account_path)
+        if action == "deposit":
+            if character_money < amount:
+                return False, "На игровом счёте персонажа недостаточно средств для зачисления в банк."
+            write_character_money(character_path, character_money - amount)
+            write_bank_balance(account_path, bank_money + amount)
+            self.reload()
+            return True, f"{money(amount)} кредитов переведено с персонажа в bank.ini."
+        if action == "withdraw":
+            if bank_money < amount:
+                return False, "В bank.ini недостаточно средств для вывода персонажу."
+            write_bank_balance(account_path, bank_money - amount)
+            write_character_money(character_path, character_money + amount)
+            self.reload()
+            return True, f"{money(amount)} кредитов выведено из bank.ini персонажу."
+        return False, "Неизвестная банковская операция."
+
+    def transfer_to_character(self, sender_account_id: str, sender_file: str, target_name: str, amount: int) -> tuple[bool, str]:
+        if amount <= 0:
+            return False, "Сумма перевода должна быть положительным целым числом."
+        target = self.find_unique_character(target_name.strip())
+        if target is None:
+            return False, "Пилот-получатель не найден."
+        if target == "ambiguous":
+            return False, "Найдено несколько персонажей с таким именем. Перевод отменён."
+        target_account, target_character = target
+        if target_account["id"] == sender_account_id and target_character["file"] == sender_file:
+            return False, "Нельзя выполнить перевод самому себе."
+
+        sender_account_path = self.accounts_dir / sender_account_id
+        sender_path = sender_account_path / sender_file
+        target_path = self.accounts_dir / target_account["id"] / target_character["file"]
+        if not sender_path.exists() or not target_path.exists():
+            return False, "Файл отправителя или получателя не найден."
+
+        sender_money = read_character_money(sender_path)
+        sender_bank = read_bank_balance(sender_account_path)
+        if sender_money + sender_bank < amount:
+            return False, "Средств недостаточно: денег персонажа и bank.ini вместе не хватает для перевода."
+
+        debit_from_character = min(sender_money, amount)
+        debit_from_bank = amount - debit_from_character
+        target_money = read_character_money(target_path)
+        write_character_money(sender_path, sender_money - debit_from_character)
+        if debit_from_bank:
+            write_bank_balance(sender_account_path, sender_bank - debit_from_bank)
+        write_character_money(target_path, target_money + amount)
+        self.reload()
+        details = f"списано {money(debit_from_character)} с персонажа"
+        if debit_from_bank:
+            details += f" и {money(debit_from_bank)} из bank.ini"
+        return True, f"Перевод {money(amount)} кредитов пилоту {target_character['name']} выполнен: {details}."
+
 
 CSS = """
 :root { color-scheme: dark; --bg:#07101e; --card:#101d31; --panel:#0b1728; --muted:#8ea3bd; --text:#eef5ff; --accent:#65d6ff; --accent2:#766bff; --good:#71f2a6; --bad:#ff8585; --warn:#ffd166; --line:#22344f; }
@@ -457,7 +584,7 @@ form{display:grid;gap:12px} input,button,select{border-radius:12px;border:1px so
 
 
 def page(title: str, body: str) -> bytes:
-    return f"""<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(title)}</title><style>{CSS}</style><body><main class="wrap">{body}<p class="footer">Read-only Freelancer Account Panel · клиентская часть показывает только персонажа после входа · админская логика отдельно в /admin</p></main><script>{TABS_JS}</script></body></html>""".encode()
+    return f"""<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(title)}</title><style>{CSS}</style><body><main class="wrap">{body}<p class="footer">Freelancer Account Panel · клиентская часть показывает только персонажа после входа · админская логика отдельно в /admin</p></main><script>{TABS_JS}</script></body></html>""".encode()
 
 
 TABS_JS = """
@@ -490,7 +617,7 @@ def render_login(repo: Repository, message: str = "") -> bytes:
       <p class="muted small">Администрирование вынесено отдельно: <a href="/admin">/admin</a>. Клиентская часть не показывает список чужих аккаунтов.</p></div>
       <div class="card"><h2>Что будет внутри</h2><div class="grid"><div class="stat"><b>{stats['characters']}</b>персонажей в архиве</div><div class="stat"><b>{stats['gamedata_items']}</b>записей IONCROSS</div></div>
       <p><span class="pill">Инвентарь</span><span class="pill">Снаряжение</span><span class="pill">Статистика</span><span class="pill">Финансы и банк</span><span class="pill">Репутация</span><span class="pill">Навигация</span></p>
-      <p class="muted small">Панель read-only для сохранений. Банковские операции показаны как подготовленная клиентская зона и пока не меняют файлы персонажа.</p></div>
+      <p class="muted small">Панель показывает данные сохранений и поддерживает переводы/банк через изменение money в .fl и balance в bank.ini.</p></div>
     </section>"""
     return page("Вход · Freelancer Account Panel", body)
 
@@ -502,13 +629,18 @@ def item_table(items: list[dict[str, str]], empty: str, third_label: str = "Ко
     return f"<table><thead><tr><th>Название</th><th>Тип</th><th>{esc(third_label)}</th></tr></thead><tbody>{rows}</tbody></table>"
 
 
-def render_cabinet(account: dict[str, Any], char: dict[str, Any]) -> bytes:
+def render_cabinet(account: dict[str, Any], char: dict[str, Any], message: str = "", error: str = "") -> bytes:
     top_factions = "".join(f"<span class='pill'>{esc(h['name'])}: {esc(h['reputation'])}</span>" for h in char["houses"][:8])
     bank_total = char["bank"]
     nav = char["navigation"]
     raw = esc(json.dumps(char["raw_fields"], ensure_ascii=False, indent=2))
+    notice = ""
+    if message:
+        notice = f'<p class="pill money">{esc(message)}</p>'
+    if error:
+        notice = f'<p class="pill negative">{esc(error)}</p>'
     body = f"""
-    <div class="card"><a class="pill" href="/logout">← выйти</a><span class="pill">Аккаунт: {esc(account['id'])}</span><h1>{esc(char['name'])}</h1>
+    <div class="card"><a class="pill" href="/logout">← выйти</a><span class="pill">Аккаунт: {esc(account['id'])}</span>{notice}<h1>{esc(char['name'])}</h1>
     <p class="ship">{esc(char['ship']['name'])}</p><p class="muted">{esc(char['system']['name'])} · {esc(char['base']['name'])} · ранг {esc(char['rank'])}</p></div>
     <div class="tabs"><button class="tab active" data-tab="inventory">Инвентарь</button><button class="tab" data-tab="equipment">Снаряжение</button><button class="tab" data-tab="stats">Статистика</button><button class="tab" data-tab="finance">Финансы</button><button class="tab" data-tab="reputation">Репутация</button><button class="tab" data-tab="navigation">Навигация</button></div>
 
@@ -518,7 +650,7 @@ def render_cabinet(account: dict[str, Any], char: dict[str, Any]) -> bytes:
 
     <section id="stats" class="card tab-panel"><h2>Статистика</h2><div class="grid"><div class="stat"><b>{esc(char['time_played'])}</b>Время в игре</div><div class="stat"><b>{esc(account['created'])}</b>Создан аккаунт</div><div class="stat"><b>{esc(char['created'])}</b>Создан персонаж / первая дата файла</div><div class="stat"><b>{esc(char['updated'])}</b>Последнее изменение</div><div class="stat"><b>{esc(char['kills'])}</b>Убийства</div><div class="stat"><b>{esc(char['deaths'])}</b>Смерти</div><div class="stat"><b>{esc(char['missions_success'])}/{esc(char['missions_failed'])}</b>Миссии успех/провал</div></div><details><summary>Все прочитанные сырые поля персонажа</summary><pre class="raw">{raw}</pre></details></section>
 
-    <section id="finance" class="card tab-panel"><h2>Финансы</h2><div class="grid"><div class="stat"><b class="money">{money(char['money'])}</b>Деньги персонажа</div><div class="stat"><b class="money">{money(bank_total)}</b>Личный банк кабинета</div></div><div class="two"><div class="stat"><h3>Перевод на другого персонажа</h3><form class="disabled"><input placeholder="Имя получателя" disabled><input placeholder="Сумма" disabled><button disabled>Скоро</button></form><p class="muted small">Заготовка под внутренние переводы между персонажами.</p></div><div class="stat"><h3>Банк персонажа</h3><form class="disabled"><select disabled><option>Зачислить в банк</option><option>Вывести из банка</option></select><input placeholder="Сумма" disabled><button disabled>Скоро</button></form><p class="muted small">Будущая логика позволит перекладывать средства между игровым балансом и личным банком без ручного редактирования.</p></div></div></section>
+    <section id="finance" class="card tab-panel"><h2>Финансы</h2><div class="grid"><div class="stat"><b class="money">{money(char['money'])}</b>Деньги персонажа</div><div class="stat"><b class="money">{money(bank_total)}</b>Bank.ini · [Bank] balance</div></div><div class="two"><div class="stat"><h3>Перевод другому пилоту</h3><form method="post" action="/finance/transfer"><label>Никнейм пилота-получателя</label><input name="target" placeholder="Имя персонажа" required><label>Сумма перевода</label><input name="amount" inputmode="numeric" pattern="[0-9 ]+" placeholder="100000" required><button>Перевести</button></form><p class="muted small">Сначала списывается игровой счёт персонажа. Если его не хватает, остаток берётся из bank.ini текущего аккаунта.</p></div><div class="stat"><h3>Банк персонажа</h3><form method="post" action="/finance/bank"><label>Операция</label><select name="action"><option value="deposit">Перевести с персонажа в банк</option><option value="withdraw">Перевести из банка персонажу</option></select><label>Сумма</label><input name="amount" inputmode="numeric" pattern="[0-9 ]+" placeholder="50000" required><button>Выполнить</button></form><p class="muted small">Банк хранится в файле <code>bank.ini</code>, секция <code>[Bank]</code>, поле <code>balance</code>.</p></div></div></section>
 
     <section id="reputation" class="card tab-panel"><h2>Репутация</h2><p>{top_factions}</p><table><thead><tr><th>Фракция</th><th>Код</th><th>Отношение</th></tr></thead><tbody>{''.join(f'<tr><td>{esc(h["name"])}</td><td>{esc(h["code"])}</td><td class="{ "negative" if str(h["reputation"]).startswith("-") else "" }">{esc(h["reputation"])}</td></tr>' for h in char['houses'])}</tbody></table></section>
 
@@ -559,6 +691,7 @@ def render_admin_account(account: dict[str, Any]) -> bytes:
 class Handler(BaseHTTPRequestHandler):
     repo: Repository
     sessions: dict[str, tuple[str, str]] = {}
+    flashes: dict[str, tuple[bool, str]] = {}
 
     def do_GET(self) -> None:
         parsed = urllib.parse.urlparse(self.path)
@@ -572,7 +705,12 @@ class Handler(BaseHTTPRequestHandler):
                 self.send_header("Location", "/")
                 self.end_headers()
                 return
-            self.send_html(render_cabinet(session[0], session[1]))
+            flash = self.pop_flash()
+            if flash:
+                ok, text = flash
+                self.send_html(render_cabinet(session[0], session[1], message=text if ok else "", error="" if ok else text))
+            else:
+                self.send_html(render_cabinet(session[0], session[1]))
         elif path == "/logout":
             self.logout()
         elif path == "/admin":
@@ -590,11 +728,21 @@ class Handler(BaseHTTPRequestHandler):
             self.send_error(HTTPStatus.NOT_FOUND)
 
     def do_POST(self) -> None:
-        if urllib.parse.urlparse(self.path).path != "/login":
-            self.send_error(HTTPStatus.NOT_FOUND)
-            return
+        path = urllib.parse.urlparse(self.path).path
         length = int(self.headers.get("content-length", "0"))
         form = urllib.parse.parse_qs(self.rfile.read(length).decode("utf-8", errors="replace"))
+        if path == "/login":
+            self.handle_login(form)
+            return
+        if path == "/finance/transfer":
+            self.handle_transfer(form)
+            return
+        if path == "/finance/bank":
+            self.handle_bank(form)
+            return
+        self.send_error(HTTPStatus.NOT_FOUND)
+
+    def handle_login(self, form: dict[str, list[str]]) -> None:
         character_name_value = (form.get("character", [""])[0]).strip()
         password = form.get("password", [""])[0]
         match = self.repo.authenticate(character_name_value, password)
@@ -604,18 +752,58 @@ class Handler(BaseHTTPRequestHandler):
         account, character = match
         token = secrets.token_urlsafe(32)
         self.sessions[token] = (account["id"], character["file"])
+        self.redirect_to_cabinet(token=token)
+
+    def handle_transfer(self, form: dict[str, list[str]]) -> None:
+        session = self.current_session()
+        if not session:
+            self.send_error(HTTPStatus.UNAUTHORIZED)
+            return
+        account, character = session
+        target = (form.get("target", [""])[0]).strip()
+        amount = parse_amount(form.get("amount", [""])[0])
+        ok, text = self.repo.transfer_to_character(account["id"], character["file"], target, amount)
+        self.set_flash(ok, text)
+        self.redirect_to_cabinet()
+
+    def handle_bank(self, form: dict[str, list[str]]) -> None:
+        session = self.current_session()
+        if not session:
+            self.send_error(HTTPStatus.UNAUTHORIZED)
+            return
+        account, character = session
+        action = form.get("action", [""])[0]
+        amount = parse_amount(form.get("amount", [""])[0])
+        ok, text = self.repo.bank_operation(account["id"], character["file"], action, amount)
+        self.set_flash(ok, text)
+        self.redirect_to_cabinet()
+
+    def redirect_to_cabinet(self, token: str | None = None) -> None:
         self.send_response(HTTPStatus.SEE_OTHER)
         self.send_header("Location", "/cabinet")
-        self.send_header("Set-Cookie", f"flpanel={token}; HttpOnly; SameSite=Lax; Path=/")
+        if token:
+            self.send_header("Set-Cookie", f"flpanel={token}; HttpOnly; SameSite=Lax; Path=/")
         self.end_headers()
 
-    def current_session(self) -> tuple[dict[str, Any], dict[str, Any]] | None:
+    def current_token(self) -> str:
         cookie = self.headers.get("Cookie", "")
-        token = ""
         for part in cookie.split(";"):
             name, _, value = part.strip().partition("=")
             if name == "flpanel":
-                token = value
+                return value
+        return ""
+
+    def set_flash(self, ok: bool, text: str) -> None:
+        token = self.current_token()
+        if token:
+            self.flashes[token] = (ok, text)
+
+    def pop_flash(self) -> tuple[bool, str] | None:
+        token = self.current_token()
+        return self.flashes.pop(token, None) if token else None
+
+    def current_session(self) -> tuple[dict[str, Any], dict[str, Any]] | None:
+        token = self.current_token()
         stored = self.sessions.get(token)
         if not stored:
             return None
@@ -647,6 +835,7 @@ class Handler(BaseHTTPRequestHandler):
             safe_accounts.append({
                 "id": account["id"],
                 "created": account["created"],
+                "bank": account["bank"],
                 "characters": safe_characters,
                 "character_count": account["character_count"],
                 "total_money": account["total_money"],
@@ -674,7 +863,7 @@ class Handler(BaseHTTPRequestHandler):
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Read-only Freelancer account web panel")
+    parser = argparse.ArgumentParser(description="Freelancer account web panel")
     parser.add_argument("--host", default=os.environ.get("FL_PANEL_HOST", "127.0.0.1"))
     parser.add_argument("--port", default=int(os.environ.get("FL_PANEL_PORT", "8080")), type=int)
     parser.add_argument("--accounts", default=str(ACCOUNTS_DIR), type=Path)
