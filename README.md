@@ -1,30 +1,62 @@
 # Freelancer Account Control Panel
 
-Read-only browser panel for the bundled Freelancer multiplayer account archive.
-It reads character `.fl` files from `Accts/MultiPlayer` and translates numeric
-ship/equipment/cargo/navigation codes through the local `IONCROSS/GAMEDATA_*.txt`
-files.
+Browser panel for a Freelancer multiplayer account archive. The app is now split into a small
+entry point plus modules under `fl_panel/`, while browser styling and JavaScript live in
+`fl_panel/static/` for easier editing.
 
-## Client login
+## Project layout
 
-The client-facing page does **not** ask for an account-folder ID. A player enters:
+- `account_panel.py` — tiny CLI entry point;
+- `fl_panel/server.py` — HTTP routes, sessions and POST handlers;
+- `fl_panel/repository.py` — account loading, authentication and business logic;
+- `fl_panel/gamedata.py` — IONCROSS `GAMEDATA_*.txt` loader and code resolver;
+- `fl_panel/finance.py` — `.fl` money and account `bank.ini` read/write helpers;
+- `fl_panel/views.py` — HTML renderers;
+- `fl_panel/static/index.html`, `style.css` and `tabs.js` — browser UI assets, including AJAX finance forms.
 
-1. character name from a `.fl` save;
-2. the account-wide password stored in the account folder's `name` file.
+## Login compatibility
 
-After a successful match the panel opens only that character's personal cabinet.
-All `.fl` files in one account folder share the same `name` password.
+The login form accepts either:
+
+1. a character name plus the account password from the account folder `name` file;
+2. an account folder ID (`23-...`) with the optional character name field;
+3. the old compatibility mode: account folder ID without a password.
+
+This keeps the previous account-ID login flow available while still supporting the character
+password login flow.
 
 ## Character cabinet tabs
 
 - **Инвентарь** — cargo/inventory from the character save;
 - **Снаряжение** — ship, mounted equipment and base equipment state;
 - **Статистика** — time played, created/updated dates, kills, deaths and mission counters;
-- **Финансы** — character money, future personal-bank balance and disabled placeholders for
-  internal transfers/bank deposit/withdrawal flows;
+- **Финансы** — character money, `bank.ini` balance, direct pilot transfers, and bank
+  deposit/withdrawal operations;
 - **Репутация** — relations with factions resolved through `GAMEDATA_factions.txt`;
 - **Навигация** — current system/base plus visited systems, bases, holes and map marks in a
   readable table where the local data allows code resolution.
+
+## Financial operations
+
+`bank.ini` is stored in the account folder as a single plain integer for speed:
+
+```txt
+1000000
+```
+
+Legacy `[Bank] balance = ...` files are still readable, but the panel writes the optimized
+plain-number format after the next bank operation.
+
+Supported operations from the **Финансы** tab are submitted with AJAX, so the cabinet balances update without a full page reload:
+
+- **Transfer to another pilot**: enter the target pilot nickname and amount. The panel debits the
+  sender character's in-game `money` first. If the character balance is not enough, the remainder
+  is debited from the sender account's `bank.ini`. If character money plus bank balance is still
+  insufficient, the operation is rejected.
+- **Deposit to bank**: moves the amount from the current character's `.fl` `money` field into
+  `bank.ini`.
+- **Withdraw from bank**: moves the amount from `bank.ini` into the current character's `.fl`
+  `money` field.
 
 ## Admin area
 
@@ -39,7 +71,8 @@ python3 account_panel.py --host 127.0.0.1 --port 8080
 ```
 
 Open <http://127.0.0.1:8080>, then log in with a character name such as `Athlon0104`
-and the decoded password from that account's `name` file.
+and the decoded password from that account's `name` file, or use an account ID in compatibility
+mode.
 
 ## Custom paths
 
@@ -56,6 +89,6 @@ and port.
 
 ## Security note
 
-The panel is intentionally read-only for save files. The future bank/transfer controls are UI
-placeholders and currently do not write to `.fl` files. Do not expose the app publicly without
-adding real transport security and access control.
+Financial actions write to `.fl` character files and account-level plain-number `bank.ini` files. Back up the
+account archive before enabling this on a live server, and do not expose the app publicly without
+transport security and access control.
