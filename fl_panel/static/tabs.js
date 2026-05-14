@@ -35,7 +35,10 @@ document.addEventListener('submit', async (event) => {
   }
 
   try {
-    const response = await fetch(form.action, {
+    // Do not use form.action here: a child control named "action" shadows
+    // HTMLFormElement.action in browsers and becomes "[object HTMLSelectElement]".
+    const actionUrl = form.getAttribute('action') || window.location.href;
+    const response = await fetch(actionUrl, {
       method: 'POST',
       body: new FormData(form),
       credentials: 'same-origin',
