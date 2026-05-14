@@ -12,7 +12,7 @@ entry point plus modules under `fl_panel/`, while browser styling and JavaScript
 - `fl_panel/gamedata.py` — IONCROSS `GAMEDATA_*.txt` loader and code resolver;
 - `fl_panel/finance.py` — `.fl` money and account `bank.ini` read/write helpers;
 - `fl_panel/views.py` — HTML renderers;
-- `fl_panel/static/index.html`, `style.css` and `tabs.js` — browser UI assets.
+- `fl_panel/static/index.html`, `style.css` and `tabs.js` — browser UI assets, including AJAX finance forms.
 
 ## Login compatibility
 
@@ -47,7 +47,7 @@ password login flow.
 Legacy `[Bank] balance = ...` files are still readable, but the panel writes the optimized
 plain-number format after the next bank operation.
 
-Supported operations from the **Финансы** tab:
+Supported operations from the **Финансы** tab are submitted with AJAX, so the cabinet balances update without a full page reload:
 
 - **Transfer to another pilot**: enter the target pilot nickname and amount. The panel debits the
   sender character's in-game `money` first. If the character balance is not enough, the remainder

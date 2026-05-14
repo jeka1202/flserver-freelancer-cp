@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import Any
 
 from .config import ACCOUNTS_DIR, IONCROSS_DIR, STATIC_DIR
-from .repository import Repository
+from .repository import Repository, money
 from .utils import parse_amount
 from .views import render_admin, render_admin_account, render_cabinet, render_login
 
@@ -85,26 +85,46 @@ class Handler(BaseHTTPRequestHandler):
     def handle_transfer(self, form: dict[str, list[str]]) -> None:
         session = self.current_session()
         if not session:
-            self.send_error(HTTPStatus.UNAUTHORIZED)
+            self.send_finance_response(False, "Сессия истекла. Войдите заново.", HTTPStatus.UNAUTHORIZED)
             return
         account, character = session
         target = (form.get("target", [""])[0]).strip()
         amount = parse_amount(form.get("amount", [""])[0])
         ok, text = self.repo.transfer_to_character(account["id"], character["file"], target, amount)
-        self.set_flash(ok, text)
-        self.redirect("/cabinet")
+        self.finish_finance_operation(ok, text)
 
     def handle_bank(self, form: dict[str, list[str]]) -> None:
         session = self.current_session()
         if not session:
-            self.send_error(HTTPStatus.UNAUTHORIZED)
+            self.send_finance_response(False, "Сессия истекла. Войдите заново.", HTTPStatus.UNAUTHORIZED)
             return
         account, character = session
         action = form.get("action", [""])[0]
         amount = parse_amount(form.get("amount", [""])[0])
         ok, text = self.repo.bank_operation(account["id"], character["file"], action, amount)
+        self.finish_finance_operation(ok, text)
+
+    def finish_finance_operation(self, ok: bool, text: str) -> None:
+        if self.wants_json():
+            self.send_finance_response(ok, text)
+            return
         self.set_flash(ok, text)
         self.redirect("/cabinet")
+
+    def wants_json(self) -> bool:
+        return self.headers.get("X-Requested-With") == "XMLHttpRequest" or "application/json" in self.headers.get("Accept", "")
+
+    def send_finance_response(self, ok: bool, text: str, status: HTTPStatus = HTTPStatus.OK) -> None:
+        session = self.current_session()
+        account, character = session if session else ({"bank": 0}, {"money": 0, "bank": 0})
+        self.send_json({
+            "ok": ok,
+            "message": text,
+            "character_money": int(character.get("money", 0)),
+            "character_money_formatted": money(int(character.get("money", 0))),
+            "bank": int(account.get("bank", character.get("bank", 0))),
+            "bank_formatted": money(int(account.get("bank", character.get("bank", 0)))),
+        }, status=status)
 
     def redirect(self, location: str, token: str | None = None) -> None:
         self.send_response(HTTPStatus.SEE_OTHER)
@@ -185,9 +205,9 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(content)
 
-    def send_json(self, payload: Any) -> None:
+    def send_json(self, payload: Any, status: HTTPStatus = HTTPStatus.OK) -> None:
         content = json.dumps(payload, ensure_ascii=False, indent=2).encode()
-        self.send_response(HTTPStatus.OK)
+        self.send_response(status)
         self.send_header("Content-Type", "application/json; charset=utf-8")
         self.send_header("Content-Length", str(len(content)))
         self.end_headers()
