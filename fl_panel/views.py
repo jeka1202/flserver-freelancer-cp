@@ -4,6 +4,7 @@ import html
 import json
 from typing import Any
 
+from .config import STATIC_DIR
 from .repository import money
 
 
@@ -17,17 +18,12 @@ def page(title: str, body: str) -> bytes:
 
 def render_login(repo, message: str = "") -> bytes:
     stats = repo.public_stats()
-    body = f"""
-    <section class="hero">
-      <div class="card"><span class="pill">FREELANCER · ACCOUNT CP</span><h1>Личный кабинет пилота</h1>
-      <p class="muted">Вернули гибкий вход: введите имя персонажа или ID аккаунта. Пароль можно указать из файла <code>name</code>; для совместимости старый вход по ID аккаунта работает без пароля.</p>
-      {f'<p class="pill negative">{esc(message)}</p>' if message else ''}
-      <form method="post" action="/login"><label>Логин</label><input name="login" placeholder="Athlon0104 или 23-f73f713c" autocomplete="username" required autofocus><label>Пароль</label><input name="password" type="password" placeholder="пароль из файла name, если используется"><label>Персонаж (если вошли по ID аккаунта)</label><input name="character" placeholder="необязательно"><button>Войти в кабинет</button></form>
-      <p class="muted small">Администрирование вынесено отдельно: <a href="/admin">/admin</a>. Клиентская часть не показывает список чужих аккаунтов.</p></div>
-      <div class="card"><h2>Что будет внутри</h2><div class="grid"><div class="stat"><b>{stats['characters']}</b>персонажей в архиве</div><div class="stat"><b>{stats['gamedata_items']}</b>записей IONCROSS</div></div>
-      <p><span class="pill">Инвентарь</span><span class="pill">Снаряжение</span><span class="pill">Статистика</span><span class="pill">Финансы и банк</span><span class="pill">Репутация</span><span class="pill">Навигация</span></p></div>
-    </section>"""
-    return page("Вход · Freelancer Account Panel", body)
+    content = (STATIC_DIR / "index.html").read_text(encoding="utf-8")
+    message_html = f'<p class="pill negative">{esc(message)}</p>' if message else ""
+    content = content.replace("{{message}}", message_html)
+    content = content.replace("{{characters}}", str(stats["characters"]))
+    content = content.replace("{{gamedata_items}}", str(stats["gamedata_items"]))
+    return content.encode()
 
 
 def item_table(items: list[dict[str, str]], empty: str, third_label: str = "Кол-во / слот") -> str:
@@ -63,7 +59,7 @@ def render_cabinet(account: dict[str, Any], char: dict[str, Any], message: str =
     <section id="inventory" class="card tab-panel active"><h2>Инвентарь</h2>{item_table(char['cargo'], 'Груз отсутствует.', 'Кол-во')}</section>
     <section id="equipment" class="card tab-panel"><h2>Снаряжение</h2><div class="grid"><div class="stat"><b>{esc(char['ship']['name'])}</b>Корабль<br><span class="muted">{esc(char['ship']['nickname'])}</span></div><div class="stat"><b>{esc(char['base']['name'])}</b>Текущая база</div><div class="stat"><b>{esc(char['last_base']['name'])}</b>Последняя база</div></div><h3>Установлено на корабле</h3>{item_table(char['equip'], 'Нет установленного оборудования.', 'Слот')}<details><summary>Оборудование на базе/последнее сохранённое состояние</summary>{item_table(char['base_equip'], 'Нет данных base_equip.', 'Слот')}{item_table(char['base_cargo'], 'Нет данных base_cargo.', 'Кол-во')}</details></section>
     <section id="stats" class="card tab-panel"><h2>Статистика</h2><div class="grid"><div class="stat"><b>{esc(char['time_played'])}</b>Время в игре</div><div class="stat"><b>{esc(account['created'])}</b>Создан аккаунт</div><div class="stat"><b>{esc(char['created'])}</b>Создан персонаж / первая дата файла</div><div class="stat"><b>{esc(char['updated'])}</b>Последнее изменение</div><div class="stat"><b>{esc(char['kills'])}</b>Убийства</div><div class="stat"><b>{esc(char['deaths'])}</b>Смерти</div><div class="stat"><b>{esc(char['missions_success'])}/{esc(char['missions_failed'])}</b>Миссии успех/провал</div></div><details><summary>Все прочитанные сырые поля персонажа</summary><pre class="raw">{raw}</pre></details></section>
-    <section id="finance" class="card tab-panel"><h2>Финансы</h2><div class="grid"><div class="stat"><b class="money">{money(char['money'])}</b>Деньги персонажа</div><div class="stat"><b class="money">{money(char['bank'])}</b>Bank.ini · [Bank] balance</div></div><div class="two"><div class="stat"><h3>Перевод другому пилоту</h3><form method="post" action="/finance/transfer"><label>Никнейм пилота-получателя</label><input name="target" placeholder="Имя персонажа" required><label>Сумма перевода</label><input name="amount" inputmode="numeric" pattern="[0-9 ]+" placeholder="100000" required><button>Перевести</button></form><p class="muted small">Сначала списывается игровой счёт персонажа. Если его не хватает, остаток берётся из bank.ini текущего аккаунта.</p></div><div class="stat"><h3>Банк персонажа</h3><form method="post" action="/finance/bank"><label>Операция</label><select name="action"><option value="deposit">Перевести с персонажа в банк</option><option value="withdraw">Перевести из банка персонажу</option></select><label>Сумма</label><input name="amount" inputmode="numeric" pattern="[0-9 ]+" placeholder="50000" required><button>Выполнить</button></form><p class="muted small">Банк хранится в файле <code>bank.ini</code>, секция <code>[Bank]</code>, поле <code>balance</code>.</p></div></div></section>
+    <section id="finance" class="card tab-panel"><h2>Финансы</h2><div class="grid"><div class="stat"><b class="money">{money(char['money'])}</b>Деньги персонажа</div><div class="stat"><b class="money">{money(char['bank'])}</b>Bank.ini</div></div><div class="two"><div class="stat"><h3>Перевод другому пилоту</h3><form method="post" action="/finance/transfer"><label>Никнейм пилота-получателя</label><input name="target" placeholder="Имя персонажа" required><label>Сумма перевода</label><input name="amount" inputmode="numeric" pattern="[0-9 ]+" placeholder="100000" required><button>Перевести</button></form><p class="muted small">Сначала списывается игровой счёт персонажа. Если его не хватает, остаток берётся из bank.ini текущего аккаунта.</p></div><div class="stat"><h3>Банк персонажа</h3><form method="post" action="/finance/bank"><label>Операция</label><select name="action"><option value="deposit">Перевести с персонажа в банк</option><option value="withdraw">Перевести из банка персонажу</option></select><label>Сумма</label><input name="amount" inputmode="numeric" pattern="[0-9 ]+" placeholder="50000" required><button>Выполнить</button></form><p class="muted small">Банк хранится в файле <code>bank.ini</code> одной строкой: просто число кредитов.</p></div></div></section>
     <section id="reputation" class="card tab-panel"><h2>Репутация</h2><p>{top_factions}</p><table><thead><tr><th>Фракция</th><th>Код</th><th>Отношение</th></tr></thead><tbody>{''.join(f'<tr><td>{esc(h["name"])}</td><td>{esc(h["code"])}</td><td class="{ "negative" if str(h["reputation"]).startswith("-") else "" }">{esc(h["reputation"])}</td></tr>' for h in char['houses'])}</tbody></table></section>
     <section id="navigation" class="card tab-panel"><h2>Навигация</h2><div class="grid"><div class="stat"><b>{esc(char['system']['name'])}</b>Текущая система</div><div class="stat"><b>{len(nav['systems'])}</b>Посещённых систем</div><div class="stat"><b>{len(nav['bases'])}</b>Посещённых баз</div><div class="stat"><b>{nav['raw_total']}</b>Отметок карты</div></div><div class="two"><div><h3>Посещённые системы</h3>{nav_table(nav['systems'], 'Нет записей sys_visited.')}</div><div><h3>Посещённые базы</h3>{nav_table(nav['bases'], 'Нет записей base_visited.')}</div></div><details><summary>Прыжковые дыры и сырые отметки карты</summary>{nav_table(nav['holes'], 'Нет записей holes_visited.')}<h3>Первые 250 visit-записей</h3>{raw_visit_table(nav['raw'])}</details></section>
     """

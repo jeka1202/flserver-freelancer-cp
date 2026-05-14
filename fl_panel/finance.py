@@ -13,11 +13,25 @@ def bank_ini_path(account_path: Path) -> Path:
 
 
 def read_bank_balance(account_path: Path) -> int:
+    """Read account bank balance.
+
+    New fast format is a plain integer in bank.ini. Legacy INI formats are still
+    accepted for existing installs: [Bank] balance/money/cash/credits.
+    """
     path = bank_ini_path(account_path)
     if not path.exists():
         return 0
+    raw = read_text(path).strip()
+    if not raw:
+        return 0
+    if re.fullmatch(r"\d+", raw):
+        return int(raw)
+
     parser = configparser.ConfigParser()
-    parser.read(path, encoding="utf-8")
+    try:
+        parser.read_string(raw)
+    except configparser.Error:
+        return 0
     if not parser.has_section(BANK_SECTION):
         return 0
     for key in (BANK_KEY, "money", "cash", "credits"):
@@ -27,15 +41,8 @@ def read_bank_balance(account_path: Path) -> int:
 
 
 def write_bank_balance(account_path: Path, balance: int) -> None:
-    path = bank_ini_path(account_path)
-    parser = configparser.ConfigParser()
-    if path.exists():
-        parser.read(path, encoding="utf-8")
-    if not parser.has_section(BANK_SECTION):
-        parser.add_section(BANK_SECTION)
-    parser.set(BANK_SECTION, BANK_KEY, str(max(0, balance)))
-    with path.open("w", encoding="utf-8") as handle:
-        parser.write(handle)
+    """Write bank.ini in the optimized plain-number format."""
+    bank_ini_path(account_path).write_text(f"{max(0, balance)}\n", encoding="utf-8")
 
 
 def read_character_money(file_path: Path) -> int:

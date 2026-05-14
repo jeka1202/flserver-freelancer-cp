@@ -12,7 +12,7 @@ entry point plus modules under `fl_panel/`, while browser styling and JavaScript
 - `fl_panel/gamedata.py` — IONCROSS `GAMEDATA_*.txt` loader and code resolver;
 - `fl_panel/finance.py` — `.fl` money and account `bank.ini` read/write helpers;
 - `fl_panel/views.py` — HTML renderers;
-- `fl_panel/static/style.css` and `fl_panel/static/tabs.js` — browser UI assets.
+- `fl_panel/static/index.html`, `style.css` and `tabs.js` — browser UI assets.
 
 ## Login compatibility
 
@@ -38,12 +38,14 @@ password login flow.
 
 ## Financial operations
 
-`bank.ini` is stored in the account folder and uses section `[Bank]` with field `balance`:
+`bank.ini` is stored in the account folder as a single plain integer for speed:
 
-```ini
-[Bank]
-balance = 1000000
+```txt
+1000000
 ```
+
+Legacy `[Bank] balance = ...` files are still readable, but the panel writes the optimized
+plain-number format after the next bank operation.
 
 Supported operations from the **Финансы** tab:
 
@@ -87,6 +89,6 @@ and port.
 
 ## Security note
 
-Financial actions write to `.fl` character files and account-level `bank.ini` files. Back up the
+Financial actions write to `.fl` character files and account-level plain-number `bank.ini` files. Back up the
 account archive before enabling this on a live server, and do not expose the app publicly without
 transport security and access control.
