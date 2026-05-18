@@ -1,0 +1,115 @@
+document.addEventListener('click', (event) => {
+  const tab = event.target.closest('[data-tab]');
+  if (!tab) return;
+
+  const id = tab.dataset.tab;
+
+  document.querySelectorAll('.tab').forEach((item) => {
+    item.classList.toggle('active', item === tab);
+  });
+
+  document.querySelectorAll('.tab-panel').forEach((panel) => {
+    panel.classList.toggle('active', panel.id === id);
+  });
+});
+
+function setFinanceMessage(message, ok) {
+  const box = document.querySelector('#finance-message');
+  if (!box) return;
+
+  box.hidden = false;
+  box.textContent = message;
+  box.classList.toggle('money', Boolean(ok));
+  box.classList.toggle('negative', !ok);
+}
+
+function setBalance(selector, value, formatted) {
+  const element = document.querySelector(selector);
+  if (!element) return;
+
+  element.dataset.balance = String(value);
+  element.textContent = formatted;
+}
+
+function buildFinanceBody(form) {
+  const body = new URLSearchParams();
+
+  for (const element of Array.from(form.elements)) {
+    if (!element.name || element.disabled) continue;
+
+    if ((element.type === 'checkbox' || element.type === 'radio') && !element.checked) {
+      continue;
+    }
+
+    body.append(element.name, element.value);
+  }
+
+  return body;
+}
+
+document.addEventListener('submit', async (event) => {
+  const form = event.target.closest('form[data-ajax-finance="true"]');
+  if (!form) return;
+
+  event.preventDefault();
+  event.stopPropagation();
+
+  if (form.dataset.loading === '1') {
+    return;
+  }
+
+  form.dataset.loading = '1';
+
+  const button = form.querySelector('button[type="submit"], button:not([type])');
+  const originalText = button ? button.textContent : '';
+
+  if (button) {
+    button.disabled = true;
+    button.textContent = 'Выполняю...';
+  }
+
+  try {
+    // Не используем form.action: поле/селект name="action" может перекрыть HTMLFormElement.action.
+    // Собираем тело вручную, потому что FormData(form) в этой странице иногда уходил пустым.
+    const actionUrl = form.getAttribute('action') || window.location.href;
+    const body = buildFinanceBody(form);
+
+    const response = await fetch(actionUrl, {
+      method: 'POST',
+      body,
+      credentials: 'same-origin',
+      headers: {
+        Accept: 'application/json',
+        'X-Requested-With': 'XMLHttpRequest',
+        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+      },
+    });
+
+    const contentType = response.headers.get('content-type') || '';
+    if (!contentType.includes('application/json')) {
+      const text = await response.text();
+      throw new Error(text || `HTTP ${response.status}`);
+    }
+
+    const payload = await response.json();
+
+    setFinanceMessage(payload.message || 'Операция завершена.', payload.ok && response.ok);
+    setBalance('#character-money', payload.character_money, payload.character_money_formatted);
+    setBalance('#bank-money', payload.bank, payload.bank_formatted);
+
+    if (response.ok && payload.ok) {
+      const amountInput = form.querySelector('[name="amount"]');
+      if (amountInput) amountInput.value = '';
+    }
+  } catch (error) {
+    console.error('Finance AJAX failed:', error);
+    setFinanceMessage('Фоновая операция не выполнена: сервер вернул неожиданный ответ. Обновите страницу и попробуйте ещё раз.', false);
+  } finally {
+    form.dataset.loading = '0';
+
+    if (button) {
+      button.disabled = false;
+      button.textContent = originalText;
+    }
+  }
+});
