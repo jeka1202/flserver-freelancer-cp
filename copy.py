@@ -7,8 +7,13 @@ def main():
     # Папка, где лежит сам скрипт
     script_dir = Path(__file__).resolve().parent
 
+<<<<<<< Updated upstream
     # Файл bank.ini рядом со скриптом
     source_file = script_dir / "bank.ini"
+=======
+    # Файл name рядом со скриптом
+    source_file = script_dir / "name"
+>>>>>>> Stashed changes
 
     # Папка Accts\MultiPlayer\
     multiplayer_dir = script_dir / "Accts" / "MultiPlayer"
@@ -17,9 +22,15 @@ def main():
     print(f"[INFO] Файл-источник: {source_file}")
     print(f"[INFO] Папка MultiPlayer: {multiplayer_dir}")
 
+<<<<<<< Updated upstream
     # Проверяем файл bank.ini
     if not source_file.is_file():
         print("[ERROR] Файл 'bank.ini' не найден рядом со скриптом.")
+=======
+    # Проверяем файл name
+    if not source_file.is_file():
+        print("[ERROR] Файл 'name' не найден рядом со скриптом.")
+>>>>>>> Stashed changes
         sys.exit(1)
 
     # Проверяем папку Accts\MultiPlayer
@@ -39,7 +50,11 @@ def main():
     copied_count = 0
 
     for player_dir in player_dirs:
+<<<<<<< Updated upstream
         target_file = player_dir / "bank.ini"
+=======
+        target_file = player_dir / "name"
+>>>>>>> Stashed changes
 
         try:
             shutil.copy2(source_file, target_file)
