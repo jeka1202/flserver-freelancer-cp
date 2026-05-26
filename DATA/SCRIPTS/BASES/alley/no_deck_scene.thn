@@ -1,0 +1,958 @@
+duration = 3600;
+
+entities =
+{
+	{
+		entity_name = "Layer_Scene_no",
+		type = SCENE,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		up = Y_AXIS,
+		front = Z_AXIS,
+		ambient = { 20, 16, 60 }
+	},
+	{
+		entity_name = "Set_Chamber_1",
+		type = COMPOUND,
+		template_name = "nomad_collider_segment_cinematic",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		userprops =
+		{
+			category = "Solar",
+      NoFog = "n",
+		}
+	},
+	{
+		entity_name = "Set_Chamber_2",
+		type = COMPOUND,
+		template_name = "nomad_collider_segment_cinematic",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		userprops =
+		{
+			category = "Solar",
+			NoFog = "n",
+		}
+	},
+	{
+		entity_name = "Set_Chamber_3",
+		type = COMPOUND,
+		template_name = "nomad_collider_segment_cinematic",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		userprops =
+		{
+			category = "Solar",
+			NoFog = "n",
+		}
+	},
+  {
+		entity_name = "Set_Chamber_1_effect_1",
+		type = PSYS,
+		template_name = "dsy_nomad_collider_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "Set_Chamber_1_effect_2",
+		type = PSYS,
+		template_name = "dsy_nomad_collider_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "Set_Chamber_1_effect_3",
+		type = PSYS,
+		template_name = "dsy_nomad_collider_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "Set_Chamber_1_effect_4",
+		type = PSYS,
+		template_name = "dsy_nomad_collider_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "Set_Chamber_1_effect_5",
+		type = PSYS,
+		template_name = "dsy_nomad_collider_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "Set_Chamber_1_effect_6",
+		type = PSYS,
+		template_name = "dsy_nomad_collider_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "Set_Chamber_1_effect_7",
+		type = PSYS,
+		template_name = "dsy_nomad_collider_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "Set_Chamber_1_effect_8",
+		type = PSYS,
+		template_name = "dsy_nomad_collider_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+	{
+		entity_name = "Set_marduk_1",
+		type = COMPOUND,
+		template_name = "dsy_no2_artillery_cinematic",
+		lt_grp = 12, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient =	{ { 0.5877, 0, 0.8090 }, { 0, 1, 0 }, { -0.8090, 0, 0.5877 } }
+		},
+		userprops =
+		{
+			category = "Solar",
+      NoFog = "n",
+		}
+	},
+  {
+		entity_name="NomadBattleship_Engine_1",
+		type=PSYS,
+		template_name="dsy_no2_largeengine05",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=1
+		}
+	},
+	{
+		entity_name = "Set_Chamber_2_effect_1",
+		type = PSYS,
+		template_name = "dsy_nomad_collider_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "Set_Chamber_2_effect_2",
+		type = PSYS,
+		template_name = "dsy_nomad_collider_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "Set_Chamber_2_effect_3",
+		type = PSYS,
+		template_name = "dsy_nomad_collider_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "Set_Chamber_2_effect_4",
+		type = PSYS,
+		template_name = "dsy_nomad_collider_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "Set_Chamber_2_effect_5",
+		type = PSYS,
+		template_name = "dsy_nomad_collider_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "Set_Chamber_2_effect_6",
+		type = PSYS,
+		template_name = "dsy_nomad_collider_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "Set_Chamber_2_effect_7",
+		type = PSYS,
+		template_name = "dsy_nomad_collider_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "Set_Chamber_2_effect_8",
+		type = PSYS,
+		template_name = "dsy_nomad_collider_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+	{
+	  entity_name = "Set_marduk_2",
+	  type = COMPOUND,
+	  template_name = "dsy_no2_artillery_cinematic",
+	  lt_grp = 12, srt_grp = 0, usr_flg = 0,
+	  flags = LIT_DYNAMIC + LIT_AMBIENT,
+	  spatialprops =
+	  {
+	    pos = { 0, 0, 0 },
+	    orient =	{ { 0.5877, 0, 0.8090 }, { 0, 1, 0 }, { -0.8090, 0, 0.5877 } }
+	  },
+	  userprops =
+	  {
+	    category = "Solar",
+	    NoFog = "n",
+	  }
+	},
+	{
+	  entity_name="NomadBattleship_Engine_2",
+	  type=PSYS,
+	  template_name="dsy_no2_largeengine05",
+	  lt_grp=0, srt_grp=0, usr_flg=0,
+	  flags=LIT_DYNAMIC + LIT_AMBIENT,
+	  spatialprops={
+	    pos = { 0, 0, 0 },
+	    orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+	  },
+	  psysprops={
+	    sparam=1
+	  }
+	},
+	{
+		entity_name = "Set_Chamber_3_effect_1",
+		type = PSYS,
+		template_name = "dsy_nomad_collider_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "Set_Chamber_3_effect_2",
+		type = PSYS,
+		template_name = "dsy_nomad_collider_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "Set_Chamber_3_effect_3",
+		type = PSYS,
+		template_name = "dsy_nomad_collider_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "Set_Chamber_3_effect_4",
+		type = PSYS,
+		template_name = "dsy_nomad_collider_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "Set_Chamber_3_effect_5",
+		type = PSYS,
+		template_name = "dsy_nomad_collider_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "Set_Chamber_3_effect_6",
+		type = PSYS,
+		template_name = "dsy_nomad_collider_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "Set_Chamber_3_effect_7",
+		type = PSYS,
+		template_name = "dsy_nomad_collider_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "Set_Chamber_3_effect_8",
+		type = PSYS,
+		template_name = "dsy_nomad_collider_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+};
+
+events =
+{
+	{
+		0, ATTACH_ENTITY, { "Set_marduk_1", "Set_Chamber_1" },
+		{
+			duration = 3600,
+			offset = { 0, 50, 400},
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hpcine01",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		0, ATTACH_ENTITY, { "NomadBattleship_Engine_1", "Set_marduk_1" },
+		{
+			duration = 3600,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hpengine01",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		0, START_PSYS, { "NomadBattleship_Engine_1" }, { duration = 3600 }
+	},
+	{
+		0, ATTACH_ENTITY, { "Set_Chamber_2", "Set_Chamber_1" },
+		{
+			duration = 3600,
+			offset = { 0, 0, 2500},
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hpmount",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		0, ATTACH_ENTITY, { "Set_Chamber_3", "Set_Chamber_2" },
+		{
+			duration = 3600,
+			offset = { 0, 0, 2500},
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hpmount",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		0, ATTACH_ENTITY, { "Set_Chamber_1_effect_1", "Set_Chamber_1" },
+		{
+			duration = 3600,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hprunninglight01",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+  {
+		0, START_PSYS, { "Set_Chamber_1_effect_1" }, { duration = 3600 }
+	},
+  {
+		0, ATTACH_ENTITY, { "Set_Chamber_1_effect_2", "Set_Chamber_1" },
+		{
+			duration = 3600,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hprunninglight02",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+  {
+		0, START_PSYS, { "Set_Chamber_1_effect_2" }, { duration = 3600 }
+	},
+  {
+		0, ATTACH_ENTITY, { "Set_Chamber_1_effect_3", "Set_Chamber_1" },
+		{
+			duration = 3600,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hprunninglight03",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+  {
+		0, START_PSYS, { "Set_Chamber_1_effect_3" }, { duration = 3600 }
+	},
+  {
+		0, ATTACH_ENTITY, { "Set_Chamber_1_effect_4", "Set_Chamber_1" },
+		{
+			duration = 3600,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hprunninglight04",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+  {
+		0, START_PSYS, { "Set_Chamber_1_effect_4" }, { duration = 3600 }
+	},
+  {
+		0, ATTACH_ENTITY, { "Set_Chamber_1_effect_5", "Set_Chamber_1" },
+		{
+			duration = 3600,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hprunninglight05",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+  {
+		0, START_PSYS, { "Set_Chamber_1_effect_5" }, { duration = 3600 }
+	},
+  {
+		0, ATTACH_ENTITY, { "Set_Chamber_1_effect_6", "Set_Chamber_1" },
+		{
+			duration = 3600,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hprunninglight06",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+  {
+		0, START_PSYS, { "Set_Chamber_1_effect_6" }, { duration = 3600 }
+	},
+  {
+		0, ATTACH_ENTITY, { "Set_Chamber_1_effect_7", "Set_Chamber_1" },
+		{
+			duration = 3600,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hprunninglight07",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+  {
+		0, START_PSYS, { "Set_Chamber_1_effect_7" }, { duration = 3600 }
+	},
+  {
+		0, ATTACH_ENTITY, { "Set_Chamber_1_effect_8", "Set_Chamber_1" },
+		{
+			duration = 3600,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hprunninglight08",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+  {
+		0, START_PSYS, { "Set_Chamber_1_effect_8" }, { duration = 3600 }
+	},
+	{
+	  0, ATTACH_ENTITY, { "Set_marduk_2", "Set_Chamber_2" },
+	  {
+	    duration = 3600,
+	    offset = { 0, 50, 400},
+	    up=Y_AXIS,
+	    front=NEG_Z_AXIS,
+	    target_part="hpcine01",
+	    target_type=HARDPOINT,
+	    flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+	  }
+	},
+	{
+	  0, ATTACH_ENTITY, { "NomadBattleship_Engine_2", "Set_marduk_2" },
+	  {
+	    duration = 3600,
+	    offset = { 0, 0, 0 },
+	    up=Y_AXIS,
+	    front=NEG_Z_AXIS,
+	    target_part="hpengine01",
+	    target_type=HARDPOINT,
+	    flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+	  }
+	},
+	{
+	  0, START_PSYS, { "NomadBattleship_Engine_2" }, { duration = 3600 }
+	},
+	{
+			0, ATTACH_ENTITY, { "Set_Chamber_2_effect_1", "Set_Chamber_2" },
+			{
+				duration = 3600,
+				offset = { 0, 0, 0 },
+				up=Y_AXIS,
+				front=NEG_Z_AXIS,
+				target_part="hprunninglight01",
+				target_type=HARDPOINT,
+				flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+			}
+		},
+	  {
+			0, START_PSYS, { "Set_Chamber_2_effect_1" }, { duration = 3600 }
+		},
+	  {
+			0, ATTACH_ENTITY, { "Set_Chamber_2_effect_2", "Set_Chamber_2" },
+			{
+				duration = 3600,
+				offset = { 0, 0, 0 },
+				up=Y_AXIS,
+				front=NEG_Z_AXIS,
+				target_part="hprunninglight02",
+				target_type=HARDPOINT,
+				flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+			}
+		},
+	  {
+			0, START_PSYS, { "Set_Chamber_2_effect_2" }, { duration = 3600 }
+		},
+	  {
+			0, ATTACH_ENTITY, { "Set_Chamber_2_effect_3", "Set_Chamber_2" },
+			{
+				duration = 3600,
+				offset = { 0, 0, 0 },
+				up=Y_AXIS,
+				front=NEG_Z_AXIS,
+				target_part="hprunninglight03",
+				target_type=HARDPOINT,
+				flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+			}
+		},
+	  {
+			0, START_PSYS, { "Set_Chamber_2_effect_3" }, { duration = 3600 }
+		},
+	  {
+			0, ATTACH_ENTITY, { "Set_Chamber_2_effect_4", "Set_Chamber_2" },
+			{
+				duration = 3600,
+				offset = { 0, 0, 0 },
+				up=Y_AXIS,
+				front=NEG_Z_AXIS,
+				target_part="hprunninglight04",
+				target_type=HARDPOINT,
+				flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+			}
+		},
+	  {
+			0, START_PSYS, { "Set_Chamber_2_effect_4" }, { duration = 3600 }
+		},
+	  {
+			0, ATTACH_ENTITY, { "Set_Chamber_2_effect_5", "Set_Chamber_2" },
+			{
+				duration = 3600,
+				offset = { 0, 0, 0 },
+				up=Y_AXIS,
+				front=NEG_Z_AXIS,
+				target_part="hprunninglight05",
+				target_type=HARDPOINT,
+				flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+			}
+		},
+	  {
+			0, START_PSYS, { "Set_Chamber_2_effect_5" }, { duration = 3600 }
+		},
+	  {
+			0, ATTACH_ENTITY, { "Set_Chamber_2_effect_6", "Set_Chamber_2" },
+			{
+				duration = 3600,
+				offset = { 0, 0, 0 },
+				up=Y_AXIS,
+				front=NEG_Z_AXIS,
+				target_part="hprunninglight06",
+				target_type=HARDPOINT,
+				flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+			}
+		},
+	  {
+			0, START_PSYS, { "Set_Chamber_2_effect_6" }, { duration = 3600 }
+		},
+	  {
+			0, ATTACH_ENTITY, { "Set_Chamber_2_effect_7", "Set_Chamber_2" },
+			{
+				duration = 3600,
+				offset = { 0, 0, 0 },
+				up=Y_AXIS,
+				front=NEG_Z_AXIS,
+				target_part="hprunninglight07",
+				target_type=HARDPOINT,
+				flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+			}
+		},
+	  {
+			0, START_PSYS, { "Set_Chamber_2_effect_7" }, { duration = 3600 }
+		},
+	  {
+			0, ATTACH_ENTITY, { "Set_Chamber_2_effect_8", "Set_Chamber_2" },
+			{
+				duration = 3600,
+				offset = { 0, 0, 0 },
+				up=Y_AXIS,
+				front=NEG_Z_AXIS,
+				target_part="hprunninglight08",
+				target_type=HARDPOINT,
+				flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+			}
+		},
+	  {
+			0, START_PSYS, { "Set_Chamber_2_effect_8" }, { duration = 3600 }
+		},
+		{
+				0, ATTACH_ENTITY, { "Set_Chamber_3_effect_1", "Set_Chamber_3" },
+				{
+					duration = 3600,
+					offset = { 0, 0, 0 },
+					up=Y_AXIS,
+					front=NEG_Z_AXIS,
+					target_part="hprunninglight01",
+					target_type=HARDPOINT,
+					flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+				}
+			},
+		  {
+				0, START_PSYS, { "Set_Chamber_3_effect_1" }, { duration = 3600 }
+			},
+		  {
+				0, ATTACH_ENTITY, { "Set_Chamber_3_effect_2", "Set_Chamber_3" },
+				{
+					duration = 3600,
+					offset = { 0, 0, 0 },
+					up=Y_AXIS,
+					front=NEG_Z_AXIS,
+					target_part="hprunninglight02",
+					target_type=HARDPOINT,
+					flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+				}
+			},
+		  {
+				0, START_PSYS, { "Set_Chamber_3_effect_2" }, { duration = 3600 }
+			},
+		  {
+				0, ATTACH_ENTITY, { "Set_Chamber_3_effect_3", "Set_Chamber_3" },
+				{
+					duration = 3600,
+					offset = { 0, 0, 0 },
+					up=Y_AXIS,
+					front=NEG_Z_AXIS,
+					target_part="hprunninglight03",
+					target_type=HARDPOINT,
+					flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+				}
+			},
+		  {
+				0, START_PSYS, { "Set_Chamber_3_effect_3" }, { duration = 3600 }
+			},
+		  {
+				0, ATTACH_ENTITY, { "Set_Chamber_3_effect_4", "Set_Chamber_3" },
+				{
+					duration = 3600,
+					offset = { 0, 0, 0 },
+					up=Y_AXIS,
+					front=NEG_Z_AXIS,
+					target_part="hprunninglight04",
+					target_type=HARDPOINT,
+					flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+				}
+			},
+		  {
+				0, START_PSYS, { "Set_Chamber_3_effect_4" }, { duration = 3600 }
+			},
+		  {
+				0, ATTACH_ENTITY, { "Set_Chamber_3_effect_5", "Set_Chamber_3" },
+				{
+					duration = 3600,
+					offset = { 0, 0, 0 },
+					up=Y_AXIS,
+					front=NEG_Z_AXIS,
+					target_part="hprunninglight05",
+					target_type=HARDPOINT,
+					flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+				}
+			},
+		  {
+				0, START_PSYS, { "Set_Chamber_3_effect_5" }, { duration = 3600 }
+			},
+		  {
+				0, ATTACH_ENTITY, { "Set_Chamber_3_effect_6", "Set_Chamber_3" },
+				{
+					duration = 3600,
+					offset = { 0, 0, 0 },
+					up=Y_AXIS,
+					front=NEG_Z_AXIS,
+					target_part="hprunninglight06",
+					target_type=HARDPOINT,
+					flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+				}
+			},
+		  {
+				0, START_PSYS, { "Set_Chamber_3_effect_6" }, { duration = 3600 }
+			},
+		  {
+				0, ATTACH_ENTITY, { "Set_Chamber_3_effect_7", "Set_Chamber_3" },
+				{
+					duration = 3600,
+					offset = { 0, 0, 0 },
+					up=Y_AXIS,
+					front=NEG_Z_AXIS,
+					target_part="hprunninglight07",
+					target_type=HARDPOINT,
+					flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+				}
+			},
+		  {
+				0, START_PSYS, { "Set_Chamber_3_effect_7" }, { duration = 3600 }
+			},
+		  {
+				0, ATTACH_ENTITY, { "Set_Chamber_3_effect_8", "Set_Chamber_3" },
+				{
+					duration = 3600,
+					offset = { 0, 0, 0 },
+					up=Y_AXIS,
+					front=NEG_Z_AXIS,
+					target_part="hprunninglight08",
+					target_type=HARDPOINT,
+					flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+				}
+			},
+		  {
+				0, START_PSYS, { "Set_Chamber_3_effect_8" }, { duration = 3600 }
+			},
+};

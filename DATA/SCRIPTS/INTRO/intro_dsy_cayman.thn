@@ -1,0 +1,646 @@
+duration = 361.872;
+
+entities =
+{
+
+	{
+		entity_name = "Scene_Untitled",
+		type = SCENE,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		up = Y_AXIS,
+		front = Z_AXIS,
+		ambient = { 28, 28, 28 }
+	},
+
+	{
+		entity_name = "Light_2",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 10000, 0, 0 },
+			orient = { {  -1,  0.000000, 0 },
+					   {  0.000000,  1.000000,  0.000000 },
+					   {  0,  0.000000,  -1 } }
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 60, 20, 10 },
+			diffuse = { 0.2, 0.07, 0.04 },
+			specular = { 0, 0, 0 },
+			ambient = { 0, 0, 0 },
+			direction = { 0.5, 0.5, 2 },
+			range = 500000,
+			cutoff = 98.99998,
+			type = L_DIRECT,
+			theta = 90,
+			atten = { 1, 0, 0 }
+		}
+	},
+
+	{
+		entity_name = "Light_3",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 10000, 0, 0 },
+			orient = { {  0,  0.000000, 1 },
+					   {  0.000000,  1.000000,  0.000000 },
+					   {  1,  0.000000,  0 } }
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 60, 20, 10 },
+			diffuse = { 0.87, 0.35, 0.12 },
+			specular = { 0, 0, 0 },
+			ambient = { 0, 0, 0 },
+			direction = { 0.5, 0.5, 2 },
+			range = 500000,
+			cutoff = 98.99998,
+			type = L_DIRECT,
+			theta = 90,
+			atten = { 1, 0, 0 }
+		}
+	},
+
+	{
+		entity_name = "Camera_1",
+		type = CAMERA,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { -2082.575, -1028.602, 9368.024 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		cameraprops =
+		{
+			fovh = 30,
+			hvaspect = 1.333333,
+			nearplane = 1,
+			farplane = 1000000
+		}
+	},
+	
+
+	{
+		entity_name = "planet_earthgrncld_2000_1",
+		type = COMPOUND,
+		template_name = "planet_earthgrncld_2000",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 859, -3500, -5240 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		userprops =
+		{
+			category = "Solar",
+		}
+	},
+
+	{
+		entity_name = "Intro_waterplanet_ring",
+		type = PSYS,
+		template_name = "Intro_waterplanet_ring",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 859, -3500, -5240 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "planet_crater_800_1",
+		type = COMPOUND,
+		template_name = "planet_crater_800",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 4859, 2000, -25240 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		userprops =
+		{
+			category = "Solar",
+		}
+	},
+
+	{
+		entity_name = "starsphere_dyson_exterior2",
+		type = COMPOUND,
+		template_name = "starsphere_li01_stars",
+		lt_grp = 0, srt_grp = -100, usr_flg = 1,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { -1.000000,  0.000000, 0 },
+					   {  0.000000,  1.000000,  0.000000 },
+					   {  0,  0.000000, -1 } }
+		},
+		userprops =
+		{
+			category = "Prop",
+		}
+	},
+
+	{
+		entity_name = "starsphere_dyson_exterior",
+		type = COMPOUND,
+		template_name = "starsphere_ew19",
+		lt_grp = 0, srt_grp = -100, usr_flg = 1,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 0, 0, -2525 },
+			orient = { { -1.000000,  0.000000, 0 },
+					   {  0.000000,  1.000000,  0.000000 },
+					   {  0,  0.000000, -1 } }
+		},
+		userprops =
+		{
+			category = "Prop",
+		}
+	},
+
+	{
+		entity_name = "intro_volcanoplanet_sun_1",
+		type = PSYS,
+		template_name = "intro_volcanoplanet_sun",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { -2242, -1200, 2951 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "touristdust_sienna_1",
+		type = PSYS,
+		template_name = "touristdust_sienna",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "Monitor_2",
+		type = MONITOR,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0
+	},
+
+	{
+		entity_name = "dsy_coa_battlecruiser_1",
+		type = COMPOUND,
+		template_name = "dsy_coa_battlecruiser",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -2000, -1000, 8000 },
+			orient = { { 0.5150381, 0, 0.8571673 }, { 0, 1, 0 }, { -0.8571673, 0, 0.5150381 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "dsy_coa_battlecruiser_2",
+		type = COMPOUND,
+		template_name = "dsy_coa_battlecruiser",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -2000, -1000, 8000 },
+			orient = { { 0.5150381, 0, 0.8571673 }, { 0, 1, 0 }, { -0.8571673, 0, 0.5150381 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "dsy_barge_1",
+		type = COMPOUND,
+		template_name = "dsy_barge",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -2000, -1000, 8000 },
+			orient = { { 0.5150381, 0, 0.8571673 }, { 0, 1, 0 }, { -0.8571673, 0, 0.5150381 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "dsy_fearless_1",
+		type = COMPOUND,
+		template_name = "dsy_fearless",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -2000, -1000, 8000 },
+			orient = { { 0.5150381, 0, 0.8571673 }, { 0, 1, 0 }, { -0.8571673, 0, 0.5150381 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "dsy_fearless_2",
+		type = COMPOUND,
+		template_name = "dsy_fearless",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -2000, -1000, 8000 },
+			orient = { { 0.5150381, 0, 0.8571673 }, { 0, 1, 0 }, { -0.8571673, 0, 0.5150381 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "Gallia_Cruiser_Path",
+		type = MOTION_PATH,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		pathprops =
+		{
+			path_type = "CV_CROrientationSplinePath",
+			path_data = "OPEN, { -1200, -1000, 8800 }, { 1, 0, 0, 0 }, { -20000, -1000, -8000 }, { 1, 0, 0, 0 }, "
+		}
+	},
+
+	{
+		entity_name = "Gallia_Cruiser_Path3",
+		type = MOTION_PATH,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		pathprops =
+		{
+			path_type = "CV_CROrientationSplinePath",
+			path_data = "OPEN, { -2500, -1000, 6100 }, { 1, 0, 0, 0 }, { -500, -1000, 15000 }, { 1, 0, 0, 0 }, "
+		}
+	},
+
+	{
+		entity_name = "Gallia_Cruiser_Path2",
+		type = MOTION_PATH,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		pathprops =
+		{
+			path_type = "CV_CROrientationSplinePath",
+			path_data = "OPEN, { -3000, -1000, -8100 }, { 1, 0, 0, 0 }, { -500, -1000, 8000 }, { 1, 0, 0, 0 }, "
+		}
+	},
+
+	{
+		entity_name = "dsy_solarstation_1",
+		type = COMPOUND,
+		template_name = "dsy_solarstation",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -1242, 2500, -14951 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		userprops =
+		{
+			category = "Solar",
+		}
+	},
+	
+	{
+		entity_name = "mrk_1",
+		type = MARKER,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { -1242, 2500, -13951 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		}
+	},
+
+	{
+		entity_name = "dsy_solararray_1",
+		type = COMPOUND,
+		template_name = "dsy_solararray",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { -1, 0, 0 }, { 0, 1, 0 }, { 0, 0, -1 } }
+		},
+		userprops =
+		{
+			category = "Solar",
+		}
+	},
+	
+	{
+		entity_name = "dsy_solararray_2",
+		type = COMPOUND,
+		template_name = "dsy_solararray",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 0.5150381, 0, 0.8571673 }, { 0, 1, 0 }, { -0.8571673, 0, 0.5150381 } }
+		},
+		userprops =
+		{
+			category = "Solar",
+		}
+	},
+	
+	{
+		entity_name = "dsy_solararray_3",
+		type = COMPOUND,
+		template_name = "dsy_solararray",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 0.4694716, 0, -0.8829476 }, { 0, 1, 0 }, { 0.8829476, 0, 0.4694716 } }
+		},
+		userprops =
+		{
+			category = "Solar",
+		}
+	},
+	
+};
+
+events =
+{
+	{
+		0.000, START_SPATIAL_PROP_ANIM, { "planet_earthgrncld_2000_1" },
+		{
+			duration = 360.100,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 360, NEG_Y_AXIS }
+			}
+		}
+	},
+	
+	{
+		0.000, START_PATH_ANIMATION, { "dsy_coa_battlecruiser_1", "Gallia_Cruiser_Path" },
+		{
+			duration = 100.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION + ORIENTATION + LOOK_AT
+		}
+	},
+
+	{
+		0.000, START_PATH_ANIMATION, { "dsy_coa_battlecruiser_2", "Gallia_Cruiser_Path" },
+		{
+			duration = 100.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 100, 100, 100 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION + ORIENTATION + LOOK_AT
+		}
+	},
+
+	{
+		0.000, START_PATH_ANIMATION, { "dsy_fearless_1", "Gallia_Cruiser_Path2" },
+		{
+			duration = 50.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 125, -25, -20 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION + ORIENTATION + LOOK_AT
+		}
+	},
+
+	{
+		0.000, START_PATH_ANIMATION, { "dsy_fearless_2", "Gallia_Cruiser_Path2" },
+		{
+			duration = 50.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { -125, -25, -20 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION + ORIENTATION + LOOK_AT
+		}
+	},
+
+	{
+		0.000, START_PATH_ANIMATION, { "dsy_barge_1", "Gallia_Cruiser_Path2" },
+		{
+			duration = 50.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION + ORIENTATION + LOOK_AT
+		}
+	},
+
+	{
+		0.000, START_SPATIAL_PROP_ANIM, { "planet_crater_800_1" },
+		{
+			duration = 360.100,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 1080, NEG_Y_AXIS }
+			}
+		}
+	},
+	
+	{
+		0.000, START_PSYS, { "intro_volcanoplanet_sun_1" },
+		{
+			duration = 360.000
+		}
+	},
+
+	{
+		0.000, START_PSYS, { "Intro_waterplanet_ring" },
+		{
+			duration = 360.000
+		}
+	},
+
+	{
+		0.000, START_PSYS, { "touristdust_sienna_1" },
+		{
+			duration = 360.000
+		}
+	},
+
+	{
+		0.000, SET_CAMERA, { "Monitor_2", "Camera_1" }
+	},
+
+	{
+		0.000, ATTACH_ENTITY, { "dsy_solararray_1", "mrk_1" },
+		{
+			duration = 360.000,
+			offset = { 54, -40, 1485 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "",
+			target_type = ROOT,
+			flags = POSITION
+		}
+	},
+
+	{
+		0.000, ATTACH_ENTITY, { "dsy_solararray_2", "mrk_1" },
+		{
+			duration = 360.000,
+			offset = { -1146, -45, -731 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "",
+			target_type = ROOT,
+			flags = POSITION
+		}
+	},
+
+	{
+		0.000, ATTACH_ENTITY, { "dsy_solararray_3", "mrk_1" },
+		{
+			duration = 360.000,
+			offset = { 1392, -40, -660 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "",
+			target_type = ROOT,
+			flags = POSITION
+		}
+	},
+
+	{
+		0.000, START_SPATIAL_PROP_ANIM, { "mrk_1" },
+		{
+			duration = 360.100,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 3600, NEG_Y_AXIS }
+			}
+		}
+	},
+	
+	{
+		0.000, ATTACH_ENTITY, { "touristdust_sienna_1", "Camera_1" },
+		{
+			duration = 360.000,
+			offset = { 0, 0, -100 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "",
+			target_type = ROOT,
+			flags = POSITION
+		}
+	},
+
+	{
+		0.000, START_PSYS_PROP_ANIM, { "touristdust_sienna_1" },
+		{
+			duration = 360.000,
+			psysprops =
+			{
+				sparam = 1
+			},
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{  0.000000,  0.102564,  0.000000,  0.636364 },
+					{  1.000000,  1.000000,  0.900000,  0.000000 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},	
+	
+};

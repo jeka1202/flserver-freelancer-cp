@@ -1,0 +1,1139 @@
+duration = 200;
+
+entities = 
+{
+	{
+		entity_name = "Intro",
+		type = SCENE,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		up = Y_AXIS,
+		front = Z_AXIS,
+		ambient = { 0, 0, 0 }
+	},
+
+	{
+		entity_name = "Monitor",
+		type = MONITOR,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0
+	},
+
+	{
+		entity_name = "Camera",
+		type = CAMERA,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { -94.7763, 143.4027, 610.2501 },
+			-- orient = { { 0.9848, 0.0000, -0.1736}, { 0.0996, 0.8192, 0.5649 }, { 0.1422, -0.5736, 0.8067 } }
+			orient = { { 0.9659, 0.0000, -0.2588}, { 0.1294, 0.8660, 0.4830 }, { 0.2241, -0.5000, 0.8365 } }
+		},
+		cameraprops =
+		{
+			fovh = 7,
+			--fovh = 45,
+			hvaspect = 1.333333,
+			nearplane = 25,
+			farplane = 5000
+		}
+	},
+
+	{
+		entity_name = "Cityscape",
+		type = COMPOUND,
+		template_name = "br_03_cityscape_intro",
+		lt_grp = 1, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		userprops =
+		{
+			category = "Room",
+		}
+	},
+
+	{
+		entity_name = "Mountains",
+		type = COMPOUND,
+		template_name = "br_03_cityscape_bg",
+		lt_grp = 4, srt_grp = -50, usr_flg = 2,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 5287.801, -396.067, -20824.32 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		userprops =
+		{
+			category = "Prop",
+			NoFog = "y",
+		}
+	},
+
+	{
+		entity_name = "Sky",
+		type = COMPOUND,
+		template_name = "skydome_sky_storm_gray",
+		lt_grp = 5, srt_grp = -100, usr_flg = 2,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -94.7763, -4000.0000, 610.2501 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		userprops =
+		{
+			category = "Prop",
+			NoFog = "y",
+		}
+	},
+
+	{
+		entity_name = "Cityscape_Light",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 1, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 3000, 0 },
+			--orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+			orient = { { 0.9397, 0.3289, 0.0938}, { -0.0055, 0.2886, -0.9574 }, { 0.1285, -0.9764, -0.1722 } }
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 0, 0, 0 },
+			diffuse = { 0.20, 0.08, 0.0 },
+			specular = { 0, 0, 0 },
+			--ambient = { 0.01, 0.015, 0.08 },
+			ambient = { 0.06, 0.015, 0.02 },
+			--direction = { 0.5, -1, -0.75 },
+			direction = { 0, 0, 1 },
+			range = 200,
+			cutoff = 100,
+			type = L_DIRECT,
+			theta = 20,
+			atten = { 1, 0, 0 }
+		}
+	},
+
+	{
+		entity_name = "Cityscape_FireLight01",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 1, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { -278.3461, -261.3470, -788.0657 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 0, 0, 0 },
+			diffuse = { 0.75, 0.25, 0.0 },
+			specular = { 0, 0, 0 },
+			ambient = { 0, 0, 0 },
+			direction = { 0, 0, 0 },
+			range = 500,
+			cutoff = 1000,
+			type = L_POINT,
+			theta = 20,
+			atten = { 1, 0, 0 }
+		}
+	},
+
+	{
+		entity_name = "Cityscape_FireLight02",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 1, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 113.2520, -261.3470, -534.9093 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 0, 0, 0 },
+			diffuse = { 0.75, 0.25, 0.0 },
+			specular = { 0, 0, 0 },
+			ambient = { 0, 0, 0 },
+			direction = { 0, 0, 0 },
+			range = 500,
+			cutoff = 1000,
+			type = L_POINT,
+			theta = 20,
+			atten = { 1, 0, 0 }
+		}
+	},
+
+	{
+		entity_name = "Cityscape_FireLight03",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 1, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { -114.2227, -261.3470, 92.5549 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 0, 0, 0 },
+			diffuse = { 0.75, 0.25, 0.0 },
+			specular = { 0, 0, 0 },
+			ambient = { 0, 0, 0 },
+			direction = { 0, 0, 0 },
+			range = 350,
+			cutoff = 1000,
+			type = L_POINT,
+			theta = 20,
+			atten = { 1, 0, 0 }
+		}
+	},
+
+	{
+		entity_name = "Mountains_Light",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 4, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 1400, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 0, 0, 0 },
+			diffuse = { 0, 0, 0 },
+			specular = { 0, 0, 0 },
+			ambient = { 0.085, 0.025, 0.0125 },
+			direction = { 0, 0, 1 },
+			range = 30000,
+			cutoff = 180,
+			type = L_POINT,
+			theta = 200,
+			atten = { 1, 0, 0 }
+		}
+	},
+
+	{
+		entity_name = "Sky_Light01",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 5, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 1400, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 0, 0, 0 },
+			diffuse = { 0, 0, 0 },
+			specular = { 0, 0, 0 },
+			ambient = { 0.075, 0.025, 0.0125 },
+			direction = { 0, 0, 1 },
+			range = 20000,
+			cutoff = 180,
+			type = L_POINT,
+			theta = 200,
+			atten = { 1, 0, 0 }
+		}
+	},
+
+	{
+		entity_name = "Sky_Light02",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 5, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 1400, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 0, 0, 0 },
+			diffuse = { 0.15, 0.05, 0.025 },
+			specular = { 0, 0, 0 },
+			ambient = { 0, 0, 0 },
+			direction = { 0, 0, 1 },
+			range = 19000,
+			cutoff = 180,
+			type = L_POINT,
+			theta = 200,
+			atten = { 1, 0, 0 }
+		}
+	},
+
+	{
+		entity_name = "Sky_LightThunder",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 5, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 1400, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 0, 0, 0 },
+			diffuse = { 0, 0, 0 },
+			specular = { 0, 0, 0 },
+			ambient = { 0, 0, 0 },
+			direction = { 0, 0, 1 },
+			range = 19000,
+			cutoff = 180,
+			type = L_POINT,
+			theta = 200,
+			atten = { 0.5, 0, 0 }
+		}
+	},
+
+	{
+		entity_name = "FireFX01",
+		type = PSYS,
+		template_name = "rtc_distantexplosion_burning",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { -300, -140, -581 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "FireFX02",
+		type = PSYS,
+		template_name = "rtc_distantexplosion_burning",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { -36, -150, -659 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "FireFX03",
+		type = PSYS,
+		template_name = "rtc_distantexplosion_burning",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { -420, -130, -520 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "FireFX04",
+		type = PSYS,
+		template_name = "rtc_distantexplosion_burning",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 190.4992, -179.0446, -528.1493 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "Gallia_Battleship",
+		type = COMPOUND,
+		template_name = "dsy_gallicbs",
+		lt_grp = 1, srt_grp = -40, usr_flg = 2,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 0, -10000, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+
+	{
+		entity_name = "Bretonia_Battleship",
+		type = COMPOUND,
+		template_name = "br_battleship",
+		lt_grp = 1, srt_grp = -20, usr_flg = 2,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 0, -10000, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+
+	{
+		entity_name = "Gallia_Battleship_Path",
+		type = MOTION_PATH,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		pathprops =
+		{
+			path_type = "CV_CROrientationSplinePath",
+			path_data = "OPEN, { -2553.01, 2880.08, -4020.28 }, { 1, 0, 0, 0 }, { -39.2666, 2880.08, -3217.75 }, { 1, 0, 0, 0 }, { 1224.68, 2880.08, -1061.17 }, { 1, 0, 0, 0 }, "
+		}
+	},
+
+	{
+		entity_name = "Bretonia_Battleship_Path",
+		type = MOTION_PATH,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		pathprops =
+		{
+			path_type = "CV_CROrientationSplinePath",
+			--path_data = "OPEN, { -1061.21, 4192.68, -4118.0 }, { -0.5000, -1.0000, 0.0000, 0.0000 }, { -205.249, 2781.52, -3658.99 }, { -0.5777, -0.9423, 0.3348, -0.0000 }, { 211.872, -894.554, -2540.44 }, { -0.7064, -0.0872, 0.9962, 0.0000 }, "
+			path_data = "OPEN, { -1061.21, 4192.68, -3367.36 }, { -0.5000, -1.0000, 0.0000, 0.0000 }, { -205.249, 2781.52, -3112.49 }, { -0.5777, -0.9423, 0.3348, -0.0000 }, { 211.872, -894.554, -2886.86 }, { -0.7064, -0.0872, 0.9962, 0.0000 }, "
+		}
+	},
+
+	{
+		entity_name = "Gallia_Cruiser",
+		type = COMPOUND,
+		template_name = "dsy_gallicc",
+		lt_grp = 1, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 0, -10000, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+
+	{
+		entity_name = "Gallia_Cruiser_EngineFX01",
+		type = PSYS,
+		template_name = "dsy_gallicimpulse_largeengine03",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "Gallia_Cruiser_EngineFX02",
+		type = PSYS,
+		template_name = "dsy_gallicimpulse_largeengine03",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "Gallia_Cruiser_Path",
+		type = MOTION_PATH,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		pathprops =
+		{
+			path_type = "CV_CROrientationSplinePath",
+			path_data = "OPEN, { -1473.86, 337.352, -469.854 }, { 1, 0, 0, 0 }, { -66.557, 337.352, -1098.41 }, { 1, 0, 0, 0 }, { 1902.01, 337.352, -1167.05 }, { 1, 0, 0, 0 }, "
+		}
+	},
+
+	{
+		entity_name = "Gallia_Cruiser_PathReturn",
+		type = MOTION_PATH,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		pathprops =
+		{
+			path_type = "CV_CROrientationSplinePath",
+			path_data = "OPEN, { 1536.66, 325.682, -1055.55 }, { 1, 0, 0, 0 }, { 98.7129, 385.765, -580.493 }, { 1, 0, 0, 0 }, { -986.98, 47.3579, -942.795 }, { 1, 0, 0, 0 }, "
+		}
+	},
+
+	{
+		entity_name = "Bretonia_Battleship_Burning01",
+		type = PSYS,
+		template_name = "rtc_leeds_burning_small",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "Bretonia_Battleship_Burning02",
+		type = PSYS,
+		template_name = "rtc_leeds_burning_small",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "Bretonia_Battleship_Burning03",
+		type = PSYS,
+		template_name = "rtc_leeds_burning_small",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "Bretonia_Battleship_Explosion01",
+		type = PSYS,
+		template_name = "gf_explosion_br_battleship_smallexp",
+		lt_grp = 0, srt_grp = -80, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "Bretonia_Battleship_Explosion02",
+		type = PSYS,
+		template_name = "gf_explosion_br_battleship_bigexp",
+		lt_grp = 0, srt_grp = -80, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "Bretonia_Battleship_Explosion03",
+		type = PSYS,
+		template_name = "rtc_distantexplosion",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 161.872, 60, -2886.86 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+};
+
+events =
+{
+	{
+		0.00, SET_CAMERA, { "Monitor", "Camera" }
+	},
+
+	{
+		0.000, START_PATH_ANIMATION, { "Gallia_Battleship", "Gallia_Battleship_Path" },
+		{
+			duration = 18.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION + ORIENTATION + LOOK_AT
+		}
+	},
+
+	{
+		0.00, START_SPATIAL_PROP_ANIM, { "Sky" },
+		{
+			duration = 200,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 180, Y_AXIS }
+			},
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{  0.000000,  0.000000,  0.000000,  1.000000 },
+					{  1.000000,  1.000000,  1.000000,  0.000000 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		0.00, START_PSYS, { "FireFX01" }, { duration = 200 }
+	},
+
+	{
+		0.00, START_PSYS, { "FireFX02" }, { duration = 200 }
+	},
+
+	{
+		0.00, START_PSYS, { "FireFX03" }, { duration = 200 }
+	},
+
+	{
+		0.00, START_PSYS, { "FireFX04" }, { duration = 200 }
+	},
+
+	{
+		4.00, START_LIGHT_PROP_ANIM, { "Sky_LightThunder" },
+		{
+			duration = 200,
+			lightprops =
+			{
+				diffuse = { 1, 1, 1 },
+			},
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{ 0.0000, 0, 0, 0 },
+					{ 0.1000, 0, 0, 0 },
+					{ 0.1031, 0.4042, 0.7564, 0.8809 },
+					{ 0.1062, 0.9020, -0.7967, 0.0016 },
+					{ 0.1094, 0.0551, 0.9931, 0.6508 },
+					{ 0.1125, 0.4958, 0.5700, 0.6046 },
+					{ 0.1156, 0.3375, -0.9163, 0.8743 },
+					{ 0.1187, 0.7321, -0.6515, -0.9966 },
+					{ 0.1219, 0.0961, 0.5948, 0.2306 },
+					{ 0.1250, 0, 0, 0 },
+					{ 0.3000, 0, 0, 0 },
+					{ 0.3031, 0.2932, 0.5968, 0.2823 },
+					{ 0.3063, 0.7925, 0.4274, -0.8211 },
+					{ 0.3094, 0.9455, 0.6752, -0.8021 },
+					{ 0.3125, 0.1089, -0.4401, 0.5391 },
+					{ 0.3156, 0.4130, 0.7840, -0.7305 },
+					{ 0.3188, 0.2340, 0.0336, -0.9087 },
+					{ 0.3219, 0.9278, -0.3605, 0.1245 },
+					{ 0.3250, 0, 0, 0 },
+					{ 0.8000, 0, 0, 0 },
+					{ 0.8031, 0.9817, 0.6336, -0.7415 },
+					{ 0.8063, 0.3887, 0.3085, 0.0540 },
+					{ 0.8094, 0.3095, 0.9038, -0.0605 },
+					{ 0.8125, 0.1281, -0.0009, -0.1230 },
+					{ 0.8156, 0.0097, -0.5048, 0.0593 },
+					{ 0.8188, 0.3952, -0.1287, -0.2090 },
+					{ 0.8219, 0.9707, -0.7107, -0.7028 },
+					{ 0.8250, 0, 0, 0 },
+					{ 1.0000, 0, 0, 0 }
+				}
+			},
+			pcurve_period = 24000
+		}
+	},
+
+	{
+		4.00, START_LIGHT_PROP_ANIM, { "Cityscape_Light" },
+		{
+			duration = 200,
+			lightprops =
+			{
+				diffuse = { 1, 1, 1 },
+			},
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{ 0.0000, 0, 0, 0 },
+					{ 0.1000, 0, 0, 0 },
+					{ 0.1031, 0.4042, 0.7564, 0.8809 },
+					{ 0.1062, 0.9020, -0.7967, 0.0016 },
+					{ 0.1094, 0.0551, 0.9931, 0.6508 },
+					{ 0.1125, 0.4958, 0.5700, 0.6046 },
+					{ 0.1156, 0.3375, -0.9163, 0.8743 },
+					{ 0.1187, 0.7321, -0.6515, -0.9966 },
+					{ 0.1219, 0.0961, 0.5948, 0.2306 },
+					{ 0.1250, 0, 0, 0 },
+					{ 0.3000, 0, 0, 0 },
+					{ 0.3031, 0.2932, 0.5968, 0.2823 },
+					{ 0.3063, 0.7925, 0.4274, -0.8211 },
+					{ 0.3094, 0.9455, 0.6752, -0.8021 },
+					{ 0.3125, 0.1089, -0.4401, 0.5391 },
+					{ 0.3156, 0.4130, 0.7840, -0.7305 },
+					{ 0.3188, 0.2340, 0.0336, -0.9087 },
+					{ 0.3219, 0.9278, -0.3605, 0.1245 },
+					{ 0.3250, 0, 0, 0 },
+					{ 0.8000, 0, 0, 0 },
+					{ 0.8031, 0.9817, 0.6336, -0.7415 },
+					{ 0.8063, 0.3887, 0.3085, 0.0540 },
+					{ 0.8094, 0.3095, 0.9038, -0.0605 },
+					{ 0.8125, 0.1281, -0.0009, -0.1230 },
+					{ 0.8156, 0.0097, -0.5048, 0.0593 },
+					{ 0.8188, 0.3952, -0.1287, -0.2090 },
+					{ 0.8219, 0.9707, -0.7107, -0.7028 },
+					{ 0.8250, 0, 0, 0 },
+					{ 1.0000, 0, 0, 0 }
+				}
+			},
+			pcurve_period = 24000
+		}
+	},
+
+	{
+		0.00, START_LIGHT_PROP_ANIM, { "Cityscape_FireLight01" },
+		{
+			duration = 200,
+			lightprops =
+			{
+				diffuse = { 0.85, 0.40, 0.0 },
+			},
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{0.0, 0.6366, 0, 0},
+					{0.1, 0.3159, 0, 0},
+					{0.2, 0.4882, 0, 0},
+					{0.3, 0.3698, 0, 0},
+					{0.4, 0.8748, 0, 0},
+					{0.5, 0.1407, 0, 0},
+					{0.6, 0.7747, 0, 0},
+					{0.7, 0.3995, 0, 0},
+					{0.8, 0.4646, 0, 0},
+					{0.9, 0.5005, 0, 0},
+					{1.0, 0.6366, 0, 0}
+				}
+			},
+			pcurve_period = 1600
+		}
+	},
+
+	{
+		0.00, START_LIGHT_PROP_ANIM, { "Cityscape_FireLight02" },
+		{
+			duration = 200,
+			lightprops =
+			{
+				diffuse = { 0.85, 0.40, 0.0 },
+			},
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{0.0, 0.5222, 0, 0},
+					{0.1, 0.6311, 0, 0},
+					{0.2, 0.8150, 0, 0},
+					{0.3, 0.4621, 0, 0},
+					{0.4, 0.5584, 0, 0},
+					{0.5, 0.4759, 0, 0},
+					{0.6, 0.5835, 0, 0},
+					{0.7, 0.7644, 0, 0},
+					{0.8, 0.5607, 0, 0},
+					{0.9, 0.7125, 0, 0},
+					{1.0, 0.5222, 0, 0}
+				}
+			},
+			pcurve_period = 1600
+		}
+	},
+
+	{
+		0.00, START_LIGHT_PROP_ANIM, { "Cityscape_FireLight03" },
+		{
+			duration = 200,
+			lightprops =
+			{
+				diffuse = { 0.75, 0.35, 0.0 },
+			},
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{0.0, 0.6366, 0, 0},
+					{0.1, 0.3159, 0, 0},
+					{0.2, 0.4882, 0, 0},
+					{0.3, 0.3698, 0, 0},
+					{0.4, 0.8748, 0, 0},
+					{0.5, 0.1407, 0, 0},
+					{0.6, 0.7747, 0, 0},
+					{0.7, 0.3995, 0, 0},
+					{0.8, 0.4646, 0, 0},
+					{0.9, 0.5005, 0, 0},
+					{1.0, 0.6366, 0, 0}
+				}
+			},
+			pcurve_period = 600
+		}
+	},
+
+	{
+		0.000, START_SPATIAL_PROP_ANIM, { "Camera" },
+		{
+			duration = 0,
+			target_type = ROOT,
+			spatialprops =
+			{
+				orient = { { 0.9659, 0.0000, -0.2588}, { 0.1294, 0.8660, 0.4830 }, { 0.2241, -0.5000, 0.8365 } }
+			}
+		}
+	},
+
+	{
+		0.000, START_CAMERA_PROP_ANIM, { "Camera" },
+		{
+			duration = 0,
+			cameraprops =
+			{
+				fovh = 9
+			}
+		}
+	},
+
+	{
+		2.000, START_SPATIAL_PROP_ANIM, { "Camera" },
+		{
+			duration = 3.000,
+			target_type = ROOT,
+			spatialprops =
+			{
+				orient = { { 1.0000, 0.0000, 0.0000}, { 0.0000, 0.8313, 0.5558 }, { 0.0000, -0.5558, 0.8313 } }
+			},
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 0.00 },
+					{ 1.00, 1.00, 0.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		5.000, START_CAMERA_PROP_ANIM, { "Camera" },
+		{
+			duration = 20.000,
+			cameraprops =
+			{
+				fovh = 20
+			},
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 0.00 },
+					{ 1.00, 1.00, 0.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		5.000, START_SPATIAL_PROP_ANIM, { "Camera" },
+		{
+			duration = 20.000,
+			target_type = ROOT,
+			spatialprops =
+			{
+				orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+			},
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 0.00 },
+					{ 1.00, 1.00, 0.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		0.000, START_PATH_ANIMATION, { "Bretonia_Battleship", "Bretonia_Battleship_Path" },
+		{
+			duration = 17.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION + ORIENTATION,
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{ 0.00, 0.30, 0.00, 0.00 },
+					{ 1.00, 0.88, 2.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		0.000, ATTACH_ENTITY, { "Bretonia_Battleship_Explosion01", "Bretonia_Battleship" },
+		{
+			duration = 200.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "DpEngine",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+
+	{
+		0.000, ATTACH_ENTITY, { "Bretonia_Battleship_Explosion02", "Bretonia_Battleship" },
+		{
+			duration = 200.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "",
+			target_type = ROOT,
+			flags = POSITION
+		}
+	},
+
+	{
+		0.000, ATTACH_ENTITY, { "Bretonia_Battleship_Burning01", "Bretonia_Battleship" },
+		{
+			duration = 200.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "",
+			target_type = ROOT,
+			flags = POSITION
+		}
+	},
+
+	{
+		0.000, ATTACH_ENTITY, { "Bretonia_Battleship_Burning02", "Bretonia_Battleship" },
+		{
+			duration = 200.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "DpEngine",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+
+	{
+		0.000, ATTACH_ENTITY, { "Bretonia_Battleship_Burning03", "Bretonia_Battleship" },
+		{
+			duration = 200.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "DpCntrltwr",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+
+	{
+		0.000, ATTACH_ENTITY, { "Gallia_Cruiser_EngineFX01", "Gallia_Cruiser" },
+		{
+			duration = 200.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpEngine01",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	{
+		0.000, ATTACH_ENTITY, { "Gallia_Cruiser_EngineFX02", "Gallia_Cruiser" },
+		{
+			duration = 200.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpEngine02",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	{
+		25.000, START_PATH_ANIMATION, { "Gallia_Cruiser", "Gallia_Cruiser_Path" },
+		{
+			duration = 50.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION + ORIENTATION + LOOK_AT
+		}
+	},
+
+	{
+		75.000, START_PATH_ANIMATION, { "Gallia_Cruiser", "Gallia_Cruiser_PathReturn" },
+		{
+			duration = 50.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION + ORIENTATION + LOOK_AT
+		}
+	},
+
+	{
+		0.00, START_PSYS, { "Gallia_Cruiser_EngineFX01" }, { duration = 200 }
+	},
+
+	{
+		0.00, START_PSYS, { "Gallia_Cruiser_EngineFX02" }, { duration = 200 }
+	},
+
+	{
+		0.00, START_PSYS, { "Bretonia_Battleship_Burning01" }, { duration = 100 }
+	},
+
+	{
+		5.00, START_PSYS, { "Bretonia_Battleship_Burning02" }, { duration = 30 }
+	},
+
+	{
+		3.00, START_PSYS, { "Bretonia_Battleship_Burning03" }, { duration = 30 }
+	},
+
+	{
+		5.00, START_PSYS, { "Bretonia_Battleship_Explosion01" }, { duration = 100 }
+	},
+
+	{
+		3.00, START_PSYS, { "Bretonia_Battleship_Explosion02" }, { duration = 100 }
+	},
+
+	{
+		16.00, START_PSYS, { "Bretonia_Battleship_Explosion03" }, { duration = 200 }
+	},
+};

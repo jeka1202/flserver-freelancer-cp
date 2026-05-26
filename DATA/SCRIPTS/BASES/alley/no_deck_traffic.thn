@@ -1,0 +1,478 @@
+duration = 3600;
+
+entities =
+{
+
+	{
+		entity_name = "Layer_Scene_no",
+		type = SCENE,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		up = Y_AXIS,
+		front = Z_AXIS,
+		ambient = { 7, 10, 26 }
+	},
+  	{
+		entity_name = "Set_Chamber",
+		type = COMPOUND,
+		template_name = "nomad_reactor_chamber_cinematic",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		userprops =
+		{
+			category = "Solar",
+      NoFog = "n",
+		}
+	},
+	{
+		entity_name = "Set_marduk",
+		type = COMPOUND,
+		template_name = "dsy_no2_artillery_cinematic",
+		lt_grp = 12, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient =	{ { 0.5877, 0, 0.8090 }, { 0, 1, 0 }, { -0.8090, 0, 0.5877 } }
+		},
+		userprops =
+		{
+			category = "Solar",
+      NoFog = "n",
+		}
+	},
+  {
+		entity_name="NomadBattleship_Engine",
+		type=PSYS,
+		template_name="dsy_no2_largeengine05",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=1
+		}
+	},
+  {
+		entity_name = "reactor_effect_1",
+		type = PSYS,
+		template_name = "dsy_nomad_reactor_chamber_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "reactor_effect_2",
+		type = PSYS,
+		template_name = "dsy_nomad_reactor_chamber_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "reactor_effect_3",
+		type = PSYS,
+		template_name = "dsy_nomad_reactor_chamber_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "reactor_effect_4",
+		type = PSYS,
+		template_name = "dsy_nomad_reactor_chamber_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "reactor_effect_5",
+		type = PSYS,
+		template_name = "dsy_nomad_reactor_chamber_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "reactor_effect_6",
+		type = PSYS,
+		template_name = "dsy_nomad_reactor_chamber_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "reactor_effect_7",
+		type = PSYS,
+		template_name = "dsy_nomad_reactor_chamber_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "reactor_effect_8",
+		type = PSYS,
+		template_name = "dsy_nomad_reactor_chamber_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "reactor_effect_9",
+		type = PSYS,
+		template_name = "dsy_nomad_reactor_chamber_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "reactor_effect_10",
+		type = PSYS,
+		template_name = "dsy_nomad_reactor_chamber_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "reactor_effect_11",
+		type = PSYS,
+		template_name = "dsy_nomad_reactor_chamber_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "reactor_effect_12",
+		type = PSYS,
+		template_name = "dsy_nomad_reactor_chamber_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "reactor_effect_13",
+		type = PSYS,
+		template_name = "dsy_nomad_reactor_core",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+};
+
+events =
+{
+	{
+		0, ATTACH_ENTITY, { "NomadBattleship_Engine", "Set_marduk" },
+		{
+			duration = 3600,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hpengine01",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+  {
+		0, START_PSYS, { "NomadBattleship_Engine" }, { duration = 3600 }
+	},
+  {
+		0, ATTACH_ENTITY, { "reactor_effect_1", "Set_Chamber" },
+		{
+			duration = 3600,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hprunninglight01",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+  {
+		0, START_PSYS, { "reactor_effect_1" }, { duration = 3600 }
+	},
+  {
+		0, ATTACH_ENTITY, { "reactor_effect_2", "Set_Chamber" },
+		{
+			duration = 3600,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hprunninglight02",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+  {
+		0, START_PSYS, { "reactor_effect_2" }, { duration = 3600 }
+	},
+  {
+		0, ATTACH_ENTITY, { "reactor_effect_3", "Set_Chamber" },
+		{
+			duration = 3600,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hprunninglight03",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+  {
+		0, START_PSYS, { "reactor_effect_3" }, { duration = 3600 }
+	},
+  {
+		0, ATTACH_ENTITY, { "reactor_effect_4", "Set_Chamber" },
+		{
+			duration = 3600,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hprunninglight04",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+  {
+		0, START_PSYS, { "reactor_effect_4" }, { duration = 3600 }
+	},
+  {
+		0, ATTACH_ENTITY, { "reactor_effect_5", "Set_Chamber" },
+		{
+			duration = 3600,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hprunninglight05",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+  {
+		0, START_PSYS, { "reactor_effect_5" }, { duration = 3600 }
+	},
+  {
+		0, ATTACH_ENTITY, { "reactor_effect_6", "Set_Chamber" },
+		{
+			duration = 3600,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hprunninglight06",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+  {
+		0, START_PSYS, { "reactor_effect_6" }, { duration = 3600 }
+	},
+  {
+		0, ATTACH_ENTITY, { "reactor_effect_7", "Set_Chamber" },
+		{
+			duration = 3600,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hprunninglight07",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+  {
+		0, START_PSYS, { "reactor_effect_7" }, { duration = 3600 }
+	},
+  {
+		0, ATTACH_ENTITY, { "reactor_effect_8", "Set_Chamber" },
+		{
+			duration = 3600,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hprunninglight08",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+  {
+		0, START_PSYS, { "reactor_effect_8" }, { duration = 3600 }
+	},
+  {
+		0, ATTACH_ENTITY, { "reactor_effect_9", "Set_Chamber" },
+		{
+			duration = 3600,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hprunninglight09",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+  {
+		0, START_PSYS, { "reactor_effect_9" }, { duration = 3600 }
+	},
+  {
+		0, ATTACH_ENTITY, { "reactor_effect_10", "Set_Chamber" },
+		{
+			duration = 3600,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hprunninglight10",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+  {
+		0, START_PSYS, { "reactor_effect_10" }, { duration = 3600 }
+	},
+  {
+		0, ATTACH_ENTITY, { "reactor_effect_11", "Set_Chamber" },
+		{
+			duration = 3600,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hprunninglight11",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+  {
+		0, START_PSYS, { "reactor_effect_11" }, { duration = 3600 }
+	},
+  {
+		0, ATTACH_ENTITY, { "reactor_effect_12", "Set_Chamber" },
+		{
+			duration = 3600,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hprunninglight12",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+  {
+		0, START_PSYS, { "reactor_effect_12" }, { duration = 3600 }
+	},
+  {
+		0, START_PSYS, { "reactor_effect_13" }, { duration = 3600 }
+	},
+};

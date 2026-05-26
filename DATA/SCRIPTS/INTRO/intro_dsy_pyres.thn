@@ -1,0 +1,4392 @@
+duration = 40.000;
+
+entities =
+{
+
+	{
+		entity_name = "intro_dsy_pyres",
+		type = SCENE,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		up = Y_AXIS,
+		front = Z_AXIS,
+		ambient = { 20, 60, 60 }
+	},
+
+	{
+		entity_name = "Light_0",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { -1000, -15000, 0 },
+			orient = { {  0,  0.000000, 1 },
+					   {  0.000000,  1.000000,  0.000000 },
+					   {  1,  0.000000,  0 } }
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 255, 150, 255 },
+			diffuse = { 0.9, 0.9, 0.7 },
+			specular = { 0, 0, 0 },
+			ambient = { 0.23, 0.07, 0.03 },
+			direction = { 0, 0, 1 },
+			range = 500000,
+			cutoff = 98.99998,
+			type = L_POINT,
+			theta = 90,
+			atten = { 1, 0, 0 }
+		}
+	},
+	
+	{
+		entity_name = "Light_1",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 1, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { -1000, -25000, -22000 },
+			orient = { {  0,  0.000000, 1 },
+					   {  0.000000,  1.000000,  0.000000 },
+					   {  1,  0.000000,  0 } }
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 255, 150, 255 },
+			diffuse = { 0.9, 0.9, 0.7 },
+			specular = { 0, 0, 0 },
+			ambient = { 0, 0, 0 },
+			direction = { 0, 0, 1 },
+			range = 500000,
+			cutoff = 98.99998,
+			type = L_POINT,
+			theta = 90,
+			atten = { 1, 0, 0 }
+		}
+	},
+	
+	{
+		entity_name = "Camera",
+		type = CAMERA,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 0.0000000, -1.0000000,  0.0000000 }, { 1.0000000, -0.0000000,  0.0000000 }, { 0.0000000,  0.0000000,  1.0000000  } }
+		},
+		cameraprops =
+		{
+			fovh = 30,
+			hvaspect = 1.333333,
+			nearplane = 0.25,
+			farplane = 1000000
+		}
+	},
+	
+	{
+		entity_name = "path_camera",
+		type = MOTION_PATH,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		pathprops =
+		{
+			path_type = "CV_CROrientationSplinePath",
+			path_data = "OPEN, { 0, 0, 0 }, { 1, 0, 0, 0 }, { -500, -50, 0 }, { 1, 0, 0, 0 }, "
+		}
+	},
+
+	{
+		entity_name = "path_icarus",
+		type = MOTION_PATH,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		pathprops =
+		{
+			path_type = "CV_CROrientationSplinePath",
+			path_data = "OPEN, { 0, 0, 0 }, { 1, 0, 0, 0 }, { -500, -50, 0 }, { 1, 0, 0, 0 }, "
+		}
+	},
+
+	{
+		entity_name = "planet_earthgrncld_4000_1",
+		type = COMPOUND,
+		template_name = "planet_earthgrncld_15000",
+		lt_grp = 1, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -1000, 10000, -32000 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		userprops =
+		{
+			category = "Solar",
+		}
+	},
+
+	{
+		entity_name = "starsphere_br01_1",
+		type = COMPOUND,
+		template_name = "starsphere_br01",
+		lt_grp = 0, srt_grp = -100, usr_flg = 1,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 0.7071068,  0.0000000, -0.7071068 },
+					   {  0.0000000,  1.0000000,  0.0000000 },
+					   {  0.7071068,  0.0000000,  0.7071068   } }
+		},
+		userprops =
+		{
+			category = "Prop",
+		}
+	},
+
+	{
+		entity_name = "starsphere_li01_stars_1",
+		type = COMPOUND,
+		template_name = "starsphere_li01_stars",
+		lt_grp = 0, srt_grp = -100, usr_flg = 1,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 0.7071068,  0.0000000, -0.7071068 },
+					   {  0.0000000,  1.0000000,  0.0000000 },
+					   {  0.7071068,  0.0000000,  0.7071068   } }
+		},
+		userprops =
+		{
+			category = "Prop",
+		}
+	},
+
+
+	{
+		entity_name = "rtc_fadeblack_variable_1",
+		type = PSYS,
+		template_name = "rtc_fadeblack_variable",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 0, 0, 1 }, { 0, 1, 0 }, { -1, 0, 0 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "rtc_fadeblack_variable_2",
+		type = PSYS,
+		template_name = "rtc_fadeblack_variable",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 0, 0, 1 }, { 0, 1, 0 }, { -1, 0, 0 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "touristdust_sienna_1",
+		type = PSYS,
+		template_name = "touristdust_sienna",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "Monitor_2",
+		type = MONITOR,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0
+	},
+
+	{
+		entity_name = "bretbong",
+		type = COMPOUND,
+		template_name = "dsy_br_battleship",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -1050, -2000, -5600 },
+			orient = { { 0, 0, 1 }, { 0, 1, 0 }, { -1, 0, 0 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "bretbong2",
+		type = COMPOUND,
+		template_name = "dsy_br_carrier",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -2550, 400, -17600 },
+			orient = { { 0, 0, 1 }, { 0, 1, 0 }, { -1, 0, 0 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "lolberty",
+		type = COMPOUND,
+		template_name = "dsy_li_dreadnought",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -50, 200, -2600 },
+			orient = { { 0, 0, 1 }, { 0, 1, 0 }, { -1, 0, 0 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "heavymortar",
+		type = PSYS,
+		template_name = "dsy_hmortar02_drive",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 50000, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "path_heavymortar",
+		type = MOTION_PATH,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1.0000000,  0.0000000,  0.0000000 }, { 0.0000000, -0.0871557,  0.9961947 }, { 0.0000000, -0.9961947, -0.0871557 } }
+		},
+		pathprops =
+		{
+			path_type = "CV_CROrientationSplinePath",
+			path_data = "OPEN, { 0, 0, 0 }, { 1, 0, 0, 0 }, { 0, 2162, 0 }, { 1, 0, 0, 0 }, "
+		}
+	},
+
+	{
+		entity_name = "heavymortar_impact",
+		type = PSYS,
+		template_name = "dsy_hmortar02_bigexp",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "solaris_li_1",
+		type = PSYS,
+		template_name = "dsy_constantfire_sol_proj",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 50000, 0 },
+			orient = { { -1.0000000,  0.0000000,  0.0000000 }, { 0.0000000,  0.9961947,  0.0871557 }, { 0.0000000,  0.0871557, -0.9961947 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+	
+	{
+		entity_name = "solaris_li_2",
+		type = PSYS,
+		template_name = "dsy_constantfire_sol_proj",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 50000, 0 },
+			orient = { { -1.0000000,  0.0000000,  0.0000000 }, { 0.0000000,  0.9961947,  0.0871557 }, { 0.0000000,  0.0871557, -0.9961947 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "solaris_li_3",
+		type = PSYS,
+		template_name = "dsy_constantfire_sol_proj",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 50000, 0 },
+			orient = { { 1.0000000,  0.0000000,  0.0000000 }, { 0.0000000,  0.9925461,  0.1218693 }, { 0.0000000,  0.1218693, -0.9925461 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+	
+	{
+		entity_name = "solaris_ga_1",
+		type = PSYS,
+		template_name = "dsy_constantfire_sol_proj",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 50000, 0 },
+			orient = { { 1.0000000,  0.0000000,  0.0000000 }, { 0.0000000,  0.9940563,  0.1088669 }, { 0.0000000, -0.1088669,  0.9940563 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+	
+	{
+		entity_name = "solaris_ga_2",
+		type = PSYS,
+		template_name = "dsy_constantfire_sol_proj",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 50000, 0 },
+			orient = { { 1.0000000,  0.0000000,  0.0000000 }, { 0.0000000,  0.9940563,  0.1088669 }, { 0.0000000, -0.1088669,  0.9940563 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+	
+	{
+		entity_name = "heavytreb",
+		type = PSYS,
+		template_name = "dsy_htrebuchet02_drive",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 50000, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "path_heavytreb",
+		type = MOTION_PATH,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1.0000000,  0.0000000,  0.0000000 }, { 0.0000000, -0.0871557,  0.9961947 }, { 0.0000000, -0.9961947, -0.0871557 } }
+		},
+		pathprops =
+		{
+			path_type = "CV_CROrientationSplinePath",
+			path_data = "OPEN, { 0, 1961, 0 }, { 1, 0, 0, 0 }, { 0, 0, 0 }, { 1, 0, 0, 0 }, "
+		}
+	},
+
+	{
+		entity_name = "heavytreb_impact",
+		type = PSYS,
+		template_name = "dsy_htrebuchet02_bigexp",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "valeur_smoke_1",
+		type = PSYS,
+		template_name = "gf_derelict2_smallfires",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 50000, 0 },
+			orient = { { 1.0000000,  0.0000000,  0.0000000 }, { 0.0000000,  0.9940563,  0.1088669 }, { 0.0000000, -0.1088669,  0.9940563 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+	
+	{
+		entity_name = "valeur_smoke_2",
+		type = PSYS,
+		template_name = "gf_prisonattack_additive_smallsmoke",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 50000, 0 },
+			orient = { { 1.0000000,  0.0000000,  0.0000000 }, { 0.0000000,  0.9940563,  0.1088669 }, { 0.0000000, -0.1088669,  0.9940563 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+	
+	{
+		entity_name = "valeur_smoke_3",
+		type = PSYS,
+		template_name = "gf_prisonattack_additive_smallsmoke",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 50000, 0 },
+			orient = { { 1.0000000,  0.0000000,  0.0000000 }, { 0.0000000,  0.9940563,  0.1088669 }, { 0.0000000, -0.1088669,  0.9940563 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+	
+	{
+		entity_name = "lolberty_smoke1",
+		type = PSYS,
+		template_name = "gf_prisonattack_additive_smallsmoke",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 50000, 0 },
+			orient = { { 1.0000000,  0.0000000,  0.0000000 }, { 0.0000000,  0.9940563,  0.1088669 }, { 0.0000000, -0.1088669,  0.9940563 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+	
+	{
+		entity_name = "lolberty_smoke2",
+		type = PSYS,
+		template_name = "gf_prisonattack_bigsmoke",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 50000, 0 },
+			orient = { { 1.0000000,  0.0000000,  0.0000000 }, { 0.0000000,  0.9940563,  0.1088669 }, { 0.0000000, -0.1088669,  0.9940563 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+	
+	{
+		entity_name = "lolberty_smoke3",
+		type = PSYS,
+		template_name = "gf_prisonattack_additive_bigsmoke",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 50000, 0 },
+			orient = { { 1.0000000,  0.0000000,  0.0000000 }, { 0.0000000,  0.9940563,  0.1088669 }, { 0.0000000, -0.1088669,  0.9940563 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+	
+	{
+		entity_name = "lolberty_smoke4",
+		type = PSYS,
+		template_name = "gf_prisonattack_additive_smallsmoke",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 50000, 0 },
+			orient = { { 1.0000000,  0.0000000,  0.0000000 }, { 0.0000000,  0.9940563,  0.1088669 }, { 0.0000000, -0.1088669,  0.9940563 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+	
+	{
+		entity_name = "obby_smoke1",
+		type = PSYS,
+		template_name = "rtc_leeds_burning_small",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 50000, 0 },
+			orient = { { 1.0000000,  0.0000000,  0.0000000 }, { 0.0000000,  0.9940563,  0.1088669 }, { 0.0000000, -0.1088669,  0.9940563 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+	
+	{
+		entity_name = "obby_smoke2",
+		type = PSYS,
+		template_name = "rtc_leeds_burning_small",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 50000, 0 },
+			orient = { { 1.0000000,  0.0000000,  0.0000000 }, { 0.0000000,  0.9940563,  0.1088669 }, { 0.0000000, -0.1088669,  0.9940563 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+	
+	{
+		entity_name = "boomboom_1",
+		type = PSYS,
+		template_name = "gf_explosion_ku_cruiser_smallexp",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 50000, 0 },
+			orient = { { 1.0000000,  0.0000000,  0.0000000 }, { 0.0000000,  0.9940563,  0.1088669 }, { 0.0000000, -0.1088669,  0.9940563 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+	
+	{
+		entity_name = "boomboom_2",
+		type = PSYS,
+		template_name = "gf_explosion_ku_cruiser_bigexp",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 50000, 0 },
+			orient = { { 1.0000000,  0.0000000,  0.0000000 }, { 0.0000000,  0.9940563,  0.1088669 }, { 0.0000000, -0.1088669,  0.9940563 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+	
+	{
+		entity_name = "boomboom_3",
+		type = PSYS,
+		template_name = "gf_explosion_ku_cruiser_flashbang",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 50000, 0 },
+			orient = { { 1.0000000,  0.0000000,  0.0000000 }, { 0.0000000,  0.9940563,  0.1088669 }, { 0.0000000, -0.1088669,  0.9940563 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+	
+	{
+		entity_name = "boomboom_4",
+		type = PSYS,
+		template_name = "gf_explosion_ku_battleship_smallexp",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 50000, 0 },
+			orient = { { 1.0000000,  0.0000000,  0.0000000 }, { 0.0000000,  0.9940563,  0.1088669 }, { 0.0000000, -0.1088669,  0.9940563 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+	
+	{
+		entity_name = "boomboom_5",
+		type = PSYS,
+		template_name = "gf_explosion_ku_battleship_flashbang",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 50000, 0 },
+			orient = { { 1.0000000,  0.0000000,  0.0000000 }, { 0.0000000,  0.9940563,  0.1088669 }, { 0.0000000, -0.1088669,  0.9940563 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+	
+	{
+		entity_name = "boomboom_6",
+		type = PSYS,
+		template_name = "gf_explosion_ku_cruiser_smallexp",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 50000, 0 },
+			orient = { { 1.0000000,  0.0000000,  0.0000000 }, { 0.0000000,  0.9940563,  0.1088669 }, { 0.0000000, -0.1088669,  0.9940563 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+	
+	{
+		entity_name = "boomboom_7",
+		type = PSYS,
+		template_name = "gf_explosion_ku_cruiser_bigexp",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 50000, 0 },
+			orient = { { 1.0000000,  0.0000000,  0.0000000 }, { 0.0000000,  0.9940563,  0.1088669 }, { 0.0000000, -0.1088669,  0.9940563 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+	
+	{
+		entity_name = "boomboom_8",
+		type = PSYS,
+		template_name = "gf_explosion_ku_cruiser_flashbang",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 50000, 0 },
+			orient = { { 1.0000000,  0.0000000,  0.0000000 }, { 0.0000000,  0.9940563,  0.1088669 }, { 0.0000000, -0.1088669,  0.9940563 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+	
+	{
+		entity_name = "boomboom_9",
+		type = PSYS,
+		template_name = "gf_explosion_ku_battleship_smallexp",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 50000, 0 },
+			orient = { { 1.0000000,  0.0000000,  0.0000000 }, { 0.0000000,  0.9940563,  0.1088669 }, { 0.0000000, -0.1088669,  0.9940563 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+	
+	{
+		entity_name = "boomboom_10",
+		type = PSYS,
+		template_name = "gf_explosion_ku_battleship_flashbang",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 50000, 0 },
+			orient = { { 1.0000000,  0.0000000,  0.0000000 }, { 0.0000000,  0.9940563,  0.1088669 }, { 0.0000000, -0.1088669,  0.9940563 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+	
+	{
+		entity_name = "libcruise1",
+		type = COMPOUND,
+		template_name = "dsy_li_cruiser",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -950, 0, -2600 },
+			orient = { { -0.5000000,  0.0000000,  0.86602545000000 }, { 0, 1, 0 }, { -0.8660254,  0.0000000, -0.5000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+
+	{
+		entity_name = "path_fwg1",
+		type = MOTION_PATH,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		pathprops =
+		{
+			path_type = "CV_CROrientationSplinePath",
+			path_data = "OPEN, { 0, 0, 0 }, { 1, 0, 0, 0 }, { 0, 0, -800 }, { 1, 0, 0, 0 }, "
+		}
+	},
+
+	{
+		entity_name = "li_cruiser_maingun_1a",
+		type = PSYS,
+		template_name = "li_cruiser_maingun",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "li_cruiser_maingun_1b",
+		type = PSYS,
+		template_name = "li_cruiser_maingun",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "li_cruiser_maingun_1c",
+		type = PSYS,
+		template_name = "li_cruiser_maingun",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "li_cruiser_maingun_1d",
+		type = PSYS,
+		template_name = "li_cruiser_maingun",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "li_cruiser_maingun_1e",
+		type = PSYS,
+		template_name = "li_cruiser_maingun",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "li_cruiser_maingun_1f",
+		type = PSYS,
+		template_name = "li_cruiser_maingun",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "li_cruiser_maingun_1g",
+		type = PSYS,
+		template_name = "li_cruiser_maingun",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "li_cruiser_impact_1a",
+		type = PSYS,
+		template_name = "starlance_impact",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "li_cruiser_impact_1b",
+		type = PSYS,
+		template_name = "starlance_impact",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "li_cruiser_impact_1c",
+		type = PSYS,
+		template_name = "starlance_impact",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "li_cruiser_impact_1d",
+		type = PSYS,
+		template_name = "starlance_impact",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "li_cruiser_impact_1e",
+		type = PSYS,
+		template_name = "starlance_impact",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "li_cruiser_impact_1f",
+		type = PSYS,
+		template_name = "starlance_impact",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "li_cruiser_impact_1g",
+		type = PSYS,
+		template_name = "starlance_impact",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "li_cruiser_impact_1h",
+		type = PSYS,
+		template_name = "starlance_impact",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "creccie",
+		type = COMPOUND,
+		template_name = "dsy_br_destroyer",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -950, 100, -2800 },
+			orient = { { -0.5000000,  0.0000000,  0.86602545000000 }, { 0, 1, 0 }, { -0.8660254,  0.0000000, -0.5000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "path_creccie",
+		type = MOTION_PATH,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { -950, 100, -2800 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		pathprops =
+		{
+			path_type = "CV_CROrientationSplinePath",
+			path_data = "OPEN, { 0, 0, 0 }, { 1, 0, 0, 0 }, { 0, 0, -1600 }, { 1, 0, 0, 0 }, "
+		}
+	},
+
+	{
+		entity_name = "crecciemortar",
+		type = PSYS,
+		template_name = "dsy_mortar_proj_drive",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 50000, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "crecciemortar_impact",
+		type = PSYS,
+		template_name = "dsy_mortar_mainexpbig",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "path_crecciemortar",
+		type = MOTION_PATH,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		pathprops =
+		{
+			path_type = "CV_CROrientationSplinePath",
+			path_data = "OPEN, { 0, 0, 0 }, { 1, 0, 0, 0 }, { 0, 0, -860 }, { 1, 0, 0, 0 }, "
+		}
+	},
+
+	{
+		entity_name = "path_bretbongmortar",
+		type = MOTION_PATH,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		pathprops =
+		{
+			path_type = "CV_CROrientationSplinePath",
+			path_data = "OPEN, { 0, 0, 0 }, { 1, 0, 0, 0 }, { 0, 0, -2500 }, { 1, 0, 0, 0 }, "
+		}
+	},
+
+	{
+		entity_name = "icarus",
+		type = COMPOUND,
+		template_name = "dsy_ga_vhf",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 0.0000000,  1.0000000,  0.0000000 }, { 0.0000000,  0.0000000, 1.0000000 }, { 1.0000000,  0.0000000,  0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+			loadout = "ga_n_vhf_hard_l1_d17_d18"
+		}
+	},
+	
+	{
+		entity_name = "icarus_engine_1",
+		type = PSYS,
+		template_name = "dsy_ga_hf_smallengine02_fire",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "icarus_engine_2",
+		type = PSYS,
+		template_name = "dsy_ga_hf_smallengine02_fire",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "icarus_engine_3",
+		type = PSYS,
+		template_name = "dsy_ga_hf_smallengine02_fire",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "obby_stinate",
+		type = COMPOUND,
+		template_name = "dsy_gallicc",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -200, 0, -2180 },
+			orient = { { 0.0000000,  0.0000000, -1.0000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { 1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "obstinate1",
+		type = COMPOUND,
+		template_name = "dsy_gallicc",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -400, 5000, -14180 },
+			orient = { { 0.0000000,  0.0000000, -1.0000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { 1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	
+	{
+		entity_name = "obstinate2",
+		type = COMPOUND,
+		template_name = "dsy_gallicc",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 3600, 2000, -13180 },
+			orient = { { -1.0000000,  0.0000000,  0.0000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { -0.0000000,  0.0000000, -1.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "allies1",
+		type = COMPOUND,
+		template_name = "dsy_assaultfrigate",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -1550, -1200, -14000 },
+			orient = { { 0.0000000,  0.0000000,  1.00000000000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { -1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "allies2",
+		type = COMPOUND,
+		template_name = "dsy_assaultfrigate",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -1250, 1000, -17900 },
+			orient = { { 0.0000000,  0.0000000,  1.00000000000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { -1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "allies3",
+		type = COMPOUND,
+		template_name = "dsy_br_destroyer",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -2250, -1000, -10900 },
+			orient = { { 0.0000000,  0.0000000,  1.00000000000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { -1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "allies4",
+		type = COMPOUND,
+		template_name = "dsy_assaultfrigate",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -2250, 1000, -15900 },
+			orient = { { 0.0000000,  0.0000000,  1.00000000000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { -1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "allies5",
+		type = COMPOUND,
+		template_name = "dsy_li_cruiser",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -3750, -3000, -14900 },
+			orient = { { 0.0000000,  0.0000000,  1.00000000000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { -1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "allies6",
+		type = COMPOUND,
+		template_name = "dsy_bret_carrier_proto",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -4750, -4500, -15400 },
+			orient = { { 0.0000000,  0.0000000,  1.00000000000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { -1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Solar",
+		}
+	},
+	
+	{
+		entity_name = "allies7",
+		type = COMPOUND,
+		template_name = "dsy_br_destroyer",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -5000, -1000, -14000 },
+			orient = { { 0.0000000,  0.0000000,  1.00000000000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { -1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "allies8",
+		type = COMPOUND,
+		template_name = "dsy_providence",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -2250, -3000, -12900 },
+			orient = { { 0.0000000,  0.0000000,  1.00000000000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { -1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "allies9",
+		type = COMPOUND,
+		template_name = "dsy_li_dreadnought",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -750, -7500, -16900 },
+			orient = { { 0.0000000,  0.0000000,  1.00000000000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { -1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "allies10",
+		type = COMPOUND,
+		template_name = "dsy_assaultfrigate",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -3750, -7500, -16900 },
+			orient = { { 0.0000000,  0.0000000,  1.00000000000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { -1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "allies11",
+		type = COMPOUND,
+		template_name = "li_gunboat",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -700, 250, -1800 },
+			orient = { { 0.0000000,  0.0000000,  1.00000000000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { -1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "allies12",
+		type = COMPOUND,
+		template_name = "dsy_councilc",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -2000, 1000, -9600 },
+			orient = { { 0.0000000,  0.0000000,  1.00000000000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { -1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "allies13",
+		type = COMPOUND,
+		template_name = "dsy_br_battleship",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -3500, 2500, -12600 },
+			orient = { { 0.0000000,  0.0000000,  1.00000000000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { -1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "allies14",
+		type = COMPOUND,
+		template_name = "dsy_br_gunboat",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -200, -600, -1800 },
+			orient = { { 0.0000000,  0.0000000,  1.00000000000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { -1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "path_allies",
+		type = MOTION_PATH,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		pathprops =
+		{
+			path_type = "CV_CROrientationSplinePath",
+			path_data = "OPEN, { -1500, 0, 0 }, { 1, 0, 0, 0 }, { 0, 0, 0 }, { 1, 0, 0, 0 }, "
+		}
+	},
+
+	{
+		entity_name = "enemy1",
+		type = COMPOUND,
+		template_name = "dsy_gallicdd",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 100, -500, -10180 },
+			orient = { { 0.0000000,  0.0000000, -1.0000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { 1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "enemy2",
+		type = COMPOUND,
+		template_name = "dsy_gallicdd",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 500, -600, -6180 },
+			orient = { { 0.0000000,  0.0000000, -1.0000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { 1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "enemy3",
+		type = COMPOUND,
+		template_name = "dsy_gallicdd",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 1000, -2200, -4180 },
+			orient = { { 0.0000000,  0.0000000, -1.0000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { 1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "enemy4",
+		type = COMPOUND,
+		template_name = "dsy_gallicdd",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 600, -200, -5780 },
+			orient = { { 0.0000000,  0.0000000, -1.0000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { 1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "enemy5",
+		type = COMPOUND,
+		template_name = "dsy_gallicdd",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 1200, 3500, -12180 },
+			orient = { { 0.0000000,  0.0000000, -1.0000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { 1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "enemy6",
+		type = COMPOUND,
+		template_name = "dsy_gallicc",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -200, 3000, -14180 },
+			orient = { { 0.0000000,  0.0000000, -1.0000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { 1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "enemy7",
+		type = COMPOUND,
+		template_name = "dsy_gallicc",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 4200, 1500, -13180 },
+			orient = { { 0.0000000,  0.0000000, -1.0000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { 1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+		
+	{
+		entity_name = "enemy8",
+		type = COMPOUND,
+		template_name = "dsy_gallicdd",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -800, 2200, -4600 },
+			orient = { { 0.0000000,  0.0000000, -1.0000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { 1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "enemy9",
+		type = COMPOUND,
+		template_name = "dsy_gallicc",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 2500, -1300, -12980 },
+			orient = { { 0.0000000,  0.0000000, -1.0000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { 1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "enemy10",
+		type = COMPOUND,
+		template_name = "dsy_gallicgb",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 200, 500, -2000 },
+			orient = { { 0.0000000,  0.0000000, -1.0000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { 1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "enemy11",
+		type = COMPOUND,
+		template_name = "dsy_gallicdd",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 200, 1000, -3000 },
+			orient = { { 0.0000000,  0.0000000, -1.0000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { 1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "path_enemy",
+		type = MOTION_PATH,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		pathprops =
+		{
+			path_type = "CV_CROrientationSplinePath",
+			path_data = "OPEN, { 1000, 0, 0 }, { 1, 0, 0, 0 }, { 0, 0, 0 }, { 1, 0, 0, 0 }, "
+		}
+	},
+
+	{
+		entity_name = "norman_D",
+		type = COMPOUND,
+		template_name = "dsy_gallicbs",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 2400, 3500, -18180 },
+			orient = { { 0.0000000,  0.0000000, -1.0000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { 1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+			loadout = "Gallia_Battleship_Loadout"
+		}
+	},
+	
+	{
+		entity_name = "superdupont",
+		type = COMPOUND,
+		template_name = "dsy_gallicc",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 6400, 6500, -18680 },
+			orient = { { 0.0000000,  0.0000000, -1.0000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { 1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+			loadout = "Gallia_Battleship_Loadout"
+		}
+	},
+	
+	{
+		entity_name = "path_valeur",
+		type = MOTION_PATH,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		pathprops =
+		{
+			path_type = "CV_CROrientationSplinePath",
+			path_data = "OPEN, { 80, -20, 0 }, { 1, 0, 0, 0 }, { 120, -20, 0 }, { 1, 0, 0, 0 }, "
+		}
+	},
+
+	{
+		entity_name = "valeur",
+		type = COMPOUND,
+		template_name = "dsy_gallicbs",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 50, 0, -450 },
+			orient = { { 0.0000000,  0.0000000, -1.0000000 }, { 0.0000000,  1.0000000,  0.0000000 }, { 1.0000000,  0.0000000, -0.0000000 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+			loadout = "Gallia_Battleship_Loadout"
+		}
+	},
+};
+
+events =
+{
+	{
+		0.000, START_PSYS, { "touristdust_sienna_1" },
+		{
+			duration = 33.000
+		}
+	},
+
+	{
+		0.00, START_SPATIAL_PROP_ANIM, { "Camera" },
+		{
+			duration = 15,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 90, Z_AXIS }
+			},
+			param_curve =
+			{
+				CLSID = "SmoothPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 0.00 },
+					{ 1.00, 1.00, 0.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		0.000, START_CAMERA_PROP_ANIM, { "Camera" },
+		{
+			duration = 0,
+			cameraprops =
+			{
+				fovh = 5
+			}
+		}
+	},
+
+	{
+		0.1000, START_CAMERA_PROP_ANIM, { "Camera" },
+		{
+			duration = 35.000,
+			cameraprops =
+			{
+				fovh = 30
+			},
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 0.00 },
+					{ 1.00, 1.00, 0.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		0.050, ATTACH_ENTITY, { "rtc_fadeblack_variable_1", "Camera" },
+		{
+			duration = 40.000,
+			offset = { 0, 0, -0.27 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "",
+			target_type = ROOT,
+			flags = POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+
+	{
+		0.050, START_PSYS, { "rtc_fadeblack_variable_1" },
+		{
+			duration = 2
+		}
+	},
+
+	{
+		0.050, START_PSYS_PROP_ANIM, { "rtc_fadeblack_variable_1" },
+		{
+			duration = 1.031,
+			psysprops =
+			{
+				sparam = 1
+			},
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{  0.000000,  0.000000,  0.000000,  0.000000 },
+					{  1.000000,  1.000000,  0.000000,  0.000000 },
+				}
+			},
+			pcurve_period = 0
+		}
+	},
+
+	{
+		32.00, START_PSYS_PROP_ANIM, { "rtc_fadeblack_variable_1" },
+		{
+			duration = 1.031,
+			psysprops =
+			{
+				sparam = 1
+			},
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{  0.000000,  1.000000,  0.000000,  0.000000 },
+					{  1.000000,  0.000000,  0.000000,  0.000000 },
+				}
+			},
+			pcurve_period = 0
+		}
+	},
+
+	{
+		32.00, ATTACH_ENTITY, { "rtc_fadeblack_variable_2", "Camera" },
+		{
+			duration = 20.000,
+			offset = { 0, 0, -0.27 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "",
+			target_type = ROOT,
+			flags = POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+
+	{
+		32.00, START_PSYS, { "rtc_fadeblack_variable_2" },
+		{
+			duration = 8.5
+		}
+	},
+
+	{
+		32.00, START_PSYS_PROP_ANIM, { "rtc_fadeblack_variable_2" },
+		{
+			duration = 1.031,
+			psysprops =
+			{
+				sparam = 1
+			},
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{  0.000000,  1.000000,  0.000000,  0.000000 },
+					{  1.000000,  0.000000,  0.000000,  0.000000 },
+				}
+			},
+			pcurve_period = 0
+		}
+	},
+
+	{
+		13.00, START_SPATIAL_PROP_ANIM, { "Camera" },
+		{
+			duration = 25,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 110, Z_AXIS }
+			},
+			param_curve =
+			{
+				CLSID = "SmoothPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 0.00 },
+					{ 1.00, 1.00, 0.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		0.000, START_PATH_ANIMATION, { "valeur", "path_valeur" },
+		{
+			duration = 30.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 50, 30, -450 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+
+	{
+		0.000, START_PATH_ANIMATION, { "Camera", "path_camera" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+
+	
+	{
+		0.000, START_PATH_ANIMATION, { "allies1", "path_allies" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { -1550, -1200, -14000 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+
+	{
+		0.000, START_PATH_ANIMATION, { "allies2", "path_allies" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { -1250, 1000, -17900 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+
+	{
+		0.000, START_PATH_ANIMATION, { "allies3", "path_allies" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { -2250, -1000, -10900 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+
+	{
+		0.000, START_PATH_ANIMATION, { "allies4", "path_allies" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { -2250, 1000, -15900 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+
+	{
+		0.000, START_PATH_ANIMATION, { "allies5", "path_allies" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { -3750, -3000, -14900 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+
+	{
+		0.000, START_PATH_ANIMATION, { "allies6", "path_allies" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { -4750, -4500, -15400 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+
+	{
+		0.000, START_PATH_ANIMATION, { "allies7", "path_allies" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { -5000, -1000, -14000 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+
+	{
+		0.000, START_PATH_ANIMATION, { "allies8", "path_allies" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { -2250, -3000, -12900 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+	
+	{
+		0.000, START_PATH_ANIMATION, { "allies9", "path_allies" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { -750, -7500, -16900 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+	
+	{
+		0.000, START_PATH_ANIMATION, { "allies10", "path_allies" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { -3750, -7500, -16900 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+	
+	{
+		0.000, START_PATH_ANIMATION, { "allies11", "path_allies" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { -700, 250, -1800 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+	
+	{
+		0.000, START_PATH_ANIMATION, { "allies12", "path_allies" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { -2000, 1000, -9600 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+	
+	{
+		0.000, START_PATH_ANIMATION, { "allies13", "path_allies" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { -3500, 2500, -12600 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+	
+	{
+		0.000, START_PATH_ANIMATION, { "allies14", "path_allies" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { -300, -1000, -2000 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+	
+	{
+		0.000, START_PATH_ANIMATION, { "bretbong2", "path_allies" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { -2550, 400, -17600 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+	
+	{
+		0.000, START_PATH_ANIMATION, { "enemy1", "path_enemy" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 100, -500, -10180 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+	
+	{
+		0.000, START_PATH_ANIMATION, { "enemy2", "path_enemy" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 500, -600, -6180 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+	
+	{
+		0.000, START_PATH_ANIMATION, { "enemy3", "path_enemy" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 1000, -2200, -4180 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+	
+	{
+		0.000, START_PATH_ANIMATION, { "enemy4", "path_enemy" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 600, -200, -5780 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+	
+	{
+		0.000, START_PATH_ANIMATION, { "enemy5", "path_enemy" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 1200, 3500, -12180 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+	
+	{
+		0.000, START_PATH_ANIMATION, { "enemy6", "path_enemy" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { -200, 3000, -14180 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+	
+	{
+		0.000, START_PATH_ANIMATION, { "enemy7", "path_enemy" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 4200, 1500, -13180 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+	
+	{
+		0.000, START_PATH_ANIMATION, { "enemy8", "path_enemy" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { -800, 2200, -4600 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+	
+	{
+		0.000, START_PATH_ANIMATION, { "obstinate1", "path_enemy" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { -400, 5000, -14180 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+	
+	{
+		0.000, START_PATH_ANIMATION, { "obstinate2", "path_enemy" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 3600, 2000, -13180 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+	
+	{
+		0.000, START_PATH_ANIMATION, { "norman_d", "path_enemy" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 2400, 3500, -18180 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+	
+	{
+		0.000, START_PATH_ANIMATION, { "enemy9", "path_enemy" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 2500, -1300, -12980 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+	
+	{
+		0.000, START_PATH_ANIMATION, { "enemy10", "path_enemy" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { -50, 500, -2000 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+	
+	{
+		0.000, START_PATH_ANIMATION, { "enemy11", "path_enemy" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 50, 1000, -3000 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+	
+	
+	
+	
+	
+	{
+		0.000, START_PATH_ANIMATION, { "icarus", "path_icarus" },
+		{
+			duration = 35.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 0, -10, -70 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+
+	{
+		0.00, START_PSYS_PROP_ANIM, { "icarus_engine_1" },
+		{
+			duration = 1.031,
+			psysprops =
+			{
+				sparam = 1
+			},
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{  0.000000,  0.000000,  0.000000,  0.000000 },
+					{  1.000000,  0.950000,  0.000000,  0.000000 },
+				}
+			},
+			pcurve_period = 0
+		}
+	},
+
+	{
+		0.00, START_PSYS_PROP_ANIM, { "icarus_engine_2" },
+		{
+			duration = 1.031,
+			psysprops =
+			{
+				sparam = 1
+			},
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{  0.000000,  0.000000,  0.000000,  0.000000 },
+					{  1.000000,  0.950000,  0.000000,  0.000000 },
+				}
+			},
+			pcurve_period = 0
+		}
+	},
+
+	{
+		0.00, START_PSYS_PROP_ANIM, { "icarus_engine_3" },
+		{
+			duration = 1.031,
+			psysprops =
+			{
+				sparam = 1
+			},
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{  0.000000,  0.000000,  0.000000,  0.000000 },
+					{  1.000000,  0.950000,  0.000000,  0.000000 },
+				}
+			},
+			pcurve_period = 0
+		}
+	},
+
+	{
+		0.000, START_PSYS, { "icarus_engine_1" },
+		{
+			duration = 33.000
+		}
+	},
+
+	{
+		0.000, START_PSYS, { "icarus_engine_2" },
+		{
+			duration = 33.000
+		}
+	},
+
+	{
+		0.000, START_PSYS, { "icarus_engine_3" },
+		{
+			duration = 33.000
+		}
+	},
+
+	{
+		0.000, ATTACH_ENTITY, { "icarus_engine_1", "icarus" },
+		{
+			duration = 40.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpEngine01",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	{
+		0.000, ATTACH_ENTITY, { "icarus_engine_2", "icarus" },
+		{
+			duration = 40.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpEngine02",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	{
+		0.000, ATTACH_ENTITY, { "icarus_engine_3", "icarus" },
+		{
+			duration = 40.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpEngine03",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	
+	
+	
+	
+	{
+		50.000, START_PSYS, { "tracer_1" },
+		{
+			duration = 40.000
+		}
+	},
+
+	{
+		0.000, ATTACH_ENTITY, { "tracer_1", "lolberty" },
+		{
+			duration = 40.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpTurret_L4_05",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	
+	
+	
+	
+	
+	{
+		0.000, START_PSYS, { "valeur_smoke_1" },
+		{
+			duration = 33.000
+		}
+	},
+
+	{
+		0.000, START_PSYS, { "valeur_smoke_2" },
+		{
+			duration = 33.000
+		}
+	},
+
+	{
+		0.000, START_PSYS, { "valeur_smoke_3" },
+		{
+			duration = 33.000
+		}
+	},
+
+	{
+		0.0000, ATTACH_ENTITY, { "valeur_smoke_1", "valeur" },
+		{
+			duration = 32.5000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpDockLight04",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	{
+		0.0000, ATTACH_ENTITY, { "valeur_smoke_2", "valeur" },
+		{
+			duration = 32.5000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpRunningLight22",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+
+	{
+		0.0000, ATTACH_ENTITY, { "valeur_smoke_3", "valeur" },
+		{
+			duration = 32.5000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpTurret05",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	{
+		0.000, START_PSYS, { "lolberty_smoke1" },
+		{
+			duration = 33.000
+		}
+	},
+
+	{
+		0.000, START_PSYS, { "lolberty_smoke2" },
+		{
+			duration = 33.000
+		}
+	},
+
+	{
+		0.000, START_PSYS, { "lolberty_smoke3" },
+		{
+			duration = 33.000
+		}
+	},
+
+	{
+		0.000, START_PSYS, { "lolberty_smoke4" },
+		{
+			duration = 33.000
+		}
+	},
+
+	{
+		0.0000, ATTACH_ENTITY, { "lolberty_smoke1", "lolberty" },
+		{
+			duration = 32.5000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpRunninglight29",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	{
+		0.0000, ATTACH_ENTITY, { "lolberty_smoke2", "lolberty" },
+		{
+			duration = 32.5000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpRunninglight23",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	{
+		0.0000, ATTACH_ENTITY, { "lolberty_smoke3", "lolberty" },
+		{
+			duration = 32.5000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpRunninglight02",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	{
+		0.0000, ATTACH_ENTITY, { "lolberty_smoke4", "lolberty" },
+		{
+			duration = 32.5000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpTurret_LM_02",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	
+	
+	
+	
+	
+	{
+		0.000, START_PSYS, { "solaris_li_1" },
+		{
+			duration = 33.000
+		}
+	},
+
+	{
+		0.000, START_PSYS, { "solaris_li_2" },
+		{
+			duration = 33.000
+		}
+	},
+
+	{
+		0.000, START_PSYS, { "solaris_li_3" },
+		{
+			duration = 33.000
+		}
+	},
+
+	{
+		0.0000, ATTACH_ENTITY, { "solaris_li_1", "lolberty" },
+		{
+			duration = 32.5000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpTurret_LM_04",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+
+	{
+		0.0000, ATTACH_ENTITY, { "solaris_li_2", "lolberty" },
+		{
+			duration = 32.5000,
+			offset = { 0, -4, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpTurret02",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+
+	{
+		0.0000, ATTACH_ENTITY, { "solaris_li_3", "lolberty" },
+		{
+			duration = 32.5000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpTurret_L4_04",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+
+	{
+		15.0000, ATTACH_ENTITY, { "path_heavymortar", "lolberty" },
+		{
+			duration = 5.5000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpTurret_L4_07",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+
+	{
+		15.0000, START_PSYS, { "heavymortar" },
+		{
+			duration = 5.000
+		}
+	},
+
+	{
+		15.0000, START_PATH_ANIMATION, { "heavymortar", "path_heavymortar" },
+		{
+			duration = 5.0000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+
+	{
+		20.000, ATTACH_ENTITY, { "heavymortar_impact", "valeur" },
+		{
+			duration = 5.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpTurret12",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+
+	{
+		20.000, START_PSYS, { "heavymortar_impact" },
+		{
+			duration = 5.000
+		}
+	},
+
+	{
+		0.000, START_PSYS, { "solaris_ga_1" },
+		{
+			duration = 33.000
+		}
+	},
+
+	{
+		0.000, START_PSYS, { "solaris_ga_2" },
+		{
+			duration = 33.000
+		}
+	},
+
+	{
+		0.0000, ATTACH_ENTITY, { "solaris_ga_1", "valeur" },
+		{
+			duration = 32.5000,
+			offset = { -200, -20, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpRadar",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+
+	{
+		0.0000, ATTACH_ENTITY, { "solaris_ga_2", "valeur" },
+		{
+			duration = 32.5000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpTurret04",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+
+	{
+		22.5000, ATTACH_ENTITY, { "path_heavytreb", "lolberty" },
+		{
+			duration = 5.5000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpSpecialEquipment03",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+
+	{
+		22.6000, START_PSYS, { "heavytreb" },
+		{
+			duration = 5.000
+		}
+	},
+
+	{
+		22.5000, START_PATH_ANIMATION, { "heavytreb", "path_heavytreb" },
+		{
+			duration = 5.0000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+
+	{
+		26.000, ATTACH_ENTITY, { "heavytreb_impact", "lolberty" },
+		{
+			duration = 5.000,
+			offset = { 0, 0, 50 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpSpecialEquipment03",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+
+	{
+		27.000, START_PSYS, { "heavytreb_impact" },
+		{
+			duration = 5.000
+		}
+	},
+
+	
+	
+	
+	
+	{
+		50.000, START_PSYS, { "tracer_2" },
+		{
+			duration = 40.000
+		}
+	},
+
+	{
+		0.000, ATTACH_ENTITY, { "tracer_2", "libcruise1" },
+		{
+			duration = 40.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpWeapon01",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+
+	{
+		0.000, ATTACH_ENTITY, { "path_fwg1", "libcruise1" },
+		{
+			duration = 40.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpWeapon01",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	{
+		12.000, START_PSYS, { "li_cruiser_maingun_1a" },
+		{
+			duration = 4
+		}
+	},
+
+	{
+		12.75000, START_PSYS, { "li_cruiser_maingun_1b" },
+		{
+			duration = 2.5
+		}
+	},
+
+	{
+		13.5000, START_PSYS, { "li_cruiser_maingun_1c" },
+		{
+			duration = 2.5
+		}
+	},
+
+	{
+		14.25, START_PSYS, { "li_cruiser_maingun_1d" },
+		{
+			duration = 2.5
+		}
+	},
+
+	{
+		15.000, START_PSYS, { "li_cruiser_maingun_1e" },
+		{
+			duration = 2.5
+		}
+	},
+
+	{
+		15.75, START_PSYS, { "li_cruiser_maingun_1f" },
+		{
+			duration = 2.5
+		}
+	},
+
+	{
+		12.0, START_PATH_ANIMATION, { "li_cruiser_maingun_1a", "path_fwg1" },
+		{
+			duration = 2.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+
+	{
+		12.75000, START_PATH_ANIMATION, { "li_cruiser_maingun_1b", "path_fwg1" },
+		{
+			duration = 2.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+
+	{
+		13.5000, START_PATH_ANIMATION, { "li_cruiser_maingun_1c", "path_fwg1" },
+		{
+			duration = 2.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+
+	{
+		14.25, START_PATH_ANIMATION, { "li_cruiser_maingun_1d", "path_fwg1" },
+		{
+			duration = 2.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+
+	{
+		15.0, START_PATH_ANIMATION, { "li_cruiser_maingun_1e", "path_fwg1" },
+		{
+			duration = 2.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+
+	{
+		15.75000, START_PATH_ANIMATION, { "li_cruiser_maingun_1f", "path_fwg1" },
+		{
+			duration = 2.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+
+	{
+		13.000, ATTACH_ENTITY, { "li_cruiser_maingun_1a", "obby_stinate" },
+		{
+			duration = 5.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpPilot",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+	
+	{
+		13.000, ATTACH_ENTITY, { "li_cruiser_impact_1b", "obby_stinate" },
+		{
+			duration = 5.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpPilot",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+	
+	{
+		13.000, ATTACH_ENTITY, { "li_cruiser_impact_1c", "obby_stinate" },
+		{
+			duration = 5.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpPilot",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+	
+	{
+		13.000, ATTACH_ENTITY, { "li_cruiser_impact_1d", "obby_stinate" },
+		{
+			duration = 5.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpPilot",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+	
+	{
+		13.000, ATTACH_ENTITY, { "li_cruiser_impact_1e", "obby_stinate" },
+		{
+			duration = 5.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpPilot",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+	
+	{
+		13.000, ATTACH_ENTITY, { "li_cruiser_impact_1f", "obby_stinate" },
+		{
+			duration = 5.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpPilot",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+	
+	{
+		13.000, ATTACH_ENTITY, { "li_cruiser_impact_1g", "obby_stinate" },
+		{
+			duration = 5.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpPilot",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+	
+	{
+		13.000, ATTACH_ENTITY, { "li_cruiser_impact_1h", "obby_stinate" },
+		{
+			duration = 5.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpPilot",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+	
+	{
+		14.000, START_PSYS, { "li_cruiser_impact_1a" },
+		{
+			duration = 4
+		}
+	},
+
+	{
+		14.75000, START_PSYS, { "li_cruiser_impact_1b" },
+		{
+			duration = 4
+		}
+	},
+
+	{
+		15.5000, START_PSYS, { "li_cruiser_impact_1c" },
+		{
+			duration = 4
+		}
+	},
+
+	{
+		16.25, START_PSYS, { "li_cruiser_impact_1d" },
+		{
+			duration = 4
+		}
+	},
+
+	{
+		17.000, START_PSYS, { "li_cruiser_impact_1e" },
+		{
+			duration = 4
+		}
+	},
+
+	{
+		17.75, START_PSYS, { "li_cruiser_impact_1f" },
+		{
+			duration = 4
+		}
+	},
+
+	{
+		22.000, START_PSYS, { "li_cruiser_maingun_1a" },
+		{
+			duration = 6
+		}
+	},
+
+	{
+		22.75000, START_PSYS, { "li_cruiser_maingun_1b" },
+		{
+			duration = 4
+		}
+	},
+
+	{
+		23.5000, START_PSYS, { "li_cruiser_maingun_1c" },
+		{
+			duration = 4
+		}
+	},
+
+	{
+		24.25, START_PSYS, { "li_cruiser_maingun_1d" },
+		{
+			duration = 4
+		}
+	},
+
+	{
+		25.000, START_PSYS, { "li_cruiser_maingun_1e" },
+		{
+			duration = 4
+		}
+	},
+
+	{
+		25.75, START_PSYS, { "li_cruiser_maingun_1f" },
+		{
+			duration = 4
+		}
+	},
+
+	{
+		22.0, START_PATH_ANIMATION, { "li_cruiser_maingun_1a", "path_fwg1" },
+		{
+			duration = 2.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+
+	{
+		22.75000, START_PATH_ANIMATION, { "li_cruiser_maingun_1b", "path_fwg1" },
+		{
+			duration = 2.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+
+	{
+		23.5000, START_PATH_ANIMATION, { "li_cruiser_maingun_1c", "path_fwg1" },
+		{
+			duration = 2.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+
+	{
+		24.25, START_PATH_ANIMATION, { "li_cruiser_maingun_1d", "path_fwg1" },
+		{
+			duration = 2.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+
+	{
+		25.0, START_PATH_ANIMATION, { "li_cruiser_maingun_1e", "path_fwg1" },
+		{
+			duration = 2.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+
+	{
+		25.75000, START_PATH_ANIMATION, { "li_cruiser_maingun_1g", "path_fwg1" },
+		{
+			duration = 2.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+	
+	{
+		13.000, ATTACH_ENTITY, { "li_cruiser_impact_1a", "obby_stinate" },
+		{
+			duration = 5.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpRadar",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+	
+	{
+		13.000, ATTACH_ENTITY, { "li_cruiser_impact_1b", "obby_stinate" },
+		{
+			duration = 5.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpRadar",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+	
+	{
+		13.000, ATTACH_ENTITY, { "li_cruiser_impact_1c", "obby_stinate" },
+		{
+			duration = 5.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpRadar",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+	
+	{
+		13.000, ATTACH_ENTITY, { "li_cruiser_impact_1d", "obby_stinate" },
+		{
+			duration = 5.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpRadar",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+	
+	{
+		13.000, ATTACH_ENTITY, { "li_cruiser_impact_1e", "obby_stinate" },
+		{
+			duration = 5.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpRadar",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+	
+	{
+		13.000, ATTACH_ENTITY, { "li_cruiser_impact_1h", "obby_stinate" },
+		{
+			duration = 5.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpRadar",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+	
+	{
+		24.0, START_PSYS, { "li_cruiser_impact_1a" },
+		{
+			duration = 4
+		}
+	},
+
+	{
+		24.75000, START_PSYS, { "li_cruiser_impact_1b" },
+		{
+			duration = 4
+		}
+	},
+
+	{
+		25.5000, START_PSYS, { "li_cruiser_impact_1c" },
+		{
+			duration = 4
+		}
+	},
+
+	{
+		26.25, START_PSYS, { "li_cruiser_impact_1d" },
+		{
+			duration = 4
+		}
+	},
+
+	{
+		27.000, START_PSYS, { "li_cruiser_impact_1e" },
+		{
+			duration = 4
+		}
+	},
+
+	{
+		27.75, START_PSYS, { "li_cruiser_impact_1h" },
+		{
+			duration = 4
+		}
+	},
+
+	
+	
+	
+	
+	{
+		10.00000, START_PATH_ANIMATION, { "creccie", "path_creccie" },
+		{
+			duration = 25.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+	
+	{
+		16.00, START_SPATIAL_PROP_ANIM, { "path_crecciemortar" },
+		{
+			duration = 0.1,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { -5, X_AXIS }
+			},
+			param_curve =
+			{
+				CLSID = "SmoothPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 0.00 },
+					{ 1.00, 1.00, 0.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		16.50, START_SPATIAL_PROP_ANIM, { "path_crecciemortar" },
+		{
+			duration = 0.1,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { -95, Y_AXIS }
+			},
+			param_curve =
+			{
+				CLSID = "SmoothPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 0.00 },
+					{ 1.00, 1.00, 0.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		35.00, START_SPATIAL_PROP_ANIM, { "path_crecciemortar" },
+		{
+			duration = 0.1,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 95, Y_AXIS }
+			},
+			param_curve =
+			{
+				CLSID = "SmoothPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 0.00 },
+					{ 1.00, 1.00, 0.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		35.50, START_SPATIAL_PROP_ANIM, { "path_crecciemortar" },
+		{
+			duration = 0.1,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 5, X_AXIS }
+			},
+			param_curve =
+			{
+				CLSID = "SmoothPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 0.00 },
+					{ 1.00, 1.00, 0.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		16.000, ATTACH_ENTITY, { "path_crecciemortar", "creccie" },
+		{
+			duration = 5.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpTurret_B1_01",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+
+	{
+		16.25, START_PSYS, { "crecciemortar" },
+		{
+			duration = 6
+		}
+	},
+
+	{
+		16.00000, START_PATH_ANIMATION, { "crecciemortar", "path_crecciemortar" },
+		{
+			duration = 5.000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+	
+	{
+		16.000, ATTACH_ENTITY, { "crecciemortar_impact", "obby_stinate" },
+		{
+			duration = 5.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpRadar",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+
+	{
+		20.000, ATTACH_ENTITY, { "crecciemortar", "obby_stinate" },
+		{
+			duration = 5.000,
+			offset = { 0, 5, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpRadar",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+
+	{
+		20.000, START_PSYS, { "crecciemortar_impact" },
+		{
+			duration = 5
+		}
+	},
+
+	{
+		29.000, START_PSYS, { "crecciemortar" },
+		{
+			duration = 4
+		}
+	},
+
+	{
+		29.00000, START_PATH_ANIMATION, { "crecciemortar", "path_crecciemortar" },
+		{
+			duration = 5.000,
+			start_percent = 0,
+			stop_percent = 0.8,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+	
+	{
+		10.000, START_PSYS, { "obby_smoke1" },
+		{
+			duration = 23.000
+		}
+	},
+
+	{
+		10.000, START_PSYS, { "obby_smoke2" },
+		{
+			duration = 23.000
+		}
+	},
+
+	{
+		10.0000, ATTACH_ENTITY, { "obby_smoke1", "obby_stinate" },
+		{
+			duration = 22.5000,
+			offset = { 0, -50, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpRunningLight05",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	{
+		10.0000, ATTACH_ENTITY, { "obby_smoke2", "obby_stinate" },
+		{
+			duration = 22.5000,
+			offset = { 0, -50, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpRunningLight05",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	{
+		20.070, START_PSYS, { "boomboom_1" },
+		{
+			duration = 4.000
+		}
+	},
+
+	{
+		21.920, START_PSYS, { "boomboom_2" },
+		{
+			duration = 4.000
+		}
+	},
+
+	{
+		22.796, START_PSYS, { "boomboom_3" },
+		{
+			duration = 4.000
+		}
+	},
+
+	{
+		23.500, START_PSYS, { "boomboom_7" },
+		{
+			duration = 4.000
+		}
+	},
+
+	{
+		24.800, START_PSYS, { "boomboom_4" },
+		{
+			duration = 4.000
+		}
+	},
+
+	{
+		26.000, START_PSYS, { "boomboom_5" },
+		{
+			duration = 4.000
+		}
+	},
+
+	{
+		27.5000, START_PSYS, { "boomboom_2" },
+		{
+			duration = 4.000
+		}
+	},
+
+	{
+		27.5000, START_PSYS, { "boomboom_4" },
+		{
+			duration = 4.000
+		}
+	},
+
+	{
+		28.000, START_PSYS, { "boomboom_8" },
+		{
+			duration = 4.000
+		}
+	},
+
+	{
+		29.000, START_PSYS, { "boomboom_5" },
+		{
+			duration = 4.000
+		}
+	},
+
+	{
+		30.000, START_PSYS, { "boomboom_3" },
+		{
+			duration = 4.000
+		}
+	},
+
+	{
+		30.250, START_PSYS, { "boomboom_4" },
+		{
+			duration = 4.000
+		}
+	},
+
+	{
+		31.000, START_PSYS, { "boomboom_2" },
+		{
+			duration = 4.000
+		}
+	},
+
+	{
+		31.8000, START_PSYS, { "boomboom_4" },
+		{
+			duration = 4.000
+		}
+	},
+
+	{
+		32.0000, ATTACH_ENTITY, { "boomboom_1", "obby_stinate" },
+		{
+			duration = 10.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpRunningLight05",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	{
+		21.0000, ATTACH_ENTITY, { "boomboom_2", "obby_stinate" },
+		{
+			duration = 10.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpRunningLight08",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	{
+		22.7000, ATTACH_ENTITY, { "boomboom_3", "obby_stinate" },
+		{
+			duration = 10.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpTurret06",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	{
+		23.5, ATTACH_ENTITY, { "boomboom_7", "obby_stinate" },
+		{
+			duration = 10.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpTurret01",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	{
+		24.0000, ATTACH_ENTITY, { "boomboom_4", "obby_stinate" },
+		{
+			duration = 10.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpTurret17",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	{
+		26.0000, ATTACH_ENTITY, { "boomboom_5", "obby_stinate" },
+		{
+			duration = 10.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpTurret13",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	{
+		27.5000, ATTACH_ENTITY, { "boomboom_2", "obby_stinate" },
+		{
+			duration = 10.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpRunningLight10",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	{
+		27.5000, ATTACH_ENTITY, { "boomboom_4", "obby_stinate" },
+		{
+			duration = 10.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpDockLight01",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	{
+		28.0000, ATTACH_ENTITY, { "boomboom_8", "obby_stinate" },
+		{
+			duration = 10.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpTurret14",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	{
+		29.0000, ATTACH_ENTITY, { "boomboom_5", "obby_stinate" },
+		{
+			duration = 10.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpRunningLight13",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	{
+		30.0000, ATTACH_ENTITY, { "boomboom_3", "obby_stinate" },
+		{
+			duration = 10.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpRunningLight02",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	{
+		30.25000, ATTACH_ENTITY, { "boomboom_4", "obby_stinate" },
+		{
+			duration = 10.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpTurret05",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	{
+		30.5000, ATTACH_ENTITY, { "boomboom_1", "obby_stinate" },
+		{
+			duration = 10.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpTurret05",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	{
+		31.0000, ATTACH_ENTITY, { "boomboom_2", "obby_stinate" },
+		{
+			duration = 10.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpRunningLight07",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+	{
+		31.8000, ATTACH_ENTITY, { "boomboom_3", "obby_stinate" },
+		{
+			duration = 10.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpTurret05",
+			target_type = HARDPOINT,
+			flags = POSITION + ORIENTATION
+		}
+	},
+
+
+	
+	
+	
+	
+	{
+		20.00, START_SPATIAL_PROP_ANIM, { "bretbong" },
+		{
+			duration = 19,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { -75, Y_AXIS }
+			},
+			param_curve =
+			{
+				CLSID = "SmoothPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 0.00 },
+					{ 1.00, 1.00, 0.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		39.00, START_SPATIAL_PROP_ANIM, { "bretbong" },
+		{
+			duration = 0.1,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 75, Y_AXIS }
+			},
+			param_curve =
+			{
+				CLSID = "SmoothPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 0.00 },
+					{ 1.00, 1.00, 0.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		0.000, ATTACH_ENTITY, { "path_bretbongmortar", "bretbong" },
+		{
+			duration = 40.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "HpTurret_B1_01",
+			target_type = HARDPOINT,
+			flags = POSITION
+		}
+	},
+
+	{
+		0.00, START_SPATIAL_PROP_ANIM, { "path_bretbongmortar" },
+		{
+			duration = 0.1,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { -135, Y_AXIS }
+			},
+			param_curve =
+			{
+				CLSID = "SmoothPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 0.00 },
+					{ 1.00, 1.00, 0.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		20.00, START_SPATIAL_PROP_ANIM, { "path_bretbongmortar" },
+		{
+			duration = 19,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 75, Y_AXIS }
+			},
+			param_curve =
+			{
+				CLSID = "SmoothPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 0.00 },
+					{ 1.00, 1.00, 0.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		39.00, START_SPATIAL_PROP_ANIM, { "path_bretbongmortar" },
+		{
+			duration = 0.1,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { -75, Y_AXIS }
+			},
+			param_curve =
+			{
+				CLSID = "SmoothPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 0.00 },
+					{ 1.00, 1.00, 0.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		39.100, START_SPATIAL_PROP_ANIM, { "path_bretbongmortar" },
+		{
+			duration = 0.1,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 135, Y_AXIS }
+			},
+			param_curve =
+			{
+				CLSID = "SmoothPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 0.00 },
+					{ 1.00, 1.00, 0.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		25.0000, START_PSYS, { "heavymortar" },
+		{
+			duration = 5.000
+		}
+	},
+
+	{
+		25.0000, START_PATH_ANIMATION, { "heavymortar", "path_bretbongmortar" },
+		{
+			duration = 5.0000,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION
+		}
+	},
+
+	
+	
+	
+	
+	{
+		15.00, START_SPATIAL_PROP_ANIM, { "obby_stinate" },
+		{
+			duration = 20,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 45, Z_AXIS }
+			},
+			param_curve =
+			{
+				CLSID = "SmoothPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 0.00 },
+					{ 1.00, 1.00, 0.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		15.00, START_SPATIAL_PROP_ANIM, { "obby_stinate" },
+		{
+			duration = 20,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 75, X_AXIS }
+			},
+			param_curve =
+			{
+				CLSID = "SmoothPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 0.00 },
+					{ 1.00, 1.00, 0.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		15.00, START_SPATIAL_PROP_ANIM, { "obby_stinate" },
+		{
+			duration = 20,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 50, Y_AXIS }
+			},
+			param_curve =
+			{
+				CLSID = "SmoothPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 0.00 },
+					{ 1.00, 1.00, 0.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		35.00, START_SPATIAL_PROP_ANIM, { "obby_stinate" },
+		{
+			duration = 5,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { -45, Z_AXIS }
+			},
+			param_curve =
+			{
+				CLSID = "SmoothPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 0.00 },
+					{ 1.00, 1.00, 0.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		35.00, START_SPATIAL_PROP_ANIM, { "obby_stinate" },
+		{
+			duration = 5,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { -75, X_AXIS }
+			},
+			param_curve =
+			{
+				CLSID = "SmoothPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 0.00 },
+					{ 1.00, 1.00, 0.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		35.00, START_SPATIAL_PROP_ANIM, { "obby_stinate" },
+		{
+			duration = 5,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { -50, Y_AXIS }
+			},
+			param_curve =
+			{
+				CLSID = "SmoothPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 0.00 },
+					{ 1.00, 1.00, 0.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+	{
+		0.000, ATTACH_ENTITY, { "touristdust_sienna_1", "Camera" },
+		{
+			duration = 33.000,
+			offset = { 0, 0, -100 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "",
+			target_type = ROOT,
+			flags = POSITION
+		}
+	},
+
+	{
+		37.00, START_SPATIAL_PROP_ANIM, { "Camera" },
+		{
+			duration = 1,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { -200, Z_AXIS }
+			},
+			param_curve =
+			{
+				CLSID = "SmoothPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 0.00 },
+					{ 1.00, 1.00, 0.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		0.000, SET_CAMERA, { "Monitor_2", "Camera" }
+	},
+
+	{
+		0.000, START_PSYS_PROP_ANIM, { "touristdust_sienna_1" },
+		{
+			duration = 40.000,
+			psysprops =
+			{
+				sparam = 1
+			},
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{  0.000000,  0.102564,  0.000000,  0.636364 },
+					{  1.000000,  1.000000,  0.900000,  0.000000 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},	
+	
+};

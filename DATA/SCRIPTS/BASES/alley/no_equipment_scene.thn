@@ -1,0 +1,184 @@
+duration = 3600;
+
+entities =
+{
+
+	{
+		entity_name = "Layer_Scene_no",
+		type = SCENE,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		up = Y_AXIS,
+		front = Z_AXIS,
+		ambient = { 7, 10, 26 }
+	},
+  	{
+		entity_name = "Set_Chamber",
+		type = COMPOUND,
+		template_name = "nomad_reactor_chamber_cinematic",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		userprops =
+		{
+			category = "Solar",
+      NoFog = "n",
+		}
+	},
+  {
+		entity_name = "reactor_effect_1",
+		type = PSYS,
+		template_name = "dsy_nomad_reactor_chamber_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "reactor_effect_2",
+		type = PSYS,
+		template_name = "dsy_nomad_reactor_chamber_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "reactor_effect_3",
+		type = PSYS,
+		template_name = "dsy_nomad_reactor_chamber_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "reactor_effect_4",
+		type = PSYS,
+		template_name = "dsy_nomad_reactor_chamber_projector",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+  {
+		entity_name = "reactor_effect_5",
+		type = PSYS,
+		template_name = "dsy_dyson_boss_door_helper",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 1
+		}
+	},
+};
+
+events =
+{
+  {
+		0, ATTACH_ENTITY, { "reactor_effect_1", "Set_Chamber" },
+		{
+			duration = 3600,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hprunninglight01",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+  {
+		0, START_PSYS, { "reactor_effect_1" }, { duration = 3600 }
+	},
+  {
+		0, ATTACH_ENTITY, { "reactor_effect_2", "Set_Chamber" },
+		{
+			duration = 3600,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hprunninglight02",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+  {
+		0, START_PSYS, { "reactor_effect_2" }, { duration = 3600 }
+	},
+  {
+		0, ATTACH_ENTITY, { "reactor_effect_3", "Set_Chamber" },
+		{
+			duration = 3600,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hprunninglight11",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+  {
+		0, START_PSYS, { "reactor_effect_3" }, { duration = 3600 }
+	},
+  {
+		0, ATTACH_ENTITY, { "reactor_effect_4", "Set_Chamber" },
+		{
+			duration = 3600,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hprunninglight12",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+  {
+		0, START_PSYS, { "reactor_effect_4" }, { duration = 3600 }
+	},
+  {
+		0, START_PSYS, { "reactor_effect_5" }, { duration = 3600 }
+	},
+};

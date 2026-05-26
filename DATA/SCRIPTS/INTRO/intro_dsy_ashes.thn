@@ -1,0 +1,842 @@
+duration = 1024;
+
+entities =
+{
+
+	{
+		entity_name = "Ashes",
+		type = SCENE,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		up = Y_AXIS,
+		front = Z_AXIS,
+		ambient = { 0, 0, 0 }
+	},
+
+	{
+		entity_name = "Light_1",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, -13000 },
+			orient = { {  0,  0.000000, 1 },
+					   {  0.000000,  1.000000,  0.000000 },
+					   {  1,  0.000000,  0 } }
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 220, 160, 80 },
+			diffuse = { 0.86, 0.6, 0.3 },
+			specular = { 0, 0, 0 },
+			ambient = { 0.25, 0.13, 0.03 },
+			direction = { 0, 0, 1 },
+			range = 500000,
+			cutoff = 98.99998,
+			type = L_POINT,
+			theta = 90,
+			atten = { 1, 0, 0 }
+		}
+	},
+
+	{
+		entity_name = "Camera_1",
+		type = CAMERA,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		cameraprops =
+		{
+			fovh = 30,
+			hvaspect = 1.333333,
+			nearplane = 1,
+			farplane = 50000
+		}
+	},
+	
+	{
+		entity_name = "leeds_color",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 23, srt_grp = -100, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 2.635458, 0, 1.632055 },
+			orient = { {  0.636787,  0.000000, -0.771040 },
+					   {  0.000000,  1.000000,  0.000000 },
+					   {  0.771040,  0.000000,  0.636787 } }
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 255, 255, 255 },
+			diffuse = { 0.996078, 0.803922, 0.360784 },
+			specular = { 0, 0, 0 },
+			ambient = { 1, 0.501961, 0.133333 },
+			direction = { 0, 0, 1 },
+			range = 2000,
+			cutoff = 98.99998,
+			type = L_DIRECT,
+			theta = 90,
+			atten = { 0, 0, 4e-009 }
+		}
+	},
+
+	{
+		entity_name = "dsy_planet_albenheim_15000_1",
+		type = COMPOUND,
+		template_name = "dsy_planet_albenheim_15000",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 10000, 14000, -15000 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		userprops =
+		{
+			category = "Solar",
+		}
+	},
+
+	{
+		entity_name = "starsphere_br04_1",
+		type = COMPOUND,
+		template_name = "starsphere_br04",
+		lt_grp = 23, srt_grp = -100, usr_flg = 2,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { -0.1484525, -0.2120122,  0.9659258 },
+					   {  -0.8191521,  0.5735765,  0.0000000 },
+					   { -0.5540323, -0.7912401, -0.2588190 } }
+		},
+		userprops =
+		{
+			category = "Prop",
+		}
+	},
+
+	{
+		entity_name = "leeds_color_2",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 24, srt_grp = -101, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 2.635458, 0, 1.632055 },
+			orient = { {  0.636787,  0.000000, -0.771040 },
+					   {  0.000000,  1.000000,  0.000000 },
+					   {  0.771040,  0.000000,  0.636787 } }
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 255, 255, 255 },
+			diffuse = { 0, 0, 0 },
+			specular = { 0, 0, 0 },
+			ambient = { 0.403922, 0.25098, 0.094118 },
+			direction = { 0, 0, 1 },
+			range = 2000,
+			cutoff = 98.99998,
+			type = L_DIRECT,
+			theta = 90,
+			atten = { 1, 0, 0 }
+		}
+	},
+	
+	{
+		entity_name = "skydome_blank",
+		type = COMPOUND,
+		template_name = "skydome_sky_blank",
+		lt_grp = 24, srt_grp = -102, usr_flg = 2,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 0, -5000, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		userprops =
+		{
+			category = "Prop",
+		}
+	},
+
+	{
+		entity_name = "starsphere_li01_stars_1",
+		type = COMPOUND,
+		template_name = "starsphere_li01_stars",
+		lt_grp = 0, srt_grp = -100, usr_flg = 1,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 0.7071068,  0.0000000, -0.7071068 },
+					   {  0.0000000,  1.0000000,  0.0000000 },
+					   {  0.7071068,  0.0000000,  0.7071068   } }
+		},
+		userprops =
+		{
+			category = "Prop",
+		}
+	},
+
+	{
+		entity_name = "rtc_pl03_sun_1",
+		type = PSYS,
+		template_name = "rtc_pl03_sun",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { -300, 0, -2000 },
+			orient = { { 1, 0, 0 }, { 0.0000000,  0.9659258,  0.2588190 }, { 0.0000000, -0.2588190,  0.9659258 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+	
+	{
+		entity_name = "leedsdust_1",
+		type = PSYS,
+		template_name = "leedsdust",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "lavaashdust_1",
+		type = PSYS,
+		template_name = "lavaashdust",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+
+	{
+		entity_name = "Monitor_2",
+		type = MONITOR,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0
+	},
+
+	{
+		entity_name = "trade_lane",
+		type = COMPOUND,
+		template_name = "Trade_Lane_Ring_Damage_B",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 1200, -800, -5500 },
+			orient = { { -0.4480736, -0.8939967,  0.0000000 }, { 0.8939967, -0.4480736,  0.0000000 }, { 0, 0, 1 } }
+		},
+		userprops =
+		{
+			category = "Solar",
+		}
+	},
+	
+	{
+		entity_name = "dsy_br_elite_wreck_1",
+		type = COMPOUND,
+		template_name = "br_elite",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 0, 0, -190 },
+			orient = { { 0.8433251, -0.0298710, -0.5365729 }, { -0.1158444,  0.9648757, -0.2357859 }, { 0.5247693,  0.2610031,  0.8102435  } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "dsy_li_elite2_1",
+		type = COMPOUND,
+		template_name = "li_elite2",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -10, -80, -690 },
+			orient = { { 0.8433251, -0.0298710, -0.5365729 }, { -0.1158444,  0.9648757, -0.2357859 }, { 0.5247693,  0.2610031,  0.8102435  } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "dsy_challenger_1",
+		type = COMPOUND,
+		template_name = "dsy_challenger",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -200, -200, -850 },
+			orient = { { 0.8433251, -0.0298710, -0.5365729 }, { -0.1158444,  0.9648757, -0.2357859 }, { 0.5247693,  0.2610031,  0.8102435  } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "dsy_challenger_2",
+		type = COMPOUND,
+		template_name = "dsy_challenger",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 50, 130, -700 },
+			orient = { { 0.8433251, -0.0298710, -0.5365729 }, { -0.1158444,  0.9648757, -0.2357859 }, { 0.5247693,  0.2610031,  0.8102435  } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "dsy_dragoon_1",
+		type = COMPOUND,
+		template_name = "dsy_dragoon",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 80, 20, -490 },
+			orient = { { -0.3646951, -0.7609777, -0.5365729 }, { 00.6823712,  0.1736602, -0.7100786 }, { 0.6335353, -0.6251041,  0.4559363 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "dsy_paladin_1",
+		type = COMPOUND,
+		template_name = "dsy_paladin",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 10, -40, -180 },
+			orient = { { -0.4197060,  0.2316959,  0.8775898 }, { -0.3626828, -0.9291385,  0.0718530 }, { 0.8320505, -0.2881296,  0.4739972 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "dsy_ga_vhf_1",
+		type = COMPOUND,
+		template_name = "dsy_ga_vhf",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -160, 64, -340 },
+			orient = { { 0.0036703,  0.8293017, -0.5587891 }, { -0.9583621,  0.1566373,  0.2387611 }, { 0.2855322,  0.5363986,  0.7941964 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "dsy_ga_bomber_1",
+		type = COMPOUND,
+		template_name = "dsy_ga_bomber",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 160, -50, -410 },
+			orient = { { -0.2221305,  0.3982033, -0.8899956 }, { -0.5770941,  0.6820448,  0.4491962 }, { 0.7858883,  0.6133914,  0.0782978  } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "dsy_ga_lf_1",
+		type = COMPOUND,
+		template_name = "dsy_ga_lf",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 140, -20, -540 },
+			orient = { { 0.8021504, -0.2104982, -0.5587891 }, { -0.3406975, -0.9298724, -0.1387897 }, { -0.4903875,  0.3017083, -0.8176137  } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "dsy_upholder_1",
+		type = COMPOUND,
+		template_name = "dsy_upholder",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -310, -0, -740 },
+			orient = { { 0.8021504, -0.2104982, -0.5587891 }, { -0.3406975, -0.9298724, -0.1387897 }, { -0.4903875,  0.3017083, -0.8176137  } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "dsy_gallicc_1",
+		type = COMPOUND,
+		template_name = "dsy_gallicc",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 750, 150, -1640 },
+			orient = { { -0.9893721, -0.1410316,  0.0353983 }, { -0.1187577,  0.9242123,  0.3629438 }, { -0.0839021,  0.3548826, -0.9311385  } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "dsy_gallicdd_1",
+		type = COMPOUND,
+		template_name = "dsy_gallicdd",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 1000, 550, -4240 },
+			orient = { { 0.0120968, -0.0054716,  0.9999118 }, { 0.0883293, -0.9960700, -0.0065192 }, { 0.9960179,  0.0884003, -0.0115660  } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "dsy_gallicdd_2",
+		type = COMPOUND,
+		template_name = "dsy_gallicdd",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -700, -250, -1440 },
+			orient = { { -0.0973261, -0.7050893,  0.7024078 }, { -0.1888977,  0.7060166,  0.6825381 }, { -0.9771619, -0.0662544, -0.2019036  } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+	{
+		entity_name = "dsy_gallicdd_3",
+		type = COMPOUND,
+		template_name = "dsy_gallicdd",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -370, 750, -5440 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+		}
+	},
+	
+};
+
+events =
+{
+	{
+		0.000, START_SPATIAL_PROP_ANIM, { "dsy_br_elite_wreck_1" },
+		{
+			duration = 1024.100,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 360, NEG_Y_AXIS }
+			}
+		}
+	},
+
+	{
+		0.000, START_SPATIAL_PROP_ANIM, { "dsy_br_elite_wreck_1" },
+		{
+			duration = 1024.100,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 360, Z_AXIS }
+			}
+		}
+	},
+
+	{
+		0.000, START_SPATIAL_PROP_ANIM, { "dsy_br_elite_wreck_1" },
+		{
+			duration = 1024.100,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 360, X_AXIS }
+			}
+		}
+	},
+
+	{
+		0.000, START_SPATIAL_PROP_ANIM, { "dsy_planet_albenheim_15000_1" },
+		{
+			duration = 2040.100,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 360, NEG_Y_AXIS }
+			}
+		}
+	},
+
+	{
+		0.000, START_SPATIAL_PROP_ANIM, { "dsy_ga_lf_1" },
+		{
+			duration = 1024.100,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 1024, NEG_Y_AXIS }
+			}
+		}
+	},
+
+	{
+		0.000, START_SPATIAL_PROP_ANIM, { "dsy_ga_lf_1" },
+		{
+			duration = 1024.100,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 1024, X_AXIS }
+			}
+		}
+	},
+
+	{
+		0.000, START_SPATIAL_PROP_ANIM, { "dsy_ga_vhf_1" },
+		{
+			duration = 1024.100,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 1024, NEG_Y_AXIS }
+			}
+		}
+	},
+
+	{
+		0.000, START_SPATIAL_PROP_ANIM, { "dsy_ga_vhf_1" },
+		{
+			duration = 1024.100,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 1024, X_AXIS }
+			}
+		}
+	},
+
+	{
+		0.000, START_SPATIAL_PROP_ANIM, { "dsy_li_elite2_1" },
+		{
+			duration = 1024.100,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 360, X_AXIS }
+			}
+		}
+	},
+
+	{
+		0.000, START_SPATIAL_PROP_ANIM, { "dsy_challenger_1" },
+		{
+			duration = 1024.100,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 360, X_AXIS }
+			}
+		}
+	},
+
+	{
+		0.000, START_SPATIAL_PROP_ANIM, { "dsy_challenger_2" },
+		{
+			duration = 1024.100,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 360, NEG_Z_AXIS }
+			}
+		}
+	},
+
+	{
+		0.000, START_SPATIAL_PROP_ANIM, { "dsy_challenger_2" },
+		{
+			duration = 1024.100,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 360, NEG_Y_AXIS }
+			}
+		}
+	},
+
+	{
+		0.000, START_SPATIAL_PROP_ANIM, { "dsy_dragoon_1" },
+		{
+			duration = 512.100,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 360, X_AXIS }
+			}
+		}
+	},
+
+	{
+		0.000, START_SPATIAL_PROP_ANIM, { "dsy_paladin_1" },
+		{
+			duration = 1024.100,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 360, Y_AXIS }
+			}
+		}
+	},
+
+	{
+		0.000, START_SPATIAL_PROP_ANIM, { "dsy_ga_bomber_1" },
+		{
+			duration = 512.100,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 360, Z_AXIS }
+			}
+		}
+	},
+
+	{
+		0.000, START_SPATIAL_PROP_ANIM, { "dsy_upholder_1" },
+		{
+			duration = 1024.100,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 360, Z_AXIS }
+			}
+		}
+	},
+
+	{
+		0.000, START_SPATIAL_PROP_ANIM, { "dsy_gallicc_1" },
+		{
+			duration = 512.100,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { 360, NEG_Z_AXIS }
+			}
+		}
+	},
+
+	{
+		0.000, START_PSYS, { "rtc_pl03_sun_1" },
+		{
+			duration = 1024.000
+		}
+	},
+
+	{
+		0.000, START_PSYS, { "leedsdust_1" },
+		{
+			duration = 360.000
+		}
+	},
+
+	{
+		0.000, ATTACH_ENTITY, { "leedsdust_1", "Camera_1" },
+		{
+			duration = 360.000,
+			offset = { 0, 0, -100 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "",
+			target_type = ROOT,
+			flags = POSITION
+		}
+	},
+
+	{
+		0.000, START_PSYS_PROP_ANIM, { "leedsdust_1" },
+		{
+			duration = 3600.000,
+			psysprops =
+			{
+				sparam = 1
+			},
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{  0.000000,  0.102564,  0.000000,  0.636364 },
+					{  1.000000,  1.000000,  0.900000,  0.000000 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},	
+	
+	{
+		0.000, START_PSYS, { "lavaashdust_1" },
+		{
+			duration = 360.000
+		}
+	},
+
+	{
+		0.000, ATTACH_ENTITY, { "lavaashdust_1", "Camera_1" },
+		{
+			duration = 360.000,
+			offset = { 0, 0, -100 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "",
+			target_type = ROOT,
+			flags = POSITION
+		}
+	},
+
+	{
+		0.000, START_PSYS_PROP_ANIM, { "lavaashdust_1" },
+		{
+			duration = 0.500,
+			psysprops =
+			{
+				sparam = 1
+			},
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{  0.000000,  0.000000,  0.000000,  0.000000 },
+					{  1.000000,  0.102564,  0.000000,  0.336364 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},	
+	
+	{
+		0.000, SET_CAMERA, { "Monitor_2", "Camera_1" }
+	},
+
+	{
+		0.000, START_CAMERA_PROP_ANIM, { "Camera_1" },
+		{
+			duration = 0,
+			cameraprops =
+			{
+				fovh = 7
+			}
+		}
+	},
+
+	{
+		5.0000, START_CAMERA_PROP_ANIM, { "Camera_1" },
+		{
+			duration = 15.0000,
+			cameraprops =
+			{
+				fovh = 30
+			},
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 0.00 },
+					{ 1.00, 1.00, 0.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+};

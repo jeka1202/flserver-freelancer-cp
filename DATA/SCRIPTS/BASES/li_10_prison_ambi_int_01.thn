@@ -1,0 +1,78 @@
+duration = 307.000;
+
+entities =
+{
+
+	{
+		entity_name = "Ambi_Layer_s069x_Spcl_Ambi",
+		type = SCENE,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		up = Y_AXIS,
+		front = Z_AXIS,
+		ambient = { 0, 0, 0 }
+	},
+
+	{
+		entity_name = "Ambi_RangeMkr",
+		type = MARKER,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		}
+	},
+
+	{
+		entity_name = "Ambi_Mkr_CellMid02",
+		type = MARKER,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { -6.368691, 6.155284, 1.832712 },
+			orient = { { -0.247186, -0.030353, -0.968492 },
+					   {  0.414183,  0.900287, -0.133926 },
+					   {  0.875986, -0.434237, -0.209967 } }
+		}
+	},
+
+	{
+		entity_name = "Ambi_Mkr_Hall02",
+		type = MARKER,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0.480093, 5.251829, 14.10494 },
+			orient = { { -0.936415, -0.016151,  0.350522 },
+					   { -0.216550,  0.812621, -0.541066 },
+					   { -0.276103, -0.582568, -0.764449 } }
+		}
+	}
+};
+
+events =
+{
+	{
+		0.000, START_FOG_PROP_ANIM, { "Ambi_Layer_s069x_Spcl_Ambi" },
+		{
+			duration = 0.000,
+			fogprops =
+			{
+				fogon = N,
+				fogcolor = { 63, 63, 65 },
+				fogmode = F_LINEAR,
+				fogstart = -100,
+				fogend = 750,
+			}
+		}
+	}
+};

@@ -1,0 +1,1252 @@
+duration = 500;
+
+entities =
+{
+	{
+		entity_name = "TekagiArch",
+		type = SCENE,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		up = Y_AXIS,
+		front = Z_AXIS,
+		ambient = { 128, 128, 128 }
+	},
+
+	{
+		entity_name = "Camera01",
+		type = CAMERA,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 15.825, 12.5, 59.365 },
+			orient = {{0.642788, 0.0, 0.766044}, {0.0, 1.0, 0.0}, {-0.766044, 0.0, 0.642788}}
+		},
+		cameraprops =
+		{
+			fovh = 46,
+			hvaspect = 1.333333,
+			nearplane = 1,
+			farplane = 5000
+		}
+	},
+
+	{
+		entity_name = "Monitor",
+		type = MONITOR,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0
+	},
+
+	{
+		entity_name = "Starsphere",
+		type = COMPOUND,
+		template_name = "starsphere_Ku07",
+		lt_grp = 1, srt_grp = -1, usr_flg = 1,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { -1, 0, 0 }, { 0, 1, 0 }, { 0, 0, -1 } }
+		},
+		userprops =
+		{
+			category = "Prop",
+		}
+	},
+
+	{
+		entity_name = "Starsphere_Stars",
+		type = COMPOUND,
+		template_name = "starsphere_Ku07_stars",
+		lt_grp = 1, srt_grp = -100, usr_flg = 1,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		userprops =
+		{
+			category = "Prop",
+		}
+	},
+
+	{
+		entity_name = "Sanctum",
+		type = COMPOUND,
+		template_name = "ku_sanctum",
+		lt_grp = 1, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		userprops =
+		{
+			category = "Room",
+		}
+	},
+
+	{
+		entity_name = "SpaceArchChunk01",
+		type = COMPOUND,
+		template_name = "space_arch_chunk2a",
+		lt_grp = 2, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = {390.487, 199.435, -2396.07},
+			orient = {{1.0, 0.0, 0.0}, {0.0, 1.0, 0.0}, {0.0, 0.0, 1.0}}
+		},
+		userprops =
+		{
+			category = "Solar",
+		}
+	},
+
+	{
+		entity_name = "SpaceArchChunk02",
+		type = COMPOUND,
+		template_name = "space_arch_chunk2a",
+		lt_grp = 2, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = {1400.44, -3.24432, -706.851},
+			orient = {{-0.707107, 0.0, 0.707107}, {0.0, 1.0, 0.0}, {-0.707107, 0.0, -0.707107}}
+		},
+		userprops =
+		{
+			category = "Solar",
+		}
+	},
+
+	{
+		entity_name="SanctumFX",
+		type=PSYS,
+		template_name="rtc_sanctum_energy",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, -72.5, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+
+	{
+		entity_name = "Sanctum_Light",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 1, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 10, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 255, 0, 0 },
+			diffuse = { 0.35, 0.25, 0.15 },
+			specular = { 1, 1, 1 },
+			ambient = { 0.15, 0.05, 0 },
+			direction = { 0, 0, 1 },
+			range = 200,
+			cutoff = 0,
+			type = L_POINT,
+			theta = 4000,
+			atten = { 1, 0, 0 }
+		}
+	},
+
+	{
+		entity_name = "Outer_Light",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 2, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = {-1291.43, 1806.31, -663.978},
+			orient = {{0.173648, 0.0, 0.984808}, {-0.633022, 0.766044, 0.111619}, {-0.754407, -0.642788, 0.133022}}
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 255, 0, 0 },
+			diffuse = { 0.25, 0.45, 0.55 },
+			specular = { 1, 1, 1 },
+			ambient = { 0.15, 0.05, 0 },
+			direction = { 0, 0, 1 },
+			range = 6000,
+			cutoff = 0,
+			type = L_DIRECT,
+			theta = 4000,
+			atten = { 1, 0, 0 }
+		}
+	},
+
+	{
+		entity_name = "SanctumFX_Light",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 1, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 10, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 255, 0, 0 },
+			diffuse = { 0, 0.35, 1 },
+			specular = { 1, 1, 1 },
+			ambient = { 0, 0, 0 },
+			direction = { 0, 0, 1 },
+			range = 60,
+			cutoff = 0,
+			type = L_POINT,
+			theta = 4000,
+			atten = { 1.5, 0, 0 }
+		}
+	},
+
+	{
+		entity_name = "NomadBattleshipCloak_Light",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 1, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { -1042.09, 500.0, -978.846 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 255, 0, 0 },
+			diffuse = { 0, 0, 0 },
+			specular = { 0, 0, 0 },
+			ambient = { 0, 0, 0 },
+			direction = { 0, 0, 1 },
+			range = 10000,
+			cutoff = 0,
+			type = L_POINT,
+			theta = 4000,
+			atten = { 0.25, 0, 0 }
+		}
+	},
+
+	{
+		entity_name = "Character_Guard01",
+		type = DEFORMABLE,
+		template_name = "ku_male_guard_1",
+		lt_grp = 1, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops = {
+			pos = { 5.191, 0, 41.204 },
+			orient = {{ -1, 0, 0 }, { 0, 1, 0 }, { 0, 0, -1 }}
+		},
+		compoundprops={
+			floor_height = -0.15
+		},
+		userprops={
+			actor="ku_male_guard_1",
+			category="Character"
+		}
+	},
+
+	{
+		entity_name = "Character_Guard02",
+		type = DEFORMABLE,
+		template_name = "ku_male_guard_2",
+		lt_grp = 1, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops = {
+			pos = { -3.706, 0, 42.122 },
+			orient = {{ -1, 0, 0 }, { 0, 1, 0 }, { 0, 0, -1 }}
+		},
+		compoundprops={
+			floor_height = -0.15
+		},
+		userprops={
+			actor="ku_male_guard_2",
+			category="Character"
+		}
+	},
+
+	{
+		entity_name = "Character_Guard03",
+		type = DEFORMABLE,
+		template_name = "ku_male_guard_3",
+		lt_grp = 1, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops = {
+			pos = { -12.341, 0, 43.204 },
+			orient = {{ 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 }}
+		},
+		compoundprops={
+			floor_height = -0.15
+		},
+		userprops={
+			actor="ku_male_guard_3",
+			category="Character"
+		}
+	},
+
+	{
+		entity_name = "Character_Guard04",
+		type = DEFORMABLE,
+		template_name = "ku_male_guard_4",
+		lt_grp = 1, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops = {
+			pos = { -47.23, 0, 0 },
+			orient = {{ 0, 0, -1 }, { 0, 1, 0 }, { 1, 0, 0 }}
+		},
+		compoundprops = {
+			floor_height = 8.25
+		},
+		userprops={
+			actor="ku_male_guard_4",
+			category="Character"
+		}
+	},
+
+	{
+		entity_name="Character_Guard01_eyes_flash_left",
+		type=PSYS,
+		template_name="rtc_tekagi_eyes_flash_left",
+		lt_grp=0,
+		srt_grp=0,
+		usr_flg=0,
+		flags=HIDDEN + LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos={ 0, 0, 0 },
+			orient={{ 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 }}
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+
+	{
+		entity_name="Character_Guard01_eyes_flash_right",
+		type=PSYS,
+		template_name="rtc_tekagi_eyes_flash_right",
+		lt_grp=0,
+		srt_grp=0,
+		usr_flg=0,
+		flags=HIDDEN + LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos={ 0, 0, 0 },
+			orient={{ 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 }}
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+
+	{
+		entity_name="Character_Guard01_eyes_left",
+		type=PSYS,
+		template_name="rtc_tekagi_eyes_left",
+		lt_grp=0,
+		srt_grp=0,
+		usr_flg=0,
+		flags=HIDDEN + LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos={ 0, 0, 0 },
+			orient={{ 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 }}
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+
+	{
+		entity_name="Character_Guard01_eyes_right",
+		type=PSYS,
+		template_name="rtc_tekagi_eyes_right",
+		lt_grp=0,
+		srt_grp=0,
+		usr_flg=0,
+		flags=HIDDEN + LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos={ 0, 0, 0 },
+			orient={{ 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 }}
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+
+	{
+		entity_name="Character_Guard02_eyes_flash_left",
+		type=PSYS,
+		template_name="rtc_tekagi_eyes_flash_left",
+		lt_grp=0,
+		srt_grp=0,
+		usr_flg=0,
+		flags=HIDDEN + LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos={ 0, 0, 0 },
+			orient={{ 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 }}
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+
+	{
+		entity_name="Character_Guard02_eyes_flash_right",
+		type=PSYS,
+		template_name="rtc_tekagi_eyes_flash_right",
+		lt_grp=0,
+		srt_grp=0,
+		usr_flg=0,
+		flags=HIDDEN + LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos={ 0, 0, 0 },
+			orient={{ 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 }}
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+
+	{
+		entity_name="Character_Guard02_eyes_left",
+		type=PSYS,
+		template_name="rtc_tekagi_eyes_left",
+		lt_grp=0,
+		srt_grp=0,
+		usr_flg=0,
+		flags=HIDDEN + LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos={ 0, 0, 0 },
+			orient={{ 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 }}
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+
+	{
+		entity_name="Character_Guard02_eyes_right",
+		type=PSYS,
+		template_name="rtc_tekagi_eyes_right",
+		lt_grp=0,
+		srt_grp=0,
+		usr_flg=0,
+		flags=HIDDEN + LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos={ 0, 0, 0 },
+			orient={{ 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 }}
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+
+	{
+		entity_name="NomadBattleship",
+		type=COMPOUND,
+		template_name="dsy_no2_battleship",
+		lt_grp = 2, srt_grp = 0, usr_flg = 0,
+		flags=LIT_DYNAMIC,
+		spatialprops={
+			pos = { 0, -1000, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		userprops={
+			category="Spaceship"
+		}
+	},
+
+	{
+		entity_name="NomadFighter",
+		type=COMPOUND,
+		template_name="dsy_no2_fighter",
+		lt_grp=0,
+		srt_grp=0,
+		usr_flg=0,
+		flags=LIT_DYNAMIC,
+		spatialprops={
+			pos = { 0, -100, 0 },
+			orient = { { -1, 0, 0 }, { 0, 1, 0 }, { 0, 0, -1 } }
+		},
+		userprops={
+			category="Spaceship"
+		}
+	},
+
+	{
+		entity_name="NomadBattleship_Engine",
+		type=PSYS,
+		template_name="dsy_no2_largeengine01",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, -1000, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=1
+		}
+	},
+
+	{
+		entity_name="NomadBattleship_Trail",
+		type=PSYS,
+		template_name="gf_no_smallengine01_trail",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, -1000, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+
+	{
+		entity_name="NomadBattleship_Tentacle01",
+		type=PSYS,
+		template_name="dsy_no2_tentacle_large",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, -1000, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=1
+		}
+	},
+
+	{
+		entity_name="NomadBattleship_Tentacle02",
+		type=PSYS,
+		template_name="dsy_no2_tentacle_large",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, -1000, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=1
+		}
+	},
+
+	{
+		entity_name="NomadBattleship_Tentacle03",
+		type=PSYS,
+		template_name="dsy_no2_tentacle_large",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, -1000, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=1
+		}
+	},
+
+	{
+		entity_name="NomadBattleship_Tentacle04",
+		type=PSYS,
+		template_name="dsy_no2_tentacle_large",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, -1000, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=1
+		}
+	},
+
+	{
+		entity_name="NomadBattleship_Tentacle05",
+		type=PSYS,
+		template_name="dsy_no2_tentacle_large",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, -1000, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=1
+		}
+	},
+
+	{
+		entity_name="NomadBattleship_Tentacle06",
+		type=PSYS,
+		template_name="dsy_no2_tentacle_large",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, -1000, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=1
+		}
+	},
+
+	{
+		entity_name="NomadBattleship_Tentacle07",
+		type=PSYS,
+		template_name="dsy_no2_tentacle_large",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, -1000, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=1
+		}
+	},
+
+	{
+		entity_name="NomadBattleship_Tentacle08",
+		type=PSYS,
+		template_name="dsy_no2_tentacle_large",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, -1000, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=1
+		}
+	},
+
+	{
+		entity_name="NomadBattleship_Tentacle09",
+		type=PSYS,
+		template_name="dsy_no2_tentacle_large",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, -1000, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=1
+		}
+	},
+
+	{
+		entity_name="NomadBattleship_Cloak",
+		type=PSYS,
+		template_name="no_cloakeffect_battleship",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { -1042.09, 500.0, -978.846 },
+			orient = { { 0.5877, 0, 0.8090 }, { 0, 1, 0 }, { -0.8090, 0, 0.5877 } }
+		},
+		psysprops={
+			sparam=1
+		}
+	},
+
+	{
+		entity_name = "Path_NomadBattleship",
+		type = MOTION_PATH,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = {0, 0, 0},
+			orient = {{1, 0, 0},{0, 1, 0},{0, 0, 1}},
+		},
+		pathprops =
+		{
+			path_type = "CV_CROrientationSplinePath",
+			path_data = "OPEN,{-1042.09, 500.0, -978.846},{1, 0, 0, 0},{149.572, 500.0, -1550.24},{1, 0, 0, 0},{1507.75, 500.0, -1700.52},{1, 0, 0, 0},"
+		}
+	},
+}
+
+events =
+{
+	{
+		0.000, SET_CAMERA, { "Monitor", "Camera01" }
+	},
+
+	{
+		0, START_PSYS, { "SanctumFX" }, { duration = 500 }
+	},
+
+	{
+		0, START_MOTION, { "Character_Guard01" },
+		{
+			animation = "Sc_MLBODY_STND_IDLE_MED_000LV_xa_05",
+			duration = 5,
+			time_scale = 1,
+			weight = 1,
+			heading = -1
+		}
+	},
+
+	{
+		0, ATTACH_ENTITY, { "Character_Guard01_eyes_right", "Character_Guard01" },
+		{
+			duration=66,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="Eye IK Right",
+			target_type=PART,
+			flags=POSITION + ORIENTATION
+		}
+	},
+
+	{
+		0, ATTACH_ENTITY, { "Character_Guard01_eyes_left", "Character_Guard01" },
+		{
+			duration=66,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="Eye IK Left",
+			target_type=PART,
+			flags=POSITION + ORIENTATION
+		}
+	},
+
+	{
+		0, ATTACH_ENTITY, { "Character_Guard01_eyes_flash_right", "Character_Guard01" },
+		{
+			duration=66,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="Eye IK Right",
+			target_type=PART,
+			flags=POSITION + ORIENTATION
+		}
+	},
+
+	{
+		0, ATTACH_ENTITY, { "Character_Guard01_eyes_flash_left", "Character_Guard01" },
+		{
+			duration=66,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="Eye IK Left",
+			target_type=PART,
+			flags=POSITION + ORIENTATION
+		}
+	},
+
+	{
+		0, START_MOTION, { "Character_Guard02" },
+		{
+			animation = "Sc_MLBODY_STND_IDLE_MED_000LV_xa_05",
+			duration = 5,
+			time_scale = 1,
+			weight = 1,
+			heading = -1
+		}
+	},
+
+	{
+		0, ATTACH_ENTITY, { "Character_Guard02_eyes_right", "Character_Guard02" },
+		{
+			duration=66,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="Eye IK Right",
+			target_type=PART,
+			flags=POSITION + ORIENTATION
+		}
+	},
+
+	{
+		0, ATTACH_ENTITY, { "Character_Guard02_eyes_left", "Character_Guard02" },
+		{
+			duration=66,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="Eye IK Left",
+			target_type=PART,
+			flags=POSITION + ORIENTATION
+		}
+	},
+
+	{
+		0, ATTACH_ENTITY, { "Character_Guard02_eyes_flash_right", "Character_Guard02" },
+		{
+			duration=66,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="Eye IK Right",
+			target_type=PART,
+			flags=POSITION + ORIENTATION
+		}
+	},
+
+	{
+		0, ATTACH_ENTITY, { "Character_Guard02_eyes_flash_left", "Character_Guard02" },
+		{
+			duration=66,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="Eye IK Left",
+			target_type=PART,
+			flags=POSITION + ORIENTATION
+		}
+	},
+
+	{
+		0, START_MOTION, { "Character_Guard03" },
+		{
+			animation = "Sc_MLBODY_STND_IDLE_MED_000LV_xa_05",
+			duration = 5,
+			time_scale = 1,
+			weight = 1,
+			heading = -1
+		}
+	},
+
+	{
+		0, START_MOTION, { "Character_Guard04" },
+		{
+			animation = "Sc_MLBODY_STND_IDLE_MED_000LV_xa_05",
+			duration = 5,
+			time_scale = 1,
+			weight = 1,
+			heading = -1
+		}
+	},
+
+	{
+		0, START_LIGHT_PROP_ANIM, { "SanctumFX_Light" },
+		{
+			duration = 500,
+			lightprops =
+			{
+				diffuse = { 0, 0.75, 1 },
+			},
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 0.00 },
+					{ 0.25, 1.00, 1.00, 0.00 },
+					{ 0.50, 0.00, 0.00, 0.00 },
+					{ 0.75, 1.00, 1.00, 0.00 },
+					{ 1.00, 0.00, 0.00, 0.00 },
+				}
+			},
+			pcurve_period = 6000
+		}
+	},
+
+	{
+		0.000, START_SPATIAL_PROP_ANIM, { "Camera01" },
+		{
+			duration = 3.000,
+			target_type = ROOT,
+			spatialprops =
+			{
+				pos = {6.36295, 7.74523, 50.9705},
+				orient = {{0.866025, 0.0, -0.5}, {-0.0695866, 0.990268, -0.120527}, {0.495134, 0.139173, 0.857597}}
+			},
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 0.00 },
+					{ 1.00, 1.00, 0.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		0.000, START_SPATIAL_PROP_ANIM, { "SanctumFX" },
+		{
+			duration = 3.000,
+			target_type = ROOT,
+			spatialprops =
+			{
+				pos = { 0, -8.5, 0 },
+			},
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 0.25 },
+					{ 1.00, 1.00, 0.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		18, START_PSYS, { "Character_Guard01_eyes_flash_left" }, { duration = 8 }
+	},
+
+	{
+		18, START_PSYS, { "Character_Guard01_eyes_flash_right" }, { duration = 8 }
+	},
+
+	{
+		19, START_PSYS, { "Character_Guard01_eyes_left" }, { duration = 500 }
+	},
+
+	{
+		19, START_PSYS, { "Character_Guard01_eyes_right" }, { duration = 500 }
+	},
+
+	{
+		18, START_PSYS, { "Character_Guard02_eyes_flash_left" }, { duration = 8 }
+	},
+
+	{
+		18, START_PSYS, { "Character_Guard02_eyes_flash_right" }, { duration = 8 }
+	},
+
+	{
+		19, START_PSYS, { "Character_Guard02_eyes_left" }, { duration = 500 }
+	},
+
+	{
+		19, START_PSYS, { "Character_Guard02_eyes_right" }, { duration = 500 }
+	},
+
+	{
+		22, ATTACH_ENTITY, { "NomadBattleship_Engine", "NomadBattleship" },
+		{
+			duration = 30,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hpengine01",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+
+	{
+		22, ATTACH_ENTITY, { "NomadBattleship_Trail", "NomadBattleship" },
+		{
+			duration = 30,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="hpengine01",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+
+	{
+		22, ATTACH_ENTITY, { "NomadBattleship_Tentacle01", "NomadBattleship" },
+		{
+			duration = 30,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX01",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+
+	{
+		22, ATTACH_ENTITY, { "NomadBattleship_Tentacle02", "NomadBattleship" },
+		{
+			duration = 30,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX02",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+
+	{
+		22, ATTACH_ENTITY, { "NomadBattleship_Tentacle03", "NomadBattleship" },
+		{
+			duration = 30,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX03",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+
+	{
+		22, ATTACH_ENTITY, { "NomadBattleship_Tentacle04", "NomadBattleship" },
+		{
+			duration = 30,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX04",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+
+	{
+		22, ATTACH_ENTITY, { "NomadBattleship_Tentacle05", "NomadBattleship" },
+		{
+			duration = 30,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX05",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+
+	{
+		22, ATTACH_ENTITY, { "NomadBattleship_Tentacle06", "NomadBattleship" },
+		{
+			duration = 30,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX06",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+
+	{
+		22, ATTACH_ENTITY, { "NomadBattleship_Tentacle07", "NomadBattleship" },
+		{
+			duration = 30,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX07",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+
+	{
+		22, ATTACH_ENTITY, { "NomadBattleship_Tentacle08", "NomadBattleship" },
+		{
+			duration = 30,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX08",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+
+	{
+		22, ATTACH_ENTITY, { "NomadBattleship_Tentacle09", "NomadBattleship" },
+		{
+			duration = 30,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX09",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+
+	{
+		20, START_PSYS, { "NomadBattleship_Cloak" }, { duration = 500 }
+	},
+
+	{
+		20, START_LIGHT_PROP_ANIM, { "NomadBattleshipCloak_Light" },
+		{
+			duration = 6,
+			lightprops =
+			{
+				diffuse = { 0.85, 0.25, 1 },
+			},
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{  0.000000,  0.000000,  0.000000,  0.000000 },
+					{  0.003205,  0.448718,  7.500000,  0.750000 },
+					{  0.105769,  0.519231,  0.000000, -12.333333 },
+					{  0.380000,  0.102564,  0.000000,  0.000000 },
+					{  1.000000,  0.000000,  0.00000,  0.000000 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		20, START_LIGHT_PROP_ANIM, { "Sanctum_Light" },
+		{
+			duration = 6,
+			lightprops =
+			{
+				diffuse = { 0, 0, 0 },
+			},
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{  0.00,  0.0,  0.000000, 0.000000 },
+					{  0.25,  0.5,  0.00000,  0.750000 },
+					{  0.75,  0.5,  0.000000, 0.0 },
+					{  1.00,  0.0,  0.00000,  0.000000 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		22, START_PSYS, { "NomadBattleship_Engine" }, { duration = 30 }
+	},
+
+	{
+		22, START_PSYS, { "NomadBattleship_Trail" }, { duration = 30 }
+	},
+
+	{
+		22, START_PSYS_PROP_ANIM, { "NomadBattleship_Trail" },
+		{
+			duration = 10,
+			psysprops = { sparam = 1 },
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{  0.0,  0.0,  0.0,  0.0 },
+					{  1.0,  1.0,  0.0,  0.0 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		22, START_PSYS, { "NomadBattleship_Tentacle01" }, { duration = 30 }
+	},
+
+	{
+		22, START_PSYS, { "NomadBattleship_Tentacle02" }, { duration = 30 }
+	},
+
+	{
+		22, START_PSYS, { "NomadBattleship_Tentacle03" }, { duration = 30 }
+	},
+
+	{
+		22, START_PSYS, { "NomadBattleship_Tentacle04" }, { duration = 30 }
+	},
+
+	{
+		22, START_PSYS, { "NomadBattleship_Tentacle05" }, { duration = 30 }
+	},
+
+	{
+		22, START_PSYS, { "NomadBattleship_Tentacle06" }, { duration = 30 }
+	},
+
+	{
+		22, START_PSYS, { "NomadBattleship_Tentacle07" }, { duration = 30 }
+	},
+
+	{
+		22, START_PSYS, { "NomadBattleship_Tentacle08" }, { duration = 30 }
+	},
+
+	{
+		22, START_PSYS, { "NomadBattleship_Tentacle09" }, { duration = 30 }
+	},
+
+	{
+		22, START_PATH_ANIMATION, { "NomadBattleship", "Path_NomadBattleship" },
+		{
+			duration = 30,
+			start_percent = 0,
+			stop_percent = 1,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			flags = POSITION + ORIENTATION + LOOK_AT,
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 0.00 },
+					{ 0.25, 0.00, 0.00, 0.00 },
+					{ 1.00, 1.00, 2.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+
+	{
+		100.000, START_SPATIAL_PROP_ANIM, { "NomadFighter" },
+		{
+			duration = 10.000,
+			target_type = ROOT,
+			spatialprops =
+			{
+				pos = { 0, 20, 0 },
+			},
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{ 0.00, 0.00, 0.00, 1.00 },
+					{ 1.00, 1.00, 0.00, 0.00 },
+				}
+			},
+			pcurve_period = -1000
+		}
+	},
+}

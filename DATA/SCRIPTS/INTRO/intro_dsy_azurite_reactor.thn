@@ -1,0 +1,1424 @@
+-- The Laz Project™
+duration = 8000
+ 
+entities =
+{
+    {
+        entity_name = "Scene_Trailer_Cam2",
+        type = SCENE,
+        template_name = "",
+        template_id = 0,
+        spatialprops =
+        {
+            pos = { 0, 0, 0 },
+            orient =
+            {
+                { 1, 0, 0 },
+                { 0, 1, 0 },
+                { 0, 0, 1 }
+            }
+        },
+        up = Y_AXIS,
+        front  =  Z_AXIS,
+        ambient = { 15, 5, 20 }
+    },
+   
+    {
+        entity_name = "Starsphere",
+        type = COMPOUND,
+        template_name = "starsphere_bw05",
+        lt_grp = 1, srt_grp = -1, usr_flg = 1,
+        flags = LIT_DYNAMIC,
+        spatialprops =
+        {
+            pos = { 0, 0, 0 },
+            orient = { { -1, 0, 0 }, { 0, 1, 0 }, { 0, 0, -1 } }
+        },
+        userprops =
+        {
+            category = "Prop",
+        }
+    },
+ 
+    {
+        entity_name = "Starsphere_Stars",
+        type = COMPOUND,
+        template_name = "starsphere_Ku05_stars",
+        lt_grp = 1, srt_grp = -100, usr_flg = 1,
+        flags = LIT_DYNAMIC,
+        spatialprops =
+        {
+            pos = { 0, 0, 0 },
+            orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+        },
+        userprops =
+        {
+            category = "Prop",
+        }
+    },
+	{
+        entity_name = "CoreMarker",
+        type  =  MARKER,
+        template_name = "",
+        template_id  =  0,
+        spatialprops =
+        {
+            pos  =  { 0, 0, 0 },
+            orient  =  {
+                { 1, 0, 0 },
+                { 0, 1, 0 },
+                { 0, 0, 1 }
+            }
+        }
+    },
+    {
+        entity_name  =  "CameraMarker",
+        type  =  MARKER,
+        template_name  =  "",
+        template_id  =  0,
+        spatialprops  =  {
+            pos  =  { 0, 0, 0 },
+            orient  =  {
+                { 1, 0, 0 },
+                { 0, 1, 0 },
+                { 0, 0, 1 }
+            }
+        }
+    },
+	{
+		entity_name = "Intro_planetchunk_sun_1",
+		type = PSYS,
+		template_name = "Intro_planetchunk_sun",
+		lt_grp = 2, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 1000, 0, 18000 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+	{
+		entity_name = "Light_1",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 2, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { {  0.664744,  0.000000, -0.747071 }, {  0.000000,  1.000000,  0.000000 }, {  0.747071,  0.000000,  0.664744 } }
+		},
+		lightprops =
+		{
+			on = N,
+			color = { 255, 255, 255 },
+			diffuse = { 70, 20, 90 },
+			specular = { 0.3, 0.3, 0.3 },
+			ambient = { 190, 90, 210 },
+			direction = { 0, 0, 1 },
+			range = 1,
+			cutoff = 1,
+			type = L_DIRECT,
+			theta = 500,
+			atten = { 10, 0, 0 }
+		}
+	},
+	{
+		entity_name="Azurite_Reactor",
+		type=COMPOUND,
+		template_name="Nomad_Reactor_Chamber",
+		lt_grp = 2, srt_grp = 0, usr_flg = 0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 0, 0, 1 }, { 0, 1, 0 }, { -1, 0, 0 } }
+		},
+		userprops={
+			category="Solar"
+		}
+	},
+	{
+		entity_name="Azurite_Reactor_Core",
+		type=COMPOUND,
+		template_name="Nomad_Reactor",
+		lt_grp = 2, srt_grp = 0, usr_flg = 0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		userprops={
+			category="Solar"
+		}
+	},
+	{
+		entity_name="Azurite_Reactor_Tower_Block",
+		type=COMPOUND,
+		template_name="dyson_tower1",
+		lt_grp = 2, srt_grp = 0, usr_flg = 0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 2550, 0, 0 },
+			orient = { { 0, 1, 0 }, { -1, 0, 0 }, { 0, 0, 1 } }
+		},
+		userprops={
+			category="Solar"
+		}
+	},
+	{
+		entity_name="Reactor_Core_FX",
+		type=PSYS,
+		template_name="dsy_nomad_reactor_core",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Beam_1",
+		type=PSYS,
+		template_name="dsy_dyson_boss_door_helper",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Beam_2",
+		type=PSYS,
+		template_name="dsy_dyson_boss_door_helper",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Beam_3",
+		type=PSYS,
+		template_name="dsy_dyson_boss_door_helper",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Beam_4",
+		type=PSYS,
+		template_name="dsy_dyson_boss_door_helper",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Core_2",
+		type=PSYS,
+		template_name="dsy_nomad_reactor_core",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Projector_7",
+		type=PSYS,
+		template_name="dsy_nomad_collider_projector",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 0, 0, 1 }, { 0, 1, 0 }, { -1, 0, 0 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Projector_8",
+		type=PSYS,
+		template_name="dsy_nomad_collider_projector",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 0, 0, 1 }, { 0, 1, 0 }, { -1, 0, 0 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Projector_9",
+		type=PSYS,
+		template_name="dsy_nomad_collider_projector",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 0, 0, 1 }, { 0, 1, 0 }, { -1, 0, 0 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Projector_10",
+		type=PSYS,
+		template_name="dsy_nomad_collider_projector",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 0, 0, 1 }, { 0, 1, 0 }, { -1, 0, 0 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Projector_11",
+		type=PSYS,
+		template_name="dsy_nomad_collider_projector",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 0, 0, 1 }, { 0, 1, 0 }, { -1, 0, 0 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Projector_12",
+		type=PSYS,
+		template_name="dsy_nomad_collider_projector",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 0, 0, 1 }, { 0, 1, 0 }, { -1, 0, 0 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Projector_13",
+		type=PSYS,
+		template_name="dsy_nomad_collider_projector",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Projector_14",
+		type=PSYS,
+		template_name="dsy_nomad_collider_projector",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Projector_15",
+		type=PSYS,
+		template_name="dsy_nomad_collider_projector",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Projector_16",
+		type=PSYS,
+		template_name="dsy_nomad_collider_projector",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Projector_17",
+		type=PSYS,
+		template_name="dsy_nomad_collider_projector",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Projector_18",
+		type=PSYS,
+		template_name="dsy_nomad_collider_projector",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Core_FX_Segment_1",
+		type=PSYS,
+		template_name="dsy_nomad_reactor_segment",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Core_FX_Segment_2",
+		type=PSYS,
+		template_name="dsy_nomad_reactor_segment",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Core_FX_Segment_3",
+		type=PSYS,
+		template_name="dsy_nomad_reactor_segment",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Core_FX_Segment_4",
+		type=PSYS,
+		template_name="dsy_nomad_reactor_segment",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Core_FX_Segment_5",
+		type=PSYS,
+		template_name="dsy_nomad_reactor_segment",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Core_FX_Segment_6",
+		type=PSYS,
+		template_name="dsy_nomad_reactor_segment",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Core_FX_Segment_7",
+		type=PSYS,
+		template_name="dsy_nomad_reactor_segment",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Core_FX_Segment_8",
+		type=PSYS,
+		template_name="dsy_nomad_reactor_segment",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Core_FX_Segment_9",
+		type=PSYS,
+		template_name="dsy_nomad_reactor_segment",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Core_FX_Segment_10",
+		type=PSYS,
+		template_name="dsy_nomad_reactor_segment",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Core_FX_Segment_11",
+		type=PSYS,
+		template_name="dsy_nomad_reactor_segment",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Core_FX_Segment_12",
+		type=PSYS,
+		template_name="dsy_nomad_reactor_segment",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Core_FX_Segment_13",
+		type=PSYS,
+		template_name="dsy_nomad_reactor_segment",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Core_FX_Segment_14",
+		type=PSYS,
+		template_name="dsy_nomad_reactor_segment",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Core_FX_Segment_15",
+		type=PSYS,
+		template_name="dsy_nomad_reactor_segment",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Core_FX_Segment_16",
+		type=PSYS,
+		template_name="dsy_nomad_reactor_segment",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Core_FX_Segment_17",
+		type=PSYS,
+		template_name="dsy_nomad_reactor_segment",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Core_FX_Segment_18",
+		type=PSYS,
+		template_name="dsy_nomad_reactor_segment",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Core_FX_Segment_19",
+		type=PSYS,
+		template_name="dsy_nomad_reactor_segment",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+		entity_name="Reactor_Core_FX_Segment_20",
+		type=PSYS,
+		template_name="dsy_nomad_reactor_segment",
+		lt_grp=0, srt_grp=0, usr_flg=0,
+		flags=LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops={
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops={
+			sparam=0
+		}
+	},
+	{
+        entity_name  =  "main_object",
+        type  =  MARKER,
+        template_name  =  "",
+        template_id  =  0,
+        spatialprops  =  {
+            pos  =  { 0, 0, 0 },
+            orient  =  {
+                { 1, 0, 0 },
+                { 0, 1, 0 },
+                { 0, 0, 1 }
+            }
+        },
+        userprops  =  {
+            main_object  =  "Nomad_fighter_Prop"
+        }
+    },
+	{
+        entity_name  =  "Shot06_Monitor_1",
+        type  =  MONITOR,
+        template_name  =  "",
+        template_id  =  0
+    },
+    {
+        entity_name  =  "Camera_1",
+        type  =  CAMERA,
+        template_name  =  "",
+        template_id  =  0,
+        spatialprops  =  {
+            pos  =  { 0, 0, 0 },
+            orient  =  {
+                { 1, 0, 0 },
+                { 0, 1, 0 },
+                { 0, 0, 1 }
+            }
+        },
+        cameraprops  =  {
+            fovh  =  45,
+            hvaspect = 1.333333,
+            nearplane = 0.1,
+            farplane = 100000
+        }
+    }
+}
+ 
+events =
+{
+    {
+        0, SET_CAMERA, { "Shot06_Monitor_1", "Camera_1" }
+    },
+    {
+        0, ATTACH_ENTITY, { "CoreMarker", "main_object" },
+        {
+            duration = 8000,
+            offset = { 0, 0, 0 },
+            up = Y_AXIS,
+            front = NEG_Z_AXIS,
+            target_part = "",
+            target_type = ROOT,
+            flags = POSITION
+        }
+    },
+    {
+        0.1,
+        ATTACH_ENTITY, { "CameraMarker", "CoreMarker" },
+        {
+            duration = 8000,
+            offset =
+            {
+                1000,
+                250,
+                500
+            },
+            up = Y_AXIS,
+            front = NEG_Z_AXIS,
+            target_part = "",
+            target_type = ROOT,
+            flags = POSITION + ORIENTATION + ENTITY_RELATIVE
+        }
+    },
+    {
+        0.1, ATTACH_ENTITY, { "Camera_1", "CameraMarker" },
+        {
+            duration = 8000,
+            offset = { 0, 0, 0 },
+            up = Y_AXIS,
+            front = NEG_Z_AXIS,
+            target_part = "",
+            target_type = ROOT,
+            flags = POSITION + ORIENTATION
+        }
+    },
+    {
+        0.1, ATTACH_ENTITY, { "Camera_1", "main_object" },
+        {
+            duration = 8000,
+            offset = { 0, 0, 0 },
+            up = Y_AXIS,
+            front = NEG_Z_AXIS,
+            target_part = "",
+            target_type = ROOT,
+            flags = LOOK_AT
+        }
+    },
+	{
+		0.000, START_PSYS, { "Intro_planetchunk_sun_1" },
+		{
+			duration = 720.000
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Projector_7", "Azurite_Reactor" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpRunningLight01",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Projector_8", "Azurite_Reactor" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpRunningLight02",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Projector_9", "Azurite_Reactor" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpRunningLight03",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Projector_10", "Azurite_Reactor" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpRunningLight04",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Projector_11", "Azurite_Reactor" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpRunningLight05",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Projector_12", "Azurite_Reactor" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpRunningLight06",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Projector_13", "Azurite_Reactor" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpRunningLight07",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Projector_14", "Azurite_Reactor" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpRunningLight08",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Projector_15", "Azurite_Reactor" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpRunningLight09",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Projector_16", "Azurite_Reactor" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpRunningLight10",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Projector_17", "Azurite_Reactor" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpRunningLight11",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Projector_18", "Azurite_Reactor" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpRunningLight12",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Projector_18", "Azurite_Reactor" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpRunningLight12",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Beam_1", "Azurite_Reactor" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpShield01",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Beam_2", "Azurite_Reactor" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpShield02",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Beam_3", "Azurite_Reactor" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpShield03",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Beam_4", "Azurite_Reactor" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpShield04",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Beam_5", "Azurite_Reactor" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpShield05",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Core_FX", "Azurite_Reactor_Core" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX21",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Core_FX_Segment_1", "Azurite_Reactor_Core" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX01",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Core_FX_Segment_2", "Azurite_Reactor_Core" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX02",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Core_FX_Segment_3", "Azurite_Reactor_Core" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX03",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Core_FX_Segment_4", "Azurite_Reactor_Core" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX04",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Core_FX_Segment_5", "Azurite_Reactor_Core" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX05",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Core_FX_Segment_6", "Azurite_Reactor_Core" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX06",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Core_FX_Segment_7", "Azurite_Reactor_Core" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX07",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Core_FX_Segment_8", "Azurite_Reactor_Core" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX08",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Core_FX_Segment_9", "Azurite_Reactor_Core" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX09",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Core_FX_Segment_10", "Azurite_Reactor_Core" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX10",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Core_FX_Segment_11", "Azurite_Reactor_Core" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX11",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Core_FX_Segment_12", "Azurite_Reactor_Core" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX12",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Core_FX_Segment_13", "Azurite_Reactor_Core" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX13",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Core_FX_Segment_14", "Azurite_Reactor_Core" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX14",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Core_FX_Segment_15", "Azurite_Reactor_Core" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX15",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Core_FX_Segment_16", "Azurite_Reactor_Core" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX16",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Core_FX_Segment_17", "Azurite_Reactor_Core" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX17",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Core_FX_Segment_18", "Azurite_Reactor_Core" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX18",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Core_FX_Segment_19", "Azurite_Reactor_Core" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX19",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, ATTACH_ENTITY, { "Reactor_Core_FX_Segment_20", "Azurite_Reactor_Core" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up=Y_AXIS,
+			front=NEG_Z_AXIS,
+			target_part="HpFX20",
+			target_type=HARDPOINT,
+			flags=POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+	{
+		1, START_PSYS, { "Reactor_Core_FX_Segment_1" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Core_FX_Segment_2" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Core_FX_Segment_3" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Core_FX_Segment_4" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Core_FX_Segment_5" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Core_FX_Segment_6" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Core_FX_Segment_7" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Core_FX_Segment_8" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Core_FX_Segment_9" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Core_FX_Segment_10" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Core_FX_Segment_11" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Core_FX_Segment_12" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Core_FX_Segment_13" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Core_FX_Segment_14" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Core_FX_Segment_15" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Core_FX_Segment_16" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Core_FX_Segment_17" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Core_FX_Segment_18" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Core_FX_Segment_19" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Core_FX_Segment_20" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Core_FX" }, { duration = 8000 }
+	},
+--	{
+--		1, START_PSYS, { "Reactor_Beam_1" }, { duration = 8000 }
+--	},
+---	{
+--		1, START_PSYS, { "Reactor_Beam_2" }, { duration = 8000 }
+--	},
+--	{
+--		1, START_PSYS, { "Reactor_Beam_3" }, { duration = 8000 }
+--	},
+--	{
+--		1, START_PSYS, { "Reactor_Beam_4" }, { duration = 8000 }
+--	},
+--	{
+--		1, START_PSYS, { "Reactor_Beam_5" }, { duration = 8000 }
+--	},
+	{
+		1, START_PSYS, { "Reactor_Projector_7" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Projector_8" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Projector_9" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Projector_10" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Projector_11" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Projector_12" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Projector_13" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Projector_14" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Projector_15" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Projector_16" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Projector_17" }, { duration = 8000 }
+	},
+	{
+		1, START_PSYS, { "Reactor_Projector_18" }, { duration = 8000 }
+	},
+	{
+		1, START_LIGHT_PROP_ANIM, { "Light_1" }, { duration = 8000 }
+	},
+	{
+		0.000, START_MOTION, { "Azurite_Reactor_Core" },
+		{
+			duration = 8000,
+			animation = "Sc_rotate reactor",
+			time_scale = 1,
+			weight = 1,
+			trans_scale = 1,
+			event_flags = 2
+		}
+	},
+    {
+        0.1, START_SPATIAL_PROP_ANIM, { "CoreMarker" },
+        {
+            duration = 8000,
+            target_type = ROOT,
+            spatialprops =
+            {
+                axisrot =
+                {
+                    -7360,
+                    Y_AXIS
+                }
+            }
+        }
+    }
+}

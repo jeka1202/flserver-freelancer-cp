@@ -1,0 +1,132 @@
+duration = 1000.000;
+
+entities =
+{
+
+	{
+		entity_name = "Layer_li_01_Shipdlr_Hardpoint",
+		type = SCENE,
+		template_name = "",
+		lt_grp = 12, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		up = Y_AXIS,
+		front = Z_AXIS,
+		ambient = { 0, 0, 0 }
+	},
+	{
+		entity_name = "Camera_0",
+		type = CAMERA,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { -110, 6.489915, 1050 },
+			orient = {{ 0.996195, 0, 0.087156 } , { 0, 1, 0 } , { -0.087156, 0, 0.996195 }}
+		},
+		cameraprops =
+		{
+			fovh = 30,
+			hvaspect = 1.333333,
+			nearplane = 1,
+			farplane = 5000
+		}
+	},
+  {
+		entity_name = "Camera_Wide",
+		type = CAMERA,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 100, 100, 500 },
+			orient = { {  0.989579,  0.000000,  0.143991 },
+					   {  0.034753,  0.970437, -0.238840 },
+					   { -0.139734,  0.241355,  0.960324 } }
+		},
+		cameraprops =
+		{
+			fovh = 30,
+			hvaspect = 1.333333,
+			nearplane = 1,
+			farplane = 5000
+		}
+	},
+	{
+		entity_name = "LtShadowSource",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 5.19, 0 },
+			orient = { {  1.000000,  0.000000,  0.000000 },
+					   {  0.000000, -0.004738,  0.999989 },
+					   {  0.000000, -0.999989, -0.004738 } }
+		},
+		lightprops =
+		{
+			on = N,
+			color = { 255, 255, 255 },
+			diffuse = { 0, 0, 0 },
+			specular = { 0, 0, 0 },
+			ambient = { 0, 0, 0 },
+			direction = { 0, 0, 1 },
+			range = 2000,
+			cutoff = 98.99998,
+			type = L_DIRECT,
+			theta = 90,
+			atten = { 1, 0, 4e-006 }
+		}
+	},
+	{
+		entity_name = "LtGlareSource",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { -31.87602, 10.20176, 14.78441 },
+			orient = { {  1.000000,  0.000000,  0.000000 },
+					   {  0.000000, -0.004738,  0.999989 },
+					   {  0.000000, -0.999989, -0.004738 } }
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 255, 255, 255 },
+			diffuse = { 1, 1, 1 },
+			specular = { 0, 0, 0 },
+			ambient = { 0, 0, 0 },
+			direction = { 0, 0, 1 },
+			range = 5000,
+			cutoff = 98.99998,
+			type = L_DIRECT,
+			theta = 90,
+			atten = { 1, 0, 4e-006 }
+		}
+	},
+};
+
+events =
+{
+   {
+		0.000, START_FOG_PROP_ANIM, { "Layer_li_01_Shipdlr_Hardpoint" },
+		{
+			duration = 10,
+			fogprops =
+			{
+				fogon = Y,
+				fogcolor = { 145, 145, 176 },
+				fogmode = F_LINEAR,
+				fogstart = 0,
+				fogend = 1000,
+				fogdensity = 1
+			}
+		}
+	},
+
+};

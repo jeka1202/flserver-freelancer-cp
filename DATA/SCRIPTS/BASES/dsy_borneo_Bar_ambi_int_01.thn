@@ -1,0 +1,338 @@
+duration = 20.000;
+
+entities =
+{
+
+	{
+		entity_name = "Layer_Pl_06_Bar_Ambi",
+		type = SCENE,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		up = Y_AXIS,
+		front = Z_AXIS,
+		ambient = { 128, 128, 128 }
+	},
+
+	{
+		entity_name = "BG_ocean_green_btm_2",
+		type = COMPOUND,
+		template_name = "ocean_grey_btm.3db",
+		lt_grp = 10, srt_grp = 1, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 130.9539, -179.5843, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		userprops =
+		{
+			category = "Prop",
+		}
+	},
+
+	{
+		entity_name = "BG_ocean_green_top_3",
+		type = COMPOUND,
+		template_name = "ocean_grey_top.3db",
+		lt_grp = 10, srt_grp = 1, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { 0, -89.68876, -8.387741 },
+			orient = { {  0.065482,  0.000000,  0.997854 },
+					   {  0.997854,  0.000000, -0.065482 },
+					   {  0.000000,  1.000000,  0.000000 } }
+		},
+		userprops =
+		{
+			category = "Prop",
+		}
+	},
+
+	{
+		entity_name = "skydome_sky_storm_gray_1",
+		type = COMPOUND,
+		template_name = "skydome_sky_storm_gray",
+		lt_grp = 0, srt_grp = -100, usr_flg = 2,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, -1500.042, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		userprops =
+		{
+			category = "Prop",
+		}
+	},
+
+	{
+		entity_name = "skydome_sky_storm_gray_2",
+		type = COMPOUND,
+		template_name = "skydome_sky_storm_gray",
+		lt_grp = 0, srt_grp = -100, usr_flg = 2,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, -12697.31, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		userprops =
+		{
+			category = "Prop",
+		}
+	},
+
+	{
+		entity_name = "LtInfBlue",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 10, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { -5.728886, 5.251905, 29.59931 },
+			orient = { { -0.255679,  0.003094, -0.966757 },
+					   {  0.381086,  0.919348, -0.097844 },
+					   {  0.888483, -0.393434, -0.236237 } }
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 255, 255, 255 },
+			diffuse = { 0.658824, 0.686275, 0.784314 },
+			specular = { 0, 0, 0 },
+			ambient = { 0, 0, 0 },
+			direction = { 0, 0, 1 },
+			range = 2000,
+			cutoff = 90,
+			type = L_DIRECT,
+			theta = 90,
+			atten = { 1, 0, 4e-006 }
+		}
+	},
+
+	{
+		entity_name = "LtInfRed",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 10, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 5.071066, 5.123151, 31.8809 },
+			orient = { {  0.029833, -0.161854,  0.986364 },
+					   {  0.447205,  0.884691,  0.131645 },
+					   { -0.893934,  0.437179,  0.098775 } }
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 255, 255, 255 },
+			diffuse = { 0.784314, 0.568627, 0.568627 },
+			specular = { 0, 0, 0 },
+			ambient = { 0, 0, 0 },
+			direction = { 0, 0, 1 },
+			range = 2000,
+			cutoff = 90,
+			type = L_DIRECT,
+			theta = 90,
+			atten = { 1, 0, 4e-006 }
+		}
+	},
+
+	{
+		entity_name = "LtInfOrg",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 10, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { -10.90168, -5.296432, -9.259949 },
+			orient = { {  0.073828,  0.058631, -0.995546 },
+					   {  0.433853,  0.896965,  0.084999 },
+					   {  0.897954, -0.438196,  0.040784 } }
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 234, 192, 115 },
+			diffuse = { 0.94902, 0.788235, 0.690196 },
+			specular = { 0, 0, 0 },
+			ambient = { 0, 0, 0 },
+			direction = { 0, 0, 1 },
+			range = 2000,
+			cutoff = 120,
+			type = L_DIRECT,
+			theta = 120,
+			atten = { 1, 0, 4e-006 }
+		}
+	},
+	
+	{
+		entity_name = "LtPtBar01",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { -0.120919, 2.849784, 0.964041 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 182, 206, 231 },
+			diffuse = { 0.713726, 0.807843, 0.905882 },
+			specular = { 0, 0, 0 },
+			ambient = { 0, 0, 0 },
+			direction = { 0, 0, 1 },
+			range = 12,
+			cutoff = 180,
+			type = L_POINT,
+			theta = 180,
+			atten = { 1, 0, 0.111111 }
+		}
+	},
+
+	{
+		entity_name = "LtPtExitGrn",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 5.422365, 1.986459, -2.573145 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 23, 142, 17 },
+			diffuse = { 0.090196, 0.556863, 0.066667 },
+			specular = { 0, 0, 0 },
+			ambient = { 0, 0, 0 },
+			direction = { 0, 0, 1 },
+			range = 4,
+			cutoff = 180,
+			type = L_POINT,
+			theta = 180,
+			atten = { 1, 0, 1 }
+		}
+	},
+
+	{
+		entity_name = "LtInfBlu01",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { -0.582443,  0.783542, -0.216385 },
+					   { -0.796886, -0.497854,  0.342218 },
+					   {  0.160414,  0.371756,  0.914366 } }
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 174, 232, 249 },
+			diffuse = { 0.682353, 0.909804, 0.976471 },
+			specular = { 0, 0, 0 },
+			ambient = { 0, 0, 0 },
+			direction = { 0, 0, 1 },
+			range = 2000,
+			cutoff = 120,
+			type = L_DIRECT,
+			theta = 144,
+			atten = { 1, 0, 4e-006 }
+		}
+	},
+
+	{
+		entity_name = "LtInfWht01",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { -0.388961,  0.907779, -0.156992 },
+					   {  0.867165,  0.418300,  0.270278 },
+					   {  0.311023, -0.031010, -0.949896 } }
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 197, 222, 192 },
+			diffuse = { 0.87451, 0.87451, 0.87451 },
+			specular = { 0, 0, 0 },
+			ambient = { 0, 0, 0 },
+			direction = { 0, 0, 1 },
+			range = 2000,
+			cutoff = 120,
+			type = L_DIRECT,
+			theta = 120,
+			atten = { 1, 0, 4e-006 }
+		}
+	},
+
+	{
+		entity_name = "LtTbM02",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 4.015052, 1.109281, 1.962161 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 205, 193, 156 },
+			diffuse = { 0.803922, 0.756863, 0.611765 },
+			specular = { 0, 0, 0 },
+			ambient = { 0, 0, 0 },
+			direction = { 0, 0, 1 },
+			range = 4,
+			cutoff = 180,
+			type = L_POINT,
+			theta = 180,
+			atten = { 1, 0, 1 }
+		}
+	},
+
+	{
+		entity_name = "LtTbM01",
+		type = LIGHT,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0.017342, 1.133732, -4.986316 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		lightprops =
+		{
+			on = Y,
+			color = { 205, 193, 156 },
+			diffuse = { 0.803922, 0.756863, 0.611765 },
+			specular = { 0, 0, 0 },
+			ambient = { 0, 0, 0 },
+			direction = { 0, 0, 1 },
+			range = 4,
+			cutoff = 180,
+			type = L_POINT,
+			theta = 180,
+			atten = { 1, 0, 1 }
+		}
+	}
+};
+
+events =
+{
+};

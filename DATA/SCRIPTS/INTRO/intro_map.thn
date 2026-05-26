@@ -1,0 +1,130 @@
+duration = 8000;
+
+entities =
+{
+	{
+		entity_name = "TestScene",
+		type = SCENE,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		up = Y_AXIS,
+		front = Z_AXIS,
+		ambient = { 128, 128, 128 }
+	},
+
+	{
+		entity_name = "Camera01",
+		type = CAMERA,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		cameraprops =
+		{
+			fovh = 41,
+			hvaspect = 1.777777,
+			nearplane = 1,
+			farplane = 5000
+		}
+	},
+	
+	{
+		entity_name = "Monitor",
+		type = MONITOR,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0
+	},
+	
+	{
+		entity_name = "MapFX",
+		type = PSYS,
+		template_name = "dsy_universe_map",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops = { sparam = 0 }
+	},
+	
+	{
+		entity_name = "Camera_Marker",
+		type = MARKER,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		}
+	},
+}
+
+events =
+{
+	{
+		0.000, SET_CAMERA, { "Monitor", "Camera01" }
+	},
+
+	{
+		0.000, ATTACH_ENTITY, { "Camera01", "Camera_Marker" },
+		{
+			duration = 8000,
+			offset = { -880, 145, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "",
+			target_type = ROOT,
+			flags = POSITION + ORIENTATION + ENTITY_RELATIVE
+		}
+	},
+
+	{
+		0.000, ATTACH_ENTITY, { "Camera01", "MapFX" },
+		{
+			duration = 8000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "",
+			target_type = ROOT,
+			flags = LOOK_AT
+		}
+	},
+	
+	{
+		0.00, START_SPATIAL_PROP_ANIM, { "Camera_Marker" },
+		{
+			duration = 8000,
+			target_type = ROOT,
+			spatialprops =
+			{
+				axisrot = { -360, Y_AXIS }
+			},
+			param_curve =
+			{
+				CLSID = "FreeFormPCurve",
+				points =
+				{
+					{  0.000000,  0.000000,  0.000000,  1.000000 },
+					{  1.000000,  1.000000,  1.000000,  0.000000 },
+				}
+			},
+			pcurve_period = 400000
+		}
+	},
+	
+	{
+		0.00, START_PSYS, { "MapFX" }, { duration = 800 }
+	}
+}
