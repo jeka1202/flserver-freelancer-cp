@@ -6,7 +6,8 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
-from .config import VISIT_TYPES
+from .config import CRAFTING_RECIPES_PATH, VISIT_TYPES
+from .crafting import CraftingSystem, read_cargo_inventory
 from .finance import read_bank_balance, read_character_money, write_bank_balance, write_character_money
 from .gamedata import GameData
 from .utils import (
@@ -157,12 +158,29 @@ class Repository:
 
     def reload(self) -> None:
         self.gamedata = GameData(self.ioncross_dir)
+        self.crafting = CraftingSystem(CRAFTING_RECIPES_PATH, self.gamedata)
         self.accounts = load_accounts(self.accounts_dir, self.gamedata)
         self.by_id = {account["id"].lower(): account for account in self.accounts}
         self.characters: dict[str, list[tuple[dict[str, Any], dict[str, Any]]]] = defaultdict(list)
         for account in self.accounts:
             for character in account["characters"]:
                 self.characters[character["name"].casefold()].append((account, character))
+
+    def character_inventory(self, character: dict[str, Any]) -> dict[str, int]:
+        return read_cargo_inventory(Path(character["path"]), self.gamedata)
+
+    def crafting_recipes_for(self, character: dict[str, Any]) -> list[dict[str, Any]]:
+        return self.crafting.public_recipes(self.character_inventory(character))
+
+    def craft_item(self, account_id: str, character_file: str, recipe_id: str) -> tuple[bool, str]:
+        account_path = self.accounts_dir / account_id
+        character_path = account_path / character_file
+        if not character_path.exists():
+            return False, "Персонаж не найден."
+        ok, message = self.crafting.craft(character_path, recipe_id)
+        if ok:
+            self.reload()
+        return ok, message
 
     def public_stats(self) -> dict[str, int]:
         return {"accounts": len(self.accounts), "characters": sum(account["character_count"] for account in self.accounts), "gamedata_items": len(self.gamedata.by_code)}
