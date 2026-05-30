@@ -1,18 +1,17 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
 from pathlib import Path
 
 from .config import CATEGORY_LABELS, DATA_FILES, VISIT_TYPES
 from .utils import nickname_hash, read_text, split_csv
 
 
-@dataclass(frozen=True)
 class GameItem:
-    code: str
-    nickname: str
-    name: str
-    category: str
+    def __init__(self, code: str, nickname: str, name: str, category: str) -> None:
+        self.code = code
+        self.nickname = nickname
+        self.name = name
+        self.category = category
 
 
 class GameData:

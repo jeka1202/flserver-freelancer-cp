@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import mimetypes
 import os
 import re
 import secrets
@@ -45,9 +46,9 @@ class Handler(BaseHTTPRequestHandler):
             flash = self.pop_flash()
             if flash:
                 ok, text = flash
-                self.send_html(render_cabinet(session[0], session[1], message=text if ok else "", error="" if ok else text))
+                self.send_html(render_cabinet(self.repo, session[0], session[1], message=text if ok else "", error="" if ok else text))
             else:
-                self.send_html(render_cabinet(session[0], session[1]))
+                self.send_html(render_cabinet(self.repo, session[0], session[1]))
         elif path == "/logout":
             self.logout()
         elif path == "/admin":
@@ -72,6 +73,8 @@ class Handler(BaseHTTPRequestHandler):
             self.handle_transfer(form)
         elif path == "/finance/bank":
             self.handle_bank(form)
+        elif path == "/craft":
+            self.handle_craft(form)
         else:
             self.send_error(HTTPStatus.NOT_FOUND)
 
@@ -118,6 +121,17 @@ class Handler(BaseHTTPRequestHandler):
         amount = parse_finance_amount(form.get("amount", [""])[0])
         ok, text = self.repo.bank_operation(account["id"], character["file"], action, amount)
         self.finish_finance_operation(ok, text)
+
+    def handle_craft(self, form: dict[str, list[str]]) -> None:
+        session = self.current_session()
+        if not session:
+            self.redirect("/")
+            return
+        account, character = session
+        recipe_id = form.get("recipe_id", [""])[0].strip()
+        ok, text = self.repo.craft_item(account["id"], character["file"], recipe_id)
+        self.set_flash(ok, text)
+        self.redirect("/cabinet")
 
     def finish_finance_operation(self, ok: bool, text: str) -> None:
         if self.wants_json():
@@ -206,7 +220,9 @@ class Handler(BaseHTTPRequestHandler):
             self.send_error(HTTPStatus.NOT_FOUND)
             return
         content = path.read_bytes()
-        content_type = "text/css; charset=utf-8" if path.suffix == ".css" else "application/javascript; charset=utf-8"
+        content_type = mimetypes.guess_type(path.name)[0] or "application/octet-stream"
+        if content_type.startswith("text/") or content_type == "application/javascript":
+            content_type += "; charset=utf-8"
         self.send_response(HTTPStatus.OK)
         self.send_header("Content-Type", content_type)
         self.send_header("Content-Length", str(len(content)))
@@ -249,3 +265,7 @@ def main() -> None:
         server.serve_forever()
     except KeyboardInterrupt:
         print("\nStopping...")
+
+
+if __name__ == "__main__":
+    main()

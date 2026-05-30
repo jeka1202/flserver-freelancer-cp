@@ -1,0 +1,1985 @@
+{
+  "version": 1,
+  "description": "Редактируемые рецепты крафта. ingredients/result используют nicknames из IONCROSS/DATA; base_resources добываются из asteroid/dynamic loot в DATA/SOLAR/ASTEROIDS и не имеют рецептов.",
+  "base_resources": [
+    "commodity_alien_artifacts",
+    "commodity_alien_organisms",
+    "commodity_aluminium_ore",
+    "commodity_azurite_gas",
+    "commodity_beryllium_ore",
+    "commodity_cobalt_ore",
+    "commodity_copper_ore",
+    "commodity_cryo_organisms",
+    "commodity_event_ore_01",
+    "commodity_event_ore_02",
+    "commodity_flourine",
+    "commodity_gold_ore",
+    "commodity_helium",
+    "commodity_helium3",
+    "commodity_ice_asteroid",
+    "commodity_ignitable_waste",
+    "commodity_iridium_ore",
+    "commodity_military_salvage",
+    "commodity_molybdenum_ore",
+    "commodity_niobium_ore",
+    "commodity_oxygen",
+    "commodity_platinum_ore",
+    "commodity_premiumscrap",
+    "commodity_rawhydrocarbons",
+    "commodity_scrap_metal",
+    "commodity_silver_ore",
+    "commodity_toxic_waste",
+    "commodity_uncut_diamonds",
+    "commodity_uranium_ore",
+    "commodity_water",
+    "commodity_xeno_relics"
+  ],
+  "recipes": [
+    {
+      "id": "smelt_aluminium",
+      "result": "commodity_aluminium",
+      "amount": 1,
+      "station": "refinery",
+      "tier": 1,
+      "ingredients": {
+        "commodity_aluminium_ore": 3
+      },
+      "description": "Переплавка: 3 ед. Aluminium Ore -> 1 ед. Aluminium."
+    },
+    {
+      "id": "smelt_beryllium",
+      "result": "commodity_beryllium",
+      "amount": 1,
+      "station": "refinery",
+      "tier": 1,
+      "ingredients": {
+        "commodity_beryllium_ore": 3
+      },
+      "description": "Переплавка: 3 ед. Beryllium Ore -> 1 ед. Beryllium."
+    },
+    {
+      "id": "smelt_cobalt",
+      "result": "commodity_cobalt",
+      "amount": 1,
+      "station": "refinery",
+      "tier": 1,
+      "ingredients": {
+        "commodity_cobalt_ore": 3
+      },
+      "description": "Переплавка: 3 ед. Cobalt Ore -> 1 ед. Cobalt."
+    },
+    {
+      "id": "smelt_copper",
+      "result": "commodity_copper",
+      "amount": 1,
+      "station": "refinery",
+      "tier": 1,
+      "ingredients": {
+        "commodity_copper_ore": 3
+      },
+      "description": "Переплавка: 3 ед. Copper Ore -> 1 ед. Copper."
+    },
+    {
+      "id": "smelt_gold",
+      "result": "commodity_gold",
+      "amount": 1,
+      "station": "refinery",
+      "tier": 1,
+      "ingredients": {
+        "commodity_gold_ore": 3
+      },
+      "description": "Переплавка: 3 ед. Gold Ore -> 1 ед. Gold."
+    },
+    {
+      "id": "smelt_niobium",
+      "result": "commodity_niobium",
+      "amount": 1,
+      "station": "refinery",
+      "tier": 1,
+      "ingredients": {
+        "commodity_niobium_ore": 3
+      },
+      "description": "Переплавка: 3 ед. Niobium Ore -> 1 ед. Niobium."
+    },
+    {
+      "id": "smelt_platinum",
+      "result": "commodity_platinum",
+      "amount": 1,
+      "station": "refinery",
+      "tier": 1,
+      "ingredients": {
+        "commodity_platinum_ore": 3
+      },
+      "description": "Переплавка: 3 ед. Platinum Ore -> 1 ед. Platinum."
+    },
+    {
+      "id": "smelt_silver",
+      "result": "commodity_silver",
+      "amount": 1,
+      "station": "refinery",
+      "tier": 1,
+      "ingredients": {
+        "commodity_silver_ore": 3
+      },
+      "description": "Переплавка: 3 ед. Silver Ore -> 1 ед. Silver."
+    },
+    {
+      "id": "refine_basic_alloys",
+      "result": "commodity_basic_alloys",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_aluminium": 2,
+        "commodity_copper": 1
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "refine_high_temp_alloys",
+      "result": "commodity_high_temp_alloys",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_cobalt": 2,
+        "commodity_beryllium": 1
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "refine_super_alloys",
+      "result": "commodity_super_alloys",
+      "amount": 1,
+      "station": "factory",
+      "tier": 3,
+      "ingredients": {
+        "commodity_niobium": 2,
+        "commodity_platinum": 1,
+        "commodity_high_temp_alloys": 1
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "refine_construction_machinery",
+      "result": "commodity_construction_machinery",
+      "amount": 1,
+      "station": "factory",
+      "tier": 3,
+      "ingredients": {
+        "commodity_basic_alloys": 2,
+        "commodity_industrial": 1
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "fabricate_mining_machinery",
+      "result": "commodity_mining_machinery",
+      "amount": 1,
+      "station": "factory",
+      "tier": 4,
+      "ingredients": {
+        "commodity_construction_machinery": 1,
+        "commodity_basic_alloys": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "fabricate_industrial",
+      "result": "commodity_industrial",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_scrap_metal": 2,
+        "commodity_aluminium": 1
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "fabricate_mox",
+      "result": "commodity_mox_fuel",
+      "amount": 1,
+      "station": "factory",
+      "tier": 3,
+      "ingredients": {
+        "commodity_water": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "fabricate_h_fuel",
+      "result": "commodity_h_fuel",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_hydrocarbons": 2,
+        "commodity_water": 1
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "fabricate_lpg",
+      "result": "commodity_lpg",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_hydrocarbons": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "fabricate_optronics",
+      "result": "commodity_optronics",
+      "amount": 1,
+      "station": "factory",
+      "tier": 4,
+      "ingredients": {
+        "commodity_silver": 1,
+        "commodity_gold": 1
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "fabricate_superconductors",
+      "result": "commodity_superconductors",
+      "amount": 1,
+      "station": "factory",
+      "tier": 4,
+      "ingredients": {
+        "commodity_beryllium": 1,
+        "commodity_niobium": 1,
+        "commodity_optronics": 1
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "fabricate_engine_components",
+      "result": "commodity_engine_components",
+      "amount": 1,
+      "station": "factory",
+      "tier": 4,
+      "ingredients": {
+        "commodity_high_temp_alloys": 2,
+        "commodity_superconductors": 1
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "fabricate_terraforming_gases",
+      "result": "commodity_terraforming_gases",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_oxygen": 2,
+        "commodity_water": 1
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_bd",
+      "result": "commodity_bd",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_belite",
+      "result": "commodity_belite",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_bioprocessors",
+      "result": "commodity_bioprocessors",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_blood_diamonds",
+      "result": "commodity_blood_diamonds",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_bm_munitions",
+      "result": "commodity_bm_munitions",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_bn",
+      "result": "commodity_bn",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_boron",
+      "result": "commodity_boron",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_bountyhunter",
+      "result": "commodity_bountyhunter",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_bp",
+      "result": "commodity_bp",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_bund",
+      "result": "commodity_bund",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_cardamine",
+      "result": "commodity_cardamine",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_cigars",
+      "result": "commodity_cigars",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_consumer_goods",
+      "result": "commodity_consumer_goods",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_contactadmin",
+      "result": "commodity_contactadmin",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_corsair",
+      "result": "commodity_corsair",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_council",
+      "result": "commodity_council",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_credit1",
+      "result": "commodity_credit1",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_credit2",
+      "result": "commodity_credit2",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_credit3",
+      "result": "commodity_credit3",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_credit4",
+      "result": "commodity_credit4",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_credit5",
+      "result": "commodity_credit5",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_crew",
+      "result": "commodity_crew",
+      "amount": 1,
+      "station": "factory",
+      "tier": 4,
+      "ingredients": {
+        "commodity_basic_alloys": 3,
+        "commodity_industrial": 4,
+        "commodity_high_temp_alloys": 5
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_cryocubes",
+      "result": "commodity_cryocubes",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_deuterium",
+      "result": "commodity_deuterium",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_diamonds",
+      "result": "commodity_diamonds",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_fa",
+      "result": "commodity_fa",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_fertilizers",
+      "result": "commodity_fertilizers",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_fine",
+      "result": "commodity_fine",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_floragro",
+      "result": "commodity_floragro",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_food",
+      "result": "commodity_food",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_freelancer",
+      "result": "commodity_freelancer",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_furs",
+      "result": "commodity_furs",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_g",
+      "result": "commodity_g",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_ga_artifacts",
+      "result": "commodity_ga_artifacts",
+      "amount": 1,
+      "station": "factory",
+      "tier": 3,
+      "ingredients": {
+        "commodity_basic_alloys": 2,
+        "commodity_industrial": 3
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_gabrigands",
+      "result": "commodity_gabrigands",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_gaianlife",
+      "result": "commodity_gaianlife",
+      "amount": 1,
+      "station": "factory",
+      "tier": 3,
+      "ingredients": {
+        "commodity_basic_alloys": 2,
+        "commodity_industrial": 3
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_gallic_fuel",
+      "result": "commodity_gallic_fuel",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_ganavy",
+      "result": "commodity_ganavy",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_gapolice",
+      "result": "commodity_gapolice",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_gatecell",
+      "result": "commodity_gatecell",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_gatecell_bw12",
+      "result": "commodity_gatecell_bw12",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_gc",
+      "result": "commodity_gc",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_gmg",
+      "result": "commodity_gmg",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_hazmat_canisters",
+      "result": "commodity_hazmat_canisters",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_history",
+      "result": "commodity_history",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_hog",
+      "result": "commodity_hog",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_holo_bands",
+      "result": "commodity_holo_bands",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_holosculptures",
+      "result": "commodity_holosculptures",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_humanorgans",
+      "result": "commodity_humanorgans",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_hydrocarbons",
+      "result": "commodity_hydrocarbons",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_hypno_bands",
+      "result": "commodity_hypno_bands",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_img",
+      "result": "commodity_img",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_introduction",
+      "result": "commodity_introduction",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_iridium",
+      "result": "commodity_iridium",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_junkers",
+      "result": "commodity_junkers",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_kelite",
+      "result": "commodity_kelite",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_kn",
+      "result": "commodity_kn",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_kp",
+      "result": "commodity_kp",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_kuwild",
+      "result": "commodity_kuwild",
+      "amount": 1,
+      "station": "factory",
+      "tier": 4,
+      "ingredients": {
+        "commodity_basic_alloys": 3,
+        "commodity_industrial": 4,
+        "commodity_high_temp_alloys": 5
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_lanehacker",
+      "result": "commodity_lanehacker",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_librogue",
+      "result": "commodity_librogue",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_liquid_cardamine",
+      "result": "commodity_liquid_cardamine",
+      "amount": 1,
+      "station": "factory",
+      "tier": 4,
+      "ingredients": {
+        "commodity_basic_alloys": 3,
+        "commodity_industrial": 4,
+        "commodity_high_temp_alloys": 5
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_lsf",
+      "result": "commodity_lsf",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_luxury_consumer_goods",
+      "result": "commodity_luxury_consumer_goods",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_luxury_food",
+      "result": "commodity_luxury_food",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_lwb",
+      "result": "commodity_lwb",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_majorbrain",
+      "result": "commodity_majorbrain",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_manifolds",
+      "result": "commodity_manifolds",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_maquis",
+      "result": "commodity_maquis",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_marijuana",
+      "result": "commodity_marijuana",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_mgeneral",
+      "result": "commodity_mgeneral",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_military",
+      "result": "commodity_military",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_militaryvehicles",
+      "result": "commodity_militaryvehicles",
+      "amount": 1,
+      "station": "factory",
+      "tier": 3,
+      "ingredients": {
+        "commodity_basic_alloys": 2,
+        "commodity_industrial": 3
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_militaryvehicles_li",
+      "result": "commodity_militaryvehicles_li",
+      "amount": 1,
+      "station": "factory",
+      "tier": 3,
+      "ingredients": {
+        "commodity_basic_alloys": 2,
+        "commodity_industrial": 3
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_minorbrain",
+      "result": "commodity_minorbrain",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_mlieutenant",
+      "result": "commodity_mlieutenant",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_molly",
+      "result": "commodity_molly",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_mox_rh",
+      "result": "commodity_mox_rh",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_multiplexors",
+      "result": "commodity_multiplexors",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_munitions",
+      "result": "commodity_munitions",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_namechange",
+      "result": "commodity_namechange",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_nanocapacitors",
+      "result": "commodity_nanocapacitors",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_neon",
+      "result": "commodity_neon",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_nox",
+      "result": "commodity_nox",
+      "amount": 1,
+      "station": "factory",
+      "tier": 3,
+      "ingredients": {
+        "commodity_basic_alloys": 2,
+        "commodity_industrial": 3
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_nucleardevices",
+      "result": "commodity_nucleardevices",
+      "amount": 1,
+      "station": "factory",
+      "tier": 3,
+      "ingredients": {
+        "commodity_basic_alloys": 2,
+        "commodity_industrial": 3
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_oil",
+      "result": "commodity_oil",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_optical_chips",
+      "result": "commodity_optical_chips",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_order",
+      "result": "commodity_order",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_outcast",
+      "result": "commodity_outcast",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_pearls",
+      "result": "commodity_pearls",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_petrochemicals",
+      "result": "commodity_petrochemicals",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_phantom",
+      "result": "commodity_phantom",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_pharm",
+      "result": "commodity_pharm",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_pineal_amulets",
+      "result": "commodity_pineal_amulets",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_pirates",
+      "result": "commodity_pirates",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_plastics",
+      "result": "commodity_plastics",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_plutonium",
+      "result": "commodity_plutonium",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_police",
+      "result": "commodity_police",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_polymers",
+      "result": "commodity_polymers",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_prometheum",
+      "result": "commodity_prometheum",
+      "amount": 1,
+      "station": "factory",
+      "tier": 3,
+      "ingredients": {
+        "commodity_basic_alloys": 2,
+        "commodity_industrial": 3
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_pvpserverrules",
+      "result": "commodity_pvpserverrules",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_redhessian",
+      "result": "commodity_redhessian",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_rn",
+      "result": "commodity_rn",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_rp",
+      "result": "commodity_rp",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_scientists",
+      "result": "commodity_scientists",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_serverrules",
+      "result": "commodity_serverrules",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_ship_hull_panels",
+      "result": "commodity_ship_hull_panels",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_sidearms",
+      "result": "commodity_sidearms",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_slaves",
+      "result": "commodity_slaves",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_software",
+      "result": "commodity_software",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_synthpaste",
+      "result": "commodity_synthpaste",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_tea",
+      "result": "commodity_tea",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_textberne",
+      "result": "commodity_textberne",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_tobacco",
+      "result": "commodity_tobacco",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_tourists",
+      "result": "commodity_tourists",
+      "amount": 1,
+      "station": "factory",
+      "tier": 3,
+      "ingredients": {
+        "commodity_basic_alloys": 2,
+        "commodity_industrial": 3
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_tradelane_parts",
+      "result": "commodity_tradelane_parts",
+      "amount": 1,
+      "station": "factory",
+      "tier": 3,
+      "ingredients": {
+        "commodity_basic_alloys": 2,
+        "commodity_industrial": 3
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_unionecorse",
+      "result": "commodity_unionecorse",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_unioners",
+      "result": "commodity_unioners",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_vacationers",
+      "result": "commodity_vacationers",
+      "amount": 1,
+      "station": "factory",
+      "tier": 3,
+      "ingredients": {
+        "commodity_basic_alloys": 2,
+        "commodity_industrial": 3
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_violation1",
+      "result": "commodity_violation1",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_violation10",
+      "result": "commodity_violation10",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_violation11",
+      "result": "commodity_violation11",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_violation2",
+      "result": "commodity_violation2",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_violation3",
+      "result": "commodity_violation3",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_violation4",
+      "result": "commodity_violation4",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_violation5",
+      "result": "commodity_violation5",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_violation6",
+      "result": "commodity_violation6",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_violation7",
+      "result": "commodity_violation7",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_violation8",
+      "result": "commodity_violation8",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_violation9",
+      "result": "commodity_violation9",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_vips",
+      "result": "commodity_vips",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_warning",
+      "result": "commodity_warning",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_wild",
+      "result": "commodity_wild",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_wine",
+      "result": "commodity_wine",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_xenobiotic",
+      "result": "commodity_xenobiotic",
+      "amount": 1,
+      "station": "factory",
+      "tier": 2,
+      "ingredients": {
+        "commodity_basic_alloys": 1,
+        "commodity_industrial": 2
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_xenos",
+      "result": "commodity_xenos",
+      "amount": 1,
+      "station": "factory",
+      "tier": 5,
+      "ingredients": {
+        "commodity_basic_alloys": 4,
+        "commodity_industrial": 5,
+        "commodity_high_temp_alloys": 6
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    },
+    {
+      "id": "craft_zoners",
+      "result": "commodity_zoners",
+      "amount": 1,
+      "station": "factory",
+      "tier": 4,
+      "ingredients": {
+        "commodity_basic_alloys": 3,
+        "commodity_industrial": 4,
+        "commodity_high_temp_alloys": 5
+      },
+      "description": "Автосгенерированный производственный рецепт; можно изменить в JSON."
+    }
+  ]
+}

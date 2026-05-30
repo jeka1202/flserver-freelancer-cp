@@ -806,3 +806,17 @@ button:active,
 .tab:active {
   transform: translateY(1px) !important;
 }
+.craft-list {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.craft-list li {
+  margin: 2px 0;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  filter: grayscale(.75);
+  opacity: .55;
+}
