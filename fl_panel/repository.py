@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import re
 import secrets
+import time
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
@@ -9,9 +10,13 @@ from typing import Any
 from .config import CRAFTING_RECIPES_PATH, DATA_DIR, VISIT_TYPES
 from .crafting import CraftingSystem, read_cargo_inventory
 from .finance import read_bank_balance, read_character_money, write_bank_balance, write_character_money
+from .finance_history import log_finance_event
+from .flhook_client import FlHookClient, FlHookError, FlHookUnavailable
 from .gamedata import GameData
 from .utils import (
-    account_password_candidates,
+    character_code_candidates,
+    character_auth_code_file_status,
+    normalize_auth_code,
     decode_fl_text,
     file_time,
     first,
@@ -188,13 +193,19 @@ def parse_system_objects(system_code: str, gamedata: GameData, limit: int = 180)
 
 def build_character(account_id: str, account_path: Path, file_path: Path, gamedata: GameData) -> dict[str, Any]:
     data = parse_fl(file_path)
+    auth_codes = character_code_candidates(file_path)
+    auth_code_files = character_auth_code_file_status(file_path)
     raw_fields = {key: values for key, values in data.items() if key not in {"equip", "cargo", "base_equip", "base_cargo", "house", "rep", "rep_group", "visit", "sys_visited", "base_visited", "holes_visited"}}
     played_seconds = intish(first(data, "total_time_played", "0"))
     return {
         "account_id": account_id,
         "file": file_path.name,
+        "file_stem": file_path.stem,
         "path": str(file_path),
         "name": character_name(data, file_path),
+        "auth_codes": auth_codes,
+        "auth_code_files": auth_code_files,
+        "auth_ready": bool(auth_codes),
         "description": decode_fl_text(first(data, "description")),
         "created": decode_fl_text(first(data, "created", "")) or file_time(file_path),
         "updated": file_time(file_path),
@@ -207,6 +218,8 @@ def build_character(account_id: str, account_path: Path, file_path: Path, gameda
         "missions_failed": intish(first(data, "num_misn_failures")),
         "time_played_seconds": played_seconds,
         "time_played": format_seconds(played_seconds),
+        "ship_token": first(data, "ship_archetype"),
+        "cargo_rows": data.get("cargo", []),
         "ship": gamedata.resolve(first(data, "ship_archetype")),
         "system": gamedata.resolve(first(data, "system")),
         "base": gamedata.resolve(first(data, "base")),
@@ -232,7 +245,7 @@ def load_accounts(accounts_dir: Path, gamedata: GameData) -> list[dict[str, Any]
         created_at = min((file_time(path) for path in dated_files), default=file_time(account_path))
         accounts.append({
             "id": account_path.name,
-            "passwords": account_password_candidates(account_path),
+            "passwords": set(),  # legacy account/name auth is disabled; auth is per-character now.
             "created": created_at,
             "bank": read_bank_balance(account_path),
             "characters": characters,
@@ -247,6 +260,9 @@ class Repository:
     def __init__(self, accounts_dir: Path, ioncross_dir: Path) -> None:
         self.accounts_dir = accounts_dir
         self.ioncross_dir = ioncross_dir
+        self.flhook = FlHookClient.from_env()
+        self._flhook_online_cache: dict[str, tuple[float, bool]] = {}
+        self._flhook_online_cache_ttl = 2.0
         self.reload()
 
     def reload(self) -> None:
@@ -257,7 +273,51 @@ class Repository:
         self.characters: dict[str, list[tuple[dict[str, Any], dict[str, Any]]]] = defaultdict(list)
         for account in self.accounts:
             for character in account["characters"]:
-                self.characters[character["name"].casefold()].append((account, character))
+                self.characters[str(character.get("name", "")).casefold()].append((account, character))
+
+
+    def refresh_character(self, account_id: str, character_file: str) -> tuple[dict[str, Any], dict[str, Any]] | None:
+        """Refresh only one character from disk instead of reloading every account."""
+        account = self.by_id.get(str(account_id).lower())
+        if not account:
+            return None
+
+        account_path = self.accounts_dir / account["id"]
+        file_path = account_path / character_file
+        if not file_path.exists():
+            return None
+
+        updated = build_character(account["id"], account_path, file_path, self.gamedata)
+        account["bank"] = read_bank_balance(account_path)
+
+        replaced = False
+        for index, character in enumerate(account.get("characters", [])):
+            if character.get("file") == character_file:
+                character.clear()
+                character.update(updated)
+                character["bank"] = account["bank"]
+                replaced = True
+                break
+
+        if not replaced:
+            updated["bank"] = account["bank"]
+            account.setdefault("characters", []).append(updated)
+
+        account["character_count"] = len(account.get("characters", []))
+        account["total_money"] = sum(int(char.get("money", 0)) for char in account.get("characters", []))
+        account["max_rank"] = max((int(char.get("rank", 0)) for char in account.get("characters", [])), default=0)
+
+        self.characters = defaultdict(list)
+        for acc in self.accounts:
+            for char in acc.get("characters", []):
+                self.characters[str(char.get("name", "")).casefold()].append((acc, char))
+
+        for character in account.get("characters", []):
+            if character.get("file") == character_file:
+                return account, character
+
+        return None
+
 
     def character_inventory(self, character: dict[str, Any]) -> dict[str, int]:
         return read_cargo_inventory(Path(character["path"]), self.gamedata)
@@ -301,26 +361,105 @@ class Repository:
     def public_stats(self) -> dict[str, int]:
         return {"accounts": len(self.accounts), "characters": sum(account["character_count"] for account in self.accounts), "gamedata_items": len(self.gamedata.by_code)}
 
-    def password_matches(self, account: dict[str, Any], password: str) -> bool:
-        password = password.strip()
-        if not password:
-            return True
-        return any(secrets.compare_digest(candidate, password) for candidate in account.get("passwords", set()))
+    def character_auth_status(self, character: dict[str, Any]) -> dict[str, Any]:
+        try:
+            character_path = Path(str(character.get("path") or ""))
+            files = character_auth_code_file_status(character_path) if character_path.exists() else []
+            codes = character_code_candidates(character_path) if character_path.exists() else set()
+        except Exception:
+            files = []
+            codes = set()
+
+        return {
+            "files": files,
+            "code_count": len(codes),
+            "ready": bool(codes),
+        }
+
+    def debug_auth_login(self, login: str, password: str) -> str:
+        pilot_name = str(login or "").strip()
+        code = normalize_auth_code(password)
+        if not pilot_name:
+            return "AUTH login: WRONG (empty pilot name)"
+        if not code:
+            return f"AUTH login: WRONG (pilot={pilot_name}, empty code)"
+
+        matches = self.characters.get(pilot_name.casefold(), [])
+        if not matches:
+            return f"AUTH login: WRONG (pilot={pilot_name}, pilot not found)"
+
+        if len(matches) > 1:
+            return f"AUTH login: WRONG (pilot={pilot_name}, duplicate pilot names: {len(matches)})"
+
+        _account, character = matches[0]
+        status = self.character_auth_status(character)
+        file_bits = []
+        for file_info in status.get("files", []):
+            file_bits.append(
+                f"{file_info.get('file')}:exists={file_info.get('exists')},code={file_info.get('has_code')}"
+            )
+        files_text = "; ".join(file_bits) if file_bits else "no auth files"
+        return f"AUTH login: WRONG (pilot={pilot_name}, code_files=[{files_text}], decoded_codes={status.get('code_count', 0)})"
+
+    def character_code_matches(self, character: dict[str, Any], code: str) -> bool:
+        # v82: re-read *-givecash.ini on every login attempt.
+        # Before v82 codes were cached at panel startup, so a newly generated
+        # in-game code required restarting the panel.
+        code = normalize_auth_code(code)
+        if not code:
+            return False
+
+        live_codes: set[str] = set()
+        try:
+            character_path = Path(str(character.get("path") or ""))
+            if character_path.exists():
+                live_codes = character_code_candidates(character_path)
+                character["auth_codes"] = live_codes
+                character["auth_code_files"] = character_auth_code_file_status(character_path)
+                character["auth_ready"] = bool(live_codes)
+        except Exception:
+            live_codes = set()
+
+        candidates = set(character.get("auth_codes", set())) | live_codes
+        code_bytes = code.encode("utf-8", errors="surrogatepass")
+
+        for candidate in candidates:
+            candidate_text = normalize_auth_code(candidate)
+            if not candidate_text:
+                continue
+
+            candidate_bytes = candidate_text.encode("utf-8", errors="surrogatepass")
+            if secrets.compare_digest(candidate_bytes, code_bytes):
+                return True
+
+        return False
 
     def authenticate(self, login: str, password: str, character_hint: str = "") -> tuple[dict[str, Any], dict[str, Any]] | None:
-        login = login.strip()
-        character_hint = character_hint.strip().casefold()
-        account = self.by_id.get(login.lower())
-        if account and self.password_matches(account, password):
-            if character_hint:
-                for character in account["characters"]:
-                    if character["name"].casefold() == character_hint:
-                        return account, character
-                return None
-            return (account, account["characters"][0]) if account["characters"] else None
-        for candidate_account, character in self.characters.get(login.casefold(), []):
-            if self.password_matches(candidate_account, password):
-                return candidate_account, character
+        """Authenticate only by pilot name + per-character code.
+
+        Allowed login:
+          - exact pilot name from the .fl character name field.
+
+        Not allowed anymore:
+          - account id login;
+          - .fl filename / stem login;
+          - empty password login;
+          - account/name legacy password.
+        """
+        pilot_name = str(login or "").strip()
+        code = str(password or "").strip()
+
+        if not pilot_name or not code:
+            return None
+
+        matches = self.characters.get(pilot_name.casefold(), [])
+        if len(matches) != 1:
+            return None
+
+        account, character = matches[0]
+        if self.character_code_matches(character, code):
+            return account, character
+
         return None
 
     def find_unique_character(self, character_name_value: str) -> tuple[dict[str, Any], dict[str, Any]] | None | str:
@@ -330,6 +469,15 @@ class Repository:
         if len(matches) > 1:
             return "ambiguous"
         return matches[0]
+
+    def find_character_by_file(self, account_id: str, character_file: str) -> tuple[dict[str, Any], dict[str, Any]] | None:
+        account = self.by_id.get(account_id.lower())
+        if not account:
+            return None
+        for character in account["characters"]:
+            if character["file"] == character_file:
+                return account, character
+        return None
 
     def set_account_bank(self, account: dict[str, Any], balance: int) -> None:
         account["bank"] = max(0, balance)
@@ -341,100 +489,245 @@ class Repository:
         character["money"] = max(0, balance)
         account["total_money"] = int(account.get("total_money", 0)) - old_balance + character["money"]
 
+    def flhook_online(self, character_name_value: str) -> bool:
+        name = str(character_name_value or "").strip()
+        if not name or not self.flhook.enabled:
+            return False
+
+        key = name.casefold()
+        now = time.monotonic()
+        cached = self._flhook_online_cache.get(key)
+        if cached and (now - cached[0]) <= self._flhook_online_cache_ttl:
+            return cached[1]
+
+        try:
+            online = bool(self.flhook.is_logged_in(name))
+        except FlHookUnavailable:
+            online = False
+        except FlHookError:
+            online = False
+
+        self._flhook_online_cache[key] = (now, online)
+        return online
+
+    def get_live_or_file_money(self, character: dict[str, Any], character_path: Path) -> tuple[int, bool]:
+        if self.flhook_online(character["name"]):
+            return self.flhook.get_cash(character["name"]), True
+        return read_character_money(character_path), False
+
+    def add_cash_safe(self, character: dict[str, Any], character_path: Path, amount_delta: int) -> tuple[int, bool]:
+        if self.flhook_online(character["name"]):
+            new_cash = self.flhook.add_cash(character["name"], amount_delta)
+            return new_cash, True
+
+        old_cash = read_character_money(character_path)
+        new_cash = old_cash + amount_delta
+        if new_cash < 0:
+            raise FlHookError("Недостаточно средств персонажа.")
+        write_character_money(character_path, new_cash)
+        return new_cash, False
+
     def bank_operation(self, account_id: str, character_file: str, action: str, amount: int) -> tuple[bool, str]:
         if amount <= 0:
             return False, "Сумма должна быть положительным целым числом."
+
+        found = self.find_character_by_file(account_id, character_file)
+        if not found:
+            return False, "Персонаж не найден."
+        account, character = found
+
         account_path = self.accounts_dir / account_id
         character_path = account_path / character_file
         if not character_path.exists():
-            return False, "Персонаж не найден."
-        character_money = read_character_money(character_path)
+            return False, "Файл персонажа не найден."
+
         bank_money = read_bank_balance(account_path)
+
+        try:
+            character_money, character_online = self.get_live_or_file_money(character, character_path)
+        except FlHookError as exc:
+            return False, f"FLHook не смог прочитать деньги персонажа: {exc}"
+
         if action == "deposit":
             if character_money < amount:
                 return False, "На игровом счёте персонажа недостаточно средств для зачисления в банк."
 
-            new_character_money = character_money - amount
-            new_bank_money = bank_money + amount
+            try:
+                new_character_money, used_flhook = self.add_cash_safe(character, character_path, -amount)
+            except FlHookError as exc:
+                return False, f"FLHook не смог списать деньги с персонажа: {exc}"
 
-            write_character_money(character_path, new_character_money)
+            new_bank_money = bank_money + amount
             write_bank_balance(account_path, new_bank_money)
 
-            account = self.by_id.get(account_id.lower())
-            if account:
-                for current_character in account["characters"]:
-                    if current_character["file"] == character_file:
-                        self.set_character_money(account, current_character, new_character_money)
-                        break
-                self.set_account_bank(account, new_bank_money)
+            self.set_character_money(account, character, new_character_money)
+            self.set_account_bank(account, new_bank_money)
 
-            return True, f"{money(amount)} кредитов переведено с персонажа в bank.ini."
+            mode = "через FLHook" if used_flhook or character_online else "через файл"
+            message = f"{money(amount)} кредитов переведено с персонажа в bank.ini."
+            log_finance_event(
+                account["id"],
+                character["file"],
+                character["name"],
+                "bank_deposit",
+                "internal",
+                amount,
+                character_delta=-amount,
+                bank_delta=amount,
+                mode=mode,
+                note=message,
+            )
+            return True, message
+
         if action == "withdraw":
             if bank_money < amount:
                 return False, "В bank.ini недостаточно средств для вывода персонажу."
 
+            try:
+                new_character_money, used_flhook = self.add_cash_safe(character, character_path, amount)
+            except FlHookError as exc:
+                return False, f"FLHook не смог начислить деньги персонажу: {exc}"
+
             new_bank_money = bank_money - amount
-            new_character_money = character_money + amount
-
             write_bank_balance(account_path, new_bank_money)
-            write_character_money(character_path, new_character_money)
 
-            account = self.by_id.get(account_id.lower())
-            if account:
-                for current_character in account["characters"]:
-                    if current_character["file"] == character_file:
-                        self.set_character_money(account, current_character, new_character_money)
-                        break
-                self.set_account_bank(account, new_bank_money)
+            self.set_character_money(account, character, new_character_money)
+            self.set_account_bank(account, new_bank_money)
 
-            return True, f"{money(amount)} кредитов выведено из bank.ini персонажу."
+            mode = "через FLHook" if used_flhook or character_online else "через файл"
+            message = f"{money(amount)} кредитов выведено из bank.ini персонажу."
+            log_finance_event(
+                account["id"],
+                character["file"],
+                character["name"],
+                "bank_withdraw",
+                "internal",
+                amount,
+                character_delta=amount,
+                bank_delta=-amount,
+                mode=mode,
+                note=message,
+            )
+            return True, message
+
         return False, "Неизвестная банковская операция."
 
     def transfer_to_character(self, sender_account_id: str, sender_file: str, target_name: str, amount: int) -> tuple[bool, str]:
         if amount <= 0:
             return False, "Сумма перевода должна быть положительным целым числом."
+
         target = self.find_unique_character(target_name.strip())
         if target is None:
             return False, "Пилот-получатель не найден."
         if target == "ambiguous":
             return False, "Найдено несколько персонажей с таким именем. Перевод отменён."
+
         target_account, target_character = target
+
+        sender_found = self.find_character_by_file(sender_account_id, sender_file)
+        if not sender_found:
+            return False, "Персонаж-отправитель не найден."
+        sender_account, sender_character = sender_found
+
         if target_account["id"] == sender_account_id and target_character["file"] == sender_file:
             return False, "Нельзя выполнить перевод самому себе."
+
         sender_account_path = self.accounts_dir / sender_account_id
         sender_path = sender_account_path / sender_file
         target_path = self.accounts_dir / target_account["id"] / target_character["file"]
+
         if not sender_path.exists() or not target_path.exists():
             return False, "Файл отправителя или получателя не найден."
 
-        sender_money = read_character_money(sender_path)
+        try:
+            sender_money, sender_online = self.get_live_or_file_money(sender_character, sender_path)
+            target_money, target_online = self.get_live_or_file_money(target_character, target_path)
+        except FlHookError as exc:
+            return False, f"FLHook не смог прочитать баланс: {exc}"
+
         sender_bank = read_bank_balance(sender_account_path)
+
         if sender_money + sender_bank < amount:
             return False, "Средств недостаточно: денег персонажа и bank.ini вместе не хватает для перевода."
+
         debit_from_character = min(sender_money, amount)
         debit_from_bank = amount - debit_from_character
-        target_money = read_character_money(target_path)
-        new_sender_money = sender_money - debit_from_character
+
         new_sender_bank = sender_bank - debit_from_bank
-        new_target_money = target_money + amount
 
-        write_character_money(sender_path, new_sender_money)
-        if debit_from_bank:
-            write_bank_balance(sender_account_path, new_sender_bank)
-        write_character_money(target_path, new_target_money)
+        try:
+            if debit_from_character:
+                new_sender_money, sender_used_flhook = self.add_cash_safe(sender_character, sender_path, -debit_from_character)
+            else:
+                new_sender_money = sender_money
+                sender_used_flhook = False
 
-        sender_account = self.by_id.get(sender_account_id.lower())
-        if sender_account:
-            for sender_character in sender_account["characters"]:
-                if sender_character["file"] == sender_file:
-                    self.set_character_money(sender_account, sender_character, new_sender_money)
-                    break
             if debit_from_bank:
-                self.set_account_bank(sender_account, new_sender_bank)
+                write_bank_balance(sender_account_path, new_sender_bank)
 
+            new_target_money, target_used_flhook = self.add_cash_safe(target_character, target_path, amount)
+
+        except FlHookError as exc:
+            # Попытка отката, если уже что-то успели списать.
+            try:
+                if debit_from_character:
+                    self.add_cash_safe(sender_character, sender_path, debit_from_character)
+                if debit_from_bank:
+                    write_bank_balance(sender_account_path, sender_bank)
+            except Exception:
+                pass
+            return False, f"Ошибка перевода через FLHook/файл: {exc}"
+
+        self.set_character_money(sender_account, sender_character, new_sender_money)
+        if debit_from_bank:
+            self.set_account_bank(sender_account, new_sender_bank)
         self.set_character_money(target_account, target_character, new_target_money)
 
         details = f"списано {money(debit_from_character)} с персонажа"
         if debit_from_bank:
             details += f" и {money(debit_from_bank)} из bank.ini"
-        return True, f"Перевод {money(amount)} кредитов пилоту {target_character['name']} выполнен: {details}."
+
+        modes = []
+        if sender_used_flhook or sender_online:
+            modes.append("отправитель через FLHook")
+        if target_used_flhook or target_online:
+            modes.append("получатель через FLHook")
+        if not modes:
+            modes.append("файловый режим")
+
+        mode_text = ", ".join(modes)
+        message = f"Перевод {money(amount)} кредитов пилоту {target_character['name']} выполнен: {details}."
+
+        log_finance_event(
+            sender_account["id"],
+            sender_character["file"],
+            sender_character["name"],
+            "pilot_transfer",
+            "outgoing",
+            amount,
+            character_delta=-debit_from_character,
+            bank_delta=-debit_from_bank,
+            counterparty_account_id=target_account["id"],
+            counterparty_character_file=target_character["file"],
+            counterparty_character_name=target_character["name"],
+            mode=mode_text,
+            note=message,
+        )
+
+        log_finance_event(
+            target_account["id"],
+            target_character["file"],
+            target_character["name"],
+            "pilot_transfer",
+            "incoming",
+            amount,
+            character_delta=amount,
+            bank_delta=0,
+            counterparty_account_id=sender_account["id"],
+            counterparty_character_file=sender_character["file"],
+            counterparty_character_name=sender_character["name"],
+            mode=mode_text,
+            note=f"Получено {money(amount)} кредитов от пилота {sender_character['name']}.",
+        )
+
+        return True, message

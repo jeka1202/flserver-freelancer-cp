@@ -1,0 +1,10 @@
+{
+  "enabled": true,
+  "host": "127.0.0.1",
+  "port": 1920,
+  "password": "test",
+  "encoding": "utf-16le",
+  "timeout": 3.0,
+  "auth_command": "pass",
+  "diagnostic_command": "getplayers"
+}

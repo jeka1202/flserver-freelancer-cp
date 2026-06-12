@@ -1,0 +1,15 @@
+[
+  {
+    "code": "sample_polymers_to_alloys",
+    "name": "Тестовый рецепт: Polymers → Basic Alloys",
+    "description": "Пример рецепта для проверки интерфейса. Можно удалить или заменить.",
+    "duration_seconds": 30,
+    "inputs": {
+      "commodity_polymers": 10
+    },
+    "outputs": {
+      "commodity_basic_alloys": 1
+    },
+    "enabled": false
+  }
+]

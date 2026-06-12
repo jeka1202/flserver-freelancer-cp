@@ -1,0 +1,1700 @@
+{
+  "version": 1,
+  "format": "fl_panel_base_warehouse_seed",
+  "description": "Тестовый склад базы для крафта. Все предметы, которые встречаются в craft_recipes.json, добавлены по 1 000 000 шт.",
+  "account_id": "CHANGE_ME_ACCOUNT_ID",
+  "location_hash": "CHANGE_ME_BASE_HASH_OR_NICKNAME",
+  "location_type": "base",
+  "location_name": "CHANGE_ME_BASE_NAME",
+  "items": [
+    {
+      "item": "commodity_alien_artifacts",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource"
+      ]
+    },
+    {
+      "item": "commodity_alien_organisms",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource"
+      ]
+    },
+    {
+      "item": "commodity_aluminium_ore",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource",
+        "input:smelt_aluminium"
+      ]
+    },
+    {
+      "item": "commodity_azurite_gas",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource"
+      ]
+    },
+    {
+      "item": "commodity_beryllium_ore",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource",
+        "input:smelt_beryllium"
+      ]
+    },
+    {
+      "item": "commodity_cobalt_ore",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource",
+        "input:smelt_cobalt"
+      ]
+    },
+    {
+      "item": "commodity_copper_ore",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource",
+        "input:smelt_copper"
+      ]
+    },
+    {
+      "item": "commodity_cryo_organisms",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource"
+      ]
+    },
+    {
+      "item": "commodity_event_ore_01",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource"
+      ]
+    },
+    {
+      "item": "commodity_event_ore_02",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource"
+      ]
+    },
+    {
+      "item": "commodity_flourine",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource"
+      ]
+    },
+    {
+      "item": "commodity_gold_ore",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource",
+        "input:smelt_gold"
+      ]
+    },
+    {
+      "item": "commodity_helium",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource"
+      ]
+    },
+    {
+      "item": "commodity_helium3",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource"
+      ]
+    },
+    {
+      "item": "commodity_ice_asteroid",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource"
+      ]
+    },
+    {
+      "item": "commodity_ignitable_waste",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource"
+      ]
+    },
+    {
+      "item": "commodity_iridium_ore",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource"
+      ]
+    },
+    {
+      "item": "commodity_military_salvage",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource"
+      ]
+    },
+    {
+      "item": "commodity_molybdenum_ore",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource"
+      ]
+    },
+    {
+      "item": "commodity_niobium_ore",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource",
+        "input:smelt_niobium"
+      ]
+    },
+    {
+      "item": "commodity_oxygen",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource",
+        "input:fabricate_terraforming_gases"
+      ]
+    },
+    {
+      "item": "commodity_platinum_ore",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource",
+        "input:smelt_platinum"
+      ]
+    },
+    {
+      "item": "commodity_premiumscrap",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource"
+      ]
+    },
+    {
+      "item": "commodity_rawhydrocarbons",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource"
+      ]
+    },
+    {
+      "item": "commodity_scrap_metal",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource",
+        "input:fabricate_industrial"
+      ]
+    },
+    {
+      "item": "commodity_silver_ore",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource",
+        "input:smelt_silver"
+      ]
+    },
+    {
+      "item": "commodity_toxic_waste",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource"
+      ]
+    },
+    {
+      "item": "commodity_uncut_diamonds",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource"
+      ]
+    },
+    {
+      "item": "commodity_uranium_ore",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource"
+      ]
+    },
+    {
+      "item": "commodity_water",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource",
+        "input:fabricate_mox",
+        "input:fabricate_h_fuel",
+        "input:fabricate_terraforming_gases"
+      ]
+    },
+    {
+      "item": "commodity_xeno_relics",
+      "quantity": 1000000,
+      "sources": [
+        "base_resource"
+      ]
+    },
+    {
+      "item": "commodity_aluminium",
+      "quantity": 1000000,
+      "sources": [
+        "output:smelt_aluminium",
+        "input:refine_basic_alloys",
+        "input:fabricate_industrial"
+      ]
+    },
+    {
+      "item": "commodity_beryllium",
+      "quantity": 1000000,
+      "sources": [
+        "output:smelt_beryllium",
+        "input:refine_high_temp_alloys",
+        "input:fabricate_superconductors"
+      ]
+    },
+    {
+      "item": "commodity_cobalt",
+      "quantity": 1000000,
+      "sources": [
+        "output:smelt_cobalt",
+        "input:refine_high_temp_alloys"
+      ]
+    },
+    {
+      "item": "commodity_copper",
+      "quantity": 1000000,
+      "sources": [
+        "output:smelt_copper",
+        "input:refine_basic_alloys"
+      ]
+    },
+    {
+      "item": "commodity_gold",
+      "quantity": 1000000,
+      "sources": [
+        "output:smelt_gold",
+        "input:fabricate_optronics"
+      ]
+    },
+    {
+      "item": "commodity_niobium",
+      "quantity": 1000000,
+      "sources": [
+        "output:smelt_niobium",
+        "input:refine_super_alloys",
+        "input:fabricate_superconductors"
+      ]
+    },
+    {
+      "item": "commodity_platinum",
+      "quantity": 1000000,
+      "sources": [
+        "output:smelt_platinum",
+        "input:refine_super_alloys"
+      ]
+    },
+    {
+      "item": "commodity_silver",
+      "quantity": 1000000,
+      "sources": [
+        "output:smelt_silver",
+        "input:fabricate_optronics"
+      ]
+    },
+    {
+      "item": "commodity_basic_alloys",
+      "quantity": 1000000,
+      "sources": [
+        "output:refine_basic_alloys",
+        "input:refine_construction_machinery",
+        "input:fabricate_mining_machinery",
+        "input:craft_bd",
+        "input:craft_belite",
+        "input:craft_bioprocessors",
+        "input:craft_blood_diamonds",
+        "input:craft_bm_munitions",
+        "input:craft_bn",
+        "input:craft_boron",
+        "input:craft_bountyhunter",
+        "input:craft_bp",
+        "input:craft_bund",
+        "input:craft_cardamine",
+        "input:craft_cigars",
+        "input:craft_consumer_goods",
+        "input:craft_contactadmin",
+        "input:craft_corsair",
+        "input:craft_council",
+        "input:craft_credit1",
+        "input:craft_credit2",
+        "input:craft_credit3",
+        "input:craft_credit4",
+        "input:craft_credit5",
+        "input:craft_crew",
+        "input:craft_cryocubes",
+        "input:craft_deuterium",
+        "input:craft_diamonds",
+        "input:craft_fa",
+        "input:craft_fertilizers",
+        "input:craft_fine",
+        "input:craft_floragro",
+        "input:craft_food",
+        "input:craft_freelancer",
+        "input:craft_furs",
+        "input:craft_g",
+        "input:craft_ga_artifacts",
+        "input:craft_gabrigands",
+        "input:craft_gaianlife",
+        "input:craft_gallic_fuel",
+        "input:craft_ganavy",
+        "input:craft_gapolice",
+        "input:craft_gatecell",
+        "input:craft_gatecell_bw12",
+        "input:craft_gc",
+        "input:craft_gmg",
+        "input:craft_hazmat_canisters",
+        "input:craft_history",
+        "input:craft_hog",
+        "input:craft_holo_bands",
+        "input:craft_holosculptures",
+        "input:craft_humanorgans",
+        "input:craft_hydrocarbons",
+        "input:craft_hypno_bands",
+        "input:craft_img",
+        "input:craft_introduction",
+        "input:craft_iridium",
+        "input:craft_junkers",
+        "input:craft_kelite",
+        "input:craft_kn",
+        "input:craft_kp",
+        "input:craft_kuwild",
+        "input:craft_lanehacker",
+        "input:craft_librogue",
+        "input:craft_liquid_cardamine",
+        "input:craft_lsf",
+        "input:craft_luxury_consumer_goods",
+        "input:craft_luxury_food",
+        "input:craft_lwb",
+        "input:craft_majorbrain",
+        "input:craft_manifolds",
+        "input:craft_maquis",
+        "input:craft_marijuana",
+        "input:craft_mgeneral",
+        "input:craft_military",
+        "input:craft_militaryvehicles",
+        "input:craft_militaryvehicles_li",
+        "input:craft_minorbrain",
+        "input:craft_mlieutenant",
+        "input:craft_molly",
+        "input:craft_mox_rh",
+        "input:craft_multiplexors",
+        "input:craft_munitions",
+        "input:craft_namechange",
+        "input:craft_nanocapacitors",
+        "input:craft_neon",
+        "input:craft_nox",
+        "input:craft_nucleardevices",
+        "input:craft_oil",
+        "input:craft_optical_chips",
+        "input:craft_order",
+        "input:craft_outcast",
+        "input:craft_pearls",
+        "input:craft_petrochemicals",
+        "input:craft_phantom",
+        "input:craft_pharm",
+        "input:craft_pineal_amulets",
+        "input:craft_pirates",
+        "input:craft_plastics",
+        "input:craft_plutonium",
+        "input:craft_police",
+        "input:craft_polymers",
+        "input:craft_prometheum",
+        "input:craft_pvpserverrules",
+        "input:craft_redhessian",
+        "input:craft_rn",
+        "input:craft_rp",
+        "input:craft_scientists",
+        "input:craft_serverrules",
+        "input:craft_ship_hull_panels",
+        "input:craft_sidearms",
+        "input:craft_slaves",
+        "input:craft_software",
+        "input:craft_synthpaste",
+        "input:craft_tea",
+        "input:craft_textberne",
+        "input:craft_tobacco",
+        "input:craft_tourists",
+        "input:craft_tradelane_parts",
+        "input:craft_unionecorse",
+        "input:craft_unioners",
+        "input:craft_vacationers",
+        "input:craft_violation1",
+        "input:craft_violation10",
+        "input:craft_violation11",
+        "input:craft_violation2",
+        "input:craft_violation3",
+        "input:craft_violation4",
+        "input:craft_violation5",
+        "input:craft_violation6",
+        "input:craft_violation7",
+        "input:craft_violation8",
+        "input:craft_violation9",
+        "input:craft_vips",
+        "input:craft_warning",
+        "input:craft_wild",
+        "input:craft_wine",
+        "input:craft_xenobiotic",
+        "input:craft_xenos",
+        "input:craft_zoners"
+      ]
+    },
+    {
+      "item": "commodity_high_temp_alloys",
+      "quantity": 1000000,
+      "sources": [
+        "output:refine_high_temp_alloys",
+        "input:refine_super_alloys",
+        "input:fabricate_engine_components",
+        "input:craft_bd",
+        "input:craft_belite",
+        "input:craft_bn",
+        "input:craft_bountyhunter",
+        "input:craft_bp",
+        "input:craft_bund",
+        "input:craft_corsair",
+        "input:craft_council",
+        "input:craft_credit1",
+        "input:craft_credit2",
+        "input:craft_credit3",
+        "input:craft_credit4",
+        "input:craft_credit5",
+        "input:craft_crew",
+        "input:craft_fa",
+        "input:craft_freelancer",
+        "input:craft_g",
+        "input:craft_gabrigands",
+        "input:craft_ganavy",
+        "input:craft_gapolice",
+        "input:craft_gatecell",
+        "input:craft_gatecell_bw12",
+        "input:craft_gc",
+        "input:craft_gmg",
+        "input:craft_hog",
+        "input:craft_img",
+        "input:craft_junkers",
+        "input:craft_kelite",
+        "input:craft_kn",
+        "input:craft_kp",
+        "input:craft_kuwild",
+        "input:craft_lanehacker",
+        "input:craft_librogue",
+        "input:craft_liquid_cardamine",
+        "input:craft_lsf",
+        "input:craft_lwb",
+        "input:craft_majorbrain",
+        "input:craft_maquis",
+        "input:craft_mgeneral",
+        "input:craft_military",
+        "input:craft_minorbrain",
+        "input:craft_mlieutenant",
+        "input:craft_molly",
+        "input:craft_namechange",
+        "input:craft_order",
+        "input:craft_outcast",
+        "input:craft_phantom",
+        "input:craft_police",
+        "input:craft_redhessian",
+        "input:craft_rn",
+        "input:craft_rp",
+        "input:craft_textberne",
+        "input:craft_unionecorse",
+        "input:craft_unioners",
+        "input:craft_vips",
+        "input:craft_wild",
+        "input:craft_xenos",
+        "input:craft_zoners"
+      ]
+    },
+    {
+      "item": "commodity_super_alloys",
+      "quantity": 1000000,
+      "sources": [
+        "output:refine_super_alloys"
+      ]
+    },
+    {
+      "item": "commodity_industrial",
+      "quantity": 1000000,
+      "sources": [
+        "input:refine_construction_machinery",
+        "output:fabricate_industrial",
+        "input:craft_bd",
+        "input:craft_belite",
+        "input:craft_bioprocessors",
+        "input:craft_blood_diamonds",
+        "input:craft_bm_munitions",
+        "input:craft_bn",
+        "input:craft_boron",
+        "input:craft_bountyhunter",
+        "input:craft_bp",
+        "input:craft_bund",
+        "input:craft_cardamine",
+        "input:craft_cigars",
+        "input:craft_consumer_goods",
+        "input:craft_contactadmin",
+        "input:craft_corsair",
+        "input:craft_council",
+        "input:craft_credit1",
+        "input:craft_credit2",
+        "input:craft_credit3",
+        "input:craft_credit4",
+        "input:craft_credit5",
+        "input:craft_crew",
+        "input:craft_cryocubes",
+        "input:craft_deuterium",
+        "input:craft_diamonds",
+        "input:craft_fa",
+        "input:craft_fertilizers",
+        "input:craft_fine",
+        "input:craft_floragro",
+        "input:craft_food",
+        "input:craft_freelancer",
+        "input:craft_furs",
+        "input:craft_g",
+        "input:craft_ga_artifacts",
+        "input:craft_gabrigands",
+        "input:craft_gaianlife",
+        "input:craft_gallic_fuel",
+        "input:craft_ganavy",
+        "input:craft_gapolice",
+        "input:craft_gatecell",
+        "input:craft_gatecell_bw12",
+        "input:craft_gc",
+        "input:craft_gmg",
+        "input:craft_hazmat_canisters",
+        "input:craft_history",
+        "input:craft_hog",
+        "input:craft_holo_bands",
+        "input:craft_holosculptures",
+        "input:craft_humanorgans",
+        "input:craft_hydrocarbons",
+        "input:craft_hypno_bands",
+        "input:craft_img",
+        "input:craft_introduction",
+        "input:craft_iridium",
+        "input:craft_junkers",
+        "input:craft_kelite",
+        "input:craft_kn",
+        "input:craft_kp",
+        "input:craft_kuwild",
+        "input:craft_lanehacker",
+        "input:craft_librogue",
+        "input:craft_liquid_cardamine",
+        "input:craft_lsf",
+        "input:craft_luxury_consumer_goods",
+        "input:craft_luxury_food",
+        "input:craft_lwb",
+        "input:craft_majorbrain",
+        "input:craft_manifolds",
+        "input:craft_maquis",
+        "input:craft_marijuana",
+        "input:craft_mgeneral",
+        "input:craft_military",
+        "input:craft_militaryvehicles",
+        "input:craft_militaryvehicles_li",
+        "input:craft_minorbrain",
+        "input:craft_mlieutenant",
+        "input:craft_molly",
+        "input:craft_mox_rh",
+        "input:craft_multiplexors",
+        "input:craft_munitions",
+        "input:craft_namechange",
+        "input:craft_nanocapacitors",
+        "input:craft_neon",
+        "input:craft_nox",
+        "input:craft_nucleardevices",
+        "input:craft_oil",
+        "input:craft_optical_chips",
+        "input:craft_order",
+        "input:craft_outcast",
+        "input:craft_pearls",
+        "input:craft_petrochemicals",
+        "input:craft_phantom",
+        "input:craft_pharm",
+        "input:craft_pineal_amulets",
+        "input:craft_pirates",
+        "input:craft_plastics",
+        "input:craft_plutonium",
+        "input:craft_police",
+        "input:craft_polymers",
+        "input:craft_prometheum",
+        "input:craft_pvpserverrules",
+        "input:craft_redhessian",
+        "input:craft_rn",
+        "input:craft_rp",
+        "input:craft_scientists",
+        "input:craft_serverrules",
+        "input:craft_ship_hull_panels",
+        "input:craft_sidearms",
+        "input:craft_slaves",
+        "input:craft_software",
+        "input:craft_synthpaste",
+        "input:craft_tea",
+        "input:craft_textberne",
+        "input:craft_tobacco",
+        "input:craft_tourists",
+        "input:craft_tradelane_parts",
+        "input:craft_unionecorse",
+        "input:craft_unioners",
+        "input:craft_vacationers",
+        "input:craft_violation1",
+        "input:craft_violation10",
+        "input:craft_violation11",
+        "input:craft_violation2",
+        "input:craft_violation3",
+        "input:craft_violation4",
+        "input:craft_violation5",
+        "input:craft_violation6",
+        "input:craft_violation7",
+        "input:craft_violation8",
+        "input:craft_violation9",
+        "input:craft_vips",
+        "input:craft_warning",
+        "input:craft_wild",
+        "input:craft_wine",
+        "input:craft_xenobiotic",
+        "input:craft_xenos",
+        "input:craft_zoners"
+      ]
+    },
+    {
+      "item": "commodity_construction_machinery",
+      "quantity": 1000000,
+      "sources": [
+        "output:refine_construction_machinery",
+        "input:fabricate_mining_machinery"
+      ]
+    },
+    {
+      "item": "commodity_mining_machinery",
+      "quantity": 1000000,
+      "sources": [
+        "output:fabricate_mining_machinery"
+      ]
+    },
+    {
+      "item": "commodity_mox_fuel",
+      "quantity": 1000000,
+      "sources": [
+        "output:fabricate_mox"
+      ]
+    },
+    {
+      "item": "commodity_hydrocarbons",
+      "quantity": 1000000,
+      "sources": [
+        "input:fabricate_h_fuel",
+        "input:fabricate_lpg",
+        "output:craft_hydrocarbons"
+      ]
+    },
+    {
+      "item": "commodity_h_fuel",
+      "quantity": 1000000,
+      "sources": [
+        "output:fabricate_h_fuel"
+      ]
+    },
+    {
+      "item": "commodity_lpg",
+      "quantity": 1000000,
+      "sources": [
+        "output:fabricate_lpg"
+      ]
+    },
+    {
+      "item": "commodity_optronics",
+      "quantity": 1000000,
+      "sources": [
+        "output:fabricate_optronics",
+        "input:fabricate_superconductors"
+      ]
+    },
+    {
+      "item": "commodity_superconductors",
+      "quantity": 1000000,
+      "sources": [
+        "output:fabricate_superconductors",
+        "input:fabricate_engine_components"
+      ]
+    },
+    {
+      "item": "commodity_engine_components",
+      "quantity": 1000000,
+      "sources": [
+        "output:fabricate_engine_components"
+      ]
+    },
+    {
+      "item": "commodity_terraforming_gases",
+      "quantity": 1000000,
+      "sources": [
+        "output:fabricate_terraforming_gases"
+      ]
+    },
+    {
+      "item": "commodity_bd",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_bd"
+      ]
+    },
+    {
+      "item": "commodity_belite",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_belite"
+      ]
+    },
+    {
+      "item": "commodity_bioprocessors",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_bioprocessors"
+      ]
+    },
+    {
+      "item": "commodity_blood_diamonds",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_blood_diamonds"
+      ]
+    },
+    {
+      "item": "commodity_bm_munitions",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_bm_munitions"
+      ]
+    },
+    {
+      "item": "commodity_bn",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_bn"
+      ]
+    },
+    {
+      "item": "commodity_boron",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_boron"
+      ]
+    },
+    {
+      "item": "commodity_bountyhunter",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_bountyhunter"
+      ]
+    },
+    {
+      "item": "commodity_bp",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_bp"
+      ]
+    },
+    {
+      "item": "commodity_bund",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_bund"
+      ]
+    },
+    {
+      "item": "commodity_cardamine",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_cardamine"
+      ]
+    },
+    {
+      "item": "commodity_cigars",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_cigars"
+      ]
+    },
+    {
+      "item": "commodity_consumer_goods",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_consumer_goods"
+      ]
+    },
+    {
+      "item": "commodity_contactadmin",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_contactadmin"
+      ]
+    },
+    {
+      "item": "commodity_corsair",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_corsair"
+      ]
+    },
+    {
+      "item": "commodity_council",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_council"
+      ]
+    },
+    {
+      "item": "commodity_credit1",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_credit1"
+      ]
+    },
+    {
+      "item": "commodity_credit2",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_credit2"
+      ]
+    },
+    {
+      "item": "commodity_credit3",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_credit3"
+      ]
+    },
+    {
+      "item": "commodity_credit4",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_credit4"
+      ]
+    },
+    {
+      "item": "commodity_credit5",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_credit5"
+      ]
+    },
+    {
+      "item": "commodity_crew",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_crew"
+      ]
+    },
+    {
+      "item": "commodity_cryocubes",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_cryocubes"
+      ]
+    },
+    {
+      "item": "commodity_deuterium",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_deuterium"
+      ]
+    },
+    {
+      "item": "commodity_diamonds",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_diamonds"
+      ]
+    },
+    {
+      "item": "commodity_fa",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_fa"
+      ]
+    },
+    {
+      "item": "commodity_fertilizers",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_fertilizers"
+      ]
+    },
+    {
+      "item": "commodity_fine",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_fine"
+      ]
+    },
+    {
+      "item": "commodity_floragro",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_floragro"
+      ]
+    },
+    {
+      "item": "commodity_food",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_food"
+      ]
+    },
+    {
+      "item": "commodity_freelancer",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_freelancer"
+      ]
+    },
+    {
+      "item": "commodity_furs",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_furs"
+      ]
+    },
+    {
+      "item": "commodity_g",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_g"
+      ]
+    },
+    {
+      "item": "commodity_ga_artifacts",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_ga_artifacts"
+      ]
+    },
+    {
+      "item": "commodity_gabrigands",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_gabrigands"
+      ]
+    },
+    {
+      "item": "commodity_gaianlife",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_gaianlife"
+      ]
+    },
+    {
+      "item": "commodity_gallic_fuel",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_gallic_fuel"
+      ]
+    },
+    {
+      "item": "commodity_ganavy",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_ganavy"
+      ]
+    },
+    {
+      "item": "commodity_gapolice",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_gapolice"
+      ]
+    },
+    {
+      "item": "commodity_gatecell",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_gatecell"
+      ]
+    },
+    {
+      "item": "commodity_gatecell_bw12",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_gatecell_bw12"
+      ]
+    },
+    {
+      "item": "commodity_gc",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_gc"
+      ]
+    },
+    {
+      "item": "commodity_gmg",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_gmg"
+      ]
+    },
+    {
+      "item": "commodity_hazmat_canisters",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_hazmat_canisters"
+      ]
+    },
+    {
+      "item": "commodity_history",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_history"
+      ]
+    },
+    {
+      "item": "commodity_hog",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_hog"
+      ]
+    },
+    {
+      "item": "commodity_holo_bands",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_holo_bands"
+      ]
+    },
+    {
+      "item": "commodity_holosculptures",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_holosculptures"
+      ]
+    },
+    {
+      "item": "commodity_humanorgans",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_humanorgans"
+      ]
+    },
+    {
+      "item": "commodity_hypno_bands",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_hypno_bands"
+      ]
+    },
+    {
+      "item": "commodity_img",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_img"
+      ]
+    },
+    {
+      "item": "commodity_introduction",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_introduction"
+      ]
+    },
+    {
+      "item": "commodity_iridium",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_iridium"
+      ]
+    },
+    {
+      "item": "commodity_junkers",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_junkers"
+      ]
+    },
+    {
+      "item": "commodity_kelite",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_kelite"
+      ]
+    },
+    {
+      "item": "commodity_kn",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_kn"
+      ]
+    },
+    {
+      "item": "commodity_kp",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_kp"
+      ]
+    },
+    {
+      "item": "commodity_kuwild",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_kuwild"
+      ]
+    },
+    {
+      "item": "commodity_lanehacker",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_lanehacker"
+      ]
+    },
+    {
+      "item": "commodity_librogue",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_librogue"
+      ]
+    },
+    {
+      "item": "commodity_liquid_cardamine",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_liquid_cardamine"
+      ]
+    },
+    {
+      "item": "commodity_lsf",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_lsf"
+      ]
+    },
+    {
+      "item": "commodity_luxury_consumer_goods",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_luxury_consumer_goods"
+      ]
+    },
+    {
+      "item": "commodity_luxury_food",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_luxury_food"
+      ]
+    },
+    {
+      "item": "commodity_lwb",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_lwb"
+      ]
+    },
+    {
+      "item": "commodity_majorbrain",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_majorbrain"
+      ]
+    },
+    {
+      "item": "commodity_manifolds",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_manifolds"
+      ]
+    },
+    {
+      "item": "commodity_maquis",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_maquis"
+      ]
+    },
+    {
+      "item": "commodity_marijuana",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_marijuana"
+      ]
+    },
+    {
+      "item": "commodity_mgeneral",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_mgeneral"
+      ]
+    },
+    {
+      "item": "commodity_military",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_military"
+      ]
+    },
+    {
+      "item": "commodity_militaryvehicles",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_militaryvehicles"
+      ]
+    },
+    {
+      "item": "commodity_militaryvehicles_li",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_militaryvehicles_li"
+      ]
+    },
+    {
+      "item": "commodity_minorbrain",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_minorbrain"
+      ]
+    },
+    {
+      "item": "commodity_mlieutenant",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_mlieutenant"
+      ]
+    },
+    {
+      "item": "commodity_molly",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_molly"
+      ]
+    },
+    {
+      "item": "commodity_mox_rh",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_mox_rh"
+      ]
+    },
+    {
+      "item": "commodity_multiplexors",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_multiplexors"
+      ]
+    },
+    {
+      "item": "commodity_munitions",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_munitions"
+      ]
+    },
+    {
+      "item": "commodity_namechange",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_namechange"
+      ]
+    },
+    {
+      "item": "commodity_nanocapacitors",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_nanocapacitors"
+      ]
+    },
+    {
+      "item": "commodity_neon",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_neon"
+      ]
+    },
+    {
+      "item": "commodity_nox",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_nox"
+      ]
+    },
+    {
+      "item": "commodity_nucleardevices",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_nucleardevices"
+      ]
+    },
+    {
+      "item": "commodity_oil",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_oil"
+      ]
+    },
+    {
+      "item": "commodity_optical_chips",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_optical_chips"
+      ]
+    },
+    {
+      "item": "commodity_order",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_order"
+      ]
+    },
+    {
+      "item": "commodity_outcast",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_outcast"
+      ]
+    },
+    {
+      "item": "commodity_pearls",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_pearls"
+      ]
+    },
+    {
+      "item": "commodity_petrochemicals",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_petrochemicals"
+      ]
+    },
+    {
+      "item": "commodity_phantom",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_phantom"
+      ]
+    },
+    {
+      "item": "commodity_pharm",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_pharm"
+      ]
+    },
+    {
+      "item": "commodity_pineal_amulets",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_pineal_amulets"
+      ]
+    },
+    {
+      "item": "commodity_pirates",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_pirates"
+      ]
+    },
+    {
+      "item": "commodity_plastics",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_plastics"
+      ]
+    },
+    {
+      "item": "commodity_plutonium",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_plutonium"
+      ]
+    },
+    {
+      "item": "commodity_police",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_police"
+      ]
+    },
+    {
+      "item": "commodity_polymers",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_polymers"
+      ]
+    },
+    {
+      "item": "commodity_prometheum",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_prometheum"
+      ]
+    },
+    {
+      "item": "commodity_pvpserverrules",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_pvpserverrules"
+      ]
+    },
+    {
+      "item": "commodity_redhessian",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_redhessian"
+      ]
+    },
+    {
+      "item": "commodity_rn",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_rn"
+      ]
+    },
+    {
+      "item": "commodity_rp",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_rp"
+      ]
+    },
+    {
+      "item": "commodity_scientists",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_scientists"
+      ]
+    },
+    {
+      "item": "commodity_serverrules",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_serverrules"
+      ]
+    },
+    {
+      "item": "commodity_ship_hull_panels",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_ship_hull_panels"
+      ]
+    },
+    {
+      "item": "commodity_sidearms",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_sidearms"
+      ]
+    },
+    {
+      "item": "commodity_slaves",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_slaves"
+      ]
+    },
+    {
+      "item": "commodity_software",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_software"
+      ]
+    },
+    {
+      "item": "commodity_synthpaste",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_synthpaste"
+      ]
+    },
+    {
+      "item": "commodity_tea",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_tea"
+      ]
+    },
+    {
+      "item": "commodity_textberne",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_textberne"
+      ]
+    },
+    {
+      "item": "commodity_tobacco",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_tobacco"
+      ]
+    },
+    {
+      "item": "commodity_tourists",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_tourists"
+      ]
+    },
+    {
+      "item": "commodity_tradelane_parts",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_tradelane_parts"
+      ]
+    },
+    {
+      "item": "commodity_unionecorse",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_unionecorse"
+      ]
+    },
+    {
+      "item": "commodity_unioners",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_unioners"
+      ]
+    },
+    {
+      "item": "commodity_vacationers",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_vacationers"
+      ]
+    },
+    {
+      "item": "commodity_violation1",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_violation1"
+      ]
+    },
+    {
+      "item": "commodity_violation10",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_violation10"
+      ]
+    },
+    {
+      "item": "commodity_violation11",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_violation11"
+      ]
+    },
+    {
+      "item": "commodity_violation2",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_violation2"
+      ]
+    },
+    {
+      "item": "commodity_violation3",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_violation3"
+      ]
+    },
+    {
+      "item": "commodity_violation4",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_violation4"
+      ]
+    },
+    {
+      "item": "commodity_violation5",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_violation5"
+      ]
+    },
+    {
+      "item": "commodity_violation6",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_violation6"
+      ]
+    },
+    {
+      "item": "commodity_violation7",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_violation7"
+      ]
+    },
+    {
+      "item": "commodity_violation8",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_violation8"
+      ]
+    },
+    {
+      "item": "commodity_violation9",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_violation9"
+      ]
+    },
+    {
+      "item": "commodity_vips",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_vips"
+      ]
+    },
+    {
+      "item": "commodity_warning",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_warning"
+      ]
+    },
+    {
+      "item": "commodity_wild",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_wild"
+      ]
+    },
+    {
+      "item": "commodity_wine",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_wine"
+      ]
+    },
+    {
+      "item": "commodity_xenobiotic",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_xenobiotic"
+      ]
+    },
+    {
+      "item": "commodity_xenos",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_xenos"
+      ]
+    },
+    {
+      "item": "commodity_zoners",
+      "quantity": 1000000,
+      "sources": [
+        "output:craft_zoners"
+      ]
+    }
+  ]
+}

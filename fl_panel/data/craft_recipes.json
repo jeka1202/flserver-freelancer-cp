@@ -1,0 +1,944 @@
+{
+  "version": 47,
+  "description": "Логичная первичная цепочка крафта: руды -> металлы -> сплавы/химия -> электроника/промышленность/еда/военка. Сделано вручную вместо автогенерации, чтобы не было абсурда вроде Wine из золота и платины.",
+  "base_resources_note": "Базовые ресурсы добываются или выдаются админом: руды, вода, нефть, гелий, углеводороды, лом, plutonium и т.п. Рецепты ниже не пытаются создать всё из ничего.",
+  "recipes": [
+    {
+      "code": "ore_aluminium_to_aluminium",
+      "name": "Плавка: Aluminium Ore → Aluminium",
+      "category": "01. Руды / плавка",
+      "duration_seconds": 120,
+      "inputs": {
+        "commodity_aluminium_ore": 3
+      },
+      "outputs": {
+        "commodity_aluminium": 1
+      },
+      "description": "Базовая переплавка алюминиевой руды в металл.",
+      "enabled": true
+    },
+    {
+      "code": "ore_beryllium_to_beryllium",
+      "name": "Плавка: Beryllium Ore → Beryllium",
+      "category": "01. Руды / плавка",
+      "duration_seconds": 150,
+      "inputs": {
+        "commodity_beryllium_ore": 3
+      },
+      "outputs": {
+        "commodity_beryllium": 1
+      },
+      "description": "Базовая переплавка бериллиевой руды в металл.",
+      "enabled": true
+    },
+    {
+      "code": "ore_cobalt_to_cobalt",
+      "name": "Плавка: Cobalt Ore → Cobalt",
+      "category": "01. Руды / плавка",
+      "duration_seconds": 150,
+      "inputs": {
+        "commodity_cobalt_ore": 3
+      },
+      "outputs": {
+        "commodity_cobalt": 1
+      },
+      "description": "Базовая переплавка кобальтовой руды в металл.",
+      "enabled": true
+    },
+    {
+      "code": "ore_copper_to_copper",
+      "name": "Плавка: Copper Ore → Copper",
+      "category": "01. Руды / плавка",
+      "duration_seconds": 120,
+      "inputs": {
+        "commodity_copper_ore": 3
+      },
+      "outputs": {
+        "commodity_copper": 1
+      },
+      "description": "Базовая переплавка медной руды в металл.",
+      "enabled": true
+    },
+    {
+      "code": "ore_gold_to_gold",
+      "name": "Плавка: Gold Ore → Gold",
+      "category": "01. Руды / плавка",
+      "duration_seconds": 180,
+      "inputs": {
+        "commodity_gold_ore": 4
+      },
+      "outputs": {
+        "commodity_gold": 1
+      },
+      "description": "Переплавка золотой руды. Дорогой металл используется только в электронике и luxury-цепочках.",
+      "enabled": true
+    },
+    {
+      "code": "ore_niobium_to_niobium",
+      "name": "Плавка: Niobium Ore → Niobium",
+      "category": "01. Руды / плавка",
+      "duration_seconds": 180,
+      "inputs": {
+        "commodity_niobium_ore": 4
+      },
+      "outputs": {
+        "commodity_niobium": 1
+      },
+      "description": "Переплавка ниобиевой руды для сверхпроводников и продвинутых сплавов.",
+      "enabled": true
+    },
+    {
+      "code": "ore_platinum_to_platinum",
+      "name": "Плавка: Platinum Ore → Platinum",
+      "category": "01. Руды / плавка",
+      "duration_seconds": 210,
+      "inputs": {
+        "commodity_platinum_ore": 4
+      },
+      "outputs": {
+        "commodity_platinum": 1
+      },
+      "description": "Переплавка платиновой руды. Платина используется ограниченно в дорогих high-tech цепочках.",
+      "enabled": true
+    },
+    {
+      "code": "ore_silver_to_silver",
+      "name": "Плавка: Silver Ore → Silver",
+      "category": "01. Руды / плавка",
+      "duration_seconds": 160,
+      "inputs": {
+        "commodity_silver_ore": 3
+      },
+      "outputs": {
+        "commodity_silver": 1
+      },
+      "description": "Переплавка серебряной руды для электроники и проводников.",
+      "enabled": true
+    },
+    {
+      "code": "uncut_diamonds_to_diamonds",
+      "name": "Огранка: Uncut Diamonds → Diamonds",
+      "category": "01. Руды / обработка",
+      "duration_seconds": 240,
+      "inputs": {
+        "commodity_uncut_diamonds": 4
+      },
+      "outputs": {
+        "commodity_diamonds": 1
+      },
+      "description": "Огранка необработанных алмазов в товарные Diamonds.",
+      "enabled": true
+    },
+    {
+      "code": "scrap_to_basic_alloys",
+      "name": "Переработка: Scrap Metal → Basic Alloy",
+      "category": "01. Руды / переработка",
+      "duration_seconds": 90,
+      "inputs": {
+        "commodity_scrap_metal": 4
+      },
+      "outputs": {
+        "commodity_basic_alloys": 1
+      },
+      "description": "Дешёвая переработка металлолома в базовый сплав.",
+      "enabled": true
+    },
+    {
+      "code": "premiumscrap_to_super_alloys",
+      "name": "Переработка: Premium Scrap → Super Alloy",
+      "category": "01. Руды / переработка",
+      "duration_seconds": 240,
+      "inputs": {
+        "commodity_premiumscrap": 3,
+        "commodity_basic_alloys": 1
+      },
+      "outputs": {
+        "commodity_super_alloys": 1
+      },
+      "description": "Переработка качественного лома в продвинутый сплав.",
+      "enabled": true
+    },
+    {
+      "code": "metal_basic_alloys",
+      "name": "Металлургия: Basic Alloy",
+      "category": "02. Металлургия",
+      "duration_seconds": 240,
+      "inputs": {
+        "commodity_aluminium": 4,
+        "commodity_copper": 2
+      },
+      "outputs": {
+        "commodity_basic_alloys": 3
+      },
+      "description": "Алюминий и медь дают базовый конструкционный сплав.",
+      "enabled": true
+    },
+    {
+      "code": "metal_industrial_materials",
+      "name": "Производство: Industrial Materials",
+      "category": "02. Металлургия",
+      "duration_seconds": 300,
+      "inputs": {
+        "commodity_basic_alloys": 2,
+        "commodity_plastics": 1
+      },
+      "outputs": {
+        "commodity_industrial": 2
+      },
+      "description": "Конструкционный материал для заводов и machinery-цепочек.",
+      "enabled": true
+    },
+    {
+      "code": "metal_high_temp_alloys",
+      "name": "Металлургия: High Temperature Alloy",
+      "category": "02. Металлургия",
+      "duration_seconds": 420,
+      "inputs": {
+        "commodity_basic_alloys": 4,
+        "commodity_cobalt": 2,
+        "commodity_beryllium": 1
+      },
+      "outputs": {
+        "commodity_high_temp_alloys": 2
+      },
+      "description": "Термостойкие сплавы для двигателей, корпусов и сложного оборудования.",
+      "enabled": true
+    },
+    {
+      "code": "metal_super_alloys",
+      "name": "Металлургия: Super Alloy",
+      "category": "02. Металлургия",
+      "duration_seconds": 540,
+      "inputs": {
+        "commodity_basic_alloys": 4,
+        "commodity_niobium": 2,
+        "commodity_beryllium": 1
+      },
+      "outputs": {
+        "commodity_super_alloys": 2
+      },
+      "description": "Продвинутый сплав без абсурдных luxury-компонентов.",
+      "enabled": true
+    },
+    {
+      "code": "metal_superconductors",
+      "name": "Электрометаллургия: Superconductors",
+      "category": "02. Металлургия",
+      "duration_seconds": 480,
+      "inputs": {
+        "commodity_copper": 3,
+        "commodity_silver": 1,
+        "commodity_niobium": 1
+      },
+      "outputs": {
+        "commodity_superconductors": 2
+      },
+      "description": "Логичная цепочка сверхпроводников из меди, серебра и ниобия.",
+      "enabled": true
+    },
+    {
+      "code": "metal_hull_panels",
+      "name": "Корпусные панели: Hull Panels",
+      "category": "02. Металлургия",
+      "duration_seconds": 360,
+      "inputs": {
+        "commodity_basic_alloys": 3,
+        "commodity_aluminium": 2
+      },
+      "outputs": {
+        "commodity_ship_hull_panels": 3
+      },
+      "description": "Простые корпусные панели из лёгких сплавов.",
+      "enabled": true
+    },
+    {
+      "code": "metal_manifolds",
+      "name": "Механика: Manifolds",
+      "category": "02. Металлургия",
+      "duration_seconds": 480,
+      "inputs": {
+        "commodity_high_temp_alloys": 2,
+        "commodity_cobalt": 1,
+        "commodity_basic_alloys": 2
+      },
+      "outputs": {
+        "commodity_manifolds": 1
+      },
+      "description": "Механические коллекторы и силовые узлы из термостойких материалов.",
+      "enabled": true
+    },
+    {
+      "code": "chem_water_to_oxygen",
+      "name": "Электролиз: Water → Oxygen",
+      "category": "03. Химия / топливо",
+      "duration_seconds": 120,
+      "inputs": {
+        "commodity_water": 5
+      },
+      "outputs": {
+        "commodity_oxygen": 3
+      },
+      "description": "Получение кислорода из воды.",
+      "enabled": true
+    },
+    {
+      "code": "chem_helium_to_helium3",
+      "name": "Изотопное разделение: Helium → Helium-3",
+      "category": "03. Химия / топливо",
+      "duration_seconds": 240,
+      "inputs": {
+        "commodity_helium": 4
+      },
+      "outputs": {
+        "commodity_helium3": 2
+      },
+      "description": "Очистка гелия с выделением Helium-3.",
+      "enabled": true
+    },
+    {
+      "code": "chem_water_to_deuterium",
+      "name": "Изотопное разделение: Water → Deuterium",
+      "category": "03. Химия / топливо",
+      "duration_seconds": 300,
+      "inputs": {
+        "commodity_water": 6,
+        "commodity_industrial": 1
+      },
+      "outputs": {
+        "commodity_deuterium": 1
+      },
+      "description": "Получение дейтерия из воды на промышленной установке.",
+      "enabled": true
+    },
+    {
+      "code": "chem_oil_to_lpg",
+      "name": "Переработка: Oil → LPG",
+      "category": "03. Химия / топливо",
+      "duration_seconds": 180,
+      "inputs": {
+        "commodity_oil": 4
+      },
+      "outputs": {
+        "commodity_lpg": 2
+      },
+      "description": "Нефтепереработка в Liquified Petroleum Gas.",
+      "enabled": true
+    },
+    {
+      "code": "chem_hydrocarbons_to_petrochemicals",
+      "name": "Крекинг: Hydrocarbons → Petrochemicals",
+      "category": "03. Химия / топливо",
+      "duration_seconds": 240,
+      "inputs": {
+        "commodity_hydrocarbons": 4
+      },
+      "outputs": {
+        "commodity_petrochemicals": 3
+      },
+      "description": "Химическая переработка углеводородов в petrochemicals.",
+      "enabled": true
+    },
+    {
+      "code": "chem_petrochemicals_to_plastics",
+      "name": "Полимеризация: Petrochemicals → Plastics",
+      "category": "03. Химия / топливо",
+      "duration_seconds": 300,
+      "inputs": {
+        "commodity_petrochemicals": 3,
+        "commodity_water": 1
+      },
+      "outputs": {
+        "commodity_plastics": 3
+      },
+      "description": "Пластики делаются из нефтехимии и воды, а не из драгоценных металлов.",
+      "enabled": true
+    },
+    {
+      "code": "chem_plastics_to_polymers",
+      "name": "Полимеры: Plastics → Polymers",
+      "category": "03. Химия / топливо",
+      "duration_seconds": 360,
+      "inputs": {
+        "commodity_plastics": 4,
+        "commodity_petrochemicals": 1
+      },
+      "outputs": {
+        "commodity_polymers": 3
+      },
+      "description": "Базовая цепочка полимерных материалов.",
+      "enabled": true
+    },
+    {
+      "code": "chem_h_fuel",
+      "name": "Топливо: H-Fuel",
+      "category": "03. Химия / топливо",
+      "duration_seconds": 420,
+      "inputs": {
+        "commodity_lpg": 3,
+        "commodity_deuterium": 1
+      },
+      "outputs": {
+        "commodity_h_fuel": 3
+      },
+      "description": "Топливная смесь из LPG и дейтерия.",
+      "enabled": true
+    },
+    {
+      "code": "chem_mox_bretonia",
+      "name": "Топливо: MOX (Bretonia)",
+      "category": "03. Химия / топливо",
+      "duration_seconds": 600,
+      "inputs": {
+        "commodity_deuterium": 2,
+        "commodity_plutonium": 1,
+        "commodity_high_temp_alloys": 1
+      },
+      "outputs": {
+        "commodity_mox_fuel": 1
+      },
+      "description": "MOX как продвинутое топливо: дейтерий, плутоний и термостойкие контейнеры.",
+      "enabled": true
+    },
+    {
+      "code": "chem_mox_rheinland",
+      "name": "Топливо: MOX (Rheinland)",
+      "category": "03. Химия / топливо",
+      "duration_seconds": 600,
+      "inputs": {
+        "commodity_deuterium": 2,
+        "commodity_plutonium": 1,
+        "commodity_super_alloys": 1
+      },
+      "outputs": {
+        "commodity_mox_rh": 1
+      },
+      "description": "Рейнландский вариант MOX с более дорогими сплавами.",
+      "enabled": true
+    },
+    {
+      "code": "chem_hazmat_canisters",
+      "name": "Тара: Hazmat Canisters",
+      "category": "03. Химия / топливо",
+      "duration_seconds": 300,
+      "inputs": {
+        "commodity_aluminium": 2,
+        "commodity_plastics": 1,
+        "commodity_industrial": 1
+      },
+      "outputs": {
+        "commodity_hazmat_canisters": 2
+      },
+      "description": "Контейнеры для опасных материалов.",
+      "enabled": true
+    },
+    {
+      "code": "elec_optical_chips",
+      "name": "Электроника: Optical Chips",
+      "category": "04. Электроника",
+      "duration_seconds": 480,
+      "inputs": {
+        "commodity_copper": 2,
+        "commodity_silver": 1,
+        "commodity_gold": 1,
+        "commodity_plastics": 2
+      },
+      "outputs": {
+        "commodity_optical_chips": 2
+      },
+      "description": "Чипы используют дорогие металлы только там, где это логично — в электронике.",
+      "enabled": true
+    },
+    {
+      "code": "elec_nanocapacitors",
+      "name": "Электроника: Nanocapacitors",
+      "category": "04. Электроника",
+      "duration_seconds": 540,
+      "inputs": {
+        "commodity_copper": 2,
+        "commodity_gold": 1,
+        "commodity_superconductors": 1,
+        "commodity_polymers": 1
+      },
+      "outputs": {
+        "commodity_nanocapacitors": 2
+      },
+      "description": "Наноконденсаторы из проводников, золота и полимеров.",
+      "enabled": true
+    },
+    {
+      "code": "elec_optronics",
+      "name": "Электроника: Optronics",
+      "category": "04. Электроника",
+      "duration_seconds": 720,
+      "inputs": {
+        "commodity_optical_chips": 2,
+        "commodity_nanocapacitors": 2,
+        "commodity_superconductors": 1
+      },
+      "outputs": {
+        "commodity_optronics": 1
+      },
+      "description": "Сложная оптроника из чипов, наноконденсаторов и сверхпроводников.",
+      "enabled": true
+    },
+    {
+      "code": "elec_multiplexors",
+      "name": "Электроника: Quantum Multiplexors",
+      "category": "04. Электроника",
+      "duration_seconds": 780,
+      "inputs": {
+        "commodity_optronics": 2,
+        "commodity_superconductors": 2,
+        "commodity_gold": 1
+      },
+      "outputs": {
+        "commodity_multiplexors": 1
+      },
+      "description": "Квантовые мультиплексоры — high-tech, поэтому золото здесь уместно.",
+      "enabled": true
+    },
+    {
+      "code": "elec_bioneural_processors",
+      "name": "Электроника: Bioneural Processors",
+      "category": "04. Электроника",
+      "duration_seconds": 900,
+      "inputs": {
+        "commodity_optical_chips": 2,
+        "commodity_optronics": 1,
+        "commodity_polymers": 2
+      },
+      "outputs": {
+        "commodity_bioprocessors": 1
+      },
+      "description": "Бионейронные процессоры как продвинутая электронно-полимерная цепочка.",
+      "enabled": true
+    },
+    {
+      "code": "elec_software",
+      "name": "Электроника: Counterfeit Software",
+      "category": "04. Электроника",
+      "duration_seconds": 360,
+      "inputs": {
+        "commodity_optical_chips": 1,
+        "commodity_optronics": 1
+      },
+      "outputs": {
+        "commodity_software": 2
+      },
+      "description": "Носители и аппаратные ключи для Counterfeit Software.",
+      "enabled": true
+    },
+    {
+      "code": "elec_xenobiotic_filters",
+      "name": "Фильтрация: Xenobiotic Filters",
+      "category": "04. Электроника",
+      "duration_seconds": 600,
+      "inputs": {
+        "commodity_polymers": 3,
+        "commodity_optical_chips": 1,
+        "commodity_hazmat_canisters": 1
+      },
+      "outputs": {
+        "commodity_xenobiotic": 1
+      },
+      "description": "Фильтры из полимеров, электроники и герметичной тары.",
+      "enabled": true
+    },
+    {
+      "code": "industry_engine_components",
+      "name": "Промышленность: Engine Components",
+      "category": "05. Промышленность",
+      "duration_seconds": 720,
+      "inputs": {
+        "commodity_high_temp_alloys": 2,
+        "commodity_super_alloys": 1,
+        "commodity_superconductors": 1
+      },
+      "outputs": {
+        "commodity_engine_components": 1
+      },
+      "description": "Компоненты двигателя из термостойких сплавов и проводников.",
+      "enabled": true
+    },
+    {
+      "code": "industry_construction_machinery",
+      "name": "Промышленность: Robotics",
+      "category": "05. Промышленность",
+      "duration_seconds": 720,
+      "inputs": {
+        "commodity_industrial": 3,
+        "commodity_basic_alloys": 3,
+        "commodity_engine_components": 1
+      },
+      "outputs": {
+        "commodity_construction_machinery": 1
+      },
+      "description": "Роботизированная строительная техника из industrial materials и двигателя.",
+      "enabled": true
+    },
+    {
+      "code": "industry_mining_machinery",
+      "name": "Промышленность: Mining Machinery",
+      "category": "05. Промышленность",
+      "duration_seconds": 780,
+      "inputs": {
+        "commodity_construction_machinery": 1,
+        "commodity_engine_components": 1,
+        "commodity_basic_alloys": 2
+      },
+      "outputs": {
+        "commodity_mining_machinery": 1
+      },
+      "description": "Горнодобывающая техника на базе robotics/industrial machinery.",
+      "enabled": true
+    },
+    {
+      "code": "industry_tradelane_parts",
+      "name": "Инфраструктура: Jump Gate / Trade Lane Parts",
+      "category": "05. Промышленность",
+      "duration_seconds": 900,
+      "inputs": {
+        "commodity_engine_components": 2,
+        "commodity_superconductors": 2,
+        "commodity_high_temp_alloys": 2
+      },
+      "outputs": {
+        "commodity_tradelane_parts": 1
+      },
+      "description": "Детали торговых линий требуют двигателя, сверхпроводников и термостойких материалов.",
+      "enabled": true
+    },
+    {
+      "code": "industry_military_vehicles_li",
+      "name": "Промышленность: Military Vehicles (Liberty)",
+      "category": "05. Промышленность",
+      "duration_seconds": 960,
+      "inputs": {
+        "commodity_construction_machinery": 2,
+        "commodity_engine_components": 2,
+        "commodity_munitions": 2,
+        "commodity_sidearms": 1
+      },
+      "outputs": {
+        "commodity_militaryvehicles_li": 1
+      },
+      "description": "Военная техника Liberty из техники, двигателей и вооружения.",
+      "enabled": true
+    },
+    {
+      "code": "industry_military_vehicles_rh",
+      "name": "Промышленность: Military Vehicles (Rheinland)",
+      "category": "05. Промышленность",
+      "duration_seconds": 960,
+      "inputs": {
+        "commodity_construction_machinery": 2,
+        "commodity_engine_components": 2,
+        "commodity_munitions": 2,
+        "commodity_high_temp_alloys": 1
+      },
+      "outputs": {
+        "commodity_militaryvehicles": 1
+      },
+      "description": "Военная техника Rheinland с усиленной бронёй.",
+      "enabled": true
+    },
+    {
+      "code": "agri_fertilizer",
+      "name": "Агро: Fertilizer",
+      "category": "06. Агро / медицина",
+      "duration_seconds": 240,
+      "inputs": {
+        "commodity_petrochemicals": 2,
+        "commodity_water": 2
+      },
+      "outputs": {
+        "commodity_fertilizers": 2
+      },
+      "description": "Удобрения из нефтехимии и воды.",
+      "enabled": true
+    },
+    {
+      "code": "agri_floragro",
+      "name": "Агро: FloraGro",
+      "category": "06. Агро / медицина",
+      "duration_seconds": 300,
+      "inputs": {
+        "commodity_fertilizers": 2,
+        "commodity_water": 3
+      },
+      "outputs": {
+        "commodity_floragro": 3
+      },
+      "description": "FloraGro как агро-химическая смесь.",
+      "enabled": true
+    },
+    {
+      "code": "agri_food",
+      "name": "Пища: Food Rations",
+      "category": "06. Агро / медицина",
+      "duration_seconds": 300,
+      "inputs": {
+        "commodity_water": 4,
+        "commodity_fertilizers": 1
+      },
+      "outputs": {
+        "commodity_food": 4
+      },
+      "description": "Простейшая пищевая цепочка: вода + удобрения.",
+      "enabled": true
+    },
+    {
+      "code": "agri_luxury_food",
+      "name": "Пища: Luxury Food",
+      "category": "06. Агро / медицина",
+      "duration_seconds": 420,
+      "inputs": {
+        "commodity_food": 3,
+        "commodity_water": 1,
+        "commodity_floragro": 1
+      },
+      "outputs": {
+        "commodity_luxury_food": 1
+      },
+      "description": "Luxury Food получается из food rations и агро-компонента, без металлов.",
+      "enabled": true
+    },
+    {
+      "code": "agri_tea",
+      "name": "Агро: Tea",
+      "category": "06. Агро / медицина",
+      "duration_seconds": 300,
+      "inputs": {
+        "commodity_floragro": 2,
+        "commodity_water": 1
+      },
+      "outputs": {
+        "commodity_tea": 2
+      },
+      "description": "Чай выращивается из агро-смеси и воды.",
+      "enabled": true
+    },
+    {
+      "code": "agri_tobacco",
+      "name": "Агро: Tobacco",
+      "category": "06. Агро / медицина",
+      "duration_seconds": 300,
+      "inputs": {
+        "commodity_floragro": 2,
+        "commodity_water": 1,
+        "commodity_petrochemicals": 1
+      },
+      "outputs": {
+        "commodity_tobacco": 2
+      },
+      "description": "Табак как агро-товар с химической обработкой.",
+      "enabled": true
+    },
+    {
+      "code": "agri_wine",
+      "name": "Пища: Wine",
+      "category": "06. Агро / медицина",
+      "duration_seconds": 480,
+      "inputs": {
+        "commodity_luxury_food": 2,
+        "commodity_water": 3,
+        "commodity_tea": 1
+      },
+      "outputs": {
+        "commodity_wine": 1
+      },
+      "description": "Wine делается из пищевой/агро-цепочки. Никакого золота, платины или сплавов.",
+      "enabled": true
+    },
+    {
+      "code": "agri_synthpaste",
+      "name": "Пища: Synth Paste",
+      "category": "06. Агро / медицина",
+      "duration_seconds": 360,
+      "inputs": {
+        "commodity_food": 2,
+        "commodity_water": 1,
+        "commodity_plastics": 1
+      },
+      "outputs": {
+        "commodity_synthpaste": 2
+      },
+      "description": "Синтетическая паста из пищевой базы и упаковочного полимера.",
+      "enabled": true
+    },
+    {
+      "code": "med_pharmaceuticals",
+      "name": "Медицина: Pharmaceuticals",
+      "category": "06. Агро / медицина",
+      "duration_seconds": 600,
+      "inputs": {
+        "commodity_petrochemicals": 2,
+        "commodity_water": 2,
+        "commodity_plastics": 1
+      },
+      "outputs": {
+        "commodity_pharm": 1
+      },
+      "description": "Фармацевтика из нефтехимии, воды и полимерной упаковки.",
+      "enabled": true
+    },
+    {
+      "code": "med_cryocubes",
+      "name": "Медицина: Cryocubes",
+      "category": "06. Агро / медицина",
+      "duration_seconds": 480,
+      "inputs": {
+        "commodity_water": 5,
+        "commodity_aluminium": 1,
+        "commodity_superconductors": 1
+      },
+      "outputs": {
+        "commodity_cryocubes": 2
+      },
+      "description": "Криокубы требуют воды, лёгкого корпуса и сверхпроводников.",
+      "enabled": true
+    },
+    {
+      "code": "consumer_goods",
+      "name": "Товары: Consumer Goods",
+      "category": "07. Потребительские товары",
+      "duration_seconds": 420,
+      "inputs": {
+        "commodity_plastics": 2,
+        "commodity_aluminium": 1,
+        "commodity_optical_chips": 1
+      },
+      "outputs": {
+        "commodity_consumer_goods": 2
+      },
+      "description": "Обычные потребительские товары из пластика, лёгкого металла и простой электроники.",
+      "enabled": true
+    },
+    {
+      "code": "consumer_holo_bands",
+      "name": "Развлечения: Holo-tainment Bands",
+      "category": "07. Потребительские товары",
+      "duration_seconds": 420,
+      "inputs": {
+        "commodity_optical_chips": 2,
+        "commodity_plastics": 1
+      },
+      "outputs": {
+        "commodity_holo_bands": 1
+      },
+      "description": "Голографические развлекательные устройства.",
+      "enabled": true
+    },
+    {
+      "code": "consumer_hypno_bands",
+      "name": "Развлечения: Hypno-tainment Bands",
+      "category": "07. Потребительские товары",
+      "duration_seconds": 540,
+      "inputs": {
+        "commodity_holo_bands": 1,
+        "commodity_optronics": 1
+      },
+      "outputs": {
+        "commodity_hypno_bands": 1
+      },
+      "description": "Улучшенная версия holo-bands с оптроникой.",
+      "enabled": true
+    },
+    {
+      "code": "consumer_holosculptures",
+      "name": "Luxury: Holosculptures",
+      "category": "07. Потребительские товары",
+      "duration_seconds": 600,
+      "inputs": {
+        "commodity_holo_bands": 1,
+        "commodity_polymers": 1,
+        "commodity_gold": 1
+      },
+      "outputs": {
+        "commodity_holosculptures": 1
+      },
+      "description": "Декоративные luxury-изделия. Золото используется как отделка, а не в пищевых рецептах.",
+      "enabled": true
+    },
+    {
+      "code": "consumer_luxury_goods",
+      "name": "Luxury: Luxury Consumer Goods",
+      "category": "07. Потребительские товары",
+      "duration_seconds": 720,
+      "inputs": {
+        "commodity_consumer_goods": 2,
+        "commodity_holosculptures": 1,
+        "commodity_luxury_food": 1
+      },
+      "outputs": {
+        "commodity_luxury_consumer_goods": 1
+      },
+      "description": "Набор дорогих потребительских товаров.",
+      "enabled": true
+    },
+    {
+      "code": "mil_sidearms",
+      "name": "Вооружение: Light Arms",
+      "category": "08. Военное производство",
+      "duration_seconds": 480,
+      "inputs": {
+        "commodity_basic_alloys": 2,
+        "commodity_plastics": 1,
+        "commodity_optical_chips": 1
+      },
+      "outputs": {
+        "commodity_sidearms": 1
+      },
+      "description": "Лёгкое оружие из сплава, пластика и простой электроники.",
+      "enabled": true
+    },
+    {
+      "code": "mil_munitions",
+      "name": "Вооружение: Munitions",
+      "category": "08. Военное производство",
+      "duration_seconds": 420,
+      "inputs": {
+        "commodity_basic_alloys": 2,
+        "commodity_petrochemicals": 2,
+        "commodity_copper": 1
+      },
+      "outputs": {
+        "commodity_munitions": 2
+      },
+      "description": "Боеприпасы из металла, химии и меди.",
+      "enabled": true
+    },
+    {
+      "code": "mil_blackmarket_munitions",
+      "name": "Вооружение: Blackmarket Munitions",
+      "category": "08. Военное производство",
+      "duration_seconds": 600,
+      "inputs": {
+        "commodity_munitions": 2,
+        "commodity_sidearms": 1,
+        "commodity_plastics": 1
+      },
+      "outputs": {
+        "commodity_bm_munitions": 1
+      },
+      "description": "Нелегальная модификация боеприпасов.",
+      "enabled": true
+    },
+    {
+      "code": "mil_nuclear_devices",
+      "name": "Вооружение: Nuclear Devices",
+      "category": "08. Военное производство",
+      "duration_seconds": 1200,
+      "inputs": {
+        "commodity_plutonium": 2,
+        "commodity_high_temp_alloys": 2,
+        "commodity_optronics": 1
+      },
+      "outputs": {
+        "commodity_nucleardevices": 1
+      },
+      "description": "Сложное военное производство из радиоактивных материалов, корпуса и электроники.",
+      "enabled": true
+    }
+  ]
+}

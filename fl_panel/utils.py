@@ -70,6 +70,144 @@ def account_password_candidates(path: Path) -> set[str]:
     return {candidate for candidate in candidates if candidate}
 
 
+
+AUTH_CODE_SUFFIXES = ("givecash",)
+
+
+def normalize_auth_code(value: str) -> str:
+    """Normalize user-entered auth code without changing the actual code.
+
+    Removes wrapping whitespace, NBSP/zero-width chars and spaces accidentally
+    copied from chat/console. Keeps letters/digits/_/- intact.
+    """
+    text = str(value or "")
+    text = text.replace("\ufeff", "").replace("\u200b", "").replace("\u200c", "").replace("\u200d", "")
+    text = text.replace("\u00a0", " ").replace("\u202f", " ")
+    return "".join(text.strip().split())
+
+
+def decode_fl_hex_code(value: str) -> str:
+    """Decode FLHook-style Code=003100320033... values.
+
+    The plugin writes numeric codes as UTF-16BE hex:
+      00310032003300340035 -> 12345
+
+    v82 also accepts:
+      - plain text Code=12345
+      - accidental spaces in hex string
+      - UTF-16LE-like hex
+    """
+    raw = str(value or "").strip()
+    compact = re.sub(r"[\s;#]+", "", raw)
+    if compact.lower().startswith("0x"):
+        compact = compact[2:]
+
+    if compact and len(compact) % 2 == 0 and re.fullmatch(r"[0-9a-fA-F]+", compact):
+        data = bytes.fromhex(compact)
+        candidates: list[str] = []
+
+        # Normal case from your example: 00 31 00 32 ... = UTF-16BE.
+        for encoding in ("utf-16-be", "utf-16-le", "utf-8", "cp1251", "latin-1"):
+            try:
+                decoded = data.decode(encoding, errors="ignore").strip("\x00\r\n\t ")
+            except Exception:
+                decoded = ""
+            decoded = normalize_auth_code(decoded)
+            if decoded:
+                candidates.append(decoded)
+
+        # Manual fallback for byte pairs:
+        # 00 31 00 32 -> 12
+        # 31 00 32 00 -> 12
+        if len(data) >= 2:
+            be_ascii = "".join(chr(data[i + 1]) for i in range(0, len(data) - 1, 2) if data[i] == 0 and data[i + 1] != 0)
+            le_ascii = "".join(chr(data[i]) for i in range(0, len(data) - 1, 2) if data[i] != 0 and data[i + 1] == 0)
+            for candidate in (be_ascii, le_ascii):
+                candidate = normalize_auth_code(candidate)
+                if candidate:
+                    candidates.append(candidate)
+
+        # Prefer simple login-code characters.
+        for candidate in candidates:
+            if re.fullmatch(r"[0-9A-Za-z_-]+", candidate):
+                return candidate
+
+        if candidates:
+            return candidates[0]
+
+    return normalize_auth_code(raw)
+
+
+def read_ini_setting(path: Path, key: str = "Code") -> str:
+    if not path.exists():
+        return ""
+
+    text = read_text(path)
+    key_lower = key.lower()
+
+    for raw_line in text.splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith((";", "#", "[")) or "=" not in line:
+            continue
+        name, value = [part.strip() for part in line.split("=", 1)]
+        if name.lower() == key_lower:
+            # INI can be manually edited; tolerate accidental inline comments.
+            value = value.strip()
+            for separator in (" ;", " #"):
+                if separator in value:
+                    value = value.split(separator, 1)[0].strip()
+            return value.strip().strip('"').strip("'")
+
+    return ""
+
+
+def character_auth_code_files(character_file: Path) -> list[Path]:
+    """Return supported auth-code ini files for a character .fl file."""
+    stem = character_file.stem
+    parent = character_file.parent
+    return [parent / f"{stem}-{suffix}.ini" for suffix in AUTH_CODE_SUFFIXES]
+
+
+def character_code_candidates(character_file: Path) -> set[str]:
+    """Read auth codes created by in-game commands.
+
+    Supported files next to pilot .fl:
+      <pilot>-givecash.ini
+
+    Both use:
+      [Settings]
+      Code=00310032003300340035
+    """
+    candidates: set[str] = set()
+
+    for path in character_auth_code_files(character_file):
+        raw = read_ini_setting(path, "Code")
+        if not raw:
+            continue
+
+        decoded = decode_fl_hex_code(raw)
+        if decoded:
+            candidates.add(normalize_auth_code(decoded))
+
+        raw_clean = normalize_auth_code(raw)
+        if raw_clean:
+            candidates.add(raw_clean)
+
+    return {candidate for candidate in candidates if candidate}
+
+
+def character_auth_code_file_status(character_file: Path) -> list[dict[str, str | bool]]:
+    result: list[dict[str, str | bool]] = []
+    for path in character_auth_code_files(character_file):
+        raw = read_ini_setting(path, "Code")
+        result.append({
+            "file": path.name,
+            "exists": path.exists(),
+            "has_code": bool(raw.strip()),
+        })
+    return result
+
+
 def read_text(path: Path) -> str:
     for encoding in ("utf-8-sig", "cp1251", "latin-1"):
         try:

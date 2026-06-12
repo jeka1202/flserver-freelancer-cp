@@ -3,23 +3,26 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Вход · Freelancer Account Panel</title>
-<link rel="stylesheet" href="/static/style.css">
+<link rel="stylesheet" href="/static/style.css?v=98">
 <body>
+<div class="language-switcher" aria-label="Language">
+  <span>LANG</span>
+  <button type="button" data-lang-set="ru">RU</button>
+  <button type="button" data-lang-set="en">EN</button>
+</div>
 <main class="wrap">
   <div class="hud-logo">Freelancer</div>
   <section class="hero">
     <div class="card">
       <span class="pill">ACCOUNT CP</span>
       <h1>Личный кабинет пилота</h1>
-      <p class="muted">Введите имя персонажа или ID аккаунта. Пароль можно указать из файла <code>name</code>; для совместимости старый вход по ID аккаунта работает без пароля.</p>
+      <p class="muted">Вход только по имени пилота и коду доступа. Код создаётся в игре командой <code>/set cashcode</code>.</p>
       {{message}}
       <form method="post" action="/login">
-        <label>Логин</label>
-        <input name="login" placeholder="Athlon0104 или 23-f73f713c" autocomplete="username" required autofocus>
-        <label>Пароль</label>
-        <input name="password" type="password" placeholder="пароль из файла name, если используется">
-        <label>Персонаж, если вошли по ID аккаунта</label>
-        <input name="character" placeholder="необязательно">
+        <label>Имя пилота</label>
+        <input name="login" placeholder="точное имя пилота в игре" autocomplete="username" required autofocus>
+        <label>Код доступа</label>
+        <input name="password" type="password" placeholder="код из *-givecash.ini" required>
         <button>Войти в кабинет</button>
       </form>
       <p class="muted small">Администрирование вынесено отдельно: <a href="/admin">/admin</a>. Клиентская часть не показывает список чужих аккаунтов.</p>
@@ -36,6 +39,6 @@
   </section>
   <p class="footer">Freelancer Account Panel · Secure Link · Ion Data Network</p>
 </main>
-<script src="/static/tabs.js"></script>
+<script src="/static/tabs.js?v=98"></script>
 </body>
 </html>

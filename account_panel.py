@@ -1,6 +1,9 @@
+<<<<<<< Updated upstream
 #!/usr/bin/env python3
 """Entry point for the modular Freelancer Account Control Panel."""
 
+=======
+>>>>>>> Stashed changes
 from fl_panel.server import main
 
 
