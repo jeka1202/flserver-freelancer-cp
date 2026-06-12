@@ -13,7 +13,7 @@ def esc(value: Any) -> str:
 
 
 def page(title: str, body: str) -> bytes:
-    return f"""<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(title)}</title><link rel="stylesheet" href="/static/style.css"><body><main class="wrap">{body}<p class="footer">Freelancer Account Panel · клиентская часть показывает только персонажа после входа · админская логика отдельно в /admin</p></main><script src="/static/tabs.js"></script></body></html>""".encode()
+    return f"""<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(title)}</title><link rel="stylesheet" href="/static/style.css"><body><main class="wrap">{body}<p class="footer">Freelancer Account Panel · <a href="/game">браузерный прототип полёта</a> · клиентская часть показывает только персонажа после входа · админская логика отдельно в /admin</p></main><script src="/static/tabs.js"></script></body></html>""".encode()
 
 
 def render_login(repo, message: str = "") -> bytes:

@@ -51,6 +51,8 @@ class Handler(BaseHTTPRequestHandler):
                 self.send_html(render_cabinet(self.repo, session[0], session[1]))
         elif path == "/logout":
             self.logout()
+        elif path == "/game":
+            self.send_static("game.html")
         elif path == "/admin":
             self.send_html(render_admin(self.repo))
         elif path.startswith("/admin/account/"):
@@ -59,6 +61,9 @@ class Handler(BaseHTTPRequestHandler):
             self.send_html(render_admin_account(account)) if account else self.send_error(HTTPStatus.NOT_FOUND)
         elif path == "/api/accounts":
             self.send_json(self.admin_json())
+        elif path == "/api/game-data":
+            query = urllib.parse.parse_qs(parsed.query)
+            self.send_json(self.repo.public_game_data((query.get("system") or ["Li01"])[0]))
         elif path.startswith("/static/"):
             self.send_static(path.removeprefix("/static/"))
         else:

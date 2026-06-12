@@ -1,0 +1,143 @@
+@font-face {
+  font-family: AgencyFB;
+  src: url('/static/agencyfbcyrillic.ttf') format('truetype');
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #020611;
+  color: #dff8ff;
+  font: 20px/1.35 AgencyFB, 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: .04em;
+}
+
+#space {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at 50% 50%, #081426, #01040a 72%);
+}
+
+.hud {
+  position: fixed;
+  z-index: 2;
+  max-width: min(420px, 44vw);
+  padding: 16px 18px;
+  border: 1px solid rgba(73, 223, 255, .62);
+  background: linear-gradient(180deg, rgba(5, 17, 34, .82), rgba(1, 5, 13, .72));
+  box-shadow: 0 0 24px rgba(73, 223, 255, .18), inset 0 0 18px rgba(73, 223, 255, .08);
+  clip-path: polygon(0 14px, 14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%);
+}
+
+.top-left {
+  left: 18px;
+  top: 18px;
+}
+
+.top-right {
+  right: 18px;
+  top: 18px;
+}
+
+.bottom-left {
+  left: 18px;
+  bottom: 18px;
+}
+
+.bottom-right {
+  right: 18px;
+  bottom: 18px;
+}
+
+h1,
+h2,
+p {
+  margin: .25rem 0;
+}
+
+h1 {
+  font-size: 2.35rem;
+  text-transform: uppercase;
+  letter-spacing: .22em;
+  text-shadow: 0 0 14px #49dfff;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: #7af4ff;
+  text-transform: uppercase;
+}
+
+.muted {
+  color: #8eb1c9;
+}
+
+.back {
+  color: #7af4ff;
+  text-decoration: none;
+}
+
+select,
+button {
+  width: 100%;
+  margin: .35rem 0;
+  padding: .55rem .65rem;
+  border: 1px solid rgba(73, 223, 255, .6);
+  background: #04111f;
+  color: #dff8ff;
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+button:hover {
+  box-shadow: 0 0 18px rgba(73, 223, 255, .35);
+}
+
+.bar {
+  height: 12px;
+  margin: .6rem 0;
+  border: 1px solid rgba(73, 223, 255, .5);
+  background: rgba(0, 0, 0, .4);
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #2bd1ff, #ffd166);
+}
+
+.toast {
+  position: fixed;
+  left: 50%;
+  top: 18%;
+  transform: translateX(-50%);
+  z-index: 3;
+  padding: 14px 22px;
+  border: 1px solid #ffd166;
+  background: rgba(20, 14, 2, .82);
+  box-shadow: 0 0 30px rgba(255, 209, 102, .3);
+  font-size: 1.4rem;
+}
+
+.map {
+  transition: opacity .2s;
+}
+
+.map.hidden {
+  opacity: .18;
+}

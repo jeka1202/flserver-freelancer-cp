@@ -64,6 +64,22 @@ Administrative views are separated under `/admin`. They keep the operator search
 JSON export away from the player login flow. Protect `/admin` with VPN/reverse-proxy auth before
 publishing the service.
 
+
+## Browser flight prototype
+
+The panel also exposes a lightweight in-browser Freelancer-style flight prototype at
+<http://127.0.0.1:8080/game>. It reuses the repository game data instead of hard-coded
+content:
+
+- `IONCROSS/GAMEDATA_systems.txt`, `GAMEDATA_bases.txt` and `GAMEDATA_ships.txt` populate
+  the system picker, target names and ship selector;
+- `DATA/UNIVERSE/SYSTEMS/<system>/<system>.ini` supplies object positions for planets,
+  stations, suns, trade lanes and jump objects;
+- `/api/game-data?system=Li01` returns the browser-safe JSON used by the canvas renderer.
+
+Controls: `W/S` throttle, `A/D` turn, `Shift` afterburner, `Space` cruise impulse, `Tab`
+selects the nearest target, and `M` dims the map panel.
+
 ## Run locally
 
 ```bash

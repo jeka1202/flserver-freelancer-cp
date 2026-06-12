@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Freelancer Web Flight Prototype</title>
+<link rel="stylesheet" href="/static/game.css">
+<body>
+  <canvas id="space" aria-label="Браузерный прототип полёта по данным Freelancer"></canvas>
+  <aside class="hud top-left">
+    <a class="back" href="/">← панель</a>
+    <h1>Freelancer Web</h1>
+    <p id="system-name">Загрузка системы…</p>
+    <p class="muted">W/S — тяга, A/D — разворот, Shift — форсаж, Space — импульс, Tab — цель, M — карта.</p>
+  </aside>
+  <aside class="hud top-right">
+    <h2>Корабль</h2>
+    <select id="ship-select"></select>
+    <div class="bar"><span id="speed-bar"></span></div>
+    <p id="speed-readout">0 m/s</p>
+  </aside>
+  <aside class="hud bottom-left" id="target-panel">
+    <h2>Цель</h2>
+    <p id="target-name">нет цели</p>
+    <p id="target-distance" class="muted">Tab выберет ближайший объект</p>
+  </aside>
+  <aside class="hud bottom-right map" id="map-panel">
+    <h2>Системы</h2>
+    <select id="system-select"></select>
+    <button id="jump-button">Загрузить систему</button>
+    <p id="sources" class="muted"></p>
+  </aside>
+  <div id="dock-toast" class="toast" hidden></div>
+  <script src="/static/game.js"></script>
+</body>
+</html>

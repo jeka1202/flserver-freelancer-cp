@@ -44,7 +44,7 @@ class GameData:
                     nickname = parts[0]
                     name = parts[1] if len(parts) > 1 and parts[1] else nickname
                 item = GameItem(code=code, nickname=nickname, name=name, category=category)
-                for lookup_code in {code, nickname_hash(code), nickname, nickname_hash(nickname)}:
+                for lookup_code in {code, code.lower(), nickname, nickname.lower(), nickname_hash(code), nickname_hash(nickname)}:
                     items[lookup_code] = item
                     self.by_code[lookup_code] = item
                 self.by_nickname[nickname.lower()] = item
@@ -52,7 +52,7 @@ class GameData:
 
     def resolve(self, token: str | None) -> dict[str, str]:
         token = (token or "").strip()
-        item = self.by_code.get(token) or self.by_nickname.get(token.lower())
+        item = self.by_code.get(token) or self.by_code.get(token.lower()) or self.by_nickname.get(token.lower())
         if item:
             return {
                 "code": item.code,
