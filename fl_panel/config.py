@@ -4,6 +4,7 @@ ROOT = Path(__file__).resolve().parent.parent
 ACCOUNTS_DIR = ROOT / "Accts" / "MultiPlayer"
 IONCROSS_DIR = ROOT / "IONCROSS"
 STATIC_DIR = Path(__file__).resolve().parent / "static"
+DATA_DIR = ROOT / "DATA"
 CRAFTING_RECIPES_PATH = ROOT / "crafting_recipes.json"
 BANK_SECTION = "Bank"
 BANK_KEY = "balance"

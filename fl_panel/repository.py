@@ -6,7 +6,7 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
-from .config import CRAFTING_RECIPES_PATH, VISIT_TYPES
+from .config import CRAFTING_RECIPES_PATH, DATA_DIR, VISIT_TYPES
 from .crafting import CraftingSystem, read_cargo_inventory
 from .finance import read_bank_balance, read_character_money, write_bank_balance, write_character_money
 from .gamedata import GameData
@@ -18,6 +18,7 @@ from .utils import (
     format_seconds,
     intish,
     parse_fl,
+    read_text,
     split_csv,
 )
 
@@ -92,6 +93,98 @@ def parse_visits(data: dict[str, list[str]], gamedata: GameData) -> dict[str, An
         "raw_total": len(data.get("visit", [])),
     }
 
+
+
+
+def _short_game_item(item: Any) -> dict[str, str]:
+    return {"code": item.code, "nickname": item.nickname, "name": item.name}
+
+
+def _unique_game_items(items: list[Any]) -> list[Any]:
+    seen: set[tuple[str, str]] = set()
+    unique = []
+    for item in items:
+        key = (item.code.lower(), item.nickname.lower())
+        if key in seen:
+            continue
+        seen.add(key)
+        unique.append(item)
+    return unique
+
+
+def _matches_system_ini(path: Path, system_code: str) -> bool:
+    return path.is_file() and path.suffix.lower() == ".ini" and path.stem.lower() == system_code.lower()
+
+
+def _object_kind(raw: dict[str, str]) -> str:
+    nickname = raw.get("nickname", "").lower()
+    archetype = raw.get("archetype", "").lower()
+    if "trade_lane" in nickname or "trade_lane" in archetype or "tradelane" in nickname:
+        return "trade_lane"
+    if raw.get("base"):
+        return "base"
+    if "jump" in nickname or "jump" in archetype:
+        return "jump"
+    if "planet" in nickname or "planet" in archetype:
+        return "planet"
+    if "sun" in nickname or "sun" in archetype:
+        return "sun"
+    return "object"
+
+
+def parse_system_objects(system_code: str, gamedata: GameData, limit: int = 180) -> tuple[list[dict[str, Any]], str]:
+    systems_dir = DATA_DIR / "UNIVERSE" / "SYSTEMS"
+    system_ini = next((path for path in systems_dir.rglob("*.ini") if _matches_system_ini(path, system_code)), None) if systems_dir.exists() else None
+    if not system_ini:
+        return [], ""
+
+    objects: list[dict[str, Any]] = []
+    current: dict[str, str] | None = None
+
+    def flush() -> None:
+        if not current or "pos" not in current or "nickname" not in current:
+            return
+        coords = split_csv(current["pos"])
+        if len(coords) < 3:
+            return
+        try:
+            x = float(coords[0])
+            y = float(coords[1])
+            z = float(coords[2])
+        except ValueError:
+            return
+        nickname = current["nickname"]
+        resolved = gamedata.resolve(current.get("base") or nickname)
+        objects.append({
+            "nickname": nickname,
+            "name": resolved["name"] if resolved["name"] != nickname else nickname.replace("_", " "),
+            "kind": _object_kind(current),
+            "x": x,
+            "y": y,
+            "z": z,
+            "base": current.get("base", ""),
+            "archetype": current.get("archetype", ""),
+        })
+
+    for raw_line in read_text(system_ini).splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith((";", "#")):
+            continue
+        if line.startswith("[") and line.endswith("]"):
+            if line.lower() == "[object]":
+                flush()
+                current = {}
+            else:
+                flush()
+                current = None
+            continue
+        if current is None or "=" not in line:
+            continue
+        key, value = [part.strip() for part in line.split("=", 1)]
+        if key.lower() in {"nickname", "pos", "base", "archetype"}:
+            current[key.lower()] = value
+    flush()
+    return objects[:limit], str(system_ini.relative_to(DATA_DIR.parent))
 
 def build_character(account_id: str, account_path: Path, file_path: Path, gamedata: GameData) -> dict[str, Any]:
     data = parse_fl(file_path)
@@ -181,6 +274,29 @@ class Repository:
         if ok:
             self.reload()
         return ok, message
+
+
+    def public_game_data(self, system_code: str = "Li01") -> dict[str, Any]:
+        systems = sorted(_unique_game_items(list(self.gamedata.by_category.get("systems", {}).values())), key=lambda item: item.name.lower())
+        ships = [item for item in sorted(_unique_game_items(list(self.gamedata.by_category.get("ships", {}).values())), key=lambda item: item.name.lower()) if "camera" not in item.nickname.lower() and "admin" not in item.name.lower()]
+        bases = sorted(_unique_game_items(list(self.gamedata.by_category.get("bases", {}).values())), key=lambda item: item.name.lower())
+        selected_system = next((item for item in systems if item.nickname.lower() == system_code.lower() or item.code.lower() == system_code.lower()), systems[0] if systems else None)
+        selected_code = selected_system.code if selected_system else system_code
+        objects, system_file = parse_system_objects(selected_code, self.gamedata)
+        local_bases = [_short_game_item(item) for item in bases if item.code.lower().startswith(selected_code.lower() + "_")][:24]
+        return {
+            "system": _short_game_item(selected_system) if selected_system else {"code": selected_code, "nickname": selected_code, "name": selected_code},
+            "systems": [_short_game_item(item) for item in systems[:160]],
+            "ships": [_short_game_item(item) for item in ships[:36]],
+            "bases": local_bases,
+            "objects": objects,
+            "source_files": [
+                "IONCROSS/GAMEDATA_systems.txt",
+                "IONCROSS/GAMEDATA_ships.txt",
+                "IONCROSS/GAMEDATA_bases.txt",
+                system_file,
+            ],
+        }
 
     def public_stats(self) -> dict[str, int]:
         return {"accounts": len(self.accounts), "characters": sum(account["character_count"] for account in self.accounts), "gamedata_items": len(self.gamedata.by_code)}
